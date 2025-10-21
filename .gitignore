@@ -1,0 +1,10 @@
+# Archivos de Reporte y Resultados
+/test-results/
+/playwright-report/
+/playwright/.cache/
+
+# Dependencias
+/node_modules/
+
+# Archivos de Configuración Local (si los tuvieras)
+.env
