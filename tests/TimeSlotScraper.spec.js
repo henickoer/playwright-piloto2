@@ -8,10 +8,13 @@ const { expect } = require('@playwright/test');
 const fs = require('fs');
 const path = require('path');
 
-test('C1 - TimeSlot Scraper', async () => {
+test('C1 - TimeSlot Scraper', async () => { 
   test.setTimeout(210000);
   // Lanzar un contexto persistente sin headless para depurar si quieres
-  const context = await chromium.launchPersistentContext('', { headless: false });
+const context = await chromium.launchPersistentContext('', {
+  headless: false,
+  args: ['--start-maximized']
+  });
   const page = await context.newPage();
 
   // Crear HeaderPage con la página
@@ -19,8 +22,9 @@ test('C1 - TimeSlot Scraper', async () => {
   const resumencarritos = new ResumenCarritoPage(page);
   const productos = new ProductosEncontradosPage(page);
 
+
   // Cargar cookies si existe el archivo
-  if (fs.existsSync('./sessionCookies.json')) {
+  if (fs.existsSync('./sessionCookies.json')) { 
     const cookies = JSON.parse(fs.readFileSync('./sessionCookies.json'));
     for (const cookie of cookies) {
       await context.addCookies([cookie]);
@@ -41,6 +45,24 @@ test('C1 - TimeSlot Scraper', async () => {
   // Ir a la página principal
   await page.goto(config.urls.PROD);
   await headerPage.safeClick(headerPage.aceptarCookiesButton);
+  await headerPage.safeClick(headerPage.bannerSuperiorHref);
+
+        // await resumencarritos.safeClick(resumencarritos.logoHref);
+        await headerPage.safeClick(headerPage.minicartButton);  
+        await page.waitForTimeout(2000);
+        // 🛒 Verificar si hay productos en el carrito antes de intentar vaciarlo
+        const vaciarButton = await page.locator(resumencarritos.vaciarcarritoButton);
+        if (await vaciarButton.count() > 0) {
+          console.log('Vaciando el carrito...');
+          await resumencarritos.safeClick(resumencarritos.vaciarcarritoButton);
+          await resumencarritos.safeClick(resumencarritos.eliminarItemsCarritoButton);
+          await headerPage.safeClick(headerPage.cerrarminicartButton);
+        }else {
+          await headerPage.safeClick(headerPage.cerrarminicartButton);
+          console.log('🛒 El carrito ya está vacío.');
+        }
+
+
   
   const producto = 'Plátano Chiapas por Kg';
   const producto2 = 'Cebolla Blanca por kg';
@@ -82,8 +104,9 @@ test('C1 - TimeSlot Scraper', async () => {
 
 
   await headerPage.safeClick(headerPage.minicartButton);
-  await resumencarritos.safeClick(resumencarritos.comprarcarritoButton); 
-  await page.waitForTimeout(5000); // 1000 ms = 1 segundo 
+  await resumencarritos.safeClick(resumencarritos.comprarcarritoButton);
+  await page.waitForLoadState('domcontentloaded');
+  await page.waitForTimeout(6000); // 1000 ms = 1 segundo 
   await resumencarritos.safeClick(resumencarritos.continuarconlacompraButton); 
   await page.waitForLoadState('domcontentloaded');
   await page.waitForTimeout(4000);

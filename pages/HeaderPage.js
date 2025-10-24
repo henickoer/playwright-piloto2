@@ -17,6 +17,7 @@ class HeaderPage extends BasePage {
     this.buscandoInput = "//*[@placeholder='¿Qué estás buscando?']";
     this.logoImg = "//*[@alt='Logo']";
     this.holaUser = "//*[contains(text(),'Hola,')]";
+    this.cerrarminicartButton = "//*[@class=' vtex-minicart-2-x-closeIcon']"; 
   }
 }
 
