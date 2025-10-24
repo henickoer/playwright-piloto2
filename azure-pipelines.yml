@@ -4,12 +4,12 @@ trigger:
 - main  # Ejecuta este pipeline cada vez que haya un push a la rama 'main'
 
 schedules:
-- cron: "0 12 * * *"  # <--- ESTO ES "A LAS 6:00 AM"
+- cron: "0 12 * * *"  # 6:00 AM (Ajustado a UTC)
   displayName: 'Ejecución Diaria 6am'
   branches:
     include:
-    - main # Especifica qué rama debe ejecutar
-  always: true # Poner 'true' asegura que se ejecute haya o no haya cambios nuevos en el código
+    - main
+  always: true 
 
 pool:
   vmImage: 'ubuntu-latest' # Usa una máquina virtual con Ubuntu
@@ -28,16 +28,23 @@ steps:
     npx playwright install --with-deps
   displayName: 'Install Playwright browsers'
 
-# Este paso ahora es más simple, sin el bloque 'env'
+#
+# --- TAREA CORREGIDA ---
+# Aquí combinamos tu comando xvfb-run (para simular una pantalla)
+# con tu comando para correr el test específico (TimeSlotScraper.spec.js)
+# y le añadimos el flag --headed
+#
 - script: |
-    npx playwright test tests/TimeSlotScraper.spec.js
-  displayName: 'Run Playwright tests (TimeSlots)'
+    xvfb-run --auto-servernum --server-args='-screen 0 1280x960x24' npx playwright test tests/TimeSlotScraper.spec.js --headed
+  displayName: 'Run TimeSlots test (Headed Mode)'
 
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: 'reports\reporteSucursales.xml' # Ruta del archivo que definimos en playwright.config.js
+    # --- CORREGIDO ---
+    # Se usa '/' para Linux (ubuntu-latest) en lugar de '\'
+    testResultsFiles: 'reports/reporteSucursales.xml'
     mergeTestResults: true
-    failTaskOnFailedTests: true # Hace que el pipeline falle si alguna prueba falla
+    failTaskOnFailedTests: true
   displayName: 'Publish Test Results'
-  condition: always() # Ejecuta este paso siempre, incluso si el paso 'npm test' falló
+  condition: always()
