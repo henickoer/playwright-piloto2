@@ -9,6 +9,7 @@ class ProductosEncontradosPage extends BasePage {
     this.page = page;
 
     // 🔹 Locators estáticos
+    this.borrarCampoBusquedaButton = "//*[@aria-label='Borrar campo de búsqueda']";
     this.orderporSelect = "//*[contains(@class,'orderByText')]";
     this.preciobusquedaLabel = "//*[@id='gallery-layout-container']/div[1]/section/a/article/div[4]/div/div[1]/span[1]";
     this.autocompletarbusqueda = "//*[@data-af-element='search-autocomplete']//span[contains(@class,'global__vitrina__h--name t-small')]";

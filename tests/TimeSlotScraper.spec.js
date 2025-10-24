@@ -6,9 +6,10 @@ const ResumenCarritoPage = require('../pages/ResumenCarritoPage');
 const config = require('../utils/Environment');
 const { expect } = require('@playwright/test');
 const fs = require('fs');
+const path = require('path');
 
-test('C1 - Cargar sesión existente', async () => {
-  test.setTimeout(180000);
+test('C1 - TimeSlot Scraper', async () => {
+  test.setTimeout(210000);
   // Lanzar un contexto persistente sin headless para depurar si quieres
   const context = await chromium.launchPersistentContext('', { headless: false });
   const page = await context.newPage();
@@ -41,25 +42,52 @@ test('C1 - Cargar sesión existente', async () => {
   await page.goto(config.urls.PROD);
   await headerPage.safeClick(headerPage.aceptarCookiesButton);
   
-  const producto = 'Tomate Saladet por Kg';
-  await headerPage.humanType(headerPage.buscandoInput, producto);
+  const producto = 'Plátano Chiapas por Kg';
+  const producto2 = 'Cebolla Blanca por kg';
+  const producto3 = 'Aguacate Hass por Kg';
+
   
+
   await page.locator(headerPage.buscandoInput).focus();
-  const sugerido = page.locator(productos.autocompletarbusqueda).first();
+  await headerPage.humanType(headerPage.buscandoInput, producto);
+  const sugerido = await page.locator(productos.autocompletarbusqueda).first();
   await sugerido.waitFor({ state: 'visible' });
   await expect(sugerido).toBeEnabled();
-
   // Hacemos click
   await sugerido.click();
   await productos.safeClick(productos.agregarproductolateralButton);
+  await headerPage.safeClick(await headerPage.logoImg);
+
+  await page.locator(headerPage.bannerSuperiorHref).waitFor({ state: 'visible' });
+  await page.locator(headerPage.buscandoInput).focus();
+  await headerPage.humanType(headerPage.buscandoInput, producto2);
+  const sugerido2 = await page.locator(productos.autocompletarbusqueda).first();
+  await sugerido2.waitFor({ state: 'visible' });
+  await expect(sugerido2).toBeEnabled();
+  // Hacemos click
+  await sugerido2.click();
+  await productos.safeClick(productos.agregarproductolateralButton);
+  await headerPage.safeClick(await headerPage.logoImg);
+
+  await page.locator(headerPage.bannerSuperiorHref).waitFor({ state: 'visible' });
+  await page.locator(headerPage.buscandoInput).focus();
+  await headerPage.humanType(headerPage.buscandoInput, producto3);
+  const sugerido3 = await page.locator(productos.autocompletarbusqueda).first();
+  await sugerido3.waitFor({ state: 'visible' });
+
+  await expect(sugerido3).toBeEnabled();
+  // Hacemos click
+  await sugerido3.click();
+  await productos.safeClick(productos.agregarproductolateralButton);
+
+
   await headerPage.safeClick(headerPage.minicartButton);
   await resumencarritos.safeClick(resumencarritos.comprarcarritoButton); 
-  await page.waitForTimeout(2500); // 1000 ms = 1 segundo 
+  await page.waitForTimeout(5000); // 1000 ms = 1 segundo 
   await resumencarritos.safeClick(resumencarritos.continuarconlacompraButton); 
-
-  await page.waitForTimeout(1000);
   await page.waitForLoadState('domcontentloaded');
-
+  await page.waitForTimeout(4000);
+  
   // Obtener la URL actual
   const currentUrl = await page.url();
 
@@ -103,9 +131,9 @@ test('C1 - Cargar sesión existente', async () => {
     // 🔸 Intentamos leer los días sin que el test falle si no hay ninguno
     let totalDias = 0;
     try {
-      const dias = page.locator(resumencarritos.diasentrega);
+      await page.waitForTimeout(4500);
+      const dias = await page.locator(resumencarritos.diasentrega);
       // Espera breve para dar chance a que carguen los días (sin depender de que existan)
-      await page.waitForTimeout(1000);
       totalDias = await dias.count();
     } catch (e) {
       console.warn(`⚠️ No se pudieron obtener los días para ${nombreSucursal}`);
@@ -129,7 +157,7 @@ test('C1 - Cargar sesión existente', async () => {
       const visible = totalHorarios > 0 && (await horarios.first().isVisible());
 
       if (!visible) {
-        await page.pause();
+        //await page.pause();
         console.warn(`⚠️ Día ${j + 1}: Sin horarios configurados.`);
       }
     }
@@ -139,24 +167,73 @@ test('C1 - Cargar sesión existente', async () => {
     await page.waitForTimeout(200);
   }
 
-  // 🧾 Reporte final de todas las sucursales y las sin días configurados
-  console.log('\n📌 Resumen final:');
-  console.log('\n🏪 Sucursales evaluadas:');
-  for (const s of sucursalesEvaluadas) {
-    console.log(`- ${s}`);
-  }
+  // Reporte
+        // 🧾 Reporte final de todas las sucursales y las sin días configurados
+      console.log('\n📌 Resumen final:');
+      console.log('\n🏪 Sucursales evaluadas:');
+      for (const s of sucursalesEvaluadas) {
+        console.log(`- ${s}`);
+      }
 
-  if (sucursalesSinDias.length > 0) {
-    console.warn('\n🚨 Sucursales sin días configurados:');
-    for (const s of sucursalesSinDias) {
-      console.warn(`- ${s}`);
-    }
-  } else {
-    console.log('\n✅ Todas las sucursales tienen al menos un día configurado.');
-  }
+      let reporteTexto = `📌 Resumen final\n\n🏪 Sucursales evaluadas:\n`;
+      reporteTexto += sucursalesEvaluadas.map(s => `- ${s}`).join('\n');
 
+      if (sucursalesSinDias.length > 0) {
+        console.warn('\n🚨 Sucursales sin días configurados:');
+        for (const s of sucursalesSinDias) {
+          console.warn(`- ${s}`);
+        }
+        reporteTexto += `\n\n🚨 Sucursales sin días configurados:\n`;
+        reporteTexto += sucursalesSinDias.map(s => `- ${s}`).join('\n');
+      } else {
+        console.log('\n✅ Todas las sucursales tienen al menos un día configurado.');
+        reporteTexto += `\n\n✅ Todas las sucursales tienen al menos un día configurado.\n`;
+      }
+
+      // 🗂️ Guardar reporte como archivo TXT
+      const reportDir = path.join(__dirname, '../reports');
+      if (!fs.existsSync(reportDir)) {
+        fs.mkdirSync(reportDir);
+      }
+
+      const reportPathTxt = path.join(reportDir, 'reporteSucursales.txt');
+      fs.writeFileSync(reportPathTxt, reporteTexto, 'utf8');
+      console.log(`\n📄 Reporte TXT generado en: ${reportPathTxt}`);
+
+
+      // 🧩 Generar reporte XML estilo JUnit
+      let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+      xml += `<testsuite name="Evaluación de Sucursales" tests="${sucursalesEvaluadas.length}">\n`;
+
+      for (const sucursal of sucursalesEvaluadas) {
+        if (sucursalesSinDias.includes(sucursal)) {
+          xml += `  <testcase classname="Sucursales" name="${sucursal}">\n`;
+          xml += `    <failure message="Sucursal sin días configurados">No se encontraron días configurados</failure>\n`;
+          xml += `  </testcase>\n`;
+        } else {
+          xml += `  <testcase classname="Sucursales" name="${sucursal}"/>\n`;
+        }
+      }
+
+      xml += `</testsuite>\n`;
+
+      const reportPathXml = path.join(reportDir, 'reporteSucursales.xml');
+      fs.writeFileSync(reportPathXml, xml, 'utf8');
+      console.log(`📊 Reporte XML JUnit generado en: ${reportPathXml}`);
+
+
+
+    
+
+  await resumencarritos.safeClick(resumencarritos.logoHref);
+  await headerPage.safeClick(headerPage.minicartButton);
+  await resumencarritos.safeClick(resumencarritos.vaciarcarritoButton);
+  await page.waitForTimeout(500);
+  await resumencarritos.safeClick(resumencarritos.eliminarItemsCarritoButton);  
+
+  /*
   await resumencarritos.safeClick(resumencarritos.verificaPedidoTab);
   await resumencarritos.safeClick(resumencarritos.vaciarcarritoButton);
   await resumencarritos.safeClick(resumencarritos.vaciarButton);
-
+  */
 });

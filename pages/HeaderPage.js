@@ -6,6 +6,7 @@ class HeaderPage extends BasePage {
     super(page); // 🔹 Llama al constructor de BasePage
 
     // 🔹 Elementos del header
+    this.bannerSuperiorHref ="//*[contains(@class,'imageElementLink--global__header--top-bar')]";
     this.minicartButton = "//*[@href='#icon-minicart']";
     this.agregardireccionButton = "//*[@class='chedrauimx-locator-2-x-triggerAddress']"
     this.direccionButton = "//*[@class='chedrauimx-locator-2-x-triggerAddress']";

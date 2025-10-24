@@ -7,6 +7,8 @@ class ResumenCarritoPage extends BasePage {
     this.page = page;
 
     // 🔹 Locators estáticos
+    this.logoHref = "//*[@class='chedrauimx-checkout-io-1-x-header-io__containerHeader']//*[@href]";
+    this.eliminarItemsCarritoButton = "//button[@class]//*[contains(text(),'Eliminar')]";
     this.aceptarCambioDireccionButton = "//*[@class='chedrauimx-checkout-io-1-x-alert--button-accept']";
     this.cambiarDireccionLink = "//*[contains(text(),'Selecciona otra dirección')]";
     this.verificaPedidoTab = "//*[@class='chedrauimx-checkout-io-1-x-timeline__label' and contains(text(),'Verifica tu pedido')]";
