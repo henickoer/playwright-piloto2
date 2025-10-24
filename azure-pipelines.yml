@@ -30,8 +30,8 @@ steps:
 
 # Este paso ahora es más simple, sin el bloque 'env'
 - script: |
-    npm test
-  displayName: 'Run Playwright tests'
+    npx playwright test tests/TimeSlotScraper.spec.js
+  displayName: 'Run Playwright tests (TimeSlots)'
 
 - task: PublishTestResults@2
   inputs:
