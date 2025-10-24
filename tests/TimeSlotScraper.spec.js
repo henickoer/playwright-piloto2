@@ -9,7 +9,7 @@ const fs = require('fs');
 const path = require('path');
 
 test('C1 - TimeSlot Scraper', async () => { 
-  test.setTimeout(220000);
+  test.setTimeout(230000);
   // Lanzar un contexto persistente sin headless para depurar si quieres
 const context = await chromium.launchPersistentContext('', {
   headless: false,

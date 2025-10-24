@@ -1,13 +1,13 @@
 📌 Resumen final
 
 🏪 Sucursales evaluadas:
+- Calle Cerrada de San Jerónimo - 117 San Jerónimo Lídice 10200 CIUDAD DE MÉXICO, Ciudad de México México
+- Calle Hipólito Taine - 307 Polanco V Sección 11560 CIUDAD DE MÉXICO, Ciudad de México México
+- Vasco de Quiroga - 3900 Contadero 05348 CIUDAD DE MÉXICO, Ciudad de México México
 - Miguel Laurent - 624 Colonia del Valle Sur 03104 CIUDAD DE MÉXICO, Ciudad de México México
 - Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
 - Parque de Valencia - 17 Parques de la Herradura 52786 ESTADO DE MÉXICO, Naucalpan de Juárez México
 - Periférico Boulevard Manuel Ávila Camacho - 1007 Habitacional Jardines de Santa Monica 54025 ESTADO DE MÉXICO, Ciudad de México México
-- Calle Cerrada de San Jerónimo - 117 San Jerónimo Lídice 10200 CIUDAD DE MÉXICO, Ciudad de México México
-- Calle Hipólito Taine - 307 Polanco V Sección 11560 CIUDAD DE MÉXICO, Ciudad de México México
-- Vasco de Quiroga - 3900 Contadero 05348 CIUDAD DE MÉXICO, Ciudad de México México
 - Calle 12 - 30 San José Vista Hermosa 72190 PUEBLA, Heroica Puebla de Zaragoza México
 
 ✅ Todas las sucursales tienen al menos un día configurado.
