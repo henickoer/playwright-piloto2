@@ -36,7 +36,7 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: 'test-results/results.xml' # Ruta del archivo que definimos en playwright.config.js
+    testResultsFiles: 'reports\reporteSucursales.xml' # Ruta del archivo que definimos en playwright.config.js
     mergeTestResults: true
     failTaskOnFailedTests: true # Hace que el pipeline falle si alguna prueba falla
   displayName: 'Publish Test Results'
