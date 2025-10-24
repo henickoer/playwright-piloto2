@@ -7,7 +7,8 @@ class HeaderPage extends BasePage {
 
     // 🔹 Elementos del header
     this.minicartButton = "//*[@href='#icon-minicart']";
-    this.direccionButton = "//h4[contains(text(),'Agregar direcc')]";
+    this.agregardireccionButton = "//*[@class='chedrauimx-locator-2-x-triggerAddress']"
+    this.direccionButton = "//*[@class='chedrauimx-locator-2-x-triggerAddress']";
     this.ingresarButton = "//*[contains(text(),'Ingresar')]";
     this.principalHeader = "//*[@title='Envío gratis en la compra de productos de supermercado']";
     this.ayudaMessage = "//*[@data-testid='Icon--chat']";

@@ -7,7 +7,12 @@ class ResumenCarritoPage extends BasePage {
     this.page = page;
 
     // 🔹 Locators estáticos
-    this.vaciarcarritoButton = "//*[contains(text(),'Vaciar carrito')]";
+    this.aceptarCambioDireccionButton = "//*[@class='chedrauimx-checkout-io-1-x-alert--button-accept']";
+    this.cambiarDireccionLink = "//*[contains(text(),'Selecciona otra dirección')]";
+    this.verificaPedidoTab = "//*[@class='chedrauimx-checkout-io-1-x-timeline__label' and contains(text(),'Verifica tu pedido')]";
+    this.programaEntregaActivoButton = "//*[contains(@class,'--active')]//*[contains(text(),'Programa tu entrega')]";
+    this.vaciarcarritoButton = "//button[@class]//*[contains(text(),'Vaciar carrito')]";
+    this.vaciarButton = "//button[@class='chedrauimx-checkout-io-1-x-alert--button-accept' and contains(text(),'Vaciar')]";
     this.comprarcarritoButton = "//*[contains(text(),'Comprar')]";
     this.cerrarminicartButton = "//*[contains(@class,'minicart')]//*[@href='#sti-close--line']";
     this.codigodescuentoInput = "//*[@placeholder='Escribe el código']";
@@ -23,7 +28,8 @@ class ResumenCarritoPage extends BasePage {
     this.editardatoscontactoButton = "//*[@href='/checkout-io/profile' and @title]";
     this.editarentregaButton = "//*[@href='/checkout-io/shipping' and @title]";
     this.pagarButton = "//*[@id='payment-data-submit' and contains(@data-bind,('isPaymentButtonVisible'))]";
-    this.irenvioButton = "//*[@type='submit' and contains(text(),'Ir al Envío')]";
+    this.irenvioButton = "//*[@type='submit' and contains(text(),'Ir al Envío') and @form='profile-form']";
+    this.sucursales = "//*[@class='chedrauimx-checkout-io-1-x-address-list-container__list-button']";
   }
 
   // 🔹 Locators dinámicos
