@@ -1,21 +1,35 @@
-# Node.js
-# Build a general Node.js project with npm.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+# azure-pipelines.yml
 
 trigger:
-- main
+- main  # Ejecuta este pipeline cada vez que haya un push a la rama 'main'
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'ubuntu-latest' # Usa una máquina virtual con Ubuntu
 
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '20.x'
-  displayName: 'Install Node.js'
+    versionSpec: '18.x' # Especifica la versión de Node.js que usa tu proyecto
+  displayName: 'Install Node.js 18'
 
 - script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+    npm ci
+  displayName: 'Install dependencies (npm ci)'
+
+- script: |
+    npx playwright install --with-deps
+  displayName: 'Install Playwright browsers'
+
+# Este paso ahora es más simple, sin el bloque 'env'
+- script: |
+    npm test
+  displayName: 'Run Playwright tests'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: 'test-results/results.xml' # Ruta del archivo que definimos en playwright.config.js
+    mergeTestResults: true
+    failTaskOnFailedTests: true # Hace que el pipeline falle si alguna prueba falla
+  displayName: 'Publish Test Results'
+  condition: always() # Ejecuta este paso siempre, incluso si el paso 'npm test' falló
