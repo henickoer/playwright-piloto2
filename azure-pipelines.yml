@@ -3,6 +3,14 @@
 trigger:
 - main  # Ejecuta este pipeline cada vez que haya un push a la rama 'main'
 
+schedules:
+- cron: "0 6 * * *"  # <--- ESTO ES "A LAS 6:00 AM"
+  displayName: 'Ejecución Diaria 6am'
+  branches:
+    include:
+    - main # Especifica qué rama debe ejecutar
+  always: true # Poner 'true' asegura que se ejecute haya o no haya cambios nuevos en el código
+
 pool:
   vmImage: 'ubuntu-latest' # Usa una máquina virtual con Ubuntu
 
