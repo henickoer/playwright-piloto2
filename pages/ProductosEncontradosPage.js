@@ -1,5 +1,7 @@
 // pages/ProductosEncontradosPage.js
 const BasePage = require('./BasePage');
+const { expect } = require('@playwright/test');
+
 
 class ProductosEncontradosPage extends BasePage {
   constructor(page) {
@@ -7,8 +9,11 @@ class ProductosEncontradosPage extends BasePage {
     this.page = page;
 
     // 🔹 Locators estáticos
+    this.borrarCampoBusquedaButton = "//*[@aria-label='Borrar campo de búsqueda']";
     this.orderporSelect = "//*[contains(@class,'orderByText')]";
     this.preciobusquedaLabel = "//*[@id='gallery-layout-container']/div[1]/section/a/article/div[4]/div/div[1]/span[1]";
+    this.autocompletarbusqueda = "//*[@data-af-element='search-autocomplete']//span[contains(@class,'global__vitrina__h--name t-small')]";
+    this.agregarproductolateralButton = "//*[@class='sellerText']/../../../../../../../../..//*[@type='button' and contains(@class,'chedrauimx-add-to-cart')]";
   }
 
   // 🔹 Locators dinámicos

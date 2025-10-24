@@ -12,6 +12,7 @@ class LugarEntregaPage extends BasePage {
     this.enviaraButton = "//*[text()='Enviar a esta dirección']";
     this.recogerenButton = "//*[text()='Recoger en esta tienda']";
     this.direccionopcionbusquedaSpan = "//*[contains(@class,'InputSelect__content absolute')]//span[@class]";
+    this.referenciasInput = "//*[@placeholder='Puerta de entrada, color de fachada']";
   }
 }
 
