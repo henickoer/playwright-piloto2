@@ -28,12 +28,7 @@ steps:
     npx playwright install --with-deps
   displayName: 'Install Playwright browsers'
 
-#
-# --- TAREA CORREGIDA ---
-# Aquí combinamos tu comando xvfb-run (para simular una pantalla)
-# con tu comando para correr el test específico (TimeSlotScraper.spec.js)
-# y le añadimos el flag --headed
-#
+
 - script: |
     xvfb-run --auto-servernum --server-args='-screen 0 1280x960x24' npx playwright test tests/TimeSlotScraper.spec.js --headed
   displayName: 'Run TimeSlots test (Headed Mode)'
