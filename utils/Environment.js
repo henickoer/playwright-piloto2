@@ -2,6 +2,18 @@
 const ambiente = process.env.TEST_ENV || 'PROD'; // 'QA'
 const headless = process.env.HEADLESS !== 'false'; // TRUE por defecto
 
+const sucursales = {
+  "Coapa": "Calzada México-Xochimilco, 5149, 14388, Guadalupe, ciudad de méxico",
+  "Interlomas": "Parque de Valencia, 17, 52786, Parques de la Herradura, naucalpan de juárez",
+  "Mundo E": "Periférico Boulevard Manuel Ávila Camacho, 1007, 54025, Habitacional Jardines de Santa Monica, ciudad de méxico",
+  "Angelopolis": "Calle 12, 30, 72190, San José Vista Hermosa, heroica puebla de zaragoza",
+  "Pedregal": "Calle Cerrada de San Jerónimo, 117, 10200, San Jerónimo Lídice, ciudad de méxico",
+  "Polanco": "Calle Hipólito Taine, 307, 11560, Polanco V Sección, ciudad de méxico",
+  "Sante fe": "Vasco de Quiroga, #3900, 05348, Contadero, ciudad de méxico",
+  "Universidad": "Miguel Laurent, 624, 03104, Colonia del Valle Sur, ciudad de méxico"  
+};
+
+
 const config = {
   ambiente,
   headless,
@@ -20,8 +32,8 @@ const config = {
 
   mailslurp: {
     apiKey: "d1840d194ec422cbe0664c8985d1afe8cec89868d0882c9586aa8f146533ce65",
-    inboxId: "483078d1-cc0b-4078-bde0-c9dece2b875d",
-    emailAddress: "483078d1-cc0b-4078-bde0-c9dece2b875d@mailslurp.info",
+    inboxId: "b739cbe4-2aa2-4f48-836d-00d443455c5c",
+    emailAddress: "b739cbe4-2aa2-4f48-836d-00d443455c5c@mailslurp.info",
   },
 
   emails: {
@@ -35,6 +47,7 @@ const config = {
     redirect: 10000,
     retryClick: 5000,
   },
+
 };
 
 module.exports = config;
