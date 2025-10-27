@@ -7,12 +7,18 @@ class ResumenCarritoPage extends BasePage {
     this.page = page;
 
     // 🔹 Locators estáticos
+    this.diasEntregaLabel = "//*[@class='chedrauimx-checkout-io-1-x-calendar__day-date']";
+    this.paso1URL= "/checkout-io/cart";
+    this.paso2URL= "/checkout-io/profile";
+    this.paso3URL= "/checkout-io/shipping";
+    this.paso4URL= "/checkout?checkout=io/#/payment";
     this.logoHref = "//*[@class='chedrauimx-checkout-io-1-x-header-io__containerHeader']//*[@href]";
     this.eliminarItemsCarritoButton = "//button[@class]//*[contains(text(),'Eliminar')]";
     this.aceptarCambioDireccionButton = "//*[@class='chedrauimx-checkout-io-1-x-alert--button-accept']";
     this.cambiarDireccionLink = "//*[contains(text(),'Selecciona otra dirección')]";
     this.verificaPedidoTab = "//*[@class='chedrauimx-checkout-io-1-x-timeline__label' and contains(text(),'Verifica tu pedido')]";
-    this.programaEntregaActivoButton = "//*[contains(@class,'--active')]//*[contains(text(),'Programa tu entrega')]";
+    this.completaTusDatosTab = "//*[@class='chedrauimx-checkout-io-1-x-timeline__step  chedrauimx-checkout-io-1-x-timeline__step ']//*[contains(text(),'Completa tus datos')]";
+    this.programaEntregaActivoTab = "//*[contains(@class,'--active')]//*[contains(text(),'Programa tu entrega')]";
     this.vaciarcarritoButton = "//button[@class]//*[contains(text(),'Vaciar carrito')]";
     this.vaciarButton = "//button[@class='chedrauimx-checkout-io-1-x-alert--button-accept' and contains(text(),'Vaciar')]";
     this.comprarcarritoButton = "//*[contains(text(),'Comprar')]";

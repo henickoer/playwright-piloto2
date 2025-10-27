@@ -11,6 +11,7 @@ test.describe('Login y sesión persistente', () => {
   
 
   test.beforeAll(async () => {
+    test.setTimeout(60000);
     context = await chromium.launchPersistentContext('', { headless: false });
     page = await context.newPage();
 
