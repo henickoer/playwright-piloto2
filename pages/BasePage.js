@@ -57,7 +57,7 @@ class BasePage {
 
         } catch (error) {
             console.warn(`⚠️ Error en safeClick(${selector}): ${error.message}`);
-            await this.page.screenshot({ path: `error_safeClick_${Date.now()}.png`, fullPage: true });
+            //await this.page.screenshot({ path: `error_safeClick_${Date.now()}.png`, fullPage: true });
             throw error;
         }
     }
