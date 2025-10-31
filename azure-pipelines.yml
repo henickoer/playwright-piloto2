@@ -38,7 +38,7 @@ steps:
     testResultsFormat: 'JUnit'
     # --- CORREGIDO ---
     # Se usa '/' para Linux (ubuntu-latest) en lugar de '\'
-    testResultsFiles: 'reports/reporteSucursales.xml'
+    testResultsFiles: 'reports/reporteSucursales.pdf'
     mergeTestResults: true
     failTaskOnFailedTests: true
   displayName: 'Publish Test Results'
