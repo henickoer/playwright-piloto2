@@ -9,6 +9,10 @@ const path = require('path');
 const NavegacionActions = require('../utils/NavegacionActions');
 const PdfPrinter = require('pdfmake');
 const vfsFonts = require('pdfmake/build/vfs_fonts.js');
+const { sendEmail } = require('../utils/mailslurp-utils');
+const { generarReportePDF } = require('../utils/creadorpdf');
+
+
 
 
 test('C1 - TimeSlot Scraper', async () => { 
@@ -56,7 +60,7 @@ test('C1 - TimeSlot Scraper', async () => {
   await headerPage.safeClick(headerPage.minicartButton);  
   await page.waitForTimeout(2000);
 
-  const vaciarButton = page.locator(resumencarritos.vaciarcarritoButton);
+  const vaciarButton = await page.locator(resumencarritos.vaciarcarritoButton);
   if (await vaciarButton.count() > 0) {
     console.log('Vaciando el carrito...');
     await resumencarritos.safeClick(resumencarritos.vaciarcarritoButton);
@@ -69,13 +73,35 @@ test('C1 - TimeSlot Scraper', async () => {
 
   await page.goto(config.urls.PROD);
 
-  await carritoUtils.buscarYAgregarProducto(page, headerPage, productos, 'Aguacate Hass por Kg');
-  await carritoUtils.buscarYAgregarProducto(page, headerPage, productos, 'Plátano Chiapas por Kg');
-  await carritoUtils.buscarYAgregarProducto(page, headerPage, productos, 'Cebolla Blanca por kg');
+  const productosAGregar = [
+    'Aguacate Hass por Kg',  // 1
+    'Plátano Chiapas por Kg', // 2
+    'Cebolla Blanca por kg',  // 3
+    'Zanahoria por kg',       // 4
+    'Ajo por Kg'              // 5
+  ];
 
+  let productosAgregados = 0;
+
+  for (const producto of productosAGregar) {
+  if (productosAgregados >= 3) break;
+
+    try {
+        const exito = await carritoUtils.buscarYAgregarProducto(page, headerPage, productos, producto);
+        if (exito) {
+          productosAgregados++;
+          console.log(`✅ Producto agregado: ${producto} (total agregados: ${productosAgregados})`);
+        }
+      } catch (err) {
+        console.warn(`⚠️ No se pudo agregar producto: ${producto} → ${err.message}`);
+      }
+  }
+
+  console.log(`🛒 Total de productos agregados al carrito: ${productosAgregados}`);
   await page.goto(config.urls.PROD);
 
   await headerPage.safeClick(headerPage.minicartButton);
+  await page.waitForTimeout(2000);
   await resumencarritos.safeClick(resumencarritos.comprarcarritoButton);
   await page.waitForLoadState('domcontentloaded');
   await page.waitForTimeout(3000);
@@ -290,162 +316,22 @@ function obtenerSucursalPorDireccion(texto) {
   return "Desconocida";
 }
 
-
-// --- Resto del código para generar PDF (sin cambios funcionales, sólo uso de la función corregida) ---
-
-// --- Definición de fuentes usando VFS embebido ---
-const fonts = {
-  Roboto: {
-    normal: 'Helvetica',
-    bold: 'Helvetica-Bold',
-    italics: 'Helvetica-Oblique',
-    bolditalics: 'Helvetica-BoldOblique'
-  }
-};
-
-const printer = new PdfPrinter(fonts);
-printer.vfs = vfsFonts.vfs; // evita que busque archivos físicos
-
-// --- Construcción dinámica del contenido PDF ---
-const contenidoResumen = [
-  { text: 'Resumen Final', style: 'titulo' },
-  { text: `Fecha ejecución: ${fechaHora}`, style: 'subtitulo' },
-  { text: '\n' },
-  { text: `Total de sucursales evaluadas: ${totalSucursales}`, style: 'texto' },
-  { text: `Total configuradas con días: ${totalConfiguradas}`, style: 'texto' },
-  { text: `Total sin días configurados: ${totalNoConfiguradas}\n\n`, style: 'texto' },
-  { text: 'Sucursales sin días configurados', style: 'encabezadoNaranja' }
-];
-
-if (sucursalesSinDias.length > 0) {
-  sucursalesSinDias.forEach(nombre => {
-    contenidoResumen.push({ text: `${nombre}`, style: 'texto' });
-  });
-} else {
-  contenidoResumen.push({ text: 'Todas las sucursales se encuentran configuradas.', style: 'texto' });
-}
-
-// --- Salto de página antes del detalle ---
-contenidoResumen.push({ text: '', pageBreak: 'after' });
-
-// --- Detalle: cada sucursal en su propia página ---
-const sucursalesConDias = sucursalesEvaluadas.filter(s => Array.isArray(s.dias) && s.dias.length > 0);
-const contenidoDetalle = [];
-
-for (const [index, s] of sucursalesConDias.entries()) {
-  const nombreDetectado = obtenerSucursalPorDireccion(s.nombre);
-
-  // --- Encabezado de sucursal ---
-  contenidoDetalle.push({
-    text: `Sucursal: ${nombreDetectado}`,
-    style: 'encabezadoSucursal'
-  });
-
-  // Dirección
-  contenidoDetalle.push({
-    text: [
-      { text: 'Dirección: ', color: '#ff8800', bold: true },
-      { text: `${s.nombre}`, color: '#000000' }
-    ],
-    style: 'texto'
-  });
-
-  contenidoDetalle.push({ text: '\n', style: 'texto' });
-
-  // Días y horarios
-  for (const d of s.dias) {
-    // Extraer fecha si viene en el mismo texto (ej: "Hoy\n31 de octubre")
-    let nombreDia = d.nombreDia || '';
-    let fecha = '';
-
-    // Si el nombreDia tiene un salto de línea, separamos
-    if (nombreDia.includes('\n')) {
-      const partes = nombreDia.split('\n');
-      nombreDia = partes[0].trim();
-      fecha = partes[1] ? partes[1].trim() : '';
-    }
-
-    contenidoDetalle.push({
-      text: [
-        { text: 'Día: ', color: '#ff8800', bold: true },
-        { text: `${nombreDia}${fecha ? ', ' + fecha : ''}`, color: '#000000' }
-      ],
-      style: 'texto'
-    });
-
-    // Horarios
-    contenidoDetalle.push({
-      text: [
-        { text: 'Horarios: ', color: '#ff8800', bold: true },
-        { text: `${d.horarios}`, color: '#000000' }
-      ],
-      style: 'texto'
-    });
-
-    contenidoDetalle.push({ text: '\n', style: 'texto' });
-  }
-
-  // Salto de página después de cada sucursal excepto la última
-  if (index < sucursalesConDias.length - 1) {
-    contenidoDetalle.push({ text: '', pageBreak: 'after' });
-  }
-}
-
-// --- Definición del documento PDF ---
-const docDefinition = {
-  content: [
-    ...contenidoResumen,
-    ...contenidoDetalle
-  ],
-  styles: {
-    titulo: { fontSize: 18, bold: true, color: '#ff8800', margin: [0,0,0,10] },
-    subtitulo: { fontSize: 12, italics: true, color: '#555', margin: [0,0,0,15] },
-    texto: { fontSize: 11, margin: [0,2,0,2] },
-    encabezadoNaranja: { fontSize: 13, bold: true, color: '#ff8800', margin: [0,10,0,5] },
-    encabezadoSucursal: { fontSize: 14, bold: true, color: '#ff6600', margin: [0,12,0,8] }
-  },
-  defaultStyle: { font: 'Roboto' },
-  pageMargins: [40,60,40,60]
-};
-
-// --- Guardado del PDF ---
-const reportPDF = path.join(__dirname, '../reports');
-if (!fs.existsSync(reportPDF)) fs.mkdirSync(reportPDF);
-
-const pdfPath = path.join(reportPDF, 'reporteSucursales.pdf');
-
-if (fs.existsSync(pdfPath)) {
-  try {
-    fs.unlinkSync(pdfPath);
-    console.log('🧹 PDF anterior eliminado correctamente.');
-  } catch (err) {
-    console.error('⚠️ No se pudo eliminar el PDF anterior:', err);
-  }
-}
-
-const pdfDoc = printer.createPdfKitDocument(docDefinition);
-const stream = fs.createWriteStream(pdfPath);
-
-pdfDoc.pipe(stream);
-pdfDoc.end();
-
-stream.on('finish', () => {
-  console.log(`📄 Reporte PDF generado en: ${pdfPath}`);
+await generarReportePDF({
+  sucursalesEvaluadas,
+  sucursalesSinDias,
+  fechaHora,
+  totalSucursales,
+  totalConfiguradas,
+  totalNoConfiguradas
 });
 
-stream.on('error', (err) => {
-  console.error('❌ Error al generar el PDF:', err);
-});
-
-
-// --- Limpieza final ---
-await page.waitForTimeout(1500);
-await resumencarritos.safeClick(resumencarritos.logoHref);
-await page.waitForTimeout(1500);
-await headerPage.safeClick(headerPage.minicartButton);
-await page.waitForTimeout(1500);
-await resumencarritos.safeClick(resumencarritos.vaciarcarritoButton);
-await page.waitForTimeout(1500);
-await resumencarritos.safeClick(resumencarritos.eliminarItemsCarritoButton);
+/*
+await sendEmail(
+  config.correos,
+  '📄 Reporte PDF',
+  'Adjunto el reporte más reciente.',
+  '../reports/reporteSucursales.pdf'
+);
+*/
 
 });

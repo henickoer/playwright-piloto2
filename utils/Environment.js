@@ -13,11 +13,17 @@ const sucursales = {
   "Universidad": "Miguel Laurent, 624, 03104, Colonia del Valle Sur, ciudad de méxico"  
 };
 
+const correos = [
+  "kmartinez@gdcpc.com",
+  "joaquin.soto@atconmx.net"
+];
+
 
 const config = {
   ambiente,
   headless,
   sucursales,
+  correos,
 
   urls: {
     PROD: 'https://www.chedraui.com.mx',

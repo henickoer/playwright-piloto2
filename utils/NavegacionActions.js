@@ -56,28 +56,49 @@ class NavegacionActions {
    * @param {Object} productos - locators y métodos de productos
    * @param {string} producto - nombre del producto a buscar
    */
-  async buscarYAgregarProducto(page, headerPage, productos, producto) {
-    
-      // Crear el locator sin await
 
-    const headers = page.locator(headerPage.bannerSuperiorHref);
-    // Seleccionar el primer elemento del locator
-    const headerActual = headers.first();
-    // Esperar a que esté visible y habilitado
-    await headerActual.waitFor({ state: 'visible' });
-    page.waitForTimeout(500);
-    
-    await page.locator(headerPage.buscandoInput).focus();
-    await headerPage.humanType(headerPage.buscandoInput, producto);
+async buscarYAgregarProducto(page, headerPage, productos, producto) {
+  const headers = page.locator(headerPage.bannerSuperiorHref);
+  const headerActual = headers.first();
+  await headerActual.waitFor({ state: 'visible' });
+  await page.waitForTimeout(500);
 
-    const sugerido = await page.locator(productos.autocompletarbusqueda).first();
-    await sugerido.waitFor({ state: 'visible' });
-    await expect(sugerido).toBeEnabled();
+  await page.locator(headerPage.buscandoInput).focus();
+  await headerPage.humanType(headerPage.buscandoInput, producto);
 
-    await sugerido.click();
-    await productos.safeClick(productos.agregarproductolateralButton);
-    await headerPage.safeClick(await headerPage.logoImg);
+  const sugerido = page.locator(productos.autocompletarbusqueda).first();
+  await sugerido.waitFor({ state: 'visible' });
+  await sugerido.click();
+
+  // --- Esperar dinámicamente al botón o al label de agotado ---
+  const botonAgregar = page.locator(productos.agregarproductolateralButton);
+  const labelAgotado = page.locator(productos.productoAgotadoButton); // <-- necesitas definir este locator
+
+  try {
+    await Promise.race([
+      botonAgregar.waitFor({ state: 'visible', timeout: 5000 }),
+      labelAgotado.waitFor({ state: 'visible', timeout: 5000 })
+    ]);
+  } catch (err) {
+    console.warn(`⏳ Timeout esperando botón o label para producto: ${producto}`);
+    return false; // no se pudo determinar
   }
+
+  // --- Revisar cuál se mostró ---
+  if (await botonAgregar.count() > 0 && await botonAgregar.isVisible()) {
+    await botonAgregar.click();
+    await headerPage.safeClick(await headerPage.logoImg);
+    return true; // agregado con éxito
+  }
+
+  if (await labelAgotado.count() > 0 && await labelAgotado.isVisible()) {
+    console.warn(`⚠️ Producto agotado: ${producto}`);
+    return false; // no agregado
+  }
+
+  return false;
 }
 
+
+}
 module.exports = NavegacionActions;
