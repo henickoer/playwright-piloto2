@@ -16,6 +16,7 @@
     "@playwright/test": "^1.56.1"
   },
   "dependencies": {
-    "mailslurp-client": "^16.0.0"
+    "mailslurp-client": "^16.0.0",
+    "pdfmake": "^0.2.20"
   }
 }

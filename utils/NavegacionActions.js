@@ -11,11 +11,12 @@ class NavegacionActions {
    */
 
   async avanzarCarrito(page, resumencarritos, maxRetries = 5) {
+    const currentUrl = page.url();
+
     if (maxRetries <= 0) {
+      console.warn("Retries actual: "+maxRetries+" mientras nos encontramos en: \n"+currentUrl);
       throw new Error('No se pudo avanzar a paso 2 o 3 después de múltiples intentos.');
     }
-
-    const currentUrl = page.url();
 
     if (currentUrl.includes(resumencarritos.paso3URL)) {
       console.warn('Ya estamos en paso 3, listo para continuar.');
@@ -38,11 +39,12 @@ class NavegacionActions {
     if (currentUrl.includes(resumencarritos.paso1URL)) {
 
       console.warn(`Estamos en paso 1. Intentando avanzar... Reintentos restantes: ${maxRetries}`);
+      await page.waitForTimeout(1000);
       await resumencarritos.safeClick(resumencarritos.continuarconlacompraButton);
-      await page.waitForTimeout(2000);
-
+      await page.waitForTimeout(1000);
+  
       return await this.avanzarCarrito(page, resumencarritos, maxRetries - 1);
-    }
+    } 
 
     console.warn('URL desconocida, esperando a que avance de manera natural...');
   }
@@ -55,7 +57,16 @@ class NavegacionActions {
    * @param {string} producto - nombre del producto a buscar
    */
   async buscarYAgregarProducto(page, headerPage, productos, producto) {
-    await page.locator(headerPage.bannerSuperiorHref).waitFor({ state: 'visible' });
+    
+      // Crear el locator sin await
+
+    const headers = page.locator(headerPage.bannerSuperiorHref);
+    // Seleccionar el primer elemento del locator
+    const headerActual = headers.first();
+    // Esperar a que esté visible y habilitado
+    await headerActual.waitFor({ state: 'visible' });
+    page.waitForTimeout(500);
+    
     await page.locator(headerPage.buscandoInput).focus();
     await headerPage.humanType(headerPage.buscandoInput, producto);
 

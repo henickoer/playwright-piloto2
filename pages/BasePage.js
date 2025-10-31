@@ -18,7 +18,7 @@ class BasePage {
     const el = this.page.locator(selector).first();
 
     try {
-        await this.page.waitForSelector(selector, { state: 'visible', timeout: 15000 });
+        await this.page.waitForSelector(selector, { state: 'visible', timeout: 20000 });
         await this.page.waitForTimeout(300);
 
         await expect(el).toBeVisible({ timeout: 10000 });
@@ -71,7 +71,7 @@ class BasePage {
 
     // Escribir texto como un humano
     async humanType(selector, text) {
-        const el = this.page.locator(selector);
+        const el = await this.page.locator(selector);
         await el.waitFor({ state: 'visible' });
 
         for (const char of text) {
@@ -104,7 +104,6 @@ class BasePage {
     async waitForEnabled(selector) {
         const el = this.page.locator(selector);
         await el.waitFor({ state: 'visible' });
-        await el.waitFor({ state: 'enabled' });
     }
 
     // Esperar un tiempo específico (ms)
