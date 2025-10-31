@@ -33,6 +33,15 @@ steps:
     xvfb-run --auto-servernum --server-args='-screen 0 1280x960x24' npx playwright test tests/TimeSlotScraper.spec.js --headed
   displayName: 'Run TimeSlots test (Headed Mode)'
 
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: 'reports/reporteSucursales.xml'
+    mergeTestResults: true
+    failTaskOnFailedTests: true
+  displayName: 'Publish Test Results'
+  condition: always()
+
 
 - task: PublishBuildArtifacts@1
   inputs:
