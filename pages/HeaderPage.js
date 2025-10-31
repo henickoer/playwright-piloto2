@@ -6,7 +6,7 @@ class HeaderPage extends BasePage {
     super(page); // 🔹 Llama al constructor de BasePage
 
     // 🔹 Elementos del header
-    this.bannerSuperiorHref ="//*[contains(@class,'imageElementLink--global__header--top-bar')]";
+    this.bannerSuperiorHref ="//*[contains(@class,'sliderItem--top-bar-slider')]//a[@title]";
     this.minicartButton = "//*[@href='#icon-minicart']";
     this.agregardireccionButton = "//*[@class='chedrauimx-locator-2-x-triggerAddress']"
     this.direccionButton = "//*[@class='chedrauimx-locator-2-x-triggerAddress']";
@@ -15,7 +15,7 @@ class HeaderPage extends BasePage {
     this.ayudaMessage = "//*[@data-testid='Icon--chat']";
     this.enviaraDiv = "//*[@class='chedrauimx-locator-2-x-triggerAddress']//p";
     this.buscandoInput = "//*[@placeholder='¿Qué estás buscando?']";
-    this.logoImg = "//*[@alt='Logo']";
+    this.logoImg = "//*[contains(@class,'header--logo')]//*[@href]";
     this.holaUser = "//*[contains(text(),'Hola,')]";
     this.cerrarminicartButton = "//*[@class=' vtex-minicart-2-x-closeIcon']"; 
   }
