@@ -38,8 +38,16 @@ steps:
     testResultsFormat: 'JUnit'
     # --- CORREGIDO ---
     # Se usa '/' para Linux (ubuntu-latest) en lugar de '\'
-    testResultsFiles: 'reports/reporteSucursales.pdf'
+    testResultsFiles: 'reports/reporteSucursales.xml'
     mergeTestResults: true
     failTaskOnFailedTests: true
   displayName: 'Publish Test Results'
+  condition: always()
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'reports/reporteSucursales.pdf'
+    ArtifactName: 'ReportePruebas'
+    publishLocation: 'Container'
+  displayName: 'Publicar PDF como Artefacto'
   condition: always()
