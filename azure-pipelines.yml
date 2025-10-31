@@ -43,3 +43,11 @@ steps:
     failTaskOnFailedTests: true
   displayName: 'Publish Test Results'
   condition: always()
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'reports/reporteSucursales.pdf'
+    ArtifactName: 'ReportePruebas'
+    publishLocation: 'Container'
+  displayName: 'Publicar PDF como Artefacto'
+  condition: always()
