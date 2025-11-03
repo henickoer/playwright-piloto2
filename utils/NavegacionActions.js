@@ -58,15 +58,37 @@ class NavegacionActions {
    */
 
 async buscarYAgregarProducto(page, headerPage, productos, producto) {
+
+  console.warn("Se ingresar a BuscarYAgregarProducto");
+
   const headers = page.locator(headerPage.bannerSuperiorHref);
   const headerActual = headers.first();
   await headerActual.waitFor({ state: 'visible' });
   await page.waitForTimeout(500);
 
+          const input = page.locator(headerPage.buscandoInput);
+
+          // Espera hasta que el input sea visible
+          await input.waitFor({ state: 'visible' });
+          console.warn("Input Visible");
+
+          // Evalúa el input en el DOM y extrae info
+          const info = await input.evaluate(el => {
+            return {
+              outerHTML: el.outerHTML,       // Nodo completo como HTML
+              clases: el.className,           // Clases actuales
+              styles: window.getComputedStyle(el).cssText, // Estilos CSS calculados
+              value: el.value                 // Valor del input
+            };
+          });
+
+          console.warn('Clases:', info.clases);
+
+
   await page.locator(headerPage.buscandoInput).focus();
   await headerPage.humanType(headerPage.buscandoInput, producto);
 
-  const sugerido = page.locator(productos.autocompletarbusqueda).first();
+  const sugerido = await page.locator(productos.autocompletarbusqueda).first();
   await sugerido.waitFor({ state: 'visible' });
   await sugerido.click();
 

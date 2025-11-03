@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Evaluación de Sucursales" tests="8">
-  <testcase classname="Sucursales" name="Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México">
-    <failure message="Sucursal sin días configurados">No se encontraron días configurados</failure>
-  </testcase>
+  <testcase classname="Sucursales" name="Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México"/>
   <testcase classname="Sucursales" name="Parque de Valencia - 17 Parques de la Herradura 52786 ESTADO DE MÉXICO, Naucalpan de Juárez México"/>
   <testcase classname="Sucursales" name="Periférico Boulevard Manuel Ávila Camacho - 1007 Habitacional Jardines de Santa Monica 54025 ESTADO DE MÉXICO, Ciudad de México México"/>
   <testcase classname="Sucursales" name="Calle Cerrada de San Jerónimo - 117 San Jerónimo Lídice 10200 CIUDAD DE MÉXICO, Ciudad de México México"/>
-  <testcase classname="Sucursales" name="Calle Hipólito Taine - 307 Polanco V Sección 11560 CIUDAD DE MÉXICO, Ciudad de México México">
-    <failure message="Sucursal sin días configurados">No se encontraron días configurados</failure>
-  </testcase>
-  <testcase classname="Sucursales" name="Vasco de Quiroga - 3900 Contadero 05348 CIUDAD DE MÉXICO, Ciudad de México México">
-    <failure message="Sucursal sin días configurados">No se encontraron días configurados</failure>
-  </testcase>
+  <testcase classname="Sucursales" name="Calle Hipólito Taine - 307 Polanco V Sección 11560 CIUDAD DE MÉXICO, Ciudad de México México"/>
+  <testcase classname="Sucursales" name="Vasco de Quiroga - 3900 Contadero 05348 CIUDAD DE MÉXICO, Ciudad de México México"/>
   <testcase classname="Sucursales" name="Miguel Laurent - 624 Colonia del Valle Sur 03104 CIUDAD DE MÉXICO, Ciudad de México México"/>
   <testcase classname="Sucursales" name="Calle 12 - 30 San José Vista Hermosa 72190 PUEBLA, Heroica Puebla de Zaragoza México"/>
 </testsuite>

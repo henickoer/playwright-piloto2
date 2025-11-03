@@ -50,8 +50,12 @@ test('C1 - TimeSlot Scraper', async () => {
   await headerPage.safeClick(headerPage.aceptarCookiesButton);
   await page.goto(config.urls.PROD);
 
+
+
+
   // Crear el locator sin await
   const headers = page.locator(headerPage.bannerSuperiorHref);
+  
   // Seleccionar el primer elemento del locator
   const headerActual = headers.first();
   // Esperar a que esté visible y habilitado
@@ -73,28 +77,32 @@ test('C1 - TimeSlot Scraper', async () => {
 
   await page.goto(config.urls.PROD);
 
-  const productosAGregar = [
-    'Aguacate Hass por Kg',  // 1
-    'Plátano Chiapas por Kg', // 2
-    'Cebolla Blanca por kg',  // 3
-    'Zanahoria por kg',       // 4
-    'Ajo por Kg'              // 5
-  ];
+    const listaProductos = [
+      'Aguacate Hass por Kg',  // 1
+      'Plátano Chiapas por Kg', // 2
+      'Cebolla Blanca por kg',  // 3
+      'Zanahoria por kg',       // 4
+      'Ajo por Kg'              // 5
+    ];
 
-  let productosAgregados = 0;
+    let productosAgregados = 0;
 
-  for (const producto of productosAGregar) {
-  if (productosAgregados >= 4) break;
+    for (const producto of listaProductos) {
+    console.warn(`Se ingresó al for, producto actual: `+producto);
 
-    try {
-        const exito = await carritoUtils.buscarYAgregarProducto(page, headerPage, productos, producto);
-        if (exito) {
-          productosAgregados++;
-          console.log(`✅ Producto agregado: ${producto} (total agregados: ${productosAgregados})`);
+    if (productosAgregados >= 4) break;
+      console.warn(`Se ingresó al if productosAgregados`);
+      
+      try {
+          console.warn(`Se intenta agregar producto: ${producto}`);
+          const exito = await carritoUtils.buscarYAgregarProducto(page, headerPage, productos, producto);
+          if (exito) {
+            productosAgregados++;
+            console.log(`✅ Producto agregado: ${producto} (total agregados: ${productosAgregados})`);
+          }
+        } catch (err) {
+          console.warn(`⚠️ No se pudo agregar producto: ${producto} → ${err.message}`);
         }
-      } catch (err) {
-        console.warn(`⚠️ No se pudo agregar producto: ${producto} → ${err.message}`);
-      }
   }
 
   console.log(`🛒 Total de productos agregados al carrito: ${productosAgregados}`);
