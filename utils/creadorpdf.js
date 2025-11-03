@@ -88,44 +88,75 @@ async function generarReportePDF({
         style: 'encabezadoSucursal'
       });
 
+      // Dirección con fuente más grande e interlineado
       contenidoDetalle.push({
         text: [
           { text: 'Dirección: ', color: '#ff8800', bold: true },
           { text: s.nombre, color: '#000000' }
         ],
-        style: 'texto'
+        style: 'direccion'
       });
 
       contenidoDetalle.push({ text: '\n', style: 'texto' });
 
-      for (const d of s.dias) {
-        let nombreDia = d.nombreDia || '';
-        let fecha = '';
+      // --- Construcción de tabla Día 1 a Día 4 ---
+      const dias = s.dias.slice(0, 4); // máximo 4 días
+      const columnas = ['Día 1', 'Día 2', 'Día 3', 'Día 4'];
 
-        if (nombreDia.includes('\n')) {
-          const partes = nombreDia.split('\n');
-          nombreDia = partes[0].trim();
-          fecha = partes[1]?.trim() || '';
+      // Normalizar y limpiar horarios: split por "," + trim + eliminar "." final
+      const diasData = columnas.map((_, i) => {
+        let d = dias[i] || { nombreDia: '', horarios: [] };
+        if (typeof d.horarios === 'string') {
+          d.horarios = d.horarios
+            .split(',')
+            .map(h => h.trim().replace(/\.$/, ''))
+            .filter(h => h.length > 0);
+        } else if (!Array.isArray(d.horarios)) {
+          d.horarios = [];
         }
+        return d;
+      });
 
-        contenidoDetalle.push({
-          text: [
-            { text: 'Día: ', color: '#ff8800', bold: true },
-            { text: `${nombreDia}${fecha ? ', ' + fecha : ''}`, color: '#000000' }
-          ],
-          style: 'texto'
-        });
+      // Calcular máximo número de filas
+      const maxFilas = Math.max(...diasData.map(d => d.horarios.length));
 
-        contenidoDetalle.push({
-          text: [
-            { text: 'Horarios: ', color: '#ff8800', bold: true },
-            { text: d.horarios, color: '#000000' }
-          ],
-          style: 'texto'
-        });
+      // Encabezado de tabla
+      contenidoDetalle.push({
+        table: {
+          widths: ['25%', '25%', '25%', '25%'],
+          body: [
+            columnas.map(c => ({
+              text: c,
+              style: 'encabezadoNaranja',
+              alignment: 'center',
+              fillColor: '#ffe6cc'
+            }))
+          ]
+        },
+        layout: 'lightHorizontalLines'
+      });
 
-        contenidoDetalle.push({ text: '\n', style: 'texto' });
+      // Filas de horarios con fondo alternado
+      const bodyHorarios = [];
+      for (let i = 0; i < maxFilas; i++) {
+        const fila = diasData.map(d => ({
+          text: d.horarios[i] || '',
+          alignment: 'left',
+          style: 'texto',
+          fillColor: i % 2 === 0 ? '#ffffff' : '#f2f2f2' // alternado blanco/gris
+        }));
+        bodyHorarios.push(fila);
       }
+
+      contenidoDetalle.push({
+        table: {
+          widths: ['25%', '25%', '25%', '25%'],
+          body: bodyHorarios
+        },
+        layout: 'lightHorizontalLines'
+      });
+
+      contenidoDetalle.push({ text: '\n', style: 'texto' });
 
       if (index < sucursalesConDias.length - 1) {
         contenidoDetalle.push({ text: '', pageBreak: 'after' });
@@ -140,7 +171,8 @@ async function generarReportePDF({
         subtitulo: { fontSize: 12, italics: true, color: '#555', margin: [0,0,0,15] },
         texto: { fontSize: 11, margin: [0,2,0,2] },
         encabezadoNaranja: { fontSize: 13, bold: true, color: '#ff8800', margin: [0,10,0,5] },
-        encabezadoSucursal: { fontSize: 14, bold: true, color: '#ff6600', margin: [0,12,0,8] }
+        encabezadoSucursal: { fontSize: 14, bold: true, color: '#ff6600', margin: [0,12,0,8] },
+        direccion: { fontSize: 12, lineHeight: 1.4, margin: [0,4,0,4] }
       },
       defaultStyle: { font: 'Roboto' },
       pageMargins: [40, 60, 40, 60]
