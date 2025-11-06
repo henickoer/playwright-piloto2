@@ -12,9 +12,6 @@ const vfsFonts = require('pdfmake/build/vfs_fonts.js');
 const { sendEmail } = require('../utils/mailslurp-utils');
 const { generarReportePDF } = require('../utils/creadorpdf');
 
-
-
-
 test('C1 - TimeSlot Scraper', async () => { 
   test.setTimeout(300000);
 
@@ -23,7 +20,6 @@ test('C1 - TimeSlot Scraper', async () => {
     args: ['--start-maximized']
   });
   const page = await context.newPage();
-
   const headerPage = new HeaderPage(page);
   const resumencarritos = new ResumenCarritoPage(page);
   const productos = new ProductosEncontradosPage(page);

@@ -10,7 +10,7 @@ const sucursales = {
   "Pedregal": "Calle Cerrada de San Jerónimo, 117, 10200, San Jerónimo Lídice, ciudad de méxico",
   "Polanco": "Calle Hipólito Taine, 307, 11560, Polanco V Sección, ciudad de méxico",
   "Sante fe": "Vasco de Quiroga, 3900, 05348, Contadero, ciudad de méxico",
-  "Universidad": "Miguel Laurent, 624, 03104, Colonia del Valle Sur, ciudad de méxico"  
+  "Universidad": "Miguel Laurent, 624, 03104, Colonia del Valle Sur, ciudad de méxico",
 };
 
 const correos = [
@@ -39,8 +39,8 @@ const config = {
 
   mailslurp: {
     apiKey: "d1840d194ec422cbe0664c8985d1afe8cec89868d0882c9586aa8f146533ce65",
-    inboxId: "2bac2bf5-126b-45b2-935c-16474d84c321",
-    emailAddress: "2bac2bf5-126b-45b2-935c-16474d84c321@mailslurp.biz",
+    inboxId: "03588ff0-62ca-402d-a77d-fecfbf11b149",
+    emailAddress: "03588ff0-62ca-402d-a77d-fecfbf11b149@mailslurp.biz",
   },
 
   emails: {

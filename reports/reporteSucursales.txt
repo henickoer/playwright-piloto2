@@ -1,5 +1,5 @@
 📌 Resumen final
-Fecha ejecución: 3/11/2025, 02:40:20
+Fecha ejecución: 6/11/2025, 01:40:49
 🏬 Total de sucursales evaluadas: 8
 ✅ Total configuradas con días: 8
 🚫 Total sin días configurados: 0
@@ -7,68 +7,68 @@ Fecha ejecución: 3/11/2025, 02:40:20
 📅 Sucursales con días configurados:
 🏪 Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
  - Día: Hoy
-3 de noviembre
-   Horarios: 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+6 de noviembre
+   Horarios: 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
  - Día: Mañana
-4 de noviembre
-   Horarios: 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+7 de noviembre
+   Horarios: 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 
 🏪 Parque de Valencia - 17 Parques de la Herradura 52786 ESTADO DE MÉXICO, Naucalpan de Juárez México
  - Día: Hoy
-3 de noviembre
-   Horarios: 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
+6 de noviembre
+   Horarios: 11:01 am a 12:30 pm, 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
  - Día: Mañana
-4 de noviembre
-   Horarios: 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
- - Día: Miércoles
-5 de noviembre
-   Horarios: 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
+7 de noviembre
+   Horarios: 11:01 am a 12:30 pm, 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
+ - Día: Sábado
+8 de noviembre
+   Horarios: 11:01 am a 12:30 pm, 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
 
-🏪 Periférico Boulevard Manuel Ávila Camacho - 1007 Habitacional Jardines de Santa Monica 54025 ESTADO DE MÉXICO, Ciudad de México México
+🏪 Periférico Boulevard Manuel Ávila Camacho - 1007 Habitacional Jardines de Santa Monica 54050 ESTADO DE MÉXICO, Tlalnepantla México
  - Día: Hoy
-3 de noviembre
+6 de noviembre
    Horarios: 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
  - Día: Mañana
-4 de noviembre
+7 de noviembre
    Horarios: 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 
 🏪 Calle Cerrada de San Jerónimo - 117 San Jerónimo Lídice 10200 CIUDAD DE MÉXICO, Ciudad de México México
  - Día: Hoy
-3 de noviembre
-   Horarios: 8:00 am a 9:30 am, 9:31 am a 11:00 am, 11:01 am a 12:30 pm, 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
+6 de noviembre
+   Horarios: 9:31 am a 11:00 am, 11:01 am a 12:30 pm, 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
  - Día: Mañana
-4 de noviembre
-   Horarios: 8:00 am a 9:30 am, 9:31 am a 11:00 am, 11:01 am a 12:30 pm, 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
+7 de noviembre
+   Horarios: 9:31 am a 11:00 am, 11:01 am a 12:30 pm, 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
 
 🏪 Calle Hipólito Taine - 307 Polanco V Sección 11560 CIUDAD DE MÉXICO, Ciudad de México México
  - Día: Hoy
-3 de noviembre
-   Horarios: 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
+6 de noviembre
+   Horarios: 9:31 am a 11:00 am, 11:01 am a 12:30 pm, 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
  - Día: Mañana
-4 de noviembre
-   Horarios: 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
+7 de noviembre
+   Horarios: 9:31 am a 11:00 am, 11:01 am a 12:30 pm, 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
 
 🏪 Vasco de Quiroga - 3900 Contadero 05348 CIUDAD DE MÉXICO, Ciudad de México México
  - Día: Hoy
-3 de noviembre
+6 de noviembre
    Horarios: 11:01 am a 12:30 pm, 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
  - Día: Mañana
-4 de noviembre
+7 de noviembre
    Horarios: 11:01 am a 12:30 pm, 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
 
 🏪 Miguel Laurent - 624 Colonia del Valle Sur 03104 CIUDAD DE MÉXICO, Ciudad de México México
  - Día: Hoy
-3 de noviembre
-   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 9:59 pm.
+6 de noviembre
+   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
  - Día: Mañana
-4 de noviembre
-   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 9:59 pm.
+7 de noviembre
+   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 
 🏪 Calle 12 - 30 San José Vista Hermosa 72190 PUEBLA, Heroica Puebla de Zaragoza México
  - Día: Hoy
-3 de noviembre
-   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+6 de noviembre
+   Horarios: 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
  - Día: Mañana
-4 de noviembre
-   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+7 de noviembre
+   Horarios: 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 

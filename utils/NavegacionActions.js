@@ -32,7 +32,6 @@ class NavegacionActions {
       await page.waitForTimeout(2000);
       await resumencarritos.safeClick(resumencarritos.irenvioButton);
       await page.waitForTimeout(2000);
-
       return await this.avanzarCarrito(page, resumencarritos, maxRetries - 1);
     }
 
@@ -72,19 +71,6 @@ async buscarYAgregarProducto(page, headerPage, productos, producto) {
           await input.waitFor({ state: 'visible' });
           console.warn("Input Visible");
 
-          // Evalúa el input en el DOM y extrae info
-          const info = await input.evaluate(el => {
-            return {
-              outerHTML: el.outerHTML,       // Nodo completo como HTML
-              clases: el.className,           // Clases actuales
-              styles: window.getComputedStyle(el).cssText, // Estilos CSS calculados
-              value: el.value                 // Valor del input
-            };
-          });
-
-          console.warn('Clases:', info.clases);
-
-
   await page.locator(headerPage.buscandoInput).focus();
   await headerPage.humanType(headerPage.buscandoInput, producto);
 
@@ -120,6 +106,33 @@ async buscarYAgregarProducto(page, headerPage, productos, producto) {
 
   return false;
 }
+
+
+async buscarProducto(page, headerPage, producto) {
+
+  console.warn("Se ingresar a buscarProducto");
+
+  const headers = page.locator(headerPage.bannerSuperiorHref);
+  const headerActual = headers.first();
+  await headerActual.waitFor({ state: 'visible' });
+  await page.waitForTimeout(500);
+
+  const input = page.locator(headerPage.buscandoInput);
+
+          // Espera hasta que el input sea visible
+  await input.waitFor({ state: 'visible' });
+  await page.locator(headerPage.buscandoInput).focus();
+  await headerPage.humanType(headerPage.buscandoInput, producto);
+  await page.locator(headerPage.buscandoInput).focus();
+  await page.keyboard.press('Enter');
+  // Espera a que el iframe del chat esté visible
+  await page.waitForSelector('iframe#launcher', { state: 'visible', timeout: 30000 });
+  console.log('✅ El iframe del asistente virtual cargó correctamente');
+   
+
+
+}
+
 
 
 }
