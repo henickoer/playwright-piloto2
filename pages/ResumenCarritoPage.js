@@ -14,8 +14,6 @@ class ResumenCarritoPage extends BasePage {
     this.paso4URL= "/checkout?checkout=io/#/payment";
     this.logoHref = "//*[@class='chedrauimx-checkout-io-1-x-header-io__containerHeader']//*[@href]";
     this.eliminarItemsCarritoButton = "//button[@class]//*[contains(text(),'Eliminar')]";
-    this.aceptarCambioDireccionButton = "//*[@class='chedrauimx-checkout-io-1-x-alert--button-accept']";
-    this.cambiarDireccionLink = "//*[contains(text(),'Selecciona otra dirección')]";
     this.verificaPedidoTab = "//*[@class='chedrauimx-checkout-io-1-x-timeline__label' and contains(text(),'Verifica tu pedido')]";
     this.completaTusDatosTab = "//*[@class='chedrauimx-checkout-io-1-x-timeline__step  chedrauimx-checkout-io-1-x-timeline__step ']//*[contains(text(),'Completa tus datos')]";
     this.programaEntregaActivoTab = "//*[contains(@class,'--active')]//*[contains(text(),'Programa tu entrega')]";
@@ -38,6 +36,9 @@ class ResumenCarritoPage extends BasePage {
     this.pagarButton = "//*[@id='payment-data-submit' and contains(@data-bind,('isPaymentButtonVisible'))]";
     this.irenvioButton = "//*[@type='submit' and contains(text(),'Ir al Envío') and @form='profile-form']";
     this.sucursales = "//*[@class='chedrauimx-checkout-io-1-x-address-list-container__list-button']";
+    this.aceptarCambioDireccionButton = "//*[@class='chedrauimx-checkout-io-1-x-alert--button-accept']";
+    this.cambiarDireccionLink = "//*[contains(text(),'Selecciona otra dirección')]";
+    
   }
 
   // 🔹 Locators dinámicos

@@ -108,7 +108,7 @@ async buscarYAgregarProducto(page, headerPage, productos, producto) {
 }
 
 
-async buscarProducto(page, headerPage, producto) {
+async buscarProducto(page, headerPage,productos, producto ) {
 
   console.warn("Se ingresar a buscarProducto");
 
@@ -122,14 +122,12 @@ async buscarProducto(page, headerPage, producto) {
           // Espera hasta que el input sea visible
   await input.waitFor({ state: 'visible' });
   await page.locator(headerPage.buscandoInput).focus();
+  await page.locator(headerPage.buscandoInput).fill("");
   await headerPage.humanType(headerPage.buscandoInput, producto);
   await page.locator(headerPage.buscandoInput).focus();
   await page.keyboard.press('Enter');
-  // Espera a que el iframe del chat esté visible
-  await page.waitForSelector('iframe#launcher', { state: 'visible', timeout: 30000 });
-  console.log('✅ El iframe del asistente virtual cargó correctamente');
-   
-
+  await page.waitForSelector(productos.titulobusquedaLabel(producto), { state: 'visible', timeout: 30000 });
+  // console.log('✅ El iframe del asistente virtual cargó correctamente');
 
 }
 

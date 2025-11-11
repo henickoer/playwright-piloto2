@@ -15,9 +15,13 @@ class ProductosEncontradosPage extends BasePage {
     this.preciobusquedaLabel = "//*[@id='gallery-layout-container']/div[1]/section/a/article/div[4]/div/div[1]/span[1]";
     this.autocompletarbusqueda = "//*[@data-af-element='search-autocomplete']//span[contains(@class,'global__vitrina__h--name t-small')]";
     this.agregarproductolateralButton = "//*[@class='sellerText']/../../../../../../../../..//*[@type='button' and contains(@class,'chedrauimx-add-to-cart')]";
-    this.resultadobusquedaLabel = `//*[contains(@class,'global__card--name t-small')]`;
+    this.resultadobusquedaLabel = `//*[@class='vtex-product-summary-2-x-nameContainer vtex-product-summary-2-x-nameContainer--global__card--name flex items-start justify-center pv6']//*[contains(@class,'global__card--name t-small')]`;
     this.sinresultadosLabel = "//*[contains(@class,('search-result-not-found'))]//*[contains(text(),'¡Oh, no!')]";
 
+  }
+
+  titulobusquedaLabel(producto){
+    return `//*[contains(translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '${producto.toLowerCase()}') and contains(@class,'chedrauimx-search-result-3-x-galleryTitle--layout')]`;
   }
 
   // 🔹 Locators dinámicos
