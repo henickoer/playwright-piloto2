@@ -1,5 +1,9 @@
 📌 Resumen final
+<<<<<<< HEAD
 Fecha ejecución: 6/11/2025, 09:32:49
+=======
+Fecha ejecución: 14/11/2025, 11:26:19
+>>>>>>> qa
 🏬 Total de sucursales evaluadas: 8
 ✅ Total configuradas con días: 8
 🚫 Total sin días configurados: 0
@@ -7,6 +11,7 @@ Fecha ejecución: 6/11/2025, 09:32:49
 📅 Sucursales con días configurados:
 🏪 Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
  - Día: Hoy
+<<<<<<< HEAD
 6 de noviembre
    Horarios: 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
  - Día: Mañana
@@ -15,9 +20,20 @@ Fecha ejecución: 6/11/2025, 09:32:49
  - Día: Sábado
 8 de noviembre
    Horarios: 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+=======
+14 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+ - Día: Mañana
+15 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+ - Día: Domingo
+16 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+>>>>>>> qa
 
-🏪 Parque de Valencia - 17 Parques de la Herradura 52786 ESTADO DE MÉXICO, Naucalpan de Juárez México
+🏪 Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
  - Día: Hoy
+<<<<<<< HEAD
 6 de noviembre
    Horarios: 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
  - Día: Mañana
@@ -40,9 +56,31 @@ Fecha ejecución: 6/11/2025, 09:32:49
  - Día: Sábado
 8 de noviembre
    Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+=======
+14 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+ - Día: Mañana
+15 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+ - Día: Domingo
+16 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
 
-🏪 Calle Cerrada de San Jerónimo - 117 San Jerónimo Lídice 10200 CIUDAD DE MÉXICO, Ciudad de México México
+🏪 Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
  - Día: Hoy
+14 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+ - Día: Mañana
+15 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+ - Día: Domingo
+16 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+>>>>>>> qa
+
+🏪 Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
+ - Día: Hoy
+<<<<<<< HEAD
 6 de noviembre
    Horarios: 11:01 am a 12:30 pm, 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
  - Día: Mañana
@@ -51,9 +89,20 @@ Fecha ejecución: 6/11/2025, 09:32:49
  - Día: Sábado
 8 de noviembre
    Horarios: 11:01 am a 12:30 pm, 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
+=======
+14 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+ - Día: Mañana
+15 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+ - Día: Domingo
+16 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+>>>>>>> qa
 
-🏪 Calle Hipólito Taine - 307 Polanco V Sección 11560 CIUDAD DE MÉXICO, Ciudad de México México
+🏪 Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
  - Día: Hoy
+<<<<<<< HEAD
 6 de noviembre
    Horarios: 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
  - Día: Mañana
@@ -62,9 +111,20 @@ Fecha ejecución: 6/11/2025, 09:32:49
  - Día: Sábado
 8 de noviembre
    Horarios: 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
+=======
+14 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+ - Día: Mañana
+15 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+ - Día: Domingo
+16 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+>>>>>>> qa
 
-🏪 Vasco de Quiroga - 3900 Contadero 05348 CIUDAD DE MÉXICO, Ciudad de México México
+🏪 Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
  - Día: Hoy
+<<<<<<< HEAD
 6 de noviembre
    Horarios: 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
  - Día: Mañana
@@ -73,9 +133,20 @@ Fecha ejecución: 6/11/2025, 09:32:49
  - Día: Sábado
 8 de noviembre
    Horarios: 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
+=======
+14 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+ - Día: Mañana
+15 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+ - Día: Domingo
+16 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+>>>>>>> qa
 
-🏪 Miguel Laurent - 624 Colonia del Valle Sur 03104 CIUDAD DE MÉXICO, Ciudad de México México
+🏪 Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
  - Día: Hoy
+<<<<<<< HEAD
 6 de noviembre
    Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
  - Día: Mañana
@@ -84,9 +155,20 @@ Fecha ejecución: 6/11/2025, 09:32:49
  - Día: Sábado
 8 de noviembre
    Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+=======
+14 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+ - Día: Mañana
+15 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+ - Día: Domingo
+16 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+>>>>>>> qa
 
-🏪 Calle 12 - 30 San José Vista Hermosa 72190 PUEBLA, Heroica Puebla de Zaragoza México
+🏪 Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
  - Día: Hoy
+<<<<<<< HEAD
 6 de noviembre
    Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
  - Día: Mañana
@@ -95,4 +177,14 @@ Fecha ejecución: 6/11/2025, 09:32:49
  - Día: Sábado
 8 de noviembre
    Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+=======
+14 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+ - Día: Mañana
+15 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+ - Día: Domingo
+16 de noviembre
+   Horarios: 8:00 pm a 10:00 pm.
+>>>>>>> qa
 

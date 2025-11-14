@@ -4,37 +4,62 @@
     "value": "2a5bu1%2F4PuAv%2FflE63LRhjFz6N%2BZVesp4U4plIMsoAI%3D.%7B%7D",
     "domain": ".mpc-prod-11-s6uit34pua-uc.a.run.app",
     "path": "/events/a4071c33b3eae60f95bee48a159190c7bfc5ac459df4ec4d0efd0eecdd2f5744",
+<<<<<<< HEAD
     "expires": 1770218994.213232,
+=======
+    "expires": 1770915194.306086,
+>>>>>>> qa
     "httpOnly": true,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "vid_rt",
+<<<<<<< HEAD
     "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwMzUxMTQ0YS01YmEwLTQ4OWUtYmVkNC01YzAxZmQyYjM5ZjgiLCJzZXNzIjoiMWIwZDFmMTktZWFkOS00Zjc0LThhOTEtZjU5OTEzMDQ5Nzg0IiwiaWF0IjoxNzYyNDQyOTg5LCJleHAiOjE3NjUwMzQ5ODksImlzcyI6InZpZCJ9.Ve31CrmgAIpf-SLDbREtTemd7PwZ_4TD_Zy-2aSCA3c",
     "domain": ".www.chedraui.com.mx",
     "path": "/api/vtexid/refreshtoken/webstore",
     "expires": 1765034989.893774,
+=======
+    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiMThhYTAzNi0wNzRhLTQ1ZjctOTdjMi05ZDkyODU3ODliMWEiLCJzZXNzIjoiMDQyMmE0ZGYtNTY1YS00ZmU3LThjZGItMjk1NGIzMmQ4NmQzIiwiaWF0IjoxNzYzMTM5MTkxLCJleHAiOjE3NjU3MzExOTEsImlzcyI6InZpZCJ9.WtjHRe7McCHdngCor7fA-qlO6Q8iBzkT2VBg9rsQlKQ",
+    "domain": ".www.chedraui.com.mx",
+    "path": "/api/vtexid/refreshtoken/webstore",
+    "expires": 1765731192.204454,
+>>>>>>> qa
     "httpOnly": true,
     "secure": true,
     "sameSite": "Strict"
   },
   {
     "name": "_csrf",
+<<<<<<< HEAD
     "value": "Fsckd6FOeKtieyXUEb-XqcUi",
     "domain": "chedraui-prod.us.auth0.com",
     "path": "/usernamepassword/login",
     "expires": 1763306970.468284,
+=======
+    "value": "TzzPzCUm1RfpArucI9xaJcaA",
+    "domain": "chedraui-prod.us.auth0.com",
+    "path": "/usernamepassword/login",
+    "expires": 1764003177.368757,
+>>>>>>> qa
     "httpOnly": true,
     "secure": true,
     "sameSite": "Lax"
   },
   {
     "name": "_li_ss",
+<<<<<<< HEAD
     "value": "CggKBgiiARCSHA",
     "domain": "i.liadm.com",
     "path": "/s",
     "expires": 1765034968.974307,
+=======
+    "value": "CgASDw1uDIR2EggKBgj0ARCYHA",
+    "domain": "i.liadm.com",
+    "path": "/s",
+    "expires": 1765731175.843605,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
@@ -44,27 +69,45 @@
     "value": "master%3A-",
     "domain": "www.chedraui.com.mx",
     "path": "/",
+<<<<<<< HEAD
     "expires": 1762529342,
+=======
+    "expires": 1763225520,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "VtexRCSessionIdv7",
+<<<<<<< HEAD
     "value": "ef24368f-09bd-469a-9b55-8d44cfaea8b6",
     "domain": ".chedraui.com.mx",
     "path": "/",
     "expires": 1762444792,
+=======
+    "value": "af3e8e1b-f645-47eb-99d3-5d37d3041686",
+    "domain": ".chedraui.com.mx",
+    "path": "/",
+    "expires": 1763140994,
+>>>>>>> qa
     "httpOnly": false,
     "secure": false,
     "sameSite": "Lax"
   },
   {
     "name": "VtexRCMacIdv7",
+<<<<<<< HEAD
     "value": "7e8f11c2-3d51-455b-a3a3-a7999d46f591",
     "domain": ".chedraui.com.mx",
     "path": "/",
     "expires": 1793978992,
+=======
+    "value": "bbc11bf2-eb0b-4af8-9dd0-4aa8322dfc51",
+    "domain": ".chedraui.com.mx",
+    "path": "/",
+    "expires": 1794675193,
+>>>>>>> qa
     "httpOnly": false,
     "secure": false,
     "sameSite": "Lax"
@@ -74,7 +117,11 @@
     "value": "3",
     "domain": ".groovinads.com",
     "path": "/",
+<<<<<<< HEAD
     "expires": 1766330992.566623,
+=======
+    "expires": 1767027193.306335,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
@@ -84,7 +131,11 @@
     "value": "undefined",
     "domain": ".groovinads.com",
     "path": "/",
+<<<<<<< HEAD
     "expires": 1766330992.566718,
+=======
+    "expires": 1767027193.306427,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
@@ -94,23 +145,35 @@
     "value": "3",
     "domain": ".groovinads.com",
     "path": "/",
+<<<<<<< HEAD
     "expires": 1766330992.56679,
+=======
+    "expires": 1767027193.306486,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "GRV_BHV_DATE5577",
+<<<<<<< HEAD
     "value": "2025-11-06",
     "domain": ".groovinads.com",
     "path": "/",
     "expires": 1765034992.566856,
+=======
+    "value": "2025-11-14",
+    "domain": ".groovinads.com",
+    "path": "/",
+    "expires": 1765731193.306544,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "GRV_IDU",
+<<<<<<< HEAD
     "value": "c067b87f6af2268",
     "domain": ".groovinads.com",
     "path": "/",
@@ -135,6 +198,12 @@
     "domain": ".groovinads.com",
     "path": "/",
     "expires": 1762529364.603919,
+=======
+    "value": "56cb5eff3a7c4e4",
+    "domain": ".groovinads.com",
+    "path": "/",
+    "expires": 1789059193.306596,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
@@ -144,22 +213,34 @@
     "value": "Disabled",
     "domain": ".groovinads.com",
     "path": "/",
+<<<<<<< HEAD
     "expires": 1762464564.60395,
+=======
+    "expires": 1763160772.490242,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "uid",
+<<<<<<< HEAD
     "value": "04135203-c4f0-4ac4-af4d-f3b7e3037bd8",
     "domain": ".criteo.com",
     "path": "/",
     "expires": 1796138964.709054,
+=======
+    "value": "dbf7a7af-b51f-40d4-bf87-22a42d9e088a",
+    "domain": ".criteo.com",
+    "path": "/",
+    "expires": 1796835172.683471,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
+<<<<<<< HEAD
     "name": "vtex-search-session",
     "value": "c85f141bf8834ae5bdd2d9392808f51f",
     "domain": ".chedraui.com.mx",
@@ -235,16 +316,30 @@
     "domain": ".creativecdn.com",
     "path": "/",
     "expires": 1793978965.979122,
+=======
+    "name": "g",
+    "value": "0wRM0NBtIWzfzcKVqHvt_1763139172065",
+    "domain": ".creativecdn.com",
+    "path": "/",
+    "expires": 1794675172.958918,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "c",
+<<<<<<< HEAD
     "value": "RdGhxyyOmBd2PMirkYD2_23LKb0xojl6IVrjPposI_1762442965423",
     "domain": ".creativecdn.com",
     "path": "/",
     "expires": 1793978965.979272,
+=======
+    "value": "0wRM0NBtIWzfzcKVqHvt_23LKb0xojl6IVrjPposI_1763139172065",
+    "domain": ".creativecdn.com",
+    "path": "/",
+    "expires": 1794675172.959044,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None",
@@ -253,10 +348,17 @@
   },
   {
     "name": "ts",
+<<<<<<< HEAD
     "value": "1762442965",
     "domain": ".creativecdn.com",
     "path": "/",
     "expires": 1793978965.979367,
+=======
+    "value": "1763139172",
+    "domain": ".creativecdn.com",
+    "path": "/",
+    "expires": 1794675172.959118,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None",
@@ -264,26 +366,43 @@
     "_crHasCrossSiteAncestor": true
   },
   {
+<<<<<<< HEAD
     "name": "_ttp",
     "value": "356uhy1haCrqM4iQvTKeLBvq9l6",
     "domain": ".tiktok.com",
     "path": "/",
     "expires": 1796138992.51876,
+=======
+    "name": "vtex-search-session",
+    "value": "90c4a0effcfb4149838dae60c21b9aa9",
+    "domain": ".chedraui.com.mx",
+    "path": "/",
+    "expires": 1763140992.80448,
+>>>>>>> qa
     "httpOnly": false,
-    "secure": true,
-    "sameSite": "None"
+    "secure": false,
+    "sameSite": "Lax"
   },
   {
+<<<<<<< HEAD
     "name": "muidn",
     "value": "pa6p0ZbKV0t7",
     "domain": ".mgid.com",
     "path": "/",
     "expires": 1793978992.83227,
+=======
+    "name": "vtex-search-anonymous",
+    "value": "6ff0f49343d245108b9e19699b8fe3ef",
+    "domain": ".chedraui.com.mx",
+    "path": "/",
+    "expires": 1794675192.804949,
+>>>>>>> qa
     "httpOnly": false,
-    "secure": true,
-    "sameSite": "None"
+    "secure": false,
+    "sameSite": "Lax"
   },
   {
+<<<<<<< HEAD
     "name": "mg_sync",
     "value": "{\"834131\":1762442965}",
     "domain": "cm.mgid.com",
@@ -314,6 +433,16 @@
     "sameSite": "None",
     "partitionKey": "https://chedraui.com.mx",
     "_crHasCrossSiteAncestor": true
+=======
+    "name": "_lr_hb_-zvhuxj%2Ftendaenlinea",
+    "value": "{%22heartbeat%22:1763139173352}",
+    "domain": "www.chedraui.com.mx",
+    "path": "/",
+    "expires": 1763225573,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+>>>>>>> qa
   },
   {
     "name": "ar_debug",
@@ -326,16 +455,37 @@
     "sameSite": "None"
   },
   {
+<<<<<<< HEAD
     "name": "IDE",
     "value": "AHWqTUmkE4M23Ce50rNlgT3pTFAH8sO96KONCZUm8ZAXMyerfPxvvQucOIw5pK47",
     "domain": ".doubleclick.net",
     "path": "/",
     "expires": 1797002966.627814,
+=======
+    "name": "XANDR_PANID",
+    "value": "35GxLgqYDRPHdgbSAF5TjSBUlotl_qqtPr4G6qjcDPQ6ygJQUc7-UCSq-LLaRdM1BuQl_jUXLXtsIiij2Fk_acqR7XAO4A9FTEAju6ysXtk.",
+    "domain": ".adnxs.com",
+    "path": "/",
+    "expires": 1770915175.616419,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://chedraui.com.mx",
+    "_crHasCrossSiteAncestor": true
+  },
+  {
+    "name": "uuid2",
+    "value": "4452976801567333084",
+    "domain": ".adnxs.com",
+    "path": "/",
+    "expires": 1770915175.616614,
+>>>>>>> qa
     "httpOnly": true,
     "secure": true,
     "sameSite": "None"
   },
   {
+<<<<<<< HEAD
     "name": "_ga",
     "value": "GA1.1.1181119783.1762442967",
     "domain": ".chedraui.com.mx",
@@ -348,6 +498,10 @@
   {
     "name": "smc_ls_session",
     "value": "1762442966930",
+=======
+    "name": "smc_ls_session",
+    "value": "1763139173516",
+>>>>>>> qa
     "domain": ".chedraui.com.mx",
     "path": "/",
     "expires": -1,
@@ -356,11 +510,118 @@
     "sameSite": "Lax"
   },
   {
+    "name": "_lr_tabs_-zvhuxj%2Ftendaenlinea",
+    "value": "{%22recordingID%22:%226-019a8348-ba2c-7a01-a551-4164d876d9e6%22%2C%22sessionID%22:0%2C%22lastActivity%22:1763139173802%2C%22hasActivity%22:false%2C%22clearsIdentifiedUser%22:false%2C%22confirmed%22:false}",
+    "domain": "www.chedraui.com.mx",
+    "path": "/",
+    "expires": 1763225573,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_gcl_au",
+    "value": "1.1.1734832113.1763139174",
+    "domain": ".chedraui.com.mx",
+    "path": "/",
+    "expires": 1770915174,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_TargetOne_ShortLivedCookie",
+    "value": "CVCXASRI3LSNMJ2KB1RF1763139174042",
+    "domain": "www.chedraui.com.mx",
+    "path": "/",
+    "expires": 1763140993,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_TargetOne_Session_Cookie_start_time",
+    "value": "2025-11-14 16:52:54.042 UTC",
+    "domain": "www.chedraui.com.mx",
+    "path": "/",
+    "expires": 1763140993,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_ttp",
+    "value": "35TfqeoI7ZGythtTxVQig65LTMN",
+    "domain": ".tiktok.com",
+    "path": "/",
+    "expires": 1796835193.594552,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "sp-variant",
+    "value": "66844d747af2d50d0f2e2357-variantTreament",
+    "domain": ".chedraui.com.mx",
+    "path": "/",
+    "expires": 1763140992.803981,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_ga",
+    "value": "GA1.1.1378383885.1763139174",
+    "domain": ".chedraui.com.mx",
+    "path": "/",
+    "expires": 1797699174.439328,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_tt_enable_cookie",
+    "value": "1",
+    "domain": ".chedraui.com.mx",
+    "path": "/",
+    "expires": 1796835194,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_ttp",
+    "value": "01KA1MHG91NAYCFZKGQDBH4AJT_.tt.2",
+    "domain": ".chedraui.com.mx",
+    "path": "/",
+    "expires": 1796835194,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_fbp",
+    "value": "fb.2.1763139174833.152263214308243210",
+    "domain": ".chedraui.com.mx",
+    "path": "/",
+    "expires": 1770915194,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
     "name": "MUID",
+<<<<<<< HEAD
     "value": "1FF0C4F81BAC688422C7D2641ACF698D",
     "domain": ".bing.com",
     "path": "/",
     "expires": 1796138969.671886,
+=======
+    "value": "2FFF848F821861751C49922B83B1608A",
+    "domain": ".bing.com",
+    "path": "/",
+    "expires": 1796835175.429632,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
@@ -370,12 +631,17 @@
     "value": "0",
     "domain": ".bat.bing.com",
     "path": "/",
+<<<<<<< HEAD
     "expires": 1763047767.255454,
+=======
+    "expires": 1763743975.21889,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
+<<<<<<< HEAD
     "name": "XANDR_PANID",
     "value": "Tq9XAHtBzl9qe2C_LYwChyInK3xxwaYp7srLs88L_z7TFAuNwjXQqQn0SzHkTD5dUYDQ2WS4y7NBv5CoMQYSJkWr9Axa229FJt7nDuyLiX0.",
     "domain": ".adnxs.com",
@@ -425,6 +691,15 @@
     "expires": 1770218994,
     "httpOnly": false,
     "secure": false,
+=======
+    "name": "checkout.vtex.com",
+    "value": "__ofid=614ff9875f614f84badc670bcce26f85",
+    "domain": ".www.chedraui.com.mx",
+    "path": "/",
+    "expires": 1778691194.368969,
+    "httpOnly": true,
+    "secure": true,
+>>>>>>> qa
     "sameSite": "Lax"
   },
   {
@@ -432,12 +707,17 @@
     "value": "0",
     "domain": ".c.bing.com",
     "path": "/",
+<<<<<<< HEAD
     "expires": 1763047769.672015,
+=======
+    "expires": 1763743975.429719,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
+<<<<<<< HEAD
     "name": "tuuid",
     "value": "faabe928-ea7d-446c-aeb0-e28a015d9464",
     "domain": ".360yield.com",
@@ -463,51 +743,112 @@
     "domain": ".media.net",
     "path": "/",
     "expires": 1793978968.741166,
+=======
+    "name": "CMID",
+    "value": "aRdeZsAoIXQAMnanAEfmPgAA",
+    "domain": ".casalemedia.com",
+    "path": "/",
+    "expires": 1794675175.584572,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
+<<<<<<< HEAD
     "name": "data-c",
     "value": "k-PxNtOt7J3fyQ_oEVYJeS9zDSxKBXdjuQQjhKgQ~~3",
     "domain": ".media.net",
     "path": "/",
     "expires": 1765034968.741288,
+=======
+    "name": "CMPS",
+    "value": "4143",
+    "domain": ".casalemedia.com",
+    "path": "/",
+    "expires": 1770915175.487553,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
+<<<<<<< HEAD
     "name": "data-c-ts",
     "value": "1762442968",
     "domain": ".media.net",
     "path": "/",
     "expires": 1765034968.741324,
+=======
+    "name": "CMPRO",
+    "value": "4143",
+    "domain": ".casalemedia.com",
+    "path": "/",
+    "expires": 1770915175.584673,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
+<<<<<<< HEAD
     "name": "um",
     "value": "!38,eyyQvUNjIJVqNuXAU2YGmO1YQIiWxx0TvT1gnbMDLNo339oYdX.ZS4nIdk5iDr2BuJE2BKUZ4HJr3bQhYh4Pker1fK4,1770218968",
     "domain": ".360yield.com",
     "path": "/",
     "expires": 1770218968.742302,
+=======
+    "name": "IDE",
+    "value": "AHWqTUnO4Nbm7yV8Ox7bJOhnatwFgFqWdDkXArQY-BCY_zEXcory-0gbaEU0wfRWGKY",
+    "domain": ".doubleclick.net",
+    "path": "/",
+    "expires": 1797699175.493123,
+>>>>>>> qa
     "httpOnly": true,
     "secure": true,
     "sameSite": "None"
   },
   {
+<<<<<<< HEAD
     "name": "umeh",
     "value": "!38,0,1824650968,-1",
     "domain": ".360yield.com",
     "path": "/",
     "expires": 1770218968.742368,
     "httpOnly": true,
+=======
+    "name": "visitor-id",
+    "value": "4061407742636361000V10",
+    "domain": ".media.net",
+    "path": "/",
+    "expires": 1794675175.505861,
+    "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
+    "name": "data-c",
+    "value": "k-TooAsPR8Tcv7oXboX6mnYzeooIbnfP0TmFK6gg~~3",
+    "domain": ".media.net",
+    "path": "/",
+    "expires": 1765731175.505958,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "data-c-ts",
+    "value": "1763139174",
+    "domain": ".media.net",
+    "path": "/",
+    "expires": 1765731175.505994,
+    "httpOnly": false,
+>>>>>>> qa
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+<<<<<<< HEAD
     "name": "CMID",
     "value": "aQy.2MAoIUcAJydUB.qUowAA",
     "domain": ".casalemedia.com",
@@ -534,65 +875,148 @@
     "path": "/",
     "expires": 1770218968.850527,
     "httpOnly": false,
+=======
+    "name": "anj",
+    "value": "dTM7k!M40*dWIy(ghqdmU(7TBh[v63#[2R4N:uKeRh0MLZLmnp^)yv88+K?9U:jhJSZ[`Cp'VI%<ORB3cAl[jeIEYh1C=2!+AdB2E^F3%uAvlM0Kf+%ekZIYe52XzVt[i[q8YrZ(]%G5Wkf+_.*>N+*Or$qXG<62FEr%`U*SC1T-'Fi'(/H-.gLHHXs6>Jd4xcn",
+    "domain": ".adnxs.com",
+    "path": "/",
+    "expires": 1770915175.616568,
+    "httpOnly": true,
+>>>>>>> qa
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "tuuid",
+<<<<<<< HEAD
     "value": "fdf045ab-27e6-47b3-b35c-dacaec452d03",
     "domain": ".bidswitch.net",
     "path": "/",
     "expires": 1793978968.946418,
+=======
+    "value": "2c3a4823-cfbe-44a8-8e0b-641c514508a2",
+    "domain": ".bidswitch.net",
+    "path": "/",
+    "expires": 1794675175.745505,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "c",
+<<<<<<< HEAD
     "value": "1762442968",
     "domain": ".bidswitch.net",
     "path": "/",
     "expires": 1793978968.853049,
+=======
+    "value": "1763139174",
+    "domain": ".bidswitch.net",
+    "path": "/",
+    "expires": 1794675175.618776,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "tuuid_lu",
+<<<<<<< HEAD
     "value": "1762442968",
     "domain": ".bidswitch.net",
     "path": "/",
     "expires": 1793978968.946529,
+=======
+    "value": "1763139174",
+    "domain": ".bidswitch.net",
+    "path": "/",
+    "expires": 1794675175.745638,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
+<<<<<<< HEAD
     "name": "anj",
     "value": "dTM7k!M40*dWIy(ghqdmU(3#vs$%mH#[2PGN:uKeRh0MLZLmnLeT.t0D7Ax6^3M5:ENtExkv(D5oc1*I#sDA=WqOCkwl#>wnBKPi#mp(nwgfi80Kf+%ekZIYe52XzW$e#z+7Ay'E]qiA*sc:<*Cv+(Gl$o7BnK(n>sE^D(fuAppsBMf#2:L!.gLHHXs6>Jl#a:(",
     "domain": ".adnxs.com",
     "path": "/",
     "expires": 1770218968.878801,
     "httpOnly": true,
+=======
+    "name": "mv_tokens",
+    "value": "%7B%22mv_uuid%22%3A%225d7c8d60-c17a-11f0-84e4-a7724f0136dc%22%2C%22version%22%3A%22invalidate-verizon-pushes%22%7D",
+    "domain": "exchange.mediavine.com",
+    "path": "/",
+    "expires": 1764348775.619552,
+    "httpOnly": false,
+>>>>>>> qa
     "secure": true,
     "sameSite": "None"
   },
   {
+<<<<<<< HEAD
     "name": "lidid",
     "value": "c21ff238-f790-4180-b974-ad7adc226068",
     "domain": ".liadm.com",
     "path": "/",
     "expires": 1797002968.974443,
+=======
+    "name": "mv_tokens_invalidate-verizon-pushes",
+    "value": "%7B%22mv_uuid%22%3A%225d7c8d60-c17a-11f0-84e4-a7724f0136dc%22%2C%22version%22%3A%22invalidate-verizon-pushes%22%7D",
+    "domain": "exchange.mediavine.com",
+    "path": "/",
+    "expires": 1764348775.619757,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "am_tokens",
+    "value": "%7B%22mv_uuid%22%3A%225d7c8d60-c17a-11f0-84e4-a7724f0136dc%22%2C%22version%22%3A%22invalidate-verizon-pushes%22%7D",
+    "domain": "exchange.mediavine.com",
+    "path": "/",
+    "expires": 1764348775.619861,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "am_tokens_invalidate-verizon-pushes",
+    "value": "%7B%22mv_uuid%22%3A%225d7c8d60-c17a-11f0-84e4-a7724f0136dc%22%2C%22version%22%3A%22invalidate-verizon-pushes%22%7D",
+    "domain": "exchange.mediavine.com",
+    "path": "/",
+    "expires": 1764348775.619953,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "criteo",
+    "value": "%7B%22id%22%3A%22k-Q_h4VvR8Tcv7oXboX6mnYzeooIaImCvGF2FxOA%22%2C%22version%22%3A%22criteo%22%7D",
+    "domain": "exchange.mediavine.com",
+    "path": "/",
+    "expires": 1764348775.620043,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "visitor",
+<<<<<<< HEAD
     "value": "6eb91c5a-961a-48aa-950b-63f7a4c55c37",
     "domain": ".postrelease.com",
     "path": "/",
     "expires": 1793978968.904978,
+=======
+    "value": "cc69aae5-54e2-4b78-a148-c3ffb61879c4",
+    "domain": ".postrelease.com",
+    "path": "/",
+    "expires": 1794675175.64027,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
@@ -602,12 +1026,17 @@
     "value": "0",
     "domain": ".postrelease.com",
     "path": "/",
+<<<<<<< HEAD
     "expires": 1793978968.905242,
+=======
+    "expires": 1794675175.640354,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
+<<<<<<< HEAD
     "name": "mv_tokens",
     "value": "%7B%22mv_uuid%22%3A%2262276b60-bb25-11f0-9e03-5d80246e215f%22%2C%22version%22%3A%22invalidate-verizon-pushes%22%7D",
     "domain": "exchange.mediavine.com",
@@ -653,16 +1082,30 @@
     "domain": "exchange.mediavine.com",
     "path": "/",
     "expires": 1763652568.907751,
+=======
+    "name": "lidid",
+    "value": "f44cf477-3f2b-49a7-9593-26162b47e6d0",
+    "domain": ".liadm.com",
+    "path": "/",
+    "expires": 1797699175.843665,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "demdex",
+<<<<<<< HEAD
     "value": "58561446875467799593113723633665606723",
     "domain": ".demdex.net",
     "path": "/",
     "expires": 1777994969.052868,
+=======
+    "value": "13151878955781499042053015468292280755",
+    "domain": ".demdex.net",
+    "path": "/",
+    "expires": 1778691175.911062,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
@@ -682,13 +1125,18 @@
     "value": "1",
     "domain": ".revcontent.com",
     "path": "/",
+<<<<<<< HEAD
     "expires": 1765034968.964374,
+=======
+    "expires": 1765731175.859001,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "v2_151",
+<<<<<<< HEAD
     "value": "k-VIxG1d7J3fyQ_oEVYJeS9zDSxKCa1VQBaY8TvQ",
     "domain": ".revcontent.com",
     "path": "/",
@@ -703,16 +1151,29 @@
     "domain": ".dpm.demdex.net",
     "path": "/",
     "expires": 1777994969.053031,
+=======
+    "value": "k-MNggC_R8Tcv7oXboX6mnYzeooIZ4Q5q6SglzEA",
+    "domain": ".revcontent.com",
+    "path": "/",
+    "expires": 1765731175.859055,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "pid",
+<<<<<<< HEAD
     "value": "7462230284284633455",
     "domain": ".smartadserver.com",
     "path": "/",
     "expires": 1770218970.064479,
+=======
+    "value": "7139544701234836533",
+    "domain": ".smartadserver.com",
+    "path": "/",
+    "expires": 1770915175.904191,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
@@ -722,13 +1183,18 @@
     "value": "ok",
     "domain": ".smartadserver.com",
     "path": "/",
+<<<<<<< HEAD
     "expires": 1796657370.064603,
+=======
+    "expires": 1797267175.904524,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "csync",
+<<<<<<< HEAD
     "value": "79:k-lsXRg97J3fyQ_oEVYJeS9zDSxKAPvgtPap0Ljw",
     "domain": ".smartadserver.com",
     "path": "/",
@@ -795,16 +1261,71 @@
     "domain": ".tremorhub.com",
     "path": "/",
     "expires": 1765034969.14964,
+=======
+    "value": "79:k-Je0ybPR8Tcv7oXboX6mnYzeooIaGj0h_zThrLg",
+    "domain": ".smartadserver.com",
+    "path": "/",
+    "expires": 1765731175.904594,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
+    "name": "dpm",
+    "value": "13151878955781499042053015468292280755",
+    "domain": ".dpm.demdex.net",
+    "path": "/",
+    "expires": 1778691175.911261,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "tt_viewer",
+    "value": "0f80c5ce-08dc-4cbe-8802-7db1e2a2ddf2",
+    "domain": ".teads.tv",
+    "path": "/",
+    "expires": 1794588775.937133,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "t_gid",
+    "value": "f18e5339-96a0-4d0f-a6d3-f99be94a6be6-tuct1010e3e7",
+    "domain": ".taboola.com",
+    "path": "/",
+    "expires": 1794675175.940456,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "t_pt_gid",
+    "value": "f18e5339-96a0-4d0f-a6d3-f99be94a6be6-tuct1010e3e7",
+    "domain": ".taboola.com",
+    "path": "/",
+    "expires": 1794675175.94063,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://chedraui.com.mx",
+    "_crHasCrossSiteAncestor": true
+  },
+  {
     "name": "audit_p",
+<<<<<<< HEAD
     "value": "1|Ey5lJc6SDSaFe5spuv/BJjr9v9BEC9fxruzTC02f+VKjPJQK+XiI5AnLLd7c1upYrZFnyhpu0f4wHTRO1/p4iCck1N7K9KkV0dqlR5NoluSCD9zFQIvrTYwJjBFRmgRxw8YwFW3QFMji+lDxP0Mjh9h0EOua4tdk85ssuHZ9q+l16h2LKXkYaJDy+KCnXKr4N6JXMcYuiJM=",
     "domain": ".rubiconproject.com",
     "path": "/",
     "expires": 1793978969.158556,
+=======
+    "value": "1|6PeWzXZOp+CD2MVjOCMlP6na3890KXC4NoheBySgdp73kQcj3fuVxq76sY8pU55Lnc6AWy9yBTOM1KxoLazIt+aleybw1oy9Ba0etFFpiE3F1SaF7SAU7EhAmmQPrcbehw8K/LJ8WS8aXl+xL3zoMqNfeWryP9fEbm6FdLsqhXXmQdVc7iIhNLYPAdWGRZ6V8p4Q5rMwDzg=",
+    "domain": ".rubiconproject.com",
+    "path": "/",
+    "expires": 1794675176.041968,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None",
@@ -813,20 +1334,34 @@
   },
   {
     "name": "khaos",
+<<<<<<< HEAD
     "value": "MHNL1DZO-1E-FUFQ",
     "domain": ".rubiconproject.com",
     "path": "/",
     "expires": 1793978969.158723,
+=======
+    "value": "MHZ3JIDO-9-ELIP",
+    "domain": ".rubiconproject.com",
+    "path": "/",
+    "expires": 1794675176.042123,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "khaos_p",
+<<<<<<< HEAD
     "value": "MHNL1DZO-1E-FUFQ",
     "domain": ".rubiconproject.com",
     "path": "/",
     "expires": 1793978969.158792,
+=======
+    "value": "MHZ3JIDO-9-ELIP",
+    "domain": ".rubiconproject.com",
+    "path": "/",
+    "expires": 1794675176.042159,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None",
@@ -835,10 +1370,17 @@
   },
   {
     "name": "audit",
+<<<<<<< HEAD
     "value": "1|Ey5lJc6SDSaFe5spuv/BJjr9v9BEC9fxruzTC02f+VKjPJQK+XiI5AnLLd7c1upYrZFnyhpu0f4wHTRO1/p4iCck1N7K9KkV0dqlR5NoluSCD9zFQIvrTYwJjBFRmgRxw8YwFW3QFMji+lDxP0Mjh9h0EOua4tdk85ssuHZ9q+l16h2LKXkYaJDy+KCnXKr4N6JXMcYuiJM=",
     "domain": ".rubiconproject.com",
     "path": "/",
     "expires": 1793978969.15886,
+=======
+    "value": "1|6PeWzXZOp+CD2MVjOCMlP6na3890KXC4NoheBySgdp73kQcj3fuVxq76sY8pU55Lnc6AWy9yBTOM1KxoLazIt+aleybw1oy9Ba0etFFpiE3F1SaF7SAU7EhAmmQPrcbehw8K/LJ8WS8aXl+xL3zoMqNfeWryP9fEbm6FdLsqhXXmQdVc7iIhNLYPAdWGRZ6V8p4Q5rMwDzg=",
+    "domain": ".rubiconproject.com",
+    "path": "/",
+    "expires": 1794675176.042338,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
@@ -848,7 +1390,11 @@
     "value": "1",
     "domain": ".rubiconproject.com",
     "path": "/",
+<<<<<<< HEAD
     "expires": 1770218969.158916,
+=======
+    "expires": 1770915176.0424,
+>>>>>>> qa
     "httpOnly": true,
     "secure": true,
     "sameSite": "None",
@@ -856,36 +1402,82 @@
     "_crHasCrossSiteAncestor": true
   },
   {
+<<<<<<< HEAD
     "name": "_uid",
     "value": "ume96b1_7570268393670245283",
     "domain": ".fwmrm.net",
     "path": "/",
     "expires": 1777994969.182892,
+=======
+    "name": "tvid",
+    "value": "46cb048525f74398b196c2e20555ad7c",
+    "domain": ".tremorhub.com",
+    "path": "/",
+    "expires": 1794696076.067565,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
+<<<<<<< HEAD
     "name": "zync-uuid",
     "value": "b4d9253f-8700-4f75-8e55-a987428955cf:1762442968.6551492",
     "domain": ".rezync.com",
     "path": "/",
     "expires": 1796138969.579383,
+=======
+    "name": "tv_UICR",
+    "value": "k-ATrQnfR8Tcv7oXboX6mnYzeooIbBpjaGOzDHmw",
+    "domain": ".tremorhub.com",
+    "path": "/",
+    "expires": 1765731176.067654,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "tluidp",
+    "value": "2855276546561481926484",
+    "domain": ".3lift.com",
+    "path": "/",
+    "expires": 1770915176.237913,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://chedraui.com.mx",
+    "_crHasCrossSiteAncestor": true
+  },
+  {
+    "name": "tluid",
+    "value": "2855276546561481926484",
+    "domain": ".3lift.com",
+    "path": "/",
+    "expires": 1770915176.238005,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "_rxuuid",
+<<<<<<< HEAD
     "value": "%7B%22rx_uuid%22%3A%22RX-2d1e0486-f324-4033-8081-1e85615aeb90-005%22%7D",
     "domain": ".targeting.unrulymedia.com",
     "path": "/",
     "expires": 1793978969.43144,
+=======
+    "value": "%7B%22rx_uuid%22%3A%22RX-5ef7f429-ed51-4996-ac27-c414a2e746e3-005%22%7D",
+    "domain": ".1rx.io",
+    "path": "/",
+    "expires": 1794675176.191895,
+>>>>>>> qa
     "httpOnly": true,
     "secure": true,
     "sameSite": "None"
   },
   {
+<<<<<<< HEAD
     "name": "eud",
     "value": "H4sIAAAAAAAA_13IuRGAMAwEwAqIXIcYS-j00I15VBAhIZUSMkO4ezXf9EjBUhTeO2k5KE6ARoarRAJ7rewmqpIWswGsKXebvkzG8_MLLtWSvFoAAAA",
     "domain": ".rfihub.com",
@@ -931,66 +1523,177 @@
     "domain": "live.rezync.com",
     "path": "/",
     "expires": 1796138969.579549,
+=======
+    "name": "__zlcmid",
+    "value": "1Uco46X7gw3nA0d",
+    "domain": ".chedraui.com.mx",
+    "path": "/",
+    "expires": 1794675176,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_rxuuid",
+    "value": "%7B%22rx_uuid%22%3A%22RX-5ef7f429-ed51-4996-ac27-c414a2e746e3-005%22%7D",
+    "domain": ".targeting.unrulymedia.com",
+    "path": "/",
+    "expires": 1794675176.523335,
+>>>>>>> qa
     "httpOnly": true,
     "secure": true,
     "sameSite": "None"
   },
   {
+<<<<<<< HEAD
     "name": "rlas3",
     "value": "paiTO4G++A6YNI4FZTyR91Gp0Aam7FsOfFvyYbXAhaE=",
     "domain": ".rlcdn.com",
     "path": "/",
     "expires": 1793978969.875279,
+=======
+    "name": "A3",
+    "value": "d=AQABBGdeF2kCENRT7wZ0J5iU1kftDXW8BZMFEgEBAQGvGGkhaXwmzSMA_eMCAA&S=AQAAAliLptORBp5TcG66rVDBi8Q",
+    "domain": ".yahoo.com",
+    "path": "/",
+    "expires": 1794696776.716128,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "IDSYNC",
+    "value": "19ab~2sl4",
+    "domain": ".analytics.yahoo.com",
+    "path": "/",
+    "expires": 1794675176.716061,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
+<<<<<<< HEAD
     "name": "pxrc",
     "value": "CNn9ssgGEgUI6AcQABIGCLrqARAA",
     "domain": ".rlcdn.com",
     "path": "/",
     "expires": 1767626969.875483,
+=======
+    "name": "uid",
+    "value": "2859166015407459571",
+    "domain": ".turn.com",
+    "path": "/",
+    "expires": 1778691178.066502,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "mc",
+    "value": "eyJpZCI6IjY3ZWFkNjk5LTNiOGYtNGExNy1hMzcxLWQ5OTJiNzA2ZmE1NyIsImwiOjE3NjMxMzkxNzYyNDQsInQiOjR9",
+    "domain": ".thrtle.com",
+    "path": "/",
+    "expires": 1780419177.145439,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "sc",
+    "value": "eyJpIjoiNzZjMmY4NjEtNDgyZi00N2MzLTk0NzYtMTk2MGFjOWJkYTNiIiwic2lkIjoic2lkLTVkZWI4ODIzLWMxN2EtMTFmMC05NjQyLTAyNDIwYWZmMGY4NCIsIm1zIjozLCJ0cyI6MywicHMiOjMsInNwIjo1MDE1LCJwcCI6MywidHNlIjozLCJpciI6dHJ1ZSwibHRzZSI6MTc2MzEzOTE3NjI0NX0=",
+    "domain": ".thrtle.com",
+    "path": "/",
+    "expires": 1780419177.145657,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "did",
+<<<<<<< HEAD
     "value": "s%3Av0%3A78063435-c58b-4449-aaaa-78db9415e276.ZFqdTU5VcgPjONh128UIOWj8fCNTednO4g9Y7wsZAm8",
     "domain": "chedraui-prod.us.auth0.com",
     "path": "/",
     "expires": 1794000570.352451,
+=======
+    "value": "s%3Av0%3A5885247e-1026-494c-baa5-ed73b2489317.BUHHe2wi1UV1kjAtltCT6wyeBlVBjOZPTD8OmIfTemo",
+    "domain": "chedraui-prod.us.auth0.com",
+    "path": "/",
+    "expires": 1794696777.222799,
+>>>>>>> qa
     "httpOnly": true,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "did_compat",
+<<<<<<< HEAD
     "value": "s%3Av0%3A78063435-c58b-4449-aaaa-78db9415e276.ZFqdTU5VcgPjONh128UIOWj8fCNTednO4g9Y7wsZAm8",
     "domain": "chedraui-prod.us.auth0.com",
     "path": "/",
     "expires": 1794000570.352599,
+=======
+    "value": "s%3Av0%3A5885247e-1026-494c-baa5-ed73b2489317.BUHHe2wi1UV1kjAtltCT6wyeBlVBjOZPTD8OmIfTemo",
+    "domain": "chedraui-prod.us.auth0.com",
+    "path": "/",
+    "expires": 1794696777.223084,
+>>>>>>> qa
     "httpOnly": true,
     "secure": true,
     "sameSite": "Lax"
   },
   {
+    "name": "TDID",
+    "value": "ea9d5afc-de95-4d5b-aa1e-9fa347a7f05e",
+    "domain": ".adsrvr.org",
+    "path": "/",
+    "expires": 1794675177.41338,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "TDCPM",
+    "value": "CAEYBSgCMgsI4K7c3Z_q0T4QBTgB",
+    "domain": ".adsrvr.org",
+    "path": "/",
+    "expires": 1794675177.413473,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
     "name": "__rtbh.lid",
+<<<<<<< HEAD
     "value": "%7B%22eventType%22%3A%22lid%22%2C%22id%22%3A%22O3GsWnisFbGB1onwtqUB%22%2C%22expiryDate%22%3A%222026-11-06T15%3A29%3A31.207Z%22%7D",
     "domain": "chedraui-prod.us.auth0.com",
     "path": "/",
     "expires": 1793978971,
+=======
+    "value": "%7B%22eventType%22%3A%22lid%22%2C%22id%22%3A%22bVemTB5QykqnClniwNPn%22%2C%22expiryDate%22%3A%222026-11-14T16%3A52%3A58.096Z%22%7D",
+    "domain": "chedraui-prod.us.auth0.com",
+    "path": "/",
+    "expires": 1794675178,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "cto_bundle",
+<<<<<<< HEAD
     "value": "HxXVxF9NMDI5MVYwMXVsT2tHTjdHZUdwYk1XM0I2bTJ0V0J3U214S0JrNUxUeVc0ZU41c3VwTEkxQWtjazh0dSUyRlUzRVZnc01sRGNaZ3V5ZGJYR2MxbWxFZjlDTDd2b25sYllsM0FtUFFnWWhIaVNxN0hXQU5HMkkzSlMlMkZLMU1qa015OHlhdkw1empuV04lMkJtcGxxU3lzbXFUcGclM0QlM0Q",
     "domain": ".criteo.com",
     "path": "/",
     "expires": 1796138971.565558,
+=======
+    "value": "k-mA7l9DSGgzYU9YNmN4dHNYNjNHWk5FcFB4bVVuUFY2bWxsTHNaV1FoU3M2djhISHVzRzRsJTJGU3pKVnpURzh2eFEwTFY2bDZKQ0klMkZXYmQlMkYlMkJ5bldjUExvOWxrN1lmbWtEakhYdXJheiUyRktPNm1LZ295RjRZRHoyM3QlMkJEYXAxdHpZZjVocSUyRkQwVnNJZnZoODFWZnhQUiUyQmJvJTJGaUElM0QlM0Q",
+    "domain": ".criteo.com",
+    "path": "/",
+    "expires": 1796835179.397851,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None",
@@ -999,17 +1702,28 @@
   },
   {
     "name": "cto_bundle",
+<<<<<<< HEAD
     "value": "Wfspe18lMkZpSmpnZlJqUUZCSW1oOFFibXR0VzdtTGFvUjA0UkUxWGhMUkxndmlHRXZXR2tCNkYzakIzN0RHb0p6OU5ZOTZwTXQxQVFkZG9EbVpFeFhCb2ZScDUzNlVpNVRET1pZJTJCb2JtUnZuWk5lUjUxejFGaTMyREIwU21rVm1hVnBtQmtiUEZqQiUyQjU2OHclMkYzSml1a1FKeW5rdyUzRCUzRA",
     "domain": ".auth0.com",
     "path": "/",
     "expires": 1796606971,
+=======
+    "value": "crnHJF8zdjA3TjBnWldLZW1UdHlXbzNCd0JxZGtxVm5lbndscEZBaWlSTVF5WE1mR3A3SGdsYlMlMkZIZW1JazZpc1VCZk9vRmJPYWcybnlKelpod28lMkYlMkIlMkJ5WGl0ckFDbzE0bHZKMGg3Y3F6UEttMUlTMmwybW1TSW9aR2YwT0RKR1ZnN25WTXVDbjBlRnZPVTd2Q0REcUJTcmhsQSUzRCUzRA",
+    "domain": ".auth0.com",
+    "path": "/",
+    "expires": 1797303178,
+>>>>>>> qa
     "httpOnly": false,
     "secure": false,
     "sameSite": "Lax"
   },
   {
     "name": "smc_ls_session",
+<<<<<<< HEAD
     "value": "1762442971592",
+=======
+    "value": "1763139178410",
+>>>>>>> qa
     "domain": ".auth0.com",
     "path": "/",
     "expires": -1,
@@ -1019,120 +1733,205 @@
   },
   {
     "name": "_lr_hb_-zvhuxj%2Ftendaenlinea",
+<<<<<<< HEAD
     "value": "{%22heartbeat%22:1762442972352}",
     "domain": "chedraui-prod.us.auth0.com",
     "path": "/",
     "expires": 1762529372,
+=======
+    "value": "{%22heartbeat%22:1763139179139}",
+    "domain": "chedraui-prod.us.auth0.com",
+    "path": "/",
+    "expires": 1763225579,
+>>>>>>> qa
     "httpOnly": false,
     "secure": false,
     "sameSite": "Lax"
   },
   {
     "name": "_ga_N938TMF9GB",
+<<<<<<< HEAD
     "value": "GS2.1.s1762442975$o1$g0$t1762442975$j60$l0$h0",
     "domain": ".auth0.com",
     "path": "/",
     "expires": 1797002975.464797,
+=======
+    "value": "GS2.1.s1763139181$o1$g0$t1763139181$j60$l0$h0",
+    "domain": ".auth0.com",
+    "path": "/",
+    "expires": 1797699181.863894,
+>>>>>>> qa
     "httpOnly": false,
     "secure": false,
     "sameSite": "Lax"
   },
   {
     "name": "_ga",
+<<<<<<< HEAD
     "value": "GA1.1.935568563.1762442975",
     "domain": ".auth0.com",
     "path": "/",
     "expires": 1797002975.465585,
+=======
+    "value": "GA1.1.231757954.1763139182",
+    "domain": ".auth0.com",
+    "path": "/",
+    "expires": 1797699181.864498,
+>>>>>>> qa
     "httpOnly": false,
     "secure": false,
     "sameSite": "Lax"
   },
   {
     "name": "_lr_tabs_-zvhuxj%2Ftendaenlinea",
+<<<<<<< HEAD
     "value": "{%22recordingID%22:%226-019a59c9-89a7-797a-a1b3-fc239b53f5e2%22%2C%22sessionID%22:0%2C%22lastActivity%22:1762442987677%2C%22hasActivity%22:true%2C%22confirmed%22:false%2C%22recordingConditionThreshold%22:51.07131999532844%2C%22clearsIdentifiedUser%22:false}",
     "domain": "chedraui-prod.us.auth0.com",
     "path": "/",
     "expires": 1762529387,
+=======
+    "value": "{%22recordingID%22:%226-019a8348-cf6a-7251-b740-ae118d0cdf39%22%2C%22sessionID%22:0%2C%22lastActivity%22:1763139186567%2C%22hasActivity%22:true%2C%22confirmed%22:false%2C%22recordingConditionThreshold%22:38.699522831051915%2C%22clearsIdentifiedUser%22:false}",
+    "domain": "chedraui-prod.us.auth0.com",
+    "path": "/",
+    "expires": 1763225586,
+>>>>>>> qa
     "httpOnly": false,
     "secure": false,
     "sameSite": "Lax"
   },
   {
     "name": "auth0",
+<<<<<<< HEAD
     "value": "s%3AhjmFoxdl24gwuVS_l0Ln2tjkweYeRGBt.%2F3Csj5s1%2F5IUZzJ5ZYNc0ka4tpHzuw%2FmzixnbIv5IBM",
     "domain": "chedraui-prod.us.auth0.com",
     "path": "/",
     "expires": 1763306989.32581,
+=======
+    "value": "s%3AoXClKmLZPp70-I-Qak-XYJFljtUulPEx.0u%2Fwst89eKVxmZWU8rQlH6s5%2F9T2FVzjjdk1%2B%2F37H8Y",
+    "domain": "chedraui-prod.us.auth0.com",
+    "path": "/",
+    "expires": 1764003191.533332,
+>>>>>>> qa
     "httpOnly": true,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "auth0_compat",
+<<<<<<< HEAD
     "value": "s%3AhjmFoxdl24gwuVS_l0Ln2tjkweYeRGBt.%2F3Csj5s1%2F5IUZzJ5ZYNc0ka4tpHzuw%2FmzixnbIv5IBM",
     "domain": "chedraui-prod.us.auth0.com",
     "path": "/",
     "expires": 1763306989.325968,
+=======
+    "value": "s%3AoXClKmLZPp70-I-Qak-XYJFljtUulPEx.0u%2Fwst89eKVxmZWU8rQlH6s5%2F9T2FVzjjdk1%2B%2F37H8Y",
+    "domain": "chedraui-prod.us.auth0.com",
+    "path": "/",
+    "expires": 1764003191.53349,
+>>>>>>> qa
     "httpOnly": true,
     "secure": true,
     "sameSite": "Lax"
   },
   {
     "name": "VtexIdclientAutCookie_chedrauimx",
+<<<<<<< HEAD
     "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjcwRThCQ0M0MzBBOUVGMDdFQzg1MjYyREIzQkE1RUNGMjE2MkE3RjEiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiIwMzU4OGZmMC02MmNhLTQwMmQtYTc3ZC1mZWNmYmYxMWIxNDlAbWFpbHNsdXJwLmJpeiIsImFjY291bnQiOiJjaGVkcmF1aW14IiwiYXVkaWVuY2UiOiJ3ZWJzdG9yZSIsImV4cCI6MTc2MjUyOTM4OSwidHlwZSI6InVzZXIiLCJ1c2VySWQiOiIwMzUxMTQ0YS01YmEwLTQ4OWUtYmVkNC01YzAxZmQyYjM5ZjgiLCJpYXQiOjE3NjI0NDI5ODksImZsYWciOiJvYXV0aF92dGV4ZG9tYWluIiwiaXNSZXByZXNlbnRhdGl2ZSI6ZmFsc2UsImlzcyI6InRva2VuLWVtaXR0ZXIiLCJqdGkiOiI5Njg4MTUzMi0xZWEyLTQzNWYtODdjNi0zY2U5YWQ5NzA2M2QifQ.mvP-aG4-qzEKVJJgn1MMnPQh35rbDjTOMrRoim0pJkO1D9TqPcWM43IBATiN5vwZmCTAOeNVT_txP6fYicB25A",
     "domain": ".vtexid.vtex.com.br",
     "path": "/",
     "expires": 1762529388.801545,
+=======
+    "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IkJEMDI2MDEyMzdFQkJFRkU2M0VERTU2OEU1QzE5NTYyQUMzMEVCQkMiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiI5YTQzYTY2NS1jODZhLTQ2ZDMtOWU3Zi1kNGFiZDg0ZDcwOTBAbWFpbHNsdXJwLmJpeiIsImFjY291bnQiOiJjaGVkcmF1aW14IiwiYXVkaWVuY2UiOiJ3ZWJzdG9yZSIsImV4cCI6MTc2MzIyNTU5MSwidHlwZSI6InVzZXIiLCJ1c2VySWQiOiJiMThhYTAzNi0wNzRhLTQ1ZjctOTdjMi05ZDkyODU3ODliMWEiLCJpYXQiOjE3NjMxMzkxOTEsImZsYWciOiJvYXV0aF92dGV4ZG9tYWluIiwiaXNSZXByZXNlbnRhdGl2ZSI6ZmFsc2UsImlzcyI6InRva2VuLWVtaXR0ZXIiLCJqdGkiOiJhYWIxMTQzMy0wN2M2LTQwYmUtYWNmNS0xNDhmZDliYTk5MDUifQ.u1Vqfb6Oo2_2M-N_HsTPM8W0daL4yFXoNEc6XaAWV0kNKxnvHOtBm37Q5Zbw9lac7a6KZmVfzrgMdlBILBsHfQ",
+    "domain": ".vtexid.vtex.com.br",
+    "path": "/",
+    "expires": 1763225591.116657,
+>>>>>>> qa
     "httpOnly": true,
     "secure": true,
     "sameSite": "Lax"
   },
   {
     "name": "VtexIdclientAutCookie_4095fcf9-f929-49a7-a818-8abd1f714a82",
+<<<<<<< HEAD
     "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjcwRThCQ0M0MzBBOUVGMDdFQzg1MjYyREIzQkE1RUNGMjE2MkE3RjEiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiIwMzU4OGZmMC02MmNhLTQwMmQtYTc3ZC1mZWNmYmYxMWIxNDlAbWFpbHNsdXJwLmJpeiIsImFjY291bnQiOiJjaGVkcmF1aW14IiwiYXVkaWVuY2UiOiJ3ZWJzdG9yZSIsImV4cCI6MTc2MjUyOTM4OSwidHlwZSI6InVzZXIiLCJ1c2VySWQiOiIwMzUxMTQ0YS01YmEwLTQ4OWUtYmVkNC01YzAxZmQyYjM5ZjgiLCJpYXQiOjE3NjI0NDI5ODksImZsYWciOiJvYXV0aF92dGV4ZG9tYWluIiwiaXNSZXByZXNlbnRhdGl2ZSI6ZmFsc2UsImlzcyI6InRva2VuLWVtaXR0ZXIiLCJqdGkiOiI5Njg4MTUzMi0xZWEyLTQzNWYtODdjNi0zY2U5YWQ5NzA2M2QifQ.mvP-aG4-qzEKVJJgn1MMnPQh35rbDjTOMrRoim0pJkO1D9TqPcWM43IBATiN5vwZmCTAOeNVT_txP6fYicB25A",
     "domain": ".vtexid.vtex.com.br",
     "path": "/",
     "expires": 1762529388.801736,
+=======
+    "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IkJEMDI2MDEyMzdFQkJFRkU2M0VERTU2OEU1QzE5NTYyQUMzMEVCQkMiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiI5YTQzYTY2NS1jODZhLTQ2ZDMtOWU3Zi1kNGFiZDg0ZDcwOTBAbWFpbHNsdXJwLmJpeiIsImFjY291bnQiOiJjaGVkcmF1aW14IiwiYXVkaWVuY2UiOiJ3ZWJzdG9yZSIsImV4cCI6MTc2MzIyNTU5MSwidHlwZSI6InVzZXIiLCJ1c2VySWQiOiJiMThhYTAzNi0wNzRhLTQ1ZjctOTdjMi05ZDkyODU3ODliMWEiLCJpYXQiOjE3NjMxMzkxOTEsImZsYWciOiJvYXV0aF92dGV4ZG9tYWluIiwiaXNSZXByZXNlbnRhdGl2ZSI6ZmFsc2UsImlzcyI6InRva2VuLWVtaXR0ZXIiLCJqdGkiOiJhYWIxMTQzMy0wN2M2LTQwYmUtYWNmNS0xNDhmZDliYTk5MDUifQ.u1Vqfb6Oo2_2M-N_HsTPM8W0daL4yFXoNEc6XaAWV0kNKxnvHOtBm37Q5Zbw9lac7a6KZmVfzrgMdlBILBsHfQ",
+    "domain": ".vtexid.vtex.com.br",
+    "path": "/",
+    "expires": 1763225591.116822,
+>>>>>>> qa
     "httpOnly": true,
     "secure": true,
     "sameSite": "Lax"
   },
   {
     "name": "VtexIdclientAutCookie_chedrauimx",
+<<<<<<< HEAD
     "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6Ijg5MDczODREODU1RjkzMTg5ODI3Njg1RjVDMTgzMDNFMEJDMDc4Q0QiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiIwMzU4OGZmMC02MmNhLTQwMmQtYTc3ZC1mZWNmYmYxMWIxNDlAbWFpbHNsdXJwLmJpeiIsImFjY291bnQiOiJjaGVkcmF1aW14IiwiYXVkaWVuY2UiOiJ3ZWJzdG9yZSIsInNlc3MiOiIxYjBkMWYxOS1lYWQ5LTRmNzQtOGE5MS1mNTk5MTMwNDk3ODQiLCJleHAiOjE3NjI1MjkzODksInR5cGUiOiJ1c2VyIiwidXNlcklkIjoiMDM1MTE0NGEtNWJhMC00ODllLWJlZDQtNWMwMWZkMmIzOWY4IiwiaWF0IjoxNzYyNDQyOTg5LCJpc1JlcHJlc2VudGF0aXZlIjpmYWxzZSwiaXNzIjoidG9rZW4tZW1pdHRlciIsImp0aSI6ImYxNzYxOGIwLWFiZjMtNGMyZC1iZGUyLWVjMjg4OWFmZTI4ZSJ9.R3UAXewEPgTaCmXGA9I1xxQPqCFALGuu8Ju6hrBxI-9CGslrj3aAL9Ror4yjHdLLmPPt31AwSfLTLRSXvWum2w",
     "domain": ".www.chedraui.com.mx",
     "path": "/",
     "expires": 1762529389.893582,
+=======
+    "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IkJEMDI2MDEyMzdFQkJFRkU2M0VERTU2OEU1QzE5NTYyQUMzMEVCQkMiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiI5YTQzYTY2NS1jODZhLTQ2ZDMtOWU3Zi1kNGFiZDg0ZDcwOTBAbWFpbHNsdXJwLmJpeiIsImFjY291bnQiOiJjaGVkcmF1aW14IiwiYXVkaWVuY2UiOiJ3ZWJzdG9yZSIsInNlc3MiOiIwNDIyYTRkZi01NjVhLTRmZTctOGNkYi0yOTU0YjMyZDg2ZDMiLCJleHAiOjE3NjMyMjU1OTEsInR5cGUiOiJ1c2VyIiwidXNlcklkIjoiYjE4YWEwMzYtMDc0YS00NWY3LTk3YzItOWQ5Mjg1Nzg5YjFhIiwiaWF0IjoxNzYzMTM5MTkxLCJpc1JlcHJlc2VudGF0aXZlIjpmYWxzZSwiaXNzIjoidG9rZW4tZW1pdHRlciIsImp0aSI6IjM0OTZmN2M5LWYyMDQtNDYwZS05YTIyLWM0NjU3NmU2MmZhYiJ9.OsIy275PbO9dryeiSBkWK_weBNxRVfbuRBR6zJBA6aE5PwBFNUPSRdP4QIF7Qs5h4XDSxfwA3dK5QnCLjehJMA",
+    "domain": ".www.chedraui.com.mx",
+    "path": "/",
+    "expires": 1763225592.204371,
+>>>>>>> qa
     "httpOnly": true,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "VtexIdclientAutCookie_4095fcf9-f929-49a7-a818-8abd1f714a82",
+<<<<<<< HEAD
     "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6Ijg5MDczODREODU1RjkzMTg5ODI3Njg1RjVDMTgzMDNFMEJDMDc4Q0QiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiIwMzU4OGZmMC02MmNhLTQwMmQtYTc3ZC1mZWNmYmYxMWIxNDlAbWFpbHNsdXJwLmJpeiIsImFjY291bnQiOiJjaGVkcmF1aW14IiwiYXVkaWVuY2UiOiJ3ZWJzdG9yZSIsInNlc3MiOiIxYjBkMWYxOS1lYWQ5LTRmNzQtOGE5MS1mNTk5MTMwNDk3ODQiLCJleHAiOjE3NjI1MjkzODksInR5cGUiOiJ1c2VyIiwidXNlcklkIjoiMDM1MTE0NGEtNWJhMC00ODllLWJlZDQtNWMwMWZkMmIzOWY4IiwiaWF0IjoxNzYyNDQyOTg5LCJpc1JlcHJlc2VudGF0aXZlIjpmYWxzZSwiaXNzIjoidG9rZW4tZW1pdHRlciIsImp0aSI6ImYxNzYxOGIwLWFiZjMtNGMyZC1iZGUyLWVjMjg4OWFmZTI4ZSJ9.R3UAXewEPgTaCmXGA9I1xxQPqCFALGuu8Ju6hrBxI-9CGslrj3aAL9Ror4yjHdLLmPPt31AwSfLTLRSXvWum2w",
     "domain": ".www.chedraui.com.mx",
     "path": "/",
     "expires": 1762529389.893688,
+=======
+    "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IkJEMDI2MDEyMzdFQkJFRkU2M0VERTU2OEU1QzE5NTYyQUMzMEVCQkMiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiI5YTQzYTY2NS1jODZhLTQ2ZDMtOWU3Zi1kNGFiZDg0ZDcwOTBAbWFpbHNsdXJwLmJpeiIsImFjY291bnQiOiJjaGVkcmF1aW14IiwiYXVkaWVuY2UiOiJ3ZWJzdG9yZSIsInNlc3MiOiIwNDIyYTRkZi01NjVhLTRmZTctOGNkYi0yOTU0YjMyZDg2ZDMiLCJleHAiOjE3NjMyMjU1OTEsInR5cGUiOiJ1c2VyIiwidXNlcklkIjoiYjE4YWEwMzYtMDc0YS00NWY3LTk3YzItOWQ5Mjg1Nzg5YjFhIiwiaWF0IjoxNzYzMTM5MTkxLCJpc1JlcHJlc2VudGF0aXZlIjpmYWxzZSwiaXNzIjoidG9rZW4tZW1pdHRlciIsImp0aSI6IjM0OTZmN2M5LWYyMDQtNDYwZS05YTIyLWM0NjU3NmU2MmZhYiJ9.OsIy275PbO9dryeiSBkWK_weBNxRVfbuRBR6zJBA6aE5PwBFNUPSRdP4QIF7Qs5h4XDSxfwA3dK5QnCLjehJMA",
+    "domain": ".www.chedraui.com.mx",
+    "path": "/",
+    "expires": 1763225592.204422,
+>>>>>>> qa
     "httpOnly": true,
     "secure": true,
     "sameSite": "None"
   },
   {
+<<<<<<< HEAD
     "name": "GRV_5577_ga",
     "value": "GA1.1.1181119783.1762442967",
     "domain": ".groovinads.com",
     "path": "/",
     "expires": 1762702191.050284,
+=======
+    "name": "__rtbh.lid",
+    "value": "%7B%22eventType%22%3A%22lid%22%2C%22id%22%3A%22vjNwPTwnkkyZsAHzf87C%22%2C%22expiryDate%22%3A%222026-11-14T16%3A53%3A12.482Z%22%7D",
+    "domain": "www.chedraui.com.mx",
+    "path": "/",
+    "expires": 1794675192,
+>>>>>>> qa
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "vtex_session",
+<<<<<<< HEAD
     "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjljYmE2NGE5LTNhNmMtNDRiOS05MWZkLTdjYjFhZDk0ZDYyNSIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50LmlkIjpbXSwiaWQiOiJkNDQzMGFjMS1hYmRlLTQ1YWMtYmUxMC04ODhjNDQyM2JkMjYiLCJ2ZXJzaW9uIjozLCJzdWIiOiJzZXNzaW9uIiwiYWNjb3VudCI6InNlc3Npb24iLCJleHAiOjE3NjMxMzQxOTAsImlhdCI6MTc2MjQ0Mjk5MCwianRpIjoiM2E1OTcxYWQtYzFkZi00ZWI2LWE4MjEtYjhlNWJjMWQ4YmE0IiwiaXNzIjoic2Vzc2lvbi9kYXRhLXNpZ25lciJ9.1AQ-0svKrnb_w2LdudvdiJZd19tUsRwLVW6FeuK0biIsO7c5EFfr60qjs8FCYXWbedGdlOeK39_NB7n3Sw_DTw",
     "domain": "www.chedraui.com.mx",
     "path": "/",
     "expires": 1762874991.220402,
+=======
+    "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6ImE1OGU0MTVjLThkZDMtNDExOC1hNzRlLThlYjAxZTFkODFlZSIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50LmlkIjpbXSwiaWQiOiIxYWIwODEzNC01YmI4LTQ5YmQtYjExOC0xNDhlMGQ4ZTIxMTYiLCJ2ZXJzaW9uIjozLCJzdWIiOiJzZXNzaW9uIiwiYWNjb3VudCI6InNlc3Npb24iLCJleHAiOjE3NjM4MzAzOTIsImlhdCI6MTc2MzEzOTE5MiwianRpIjoiMmMwMjk2ZTktMmE4OS00NmVjLTk1YTItMWM5Y2M2Yjg5NjgxIiwiaXNzIjoic2Vzc2lvbi9kYXRhLXNpZ25lciJ9.vexa2Tf1uLbJ3LX1KU7RThS6SEuqI3YPHyzF98lSX4KdQuBCoQwylpn9QnmO1XepIDlk2kjf4m9mIoLdmxmYrA",
+    "domain": "www.chedraui.com.mx",
+    "path": "/",
+    "expires": 1763571192.90645,
+>>>>>>> qa
     "httpOnly": true,
     "secure": true,
     "sameSite": "Lax"
@@ -1142,12 +1941,17 @@
     "value": "eyJjYW1wYWlnbnMiOm51bGwsImNoYW5uZWwiOiIxIiwicHJpY2VUYWJsZXMiOm51bGwsInJlZ2lvbklkIjpudWxsLCJ1dG1fY2FtcGFpZ24iOm51bGwsInV0bV9zb3VyY2UiOm51bGwsInV0bWlfY2FtcGFpZ24iOm51bGwsImN1cnJlbmN5Q29kZSI6Ik1YTiIsImN1cnJlbmN5U3ltYm9sIjoiJCIsImNvdW50cnlDb2RlIjoiTUVYIiwiY3VsdHVyZUluZm8iOiJlcy1NWCIsImFkbWluX2N1bHR1cmVJbmZvIjoiZXMtTVgiLCJjaGFubmVsUHJpdmFjeSI6InB1YmxpYyJ9",
     "domain": "www.chedraui.com.mx",
     "path": "/",
+<<<<<<< HEAD
     "expires": 1762874991.220753,
+=======
+    "expires": 1763571192.906667,
+>>>>>>> qa
     "httpOnly": true,
     "secure": true,
     "sameSite": "Lax"
   },
   {
+<<<<<<< HEAD
     "name": "cto_bundle",
     "value": "ePSS-F9tTlhGd0lSbzE1cEcyRGhlcUxGZlpNMzlrajZiJTJGejVha3FRWXVVbG9JbFFOU0R0TUkxSzNiJTJCcnJIa0JnMjBuY0Y2YXV6WmpvVllWREc5RlZlb0FBbW4lMkJ6THglMkJ5dWRGN0xuUE9YRmFZeGpTSlhpQkZRUGdDTkxadlhyQ21RMkxlMHBXS3Zuc2hsQlZHdDVPdmg4bWQlMkJRJTNEJTNE",
     "domain": ".criteo.com",
@@ -1205,6 +2009,13 @@
     "domain": "www.chedraui.com.mx",
     "path": "/",
     "expires": 1762444792,
+=======
+    "name": "_TargetOne_Session_Cookie_Time",
+    "value": "1763139193238",
+    "domain": "www.chedraui.com.mx",
+    "path": "/",
+    "expires": 1763140993,
+>>>>>>> qa
     "httpOnly": false,
     "secure": false,
     "sameSite": "Lax"
@@ -1214,33 +2025,96 @@
     "value": "",
     "domain": ".www.chedraui.com.mx",
     "path": "/",
+<<<<<<< HEAD
     "expires": 1777994993.574648,
+=======
+    "expires": 1778691194.369215,
+>>>>>>> qa
     "httpOnly": true,
     "secure": true,
     "sameSite": "Strict"
   },
   {
+<<<<<<< HEAD
     "name": "AWSALBCORS",
     "value": "EFGvWr73/V2KkmPCdI+0SvFE1dVZRYObjODSAs1qeub5KWmOi+BkCECLgCO88gDM/A2TlusTgGcxHnqVsaw0yDlS1RylhQVhh7OKsToGGpT4THCEbd7phnxKWPNI",
     "domain": "widget-mediator.zopim.com",
     "path": "/",
     "expires": 1763047793.457444,
+=======
+    "name": "cto_bundle",
+    "value": "HkWuVV9vYXg4cTN6NyUyRnplUGdkeG4lMkJRTXNQZG1JcEhDbTZNMlRaT0k1a2diZjBvUE54M3NrMiUyRktxZWp1SW1RcDU5bVYzcWI2aXNGaHl6NGFKak56anRiSlhLR1JEZjlqdmFLQyUyQkZ0a2tPY040Q2ZnOVhWNHoyMzhiU1hUeVJ3T0MlMkZtaTB0d3RYTjFrcm51UHM3eFZqSEd0OG5nJTNEJTNE",
+    "domain": ".criteo.com",
+    "path": "/",
+    "expires": 1796835193.584069,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://chedraui.com.mx",
+    "_crHasCrossSiteAncestor": true
+  },
+  {
+    "name": "cto_bundle",
+    "value": "BsSCQ192SllDMzl0NWdMdSUyRmU5MzAyQVBnM3FHQkZOWCUyQk9ack15b2FEOVFYRU5FZjdXdFhRY3UyZ3ZBa2VWWjdrdnZYZnpyS0l3ZXRnVGVOdFhibHNvdFZTTWR5Zlp3cFVzdVZqQVp1ZktobmhMaEolMkZzODZ6VjdIME55RFVIMmU4ajBnWGhiTktkeUZPeXQ3UHc5N3FSUk0lMkJsSU5ha1JGazluVUdWWkVRdnpyclhDbyUzRA",
+    "domain": ".chedraui.com.mx",
+    "path": "/",
+    "expires": 1797303193,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "AWSALBCORS",
+    "value": "/lKfn7rbR0ShVZtEzzxeapoW5XwZa0vJRfKglTBEMA766CBAjfbV5DA6PFBka9dB3IwgA/Cd5otQkpSNU688X+oWiIbp8eo7x3ZBF5MFd3B9OhCc2gKiX+ZsWsHW",
+    "domain": "widget-mediator.zopim.com",
+    "path": "/",
+    "expires": 1763743993.892626,
+>>>>>>> qa
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+<<<<<<< HEAD
+    "name": "_uetsid",
+    "value": "6176da50bb2511f09ba631545100c059",
+    "domain": ".chedraui.com.mx",
+    "path": "/",
+    "expires": 1762529393,
+=======
+    "name": "_ga_N938TMF9GB",
+    "value": "GS2.1.s1763139174$o1$g1$t1763139193$j41$l0$h0",
+    "domain": ".chedraui.com.mx",
+    "path": "/",
+    "expires": 1797699193.929434,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "GRV_5577_ga",
+    "value": "GA1.1.1378383885.1763139174",
+    "domain": ".groovinads.com",
+    "path": "/",
+    "expires": 1763398393.986237,
     "httpOnly": false,
     "secure": true,
     "sameSite": "None"
   },
   {
     "name": "_uetsid",
-    "value": "6176da50bb2511f09ba631545100c059",
+    "value": "5dbe8dd0c17a11f08021fd70b0520fab",
     "domain": ".chedraui.com.mx",
     "path": "/",
-    "expires": 1762529393,
+    "expires": 1763225594,
+>>>>>>> qa
     "httpOnly": false,
     "secure": false,
     "sameSite": "Lax"
   },
   {
     "name": "_uetvid",
+<<<<<<< HEAD
     "value": "617721f0bb2511f096a3b5a7abe059bb",
     "domain": ".chedraui.com.mx",
     "path": "/",
@@ -1255,26 +2129,46 @@
     "domain": ".chedraui.com.mx",
     "path": "/",
     "expires": 1797002994.164265,
+=======
+    "value": "5dbeca70c17a11f09fec6b084d84ff5e",
+    "domain": ".chedraui.com.mx",
+    "path": "/",
+    "expires": 1796835194,
+>>>>>>> qa
     "httpOnly": false,
     "secure": false,
     "sameSite": "Lax"
   },
   {
     "name": "ttcsid",
+<<<<<<< HEAD
     "value": "1762442967695::Nckw63lqS_t79LC-5osx.1.1762442994278.0",
     "domain": ".chedraui.com.mx",
     "path": "/",
     "expires": 1796138994,
+=======
+    "value": "1763139174695::RHiqkMiBinCy8XbT6TDU.1.1763139194214.0",
+    "domain": ".chedraui.com.mx",
+    "path": "/",
+    "expires": 1796835194,
+>>>>>>> qa
     "httpOnly": false,
     "secure": false,
     "sameSite": "Lax"
   },
   {
     "name": "ttcsid_C8TOJ8DCSQN3SGB7QUV0",
+<<<<<<< HEAD
     "value": "1762442967692::Nnbh8sT8_XoDXpdJQ7ZX.1.1762442994278.1",
     "domain": ".chedraui.com.mx",
     "path": "/",
     "expires": 1796138994,
+=======
+    "value": "1763139174694::pYtfnZOYPpFqYi2GyRlY.1.1763139194215.1",
+    "domain": ".chedraui.com.mx",
+    "path": "/",
+    "expires": 1796835194,
+>>>>>>> qa
     "httpOnly": false,
     "secure": false,
     "sameSite": "Lax"
