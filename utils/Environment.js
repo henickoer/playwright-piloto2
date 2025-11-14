@@ -39,8 +39,8 @@ const config = {
 
   mailslurp: {
     apiKey: "d1840d194ec422cbe0664c8985d1afe8cec89868d0882c9586aa8f146533ce65",
-    inboxId: "c5fb2947-8e0f-47d4-92a7-204fa1438377",
-    emailAddress: "c5fb2947-8e0f-47d4-92a7-204fa1438377@mailslurp.biz",
+    inboxId: "9a43a665-c86a-46d3-9e7f-d4abd84d7090",
+    emailAddress: "9a43a665-c86a-46d3-9e7f-d4abd84d7090@mailslurp.biz",
   },
 
   emails: {

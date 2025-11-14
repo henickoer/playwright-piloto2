@@ -38,6 +38,8 @@ class ResumenCarritoPage extends BasePage {
     this.sucursales = "//*[@class='chedrauimx-checkout-io-1-x-address-list-container__list-button']";
     this.aceptarCambioDireccionButton = "//*[@class='chedrauimx-checkout-io-1-x-alert--button-accept']";
     this.cambiarDireccionLink = "//*[contains(text(),'Selecciona otra dirección')]";
+    this.confirmarCambiarDireccionButton = "//*[contains(text(),'Continuar')]";
+    this.telefonoCapturadoCheck = "//*[@id='phoneNumber']/..//*[@class='chedrauimx-checkout-io-1-x-user-form__icon']";
     
   }
 

@@ -113,9 +113,6 @@ test('C1 - TimeSlot Scraper', async () => {
   await carritoUtils.avanzarCarrito(page, resumencarritos);
   await page.waitForTimeout(1000);
   await resumencarritos.safeClick(resumencarritos.cambiarDireccionLink);
-
-
-
   const sucursales = page.locator(resumencarritos.sucursales);
   const total = await sucursales.count();
   console.warn('total sucursales ' + total);
@@ -127,12 +124,12 @@ test('C1 - TimeSlot Scraper', async () => {
   // --- Recorremos todas las sucursales ---
   for (let i = 0; i < total; i++) {
     const sucursal = sucursales.nth(0); // Siempre la primera
+
     await sucursal.scrollIntoViewIfNeeded();
     const nombreSucursal = (await sucursal.innerText()).trim();
     console.log(`🏪 Revisando sucursal ${i + 1}: ${nombreSucursal}`);
-
     await sucursal.click();
-    await resumencarritos.safeClick(resumencarritos.aceptarCambioDireccionButton);
+    await resumencarritos.safeClick(resumencarritos.confirmarCambiarDireccionButton);
     await page.waitForTimeout(1500);
     let diasConfigurados = [];
 
@@ -185,7 +182,7 @@ test('C1 - TimeSlot Scraper', async () => {
 
 
 
-    await resumencarritos.safeClick(resumencarritos.cambiarDireccionLink);
+    await resumencarritos.safeClick(resumencarritos.cambiarDireccionLink);    
     await page.waitForTimeout(200);
   }
 

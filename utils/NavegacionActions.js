@@ -1,27 +1,13 @@
 const { expect } = require('@playwright/test');
 
-
 class NavegacionActions {
     
-  /**
-   * Avanza dinámicamente por el flujo del carrito (paso 1 → 2 → 3)
-   * @param {import('playwright').Page} page - instancia de Playwright
-   * @param {Object} resumencarritos - objeto con locators y URLs
-   * @param {number} maxRetries - máximo de intentos
-   */
-
-  async avanzarCarrito(page, resumencarritos, maxRetries = 5) {
+  async avanzarCarrito(page, resumencarritos) {
     const currentUrl = page.url();
-
-    if (maxRetries <= 0) {
-      console.warn("Retries actual: "+maxRetries+" mientras nos encontramos en: \n"+currentUrl);
-      throw new Error('No se pudo avanzar a paso 2 o 3 después de múltiples intentos.');
-    }
 
     if (currentUrl.includes(resumencarritos.paso3URL)) {
       console.warn('Ya estamos en paso 3, listo para continuar.');
-      await page.waitForTimeout(1000);
-      return;
+      await page.waitForTimeout(500);
     }
 
     if (currentUrl.includes(resumencarritos.paso2URL)) {
@@ -29,109 +15,144 @@ class NavegacionActions {
       await resumencarritos.humanType(resumencarritos.contactonombreInput, 'Joaquin');
       await resumencarritos.humanType(resumencarritos.contactoapellidoInput, 'Soto Castillo');
       await resumencarritos.humanType(resumencarritos.contactotelefonoInput, '5550553518');
-      await page.waitForTimeout(2000);
+      await page.waitForSelector(resumencarritos.telefonoCapturadoCheck, { state: 'visible', timeout: 30000 });
       await resumencarritos.safeClick(resumencarritos.irenvioButton);
       await page.waitForTimeout(2000);
-      return await this.avanzarCarrito(page, resumencarritos, maxRetries - 1);
+      return await this.avanzarCarrito(page, resumencarritos);
+      
     }
 
     if (currentUrl.includes(resumencarritos.paso1URL)) {
-
-      console.warn(`Estamos en paso 1. Intentando avanzar... Reintentos restantes: ${maxRetries}`);
+      console.warn(`Estamos en paso 1. Intentando avanzar...`);
       await page.waitForTimeout(1000);
       await resumencarritos.safeClick(resumencarritos.continuarconlacompraButton);
-      await page.waitForTimeout(1000);
-  
-      return await this.avanzarCarrito(page, resumencarritos, maxRetries - 1);
+      await page.waitForTimeout(2000);
+      return await this.avanzarCarrito(page, resumencarritos);
+
     } 
 
     console.warn('URL desconocida, esperando a que avance de manera natural...');
+    return;
+  }
+
+  async buscarYAgregarProducto(page, headerPage, productos, producto) {
+    console.warn("Se ingresar a BuscarYAgregarProducto");
+    await page.waitForSelector('iframe#launcher', { state: 'visible', timeout: 30000 });
+    await page.locator(headerPage.buscandoInput).focus();
+    await page.locator(headerPage.buscandoInput).fill("");
+    await headerPage.humanType(headerPage.buscandoInput, producto);
+
+    const sugerido = await page.locator(productos.autocompletarbusqueda).first();
+    await sugerido.waitFor({ state: 'visible' });
+    await sugerido.click();
+
+    const botonAgregar = page.locator(productos.agregarproductolateralButton);
+    const labelAgotado = page.locator(productos.productoAgotadoButton);
+
+    try {
+      await Promise.race([
+        botonAgregar.waitFor({ state: 'visible', timeout: 5000 }),
+        labelAgotado.waitFor({ state: 'visible', timeout: 5000 })
+      ]);
+    } catch (err) {
+      console.warn(`⏳ Timeout esperando botón o label para producto: ${producto}`);
+      return false;
+    }
+
+    if (await botonAgregar.count() > 0 && await botonAgregar.isVisible()) {
+      await botonAgregar.click();
+      await headerPage.safeClick(await headerPage.logoImg);
+      return true;
+    }
+
+    if (await labelAgotado.count() > 0 && await labelAgotado.isVisible()) {
+      console.warn(`⚠️ Producto agotado: ${producto}`);
+      return false;
+    }
+
+    return false;
   }
 
   /**
-   * Busca un producto y lo agrega desde la sugerencia
-   * @param {import('playwright').Page} page - instancia de Playwright
-   * @param {Object} headerPage - locators y métodos de header
-   * @param {Object} productos - locators y métodos de productos
-   * @param {string} producto - nombre del producto a buscar
+   * 🔹 Buscar producto con estabilización de resultados
    */
+  async buscarProducto(page, headerPage, productos, producto ) {
+    console.warn("Se ingresar a buscarProducto");
 
-async buscarYAgregarProducto(page, headerPage, productos, producto) {
+    /*
+    const headers = page.locator(headerPage.bannerSuperiorHref);
+    const headerActual = headers.first();
+    await headerActual.waitFor({ state: 'visible' });
+    await page.waitForTimeout(500);
+    */
+    await page.waitForSelector('iframe#launcher', { state: 'visible', timeout: 30000 });
+    const input = page.locator(headerPage.buscandoInput);
+    await input.waitFor({ state: 'visible' });
+    await page.locator(headerPage.buscandoInput).focus();
+    await page.locator(headerPage.buscandoInput).fill("");
+    await headerPage.humanType(headerPage.buscandoInput, producto);
+    await page.locator(headerPage.buscandoInput).focus();
+    await page.keyboard.press('Enter');
 
-  console.warn("Se ingresar a BuscarYAgregarProducto");
-
-  const headers = page.locator(headerPage.bannerSuperiorHref);
-  const headerActual = headers.first();
-  await headerActual.waitFor({ state: 'visible' });
-  await page.waitForTimeout(500);
-
-          const input = page.locator(headerPage.buscandoInput);
-
-          // Espera hasta que el input sea visible
-          await input.waitFor({ state: 'visible' });
-          console.warn("Input Visible");
-
-  await page.locator(headerPage.buscandoInput).focus();
-  await headerPage.humanType(headerPage.buscandoInput, producto);
-
-  const sugerido = await page.locator(productos.autocompletarbusqueda).first();
-  await sugerido.waitFor({ state: 'visible' });
-  await sugerido.click();
-
-  // --- Esperar dinámicamente al botón o al label de agotado ---
-  const botonAgregar = page.locator(productos.agregarproductolateralButton);
-  const labelAgotado = page.locator(productos.productoAgotadoButton); // <-- necesitas definir este locator
-
-  try {
+    // --- 🔸 Espera resultados o mensaje sin resultados ---
     await Promise.race([
-      botonAgregar.waitFor({ state: 'visible', timeout: 5000 }),
-      labelAgotado.waitFor({ state: 'visible', timeout: 5000 })
+      page.locator(productos.sinresultadosLabel).waitFor({ state: 'visible', timeout: 5000 }).catch(() => {}),
+      page.locator(productos.resultadobusquedaLabel).first().waitFor({ state: 'visible', timeout: 5000 }).catch(() => {})
     ]);
-  } catch (err) {
-    console.warn(`⏳ Timeout esperando botón o label para producto: ${producto}`);
-    return false; // no se pudo determinar
+
+    // --- 🔸 Si hay resultados, estabilizar el conteo ---
+    if (await page.locator(productos.resultadobusquedaLabel).first().isVisible()) {
+      console.log('✅ Se encontraron productos');
+      let productosEncontrados = page.locator(`${productos.resultadobusquedaLabel} >> visible=true`);
+      let prevCount = 0;
+      let stableCount = 0;
+
+      for (let i = 0; i < 5; i++) {
+        const total = await productosEncontrados.count();
+        let visibles = 0;
+        for (let j = 0; j < total; j++) {
+          if (await productosEncontrados.nth(j).isVisible()) visibles++;
+        }
+        if (visibles === prevCount) {
+          stableCount++;
+          if (stableCount >= 2) break;
+        } else {
+          stableCount = 0;
+        }
+        prevCount = visibles;
+        await page.waitForTimeout(500);
+      }
+
+      console.log(`🟢 Se encontraron ${prevCount} productos visibles (conteo estabilizado)`);
+    } else {
+      console.log('❌ No se encontraron resultados');
+    }
   }
 
-  // --- Revisar cuál se mostró ---
-  if (await botonAgregar.count() > 0 && await botonAgregar.isVisible()) {
-    await botonAgregar.click();
-    await headerPage.safeClick(await headerPage.logoImg);
-    return true; // agregado con éxito
+  /**
+   * 🔹 Evalúa los resultados de búsqueda para errores ortográficos
+   * @param {import('playwright').Page} page 
+   * @param {Object} productos - page object de resultados
+   * @param {Array<string>} equivalencias - palabras esperadas
+   */
+  async evaluarBusquedaErroresOrtograficos(page, productos, equivalencias) {
+    let productosVisibles = page.locator(`${productos.resultadobusquedaLabel} >> visible=true`);
+    const count = await productosVisibles.count();
+
+    for (let i = 0; i < count; i++) {
+      const textoProducto = (await productosVisibles.nth(i).innerText()).toLowerCase();
+      console.log(`Texto del producto ${i}: ${textoProducto}`);
+
+      const contiene = equivalencias.some(eq => textoProducto.includes(eq));
+
+      if (contiene) {
+        console.log(`✅ Producto ${i + 1} contiene al menos una equivalencia (${equivalencias.join(', ')})`);
+      } else {
+        console.log(`❌ Producto ${i + 1} no contiene ninguna equivalencia (${equivalencias.join(', ')})`);
+      }
+    }
   }
 
-  if (await labelAgotado.count() > 0 && await labelAgotado.isVisible()) {
-    console.warn(`⚠️ Producto agotado: ${producto}`);
-    return false; // no agregado
-  }
-
-  return false;
 }
 
-
-async buscarProducto(page, headerPage,productos, producto ) {
-
-  console.warn("Se ingresar a buscarProducto");
-
-  const headers = page.locator(headerPage.bannerSuperiorHref);
-  const headerActual = headers.first();
-  await headerActual.waitFor({ state: 'visible' });
-  await page.waitForTimeout(500);
-
-  const input = page.locator(headerPage.buscandoInput);
-
-          // Espera hasta que el input sea visible
-  await input.waitFor({ state: 'visible' });
-  await page.locator(headerPage.buscandoInput).focus();
-  await page.locator(headerPage.buscandoInput).fill("");
-  await headerPage.humanType(headerPage.buscandoInput, producto);
-  await page.locator(headerPage.buscandoInput).focus();
-  await page.keyboard.press('Enter');
-  await page.waitForSelector(productos.titulobusquedaLabel(producto), { state: 'visible', timeout: 30000 });
-  // console.log('✅ El iframe del asistente virtual cargó correctamente');
-
-}
-
-
-
-}
 module.exports = NavegacionActions;
