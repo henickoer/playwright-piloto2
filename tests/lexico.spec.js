@@ -17,6 +17,7 @@ let context, page;
 let headerPage, resumencarritos, productosPage, carritoUtils;
 
 test.beforeAll(async () => {
+
   context = await chromium.launchPersistentContext('', {
     headless: false,
     args: ['--start-maximized']
@@ -78,7 +79,8 @@ test('C1 - Errores Ortográficos ', async () => {
 test('C2 - Long Tail', async () => {
   test.setTimeout(900000); // aumenta tiempo total del test
   const data = getExcelData(excelurl, excellong);
-
+  for (const row of data) {
+    const Termino = row['Término'];
     console.log(`\n==============================`);
     console.log(`🔹 Buscando término: ${Termino}`);
     console.log(`==============================`);
@@ -86,7 +88,7 @@ test('C2 - Long Tail', async () => {
     // 🔹 Realiza búsqueda completa (con espera y estabilización)
     await carritoUtils.buscarProducto(page, headerPage, productosPage, Termino);
 
-  
+  }
 
 
 });
@@ -94,7 +96,9 @@ test('C2 - Long Tail', async () => {
 test('C3 - Frecuencia Alta ', async () => {
   test.setTimeout(900000); // aumenta tiempo total del test
   const data = getExcelData(excelurl, excelfrecuencia);
-
+  for (const row of data) {
+    const Termino = row['Término'];
+    
     console.log(`\n==============================`);
     console.log(`🔹 Buscando término: ${Termino}`);
     console.log(`==============================`);
@@ -102,13 +106,15 @@ test('C3 - Frecuencia Alta ', async () => {
     // 🔹 Realiza búsqueda completa (con espera y estabilización)
     await carritoUtils.buscarProducto(page, headerPage, productosPage, Termino);
   
-
+  }
 
 });
 
-
 test('C4 - Semántico ', async () => {
   test.setTimeout(900000); // aumenta tiempo total del test
+  const data = getExcelData(excelurl, excelsemantico);
+
+  for (const row of data) {
     const Termino = row['Término'];
     const equivalencias = row['Equivalencia']
       .split(',')
@@ -122,6 +128,6 @@ test('C4 - Semántico ', async () => {
     // 🔹 Realiza búsqueda completa (con espera y estabilización)
     await carritoUtils.buscarProducto(page, headerPage, productosPage, Termino);
   
-
+  }
 
 });
