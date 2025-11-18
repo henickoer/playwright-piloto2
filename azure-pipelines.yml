@@ -30,6 +30,11 @@ steps:
 
 
 - script: |
+    xvfb-run --auto-servernum --server-args='-screen 0 1280x960x24' npx playwright test tests/loginCookie.spec.js --headed
+  displayName: 'Login cookie test (Headed Mode)'
+
+
+- script: |
     xvfb-run --auto-servernum --server-args='-screen 0 1280x960x24' npx playwright test tests/TimeSlotScraper.spec.js --headed
   displayName: 'Run TimeSlots test (Headed Mode)'
 
