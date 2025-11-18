@@ -76,58 +76,71 @@ class NavegacionActions {
   /**
    * 🔹 Buscar producto con estabilización de resultados
    */
-  async buscarProducto(page, headerPage, productos, producto ) {
-    console.warn("Se ingresar a buscarProducto");
+async buscarProducto(page, headerPage, productos, producto) {
+  console.warn("Se ingresar a buscarProducto");
 
-    /*
-    const headers = page.locator(headerPage.bannerSuperiorHref);
-    const headerActual = headers.first();
-    await headerActual.waitFor({ state: 'visible' });
-    await page.waitForTimeout(500);
-    */
-    await page.waitForSelector('iframe#launcher', { state: 'visible', timeout: 30000 });
-    const input = page.locator(headerPage.buscandoInput);
-    await input.waitFor({ state: 'visible' });
-    await page.locator(headerPage.buscandoInput).focus();
-    await page.locator(headerPage.buscandoInput).fill("");
-    await headerPage.humanType(headerPage.buscandoInput, producto);
-    await page.locator(headerPage.buscandoInput).focus();
-    await page.keyboard.press('Enter');
+  await page.waitForSelector('iframe#launcher', { state: 'visible', timeout: 30000 });
 
-    // --- 🔸 Espera resultados o mensaje sin resultados ---
-    await Promise.race([
-      page.locator(productos.sinresultadosLabel).waitFor({ state: 'visible', timeout: 5000 }).catch(() => {}),
-      page.locator(productos.resultadobusquedaLabel).first().waitFor({ state: 'visible', timeout: 5000 }).catch(() => {})
-    ]);
+  const input = page.locator(headerPage.buscandoInput);
+  await input.waitFor({ state: 'visible' });
 
-    // --- 🔸 Si hay resultados, estabilizar el conteo ---
-    if (await page.locator(productos.resultadobusquedaLabel).first().isVisible()) {
-      console.log('✅ Se encontraron productos');
-      let productosEncontrados = page.locator(`${productos.resultadobusquedaLabel} >> visible=true`);
-      let prevCount = 0;
-      let stableCount = 0;
+  await page.locator(headerPage.buscandoInput).focus();
+  await page.locator(headerPage.buscandoInput).fill("");
+  await headerPage.humanType(headerPage.buscandoInput, producto);
+  await page.keyboard.press('Enter');
 
-      for (let i = 0; i < 5; i++) {
-        const total = await productosEncontrados.count();
-        let visibles = 0;
-        for (let j = 0; j < total; j++) {
-          if (await productosEncontrados.nth(j).isVisible()) visibles++;
-        }
-        if (visibles === prevCount) {
-          stableCount++;
-          if (stableCount >= 2) break;
-        } else {
-          stableCount = 0;
-        }
-        prevCount = visibles;
-        await page.waitForTimeout(500);
+  // --- 🔸 Espera resultados o mensaje sin resultados ---
+  await Promise.race([
+    page.locator(productos.sinresultadosLabel).waitFor({ state: 'visible', timeout: 5000 }).catch(() => {}),
+    page.locator(productos.resultadobusquedaLabel).first().waitFor({ state: 'visible', timeout: 5000 }).catch(() => {})
+  ]);
+
+  // --- 🔸 Si hay resultados, estabilizar el conteo ---
+  if (await page.locator(productos.resultadobusquedaLabel).first().isVisible()) {
+
+    let productosEncontrados = page.locator(`${productos.resultadobusquedaLabel} >> visible=true`);
+    let prevCount = 0;
+    let stableCount = 0;
+    let visibles = 0;
+
+    for (let i = 0; i < 5; i++) {
+      const total = await productosEncontrados.count();
+      visibles = 0;
+      for (let j = 0; j < total; j++) {
+        if (await productosEncontrados.nth(j).isVisible()) visibles++;
       }
 
-      console.log(`🟢 Se encontraron ${prevCount} productos visibles (conteo estabilizado)`);
-    } else {
-      console.log('❌ No se encontraron resultados');
+      if (visibles === prevCount) {
+        stableCount++;
+        if (stableCount >= 2) break;
+      } else {
+        stableCount = 0;
+      }
+
+      prevCount = visibles;
+      await page.waitForTimeout(500);
     }
+
+    // 🔥 Aquí agregamos tu condición ANTES del console.log final
+
+    const hayMensajeNoResultados = await page
+      .locator(productos.sinresultadosLabel)
+      .isVisible()
+      .catch(() => false);
+
+    if (hayMensajeNoResultados) {
+      console.log(`❌ El sistema muestra mensaje de "sin resultados". Los ${visibles} productos visibles son sugerencias.`);
+      return false;
+    }
+
+    console.log(`🟢 Se encontraron ${visibles} productos reales (conteo estabilizado)`);
+    return true;
   }
+
+  // --- Si no hay resultados visibles ---
+  console.log('❌ No se encontraron resultados');
+  return false;
+}
 
   /**
    * 🔹 Evalúa los resultados de búsqueda para errores ortográficos

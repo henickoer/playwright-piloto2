@@ -111,9 +111,10 @@ test('C1 - TimeSlot Scraper', async () => {
   await page.waitForTimeout(3000);
 
   await carritoUtils.avanzarCarrito(page, resumencarritos);
-  await page.waitForTimeout(1000);
+  await page.waitForTimeout(2000);
   await resumencarritos.safeClick(resumencarritos.cambiarDireccionLink);
-  const sucursales = page.locator(resumencarritos.sucursales);
+  await page.waitForTimeout(2000);
+  const sucursales = await page.locator(resumencarritos.sucursales);
   const total = await sucursales.count();
   console.warn('total sucursales ' + total);
   
