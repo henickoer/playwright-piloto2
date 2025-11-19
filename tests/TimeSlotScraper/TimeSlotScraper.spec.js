@@ -1,16 +1,16 @@
 // tests/TimeSlotScraper.spec.js
 const { test, chromium } = require('@playwright/test');
-const HeaderPage = require('../pages/HeaderPage');
-const ProductosEncontradosPage = require('../pages/ProductosEncontradosPage'); 
-const ResumenCarritoPage = require('../pages/ResumenCarritoPage');
-const config = require('../utils/Environment');
+const HeaderPage = require('../../pages/HeaderPage');
+const ProductosEncontradosPage = require('../../pages/ProductosEncontradosPage'); 
+const ResumenCarritoPage = require('../../pages/ResumenCarritoPage');
+const config = require('../../utils/Environment');
 const fs = require('fs');
 const path = require('path');
-const NavegacionActions = require('../utils/NavegacionActions');
+const NavegacionActions = require('../../utils/NavegacionActions');
 const PdfPrinter = require('pdfmake');
 const vfsFonts = require('pdfmake/build/vfs_fonts.js');
-const { sendEmail } = require('../utils/mailslurp-utils');
-const { generarReportePDF } = require('../utils/creadorpdf');
+const { sendEmail } = require('../../utils/mailslurp-utils');
+const { generarReportePDF } = require('../../utils/creadorpdf');
 
 test('C1 - TimeSlot Scraper', async () => { 
   test.setTimeout(300000);
