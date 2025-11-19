@@ -2,7 +2,7 @@
 /test-results/
 /playwright-report/
 /playwright/.cache/
-
+/reports
 # Dependencias
 /node_modules/
 
