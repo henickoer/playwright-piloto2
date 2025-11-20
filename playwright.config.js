@@ -38,5 +38,5 @@ module.exports = defineConfig({
   ],
 
   timeout: 500000,
-  retries: 1,
+  retries: 2,
 });

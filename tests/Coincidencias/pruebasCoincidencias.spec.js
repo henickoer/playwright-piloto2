@@ -89,7 +89,6 @@ test('C2 - Long Tail', async ({}, testInfo) => {
   }
 });
 
-/*
 test('C3 - Frecuencia Alta', async ({}, testInfo) => {
   const { page, headerPage, productosPage, carritoUtils } = testInfo;
 
@@ -102,8 +101,7 @@ test('C3 - Frecuencia Alta', async ({}, testInfo) => {
     await carritoUtils.buscarProducto(page, headerPage, productosPage, Termino);
   }
 });
-*/
-/*
+
 test('C4 - Semántico', async ({}, testInfo) => {
   const { page, headerPage, productosPage, carritoUtils } = testInfo;
 
@@ -116,4 +114,3 @@ test('C4 - Semántico', async ({}, testInfo) => {
     await carritoUtils.buscarProducto(page, headerPage, productosPage, Termino);
   }
 });
-*/
