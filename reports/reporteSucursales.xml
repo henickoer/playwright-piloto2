@@ -1,1024 +1,256 @@
-<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="171.31087399999998">
-<testsuite name="Coincidencias\pruebasCoincidencias.spec.js" timestamp="2025-11-19T23:39:27.776Z" hostname="Coincidencias" tests="2" failures="0" skipped="0" time="242.108" errors="0">
-<testcase name="C1 - Errores Ortográficos" classname="Coincidencias\pruebasCoincidencias.spec.js" time="103.496">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="237.559756">
+<testsuite name="TimeSlotScraper\TimeSlotScraper.spec.js" timestamp="2025-11-20T00:05:48.535Z" hostname="TimeSlotScraper" tests="1" failures="0" skipped="0" time="200.421" errors="0">
+<testcase name="C1 - TimeSlot Scraper" classname="TimeSlotScraper\TimeSlotScraper.spec.js" time="200.421">
 <system-out>
-<![CDATA[
-=== Buscando: shampu ===
-🟢 Se encontraron 2 productos reales (conteo estabilizado)
-Texto del producto 0: serum + shampoo para barba + estuche kit king c gillette
-✅ Producto 1 contiene al menos una equivalencia (shampoo)
-Texto del producto 1: shampoo king c gillette para barba cuidado de la barba 241ml
-✅ Producto 2 contiene al menos una equivalencia (shampoo)
+<![CDATA[🛒 El carrito ya está vacío.
+✅ Producto agregado: Aguacate Hass por Kg (total agregados: 1)
+✅ Producto agregado: Zanahoria por kg (total agregados: 2)
+✅ Producto agregado: Ajo por Kg (total agregados: 3)
+🛒 Total de productos agregados al carrito: 3
+🏪 Revisando sucursal 1: Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
+CONSOLE
+🗓️ total dias: 2
 
-=== Buscando: papel igienico ===
-🟢 Se encontraron 20 productos reales (conteo estabilizado)
-Texto del producto 0: papel higiénico pétalo ultra jumbo 16 rollos
-✅ Producto 1 contiene al menos una equivalencia (papel higiénico)
-Texto del producto 1: papel higiénico kleenex cottonelle elegance 18 rollos
-✅ Producto 2 contiene al menos una equivalencia (papel higiénico)
-Texto del producto 2: papel higiénico kleenex cottonelle elegance 32 rollos
-✅ Producto 3 contiene al menos una equivalencia (papel higiénico)
-Texto del producto 3: papel higiénico suavel 4 rollos 325 hojas
-✅ Producto 4 contiene al menos una equivalencia (papel higiénico)
-Texto del producto 4: papel higiénico kleenex cottonelle elegance 4 rollos
-✅ Producto 5 contiene al menos una equivalencia (papel higiénico)
-Texto del producto 5: papel higiénico suavel esencia floral 30 rollos
-✅ Producto 6 contiene al menos una equivalencia (papel higiénico)
-Texto del producto 6: papel higiénico suavel 16 rollos
-✅ Producto 7 contiene al menos una equivalencia (papel higiénico)
-Texto del producto 7: papel higiénico regio luxury almond touch 18 rollos
-✅ Producto 8 contiene al menos una equivalencia (papel higiénico)
-Texto del producto 8: papel higiénico elite dúo 12 rollos
-✅ Producto 9 contiene al menos una equivalencia (papel higiénico)
-Texto del producto 9: papel higiénico regio aires de lavanda 32 rollos
-✅ Producto 10 contiene al menos una equivalencia (papel higiénico)
-Texto del producto 10: papel higiénico regio luxury almond 4 piezas
-✅ Producto 11 contiene al menos una equivalencia (papel higiénico)
-Texto del producto 11: papel higiénico premier 40 rollos
-✅ Producto 12 contiene al menos una equivalencia (papel higiénico)
-Texto del producto 12: papel higiénico premier rendiplus 12 rollos 300 hojas
-✅ Producto 13 contiene al menos una equivalencia (papel higiénico)
-Texto del producto 13: papel higiénico regio just-1 con 12 rollos
-✅ Producto 14 contiene al menos una equivalencia (papel higiénico)
-Texto del producto 14: papel higiénico kleenex cottonelle soft 24 rollos
-✅ Producto 15 contiene al menos una equivalencia (papel higiénico)
-Texto del producto 15: papel higiénico regio ecomax fresh 4 rollos
-✅ Producto 16 contiene al menos una equivalencia (papel higiénico)
-Texto del producto 16: papel higiénico regio rinde+ 16 rollos xl
-✅ Producto 17 contiene al menos una equivalencia (papel higiénico)
-Texto del producto 17: papel higiénico pétalo balance ultra jumbo 400 hojas dobles 4 rollos
-✅ Producto 18 contiene al menos una equivalencia (papel higiénico)
-Texto del producto 18: papel higiénico pétalo maxi resist 18 rollos
-✅ Producto 19 contiene al menos una equivalencia (papel higiénico)
-Texto del producto 19: papel higiénico pétalo ultra jumbo 6 rollos
-✅ Producto 20 contiene al menos una equivalencia (papel higiénico)
+🗓️ Día 1: Mañana
+20 de noviembre
+⏱️ total de horarios encontrados para Mañana
+20 de noviembre: 7
+⏰ Horarios para "Mañana
+20 de noviembre": 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 
-=== Buscando: refrijerador ===
-🟢 Se encontraron 20 productos reales (conteo estabilizado)
-Texto del producto 0: refrigerador continental 9 pies cúbicos ce-trf152 silver
-✅ Producto 1 contiene al menos una equivalencia (refrigerador, nevera, frigobar)
-Texto del producto 1: refrigerador mabe top mount 14 pies cúbicos gris oscuro rme360fdmrq0
-✅ Producto 2 contiene al menos una equivalencia (refrigerador, nevera, frigobar)
-Texto del producto 2: refrigerador lg top freezer 11p3 gt35bp
-✅ Producto 3 contiene al menos una equivalencia (refrigerador, nevera, frigobar)
-Texto del producto 3: refrigerador midea mdrt489mtm28wd 12p3 negro
-✅ Producto 4 contiene al menos una equivalencia (refrigerador, nevera, frigobar)
-Texto del producto 4: refrigerador automático mabe 10 pies cúbicos rma250fymrq0
-✅ Producto 5 contiene al menos una equivalencia (refrigerador, nevera, frigobar)
-Texto del producto 5: refrigerador mabe automático 11 pies cúbicos rma300fxmrq0 dark silver
-✅ Producto 6 contiene al menos una equivalencia (refrigerador, nevera, frigobar)
-Texto del producto 6: refrigerador mabe top mount de 14 pies cúbicos rme360fgmrm0
-✅ Producto 7 contiene al menos una equivalencia (refrigerador, nevera, frigobar)
-Texto del producto 7: refrigerador midea single door jazz black 7 pies cúbicos mrd190ccdlsw
-✅ Producto 8 contiene al menos una equivalencia (refrigerador, nevera, frigobar)
-Texto del producto 8: refrigerador mabe top mount de 19 pies cúbicos rms510ivmrm0
-✅ Producto 9 contiene al menos una equivalencia (refrigerador, nevera, frigobar)
-Texto del producto 9: refrigerador lg 7 pies cúbicos con tecnología inverter gr21wpp
-✅ Producto 10 contiene al menos una equivalencia (refrigerador, nevera, frigobar)
-Texto del producto 10: refrigerador whirlpool 9p3 xpert inverter top mount wt02409d
-✅ Producto 11 contiene al menos una equivalencia (refrigerador, nevera, frigobar)
-Texto del producto 11: refrigerador whirlpool 9p3 xpert inverter top mount wt32409d
-✅ Producto 12 contiene al menos una equivalencia (refrigerador, nevera, frigobar)
-Texto del producto 12: refrigerador lg top freezer 9p3 gt32wp
-✅ Producto 13 contiene al menos una equivalencia (refrigerador, nevera, frigobar)
-Texto del producto 13: refrigerador whirlpool top mount xpert energy saver 13 pies cúbicos inox steel
-✅ Producto 14 contiene al menos una equivalencia (refrigerador, nevera, frigobar)
-Texto del producto 14: refrigerador lg side by side 23 pies cúbicos vs23bep
-✅ Producto 15 contiene al menos una equivalencia (refrigerador, nevera, frigobar)
-Texto del producto 15: refrigerador lg top freezer 20 pies plata lt57bpsx
-✅ Producto 16 contiene al menos una equivalencia (refrigerador, nevera, frigobar)
-Texto del producto 16: refrigerador lg top mount 14 pies cúbicos vt40bjm
-✅ Producto 17 contiene al menos una equivalencia (refrigerador, nevera, frigobar)
-Texto del producto 17: refrigerador mabe top mount de 15 pies cúbicos rms400iamrm0
-✅ Producto 18 contiene al menos una equivalencia (refrigerador, nevera, frigobar)
-Texto del producto 18: refrigerador lg top mount 14 pies cúbicos rosa arcilla tecnología inverter vt40bjp
-✅ Producto 19 contiene al menos una equivalencia (refrigerador, nevera, frigobar)
-Texto del producto 19: refrigerador whirlpool top mount 18 pies cúbicos wt1818a
-✅ Producto 20 contiene al menos una equivalencia (refrigerador, nevera, frigobar)
+🗓️ Día 2: Viernes
+21 de noviembre
+⏱️ total de horarios encontrados para Viernes
+21 de noviembre: 7
+⏰ Horarios para "Viernes
+21 de noviembre": 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+🏪 Revisando sucursal 2: Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
+CONSOLE
+🗓️ total dias: 2
 
-=== Buscando: desodoramte ===
-🟢 Se encontraron 20 productos reales (conteo estabilizado)
-Texto del producto 0: desodorante aclarante nivea tono natural classic touch 50 ml
-✅ Producto 1 contiene al menos una equivalencia (desodorante, antitranspirante)
-Texto del producto 1: desodorante antitranspirante en aerosol para hombre stefano spazio 159ml
-✅ Producto 2 contiene al menos una equivalencia (desodorante, antitranspirante)
-Texto del producto 2: desodorante antitranspirante en aerosol para hombre stefano black legend 159ml
-✅ Producto 3 contiene al menos una equivalencia (desodorante, antitranspirante)
-Texto del producto 3: desodorante stefano signature play en aerosol 159ml
-✅ Producto 4 contiene al menos una equivalencia (desodorante, antitranspirante)
-Texto del producto 4: antitranspirante secret gel invisible berry 45g
-✅ Producto 5 contiene al menos una equivalencia (desodorante, antitranspirante)
-Texto del producto 5: desodorante antitranspirante en aerosol mujer lady speed stick pro 5 91g
-✅ Producto 6 contiene al menos una equivalencia (desodorante, antitranspirante)
-Texto del producto 6: desodorante antitranspirante en aerosol para hombre stefano alpha 159ml
-✅ Producto 7 contiene al menos una equivalencia (desodorante, antitranspirante)
-Texto del producto 7: desodorante en aerosol stefano imperial 159ml
-✅ Producto 8 contiene al menos una equivalencia (desodorante, antitranspirante)
-Texto del producto 8: desodorante antitranspirante en roll on garnier obao for men active 65g
-✅ Producto 9 contiene al menos una equivalencia (desodorante, antitranspirante)
-Texto del producto 9: antitranspirante en aerosol garnier obao piel delicada 89g
-✅ Producto 10 contiene al menos una equivalencia (desodorante, antitranspirante)
-Texto del producto 10: desodorante old spice fresh 50g
-✅ Producto 11 contiene al menos una equivalencia (desodorante, antitranspirante)
-Texto del producto 11: desodorante antitranspirante en aerosol neutro balance dermoprotector 150ml
-✅ Producto 12 contiene al menos una equivalencia (desodorante, antitranspirante)
-Texto del producto 12: antitranspirante en roll on garnier obao piel delicada 65g
-✅ Producto 13 contiene al menos una equivalencia (desodorante, antitranspirante)
-Texto del producto 13: desodorante anti manchas nivea men black & white invisible power 150ml
-✅ Producto 14 contiene al menos una equivalencia (desodorante, antitranspirante)
-Texto del producto 14: desodorante en aerosol stefano triumph 159ml
-✅ Producto 15 contiene al menos una equivalencia (desodorante, antitranspirante)
-Texto del producto 15: desodorante antitranspirante en aerosol para hombre stefano cosmo 159ml
-✅ Producto 16 contiene al menos una equivalencia (desodorante, antitranspirante)
-Texto del producto 16: antitranspirante en aerosol rexona powder dry 150ml
-✅ Producto 17 contiene al menos una equivalencia (desodorante, antitranspirante)
-Texto del producto 17: desodorante antitranspirante en aerosol para hombre stefano midnight 159ml
-✅ Producto 18 contiene al menos una equivalencia (desodorante, antitranspirante)
-Texto del producto 18: antitranspirante en roll on palmolive neutro balance 65ml
-✅ Producto 19 contiene al menos una equivalencia (desodorante, antitranspirante)
-Texto del producto 19: desodorante anti manchas nivea men black & white invisible power 50ml
-✅ Producto 20 contiene al menos una equivalencia (desodorante, antitranspirante)
+🗓️ Día 1: Mañana
+20 de noviembre
+⏱️ total de horarios encontrados para Mañana
+20 de noviembre: 7
+⏰ Horarios para "Mañana
+20 de noviembre": 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 
-=== Buscando: panales ===
-🟢 Se encontraron 20 productos reales (conteo estabilizado)
-Texto del producto 0: pañal kleenbebé comodisec etapa 6 extra jumbo unisex 80 pañales
-✅ Producto 1 contiene al menos una equivalencia (pañales, pañal, huggies, pampers, kleenbebé)
-Texto del producto 1: pañales kleenbebé suavelastic etapa 6 extra jumbo unisex 60 pañales
-✅ Producto 2 contiene al menos una equivalencia (pañales, pañal, huggies, pampers, kleenbebé)
-Texto del producto 2: pañales kleenbebé suavelastic etapa 5 jumbo unisex 60 pañales
-✅ Producto 3 contiene al menos una equivalencia (pañales, pañal, huggies, pampers, kleenbebé)
-Texto del producto 3: pañales kleenbebé suavelastic etapa 7 extra extra jumbo unisex 40 pañales
-✅ Producto 4 contiene al menos una equivalencia (pañales, pañal, huggies, pampers, kleenbebé)
-Texto del producto 4: pañales kleenbebé comodisec etapa 5 jumbo unisex 80 pañales
-✅ Producto 5 contiene al menos una equivalencia (pañales, pañal, huggies, pampers, kleenbebé)
-Texto del producto 5: pañales kleenbebé movilastic etapa 6 unisex 40 pañales
-✅ Producto 6 contiene al menos una equivalencia (pañales, pañal, huggies, pampers, kleenbebé)
-Texto del producto 6: pañales kleenbebé absorsec etapa 5 jumbo 40 pañales
-✅ Producto 7 contiene al menos una equivalencia (pañales, pañal, huggies, pampers, kleenbebé)
-Texto del producto 7: pañales kleenbebé absorsec etapa 6 extra jumbo 40 pañales
-✅ Producto 8 contiene al menos una equivalencia (pañales, pañal, huggies, pampers, kleenbebé)
-Texto del producto 8: pañales huggies all around etapa 7 unisex 40 pañales
-✅ Producto 9 contiene al menos una equivalencia (pañales, pañal, huggies, pampers, kleenbebé)
-Texto del producto 9: pañales kleenbebé suavelastic etapa 4 grande unisex 66 pañales
-✅ Producto 10 contiene al menos una equivalencia (pañales, pañal, huggies, pampers, kleenbebé)
-Texto del producto 10: pañales kleenbebé absorsec etapa 4 grandes 40 pañales
-✅ Producto 11 contiene al menos una equivalencia (pañales, pañal, huggies, pampers, kleenbebé)
-Texto del producto 11: pañales bbtips sensitive talla 7 40 pañales
-✅ Producto 12 contiene al menos una equivalencia (pañales, pañal, huggies, pampers, kleenbebé)
-Texto del producto 12: pañales kleenbebé absorsec unisex xxj e7 40 piezas
-✅ Producto 13 contiene al menos una equivalencia (pañales, pañal, huggies, pampers, kleenbebé)
-Texto del producto 13: pañales kleenbebé suavelastic etapa 1 recién nacido unisex 40 pañales
-✅ Producto 14 contiene al menos una equivalencia (pañales, pañal, huggies, pampers, kleenbebé)
-Texto del producto 14: pañales kleenbebé suavelastic etapa 2 chico unisex 40 pañales
-✅ Producto 15 contiene al menos una equivalencia (pañales, pañal, huggies, pampers, kleenbebé)
-Texto del producto 15: pañales kleenbebé suavelastic etapa 3 mediano unisex 44 pañales
-✅ Producto 16 contiene al menos una equivalencia (pañales, pañal, huggies, pampers, kleenbebé)
-Texto del producto 16: pañales kleenbebé movilastic etapa 5 unisex 40 pañales
-✅ Producto 17 contiene al menos una equivalencia (pañales, pañal, huggies, pampers, kleenbebé)
-Texto del producto 17: pañales huggies ultraconfort etapa 2 unisex 40 pañales
-✅ Producto 18 contiene al menos una equivalencia (pañales, pañal, huggies, pampers, kleenbebé)
-Texto del producto 18: pañales kleenbebé comodisec etapa 4 grande unisex 80 pañales
-✅ Producto 19 contiene al menos una equivalencia (pañales, pañal, huggies, pampers, kleenbebé)
-Texto del producto 19: pañales huggies all around etapa 6 unisex 40 pañales.
-✅ Producto 20 contiene al menos una equivalencia (pañales, pañal, huggies, pampers, kleenbebé)
+🗓️ Día 2: Viernes
+21 de noviembre
+⏱️ total de horarios encontrados para Viernes
+21 de noviembre: 7
+⏰ Horarios para "Viernes
+21 de noviembre": 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+🏪 Revisando sucursal 3: Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
+CONSOLE
+🗓️ total dias: 2
 
-=== Buscando: labadora ===
-🟢 Se encontraron 20 productos reales (conteo estabilizado)
-Texto del producto 0: lavadora lg carga superior motor inverter ai dd con 6 motion dd 19kg negro wt19mv6
-✅ Producto 1 contiene al menos una equivalencia (lavadora, centro de lavado, mabe, whirlpool, lg, samsung)
-Texto del producto 1: lavadora whirlpool carga superior 18kg blanca 8mwtw1823wjm
-✅ Producto 2 contiene al menos una equivalencia (lavadora, centro de lavado, mabe, whirlpool, lg, samsung)
-Texto del producto 2: lavadora whirlpool carga superior xpert system 22kg blanco 8mwtw2224mpm
-✅ Producto 3 contiene al menos una equivalencia (lavadora, centro de lavado, mabe, whirlpool, lg, samsung)
-Texto del producto 3: lavadora automática midea 17kg blanco ma500w17 w
-✅ Producto 4 contiene al menos una equivalencia (lavadora, centro de lavado, mabe, whirlpool, lg, samsung)
-Texto del producto 4: lavadora whirlpool carga superior 16kg blanca 8mwtw1612mjq
-✅ Producto 5 contiene al menos una equivalencia (lavadora, centro de lavado, mabe, whirlpool, lg, samsung)
-Texto del producto 5: lavadora mabe automática 18kg lma78113cbab0 blanca
-✅ Producto 6 contiene al menos una equivalencia (lavadora, centro de lavado, mabe, whirlpool, lg, samsung)
-Texto del producto 6: lavadora lg carga superior motor inverter ai dd con 6 motion dd 19kg blanco wt19wv6
-✅ Producto 7 contiene al menos una equivalencia (lavadora, centro de lavado, mabe, whirlpool, lg, samsung)
-Texto del producto 7: lavadora lg carga superior inteligente con motor inverter ai dd 21kg blanco wt21wv6
-✅ Producto 8 contiene al menos una equivalencia (lavadora, centro de lavado, mabe, whirlpool, lg, samsung)
-Texto del producto 8: lavadora automática mabe 17kg blanca lma77113cbab0
-✅ Producto 9 contiene al menos una equivalencia (lavadora, centro de lavado, mabe, whirlpool, lg, samsung)
-Texto del producto 9: lanzadora nerf elite 2.0 trio e9954
-❌ Producto 10 no contiene ninguna equivalencia (lavadora, centro de lavado, mabe, whirlpool, lg, samsung)
-Texto del producto 10: lavadora whirlpool carga superior 20kg blanco 8mwtw2024wjm
-✅ Producto 11 contiene al menos una equivalencia (lavadora, centro de lavado, mabe, whirlpool, lg, samsung)
-Texto del producto 11: lavadora whirlpool carga superior xpert system 20 kg blanco
-✅ Producto 12 contiene al menos una equivalencia (lavadora, centro de lavado, mabe, whirlpool, lg, samsung)
-Texto del producto 12: lavadora automática midea ma500w18 18kg gris
-✅ Producto 13 contiene al menos una equivalencia (lavadora, centro de lavado, mabe, whirlpool, lg, samsung)
-Texto del producto 13: lavadora automática mabe 22kg diamond gray lmh72205wdab1
-✅ Producto 14 contiene al menos una equivalencia (lavadora, centro de lavado, mabe, whirlpool, lg, samsung)
-Texto del producto 14: lavadora automática mabe lma72215wdab0 22 kg diamond gray
-✅ Producto 15 contiene al menos una equivalencia (lavadora, centro de lavado, mabe, whirlpool, lg, samsung)
-Texto del producto 15: lavadora whirlpool carga superior smart 26kg 8mwtw2640wjb
-✅ Producto 16 contiene al menos una equivalencia (lavadora, centro de lavado, mabe, whirlpool, lg, samsung)
-Texto del producto 16: lavadora semiautomática hisense doble tina 13kg wsa1301p
-✅ Producto 17 contiene al menos una equivalencia (lavadora, centro de lavado, mabe, whirlpool, lg, samsung)
-Texto del producto 17: lavadora carga superior whirlpool 18kg xpert system impeller gris
-✅ Producto 18 contiene al menos una equivalencia (lavadora, centro de lavado, mabe, whirlpool, lg, samsung)
-Texto del producto 18: lavadora whirlpool carga superior xpert system 8mwtw2223wpm 22kg
-✅ Producto 19 contiene al menos una equivalencia (lavadora, centro de lavado, mabe, whirlpool, lg, samsung)
-Texto del producto 19: lavadora carga superior whirlpool 21kg impeller xpert system blanca
-✅ Producto 20 contiene al menos una equivalencia (lavadora, centro de lavado, mabe, whirlpool, lg, samsung)
+🗓️ Día 1: Mañana
+20 de noviembre
+⏱️ total de horarios encontrados para Mañana
+20 de noviembre: 7
+⏰ Horarios para "Mañana
+20 de noviembre": 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 
-=== Buscando: yogurth ===
-🟢 Se encontraron 20 productos reales (conteo estabilizado)
-Texto del producto 0: yoghurt yoplait batido natural 1kg
-✅ Producto 1 contiene al menos una equivalencia (yoghurt)
-Texto del producto 1: yoghurt griego oikos natural sin azúcar 900g con 12g de proteína
-✅ Producto 2 contiene al menos una equivalencia (yoghurt)
-Texto del producto 2: yoghurt yoplait batido griego natural sin azúcar 1kg
-✅ Producto 3 contiene al menos una equivalencia (yoghurt)
-Texto del producto 3: yoghurt danone sabor natural sin azúcar 900g
-✅ Producto 4 contiene al menos una equivalencia (yoghurt)
-Texto del producto 4: yoghurt yoplait batido griego natural 1kg
-✅ Producto 5 contiene al menos una equivalencia (yoghurt)
-Texto del producto 5: yoghurt batido lala sabor fresa 900g
-✅ Producto 6 contiene al menos una equivalencia (yoghurt)
-Texto del producto 6: yoghurt yoplait batido fresa 125g
-✅ Producto 7 contiene al menos una equivalencia (yoghurt)
-Texto del producto 7: yoghurt yoplait batido natural 125g
-✅ Producto 8 contiene al menos una equivalencia (yoghurt)
-Texto del producto 8: yoghurt bebible lala fresa 6 piezas 220g
-✅ Producto 9 contiene al menos una equivalencia (yoghurt)
-Texto del producto 9: yogurth lala chiquitín fresa con 8 piezas 42g
-❌ Producto 10 no contiene ninguna equivalencia (yoghurt)
-Texto del producto 10: yoghurt danone bebible con fresa y manzana 6x220g
-✅ Producto 11 contiene al menos una equivalencia (yoghurt)
-Texto del producto 11: yoghurt griego oikos natural 900g
-✅ Producto 12 contiene al menos una equivalencia (yoghurt)
-Texto del producto 12: yoghurt yoplait griego sin azúcar natural batido 442g
-✅ Producto 13 contiene al menos una equivalencia (yoghurt)
-Texto del producto 13: yoghurt alpura batido natural 900g
-✅ Producto 14 contiene al menos una equivalencia (yoghurt)
-Texto del producto 14: yoghurt yoplait batido griego natural 145g
-✅ Producto 15 contiene al menos una equivalencia (yoghurt)
-Texto del producto 15: yoghurt yoplait bebible mix 6 piezas
-✅ Producto 16 contiene al menos una equivalencia (yoghurt)
-Texto del producto 16: yoghurt danone bebible con fresa 6x220g
-✅ Producto 17 contiene al menos una equivalencia (yoghurt)
-Texto del producto 17: yoghurt yoplait batido doble cero natural 1kg
-✅ Producto 18 contiene al menos una equivalencia (yoghurt)
-Texto del producto 18: yoghurt batido lala durazno 900g
-✅ Producto 19 contiene al menos una equivalencia (yoghurt)
-Texto del producto 19: yoghurt yoplait batido griego sin azúcar fresa 145g
-✅ Producto 20 contiene al menos una equivalencia (yoghurt)
+🗓️ Día 2: Viernes
+21 de noviembre
+⏱️ total de horarios encontrados para Viernes
+21 de noviembre: 7
+⏰ Horarios para "Viernes
+21 de noviembre": 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+🏪 Revisando sucursal 4: Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
+CONSOLE
+🗓️ total dias: 2
 
-=== Buscando: servesa ===
-🟢 Se encontraron 20 productos reales (conteo estabilizado)
-Texto del producto 0: cerveza barrilito 6 botellas 325ml c/u
-✅ Producto 1 contiene al menos una equivalencia (cerveza, corona, modelo, victoria, heineken)
-Texto del producto 1: cerveza clara carta blanca 6 latas 355ml c/u
-✅ Producto 2 contiene al menos una equivalencia (cerveza, corona, modelo, victoria, heineken)
-Texto del producto 2: cerveza premium bohemia vienna 6 botellas de 355ml c/u
-✅ Producto 3 contiene al menos una equivalencia (cerveza, corona, modelo, victoria, heineken)
-Texto del producto 3: cerveza modelo especial 6 latas de 355ml c/u
-✅ Producto 4 contiene al menos una equivalencia (cerveza, corona, modelo, victoria, heineken)
-Texto del producto 4: cerveza corona extra 6 latas de 355ml c/u
-✅ Producto 5 contiene al menos una equivalencia (cerveza, corona, modelo, victoria, heineken)
-Texto del producto 5: cerveza premium noche buena bock botella 12 pack 355ml
-✅ Producto 6 contiene al menos una equivalencia (cerveza, corona, modelo, victoria, heineken)
-Texto del producto 6: cerveza clara superior 6 latas de 355ml c/u
-✅ Producto 7 contiene al menos una equivalencia (cerveza, corona, modelo, victoria, heineken)
-Texto del producto 7: cerveza modelo especial 6 botellas de 355ml c/u
-✅ Producto 8 contiene al menos una equivalencia (cerveza, corona, modelo, victoria, heineken)
-Texto del producto 8: cerveza clara amstel ultra 6 botellas de 355 ml c/u
-✅ Producto 9 contiene al menos una equivalencia (cerveza, corona, modelo, victoria, heineken)
-Texto del producto 9: cerveza michelob ultra 6 botellas de 355ml c/u
-✅ Producto 10 contiene al menos una equivalencia (cerveza, corona, modelo, victoria, heineken)
-Texto del producto 10: cerveza pacifico clara 6 latas de 355ml c/u
-✅ Producto 11 contiene al menos una equivalencia (cerveza, corona, modelo, victoria, heineken)
-Texto del producto 11: cerveza stella artois 6 botellas de 330ml c/u
-✅ Producto 12 contiene al menos una equivalencia (cerveza, corona, modelo, victoria, heineken)
-Texto del producto 12: cerveza corona cero 355ml
-✅ Producto 13 contiene al menos una equivalencia (cerveza, corona, modelo, victoria, heineken)
-Texto del producto 13: cerveza preparada sol mezclas clamato lata 473ml
-✅ Producto 14 contiene al menos una equivalencia (cerveza, corona, modelo, victoria, heineken)
-Texto del producto 14: cerveza victoria 6 pack lata 355ml c/u
-✅ Producto 15 contiene al menos una equivalencia (cerveza, corona, modelo, victoria, heineken)
-Texto del producto 15: cerveza negra modelo 6 botellas de 355ml c/u
-✅ Producto 16 contiene al menos una equivalencia (cerveza, corona, modelo, victoria, heineken)
-Texto del producto 16: cerveza modelo especial 12 latas de 355ml c/u
-✅ Producto 17 contiene al menos una equivalencia (cerveza, corona, modelo, victoria, heineken)
-Texto del producto 17: cerveza premium bohemia pilsner 6 botellas de 355ml c/u
-✅ Producto 18 contiene al menos una equivalencia (cerveza, corona, modelo, victoria, heineken)
-Texto del producto 18: cerveza clara tecate light 6 pack lata 355ml
-✅ Producto 19 contiene al menos una equivalencia (cerveza, corona, modelo, victoria, heineken)
-Texto del producto 19: cerveza corona extra 12 latas de 355ml c/u
-✅ Producto 20 contiene al menos una equivalencia (cerveza, corona, modelo, victoria, heineken)
+🗓️ Día 1: Mañana
+20 de noviembre
+⏱️ total de horarios encontrados para Mañana
+20 de noviembre: 7
+⏰ Horarios para "Mañana
+20 de noviembre": 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 
-=== Buscando: deterjente ===
-🟢 Se encontraron 20 productos reales (conteo estabilizado)
-Texto del producto 0: detergente en polvo foca 1kg
-✅ Producto 1 contiene al menos una equivalencia (detergente)
-Texto del producto 1: detergente en polvo roma multiusos 1kg
-✅ Producto 2 contiene al menos una equivalencia (detergente)
-Texto del producto 2: detergente en polvo carisma 1kg
-✅ Producto 3 contiene al menos una equivalencia (detergente)
-Texto del producto 3: detergente líquido foca biodegradable 1l
-✅ Producto 4 contiene al menos una equivalencia (detergente)
-Texto del producto 4: detergente en polvo multiusos maestro limpio 1kg
-✅ Producto 5 contiene al menos una equivalencia (detergente)
-Texto del producto 5: detergente líquido carisma frescura en movimiento 1l
-✅ Producto 6 contiene al menos una equivalencia (detergente)
-Texto del producto 6: detergente en polvo salvo multiusos limón-bicarbonato 900g
-✅ Producto 7 contiene al menos una equivalencia (detergente)
-Texto del producto 7: detergente líquido foca biodegradable galón 3.785l
-✅ Producto 8 contiene al menos una equivalencia (detergente)
-Texto del producto 8: detergente en polvo blanca nieves multiusos 1kg
-✅ Producto 9 contiene al menos una equivalencia (detergente)
-Texto del producto 9: detergente multiusos chedraui 900g
-✅ Producto 10 contiene al menos una equivalencia (detergente)
-Texto del producto 10: detergente en polvo ariel poder y cuidado 750g
-✅ Producto 11 contiene al menos una equivalencia (detergente)
-Texto del producto 11: detergente en polvo carisma 2kg
-✅ Producto 12 contiene al menos una equivalencia (detergente)
-Texto del producto 12: detergente en polvo ariel poder y cuidado 33 lavadas 4kg
-✅ Producto 13 contiene al menos una equivalencia (detergente)
-Texto del producto 13: detergente en polvo ariel con un toque de downy 750g
-✅ Producto 14 contiene al menos una equivalencia (detergente)
-Texto del producto 14: detergente liquido selecto color 7l
-✅ Producto 15 contiene al menos una equivalencia (detergente)
-Texto del producto 15: detergente en polvo ace 5 cargas 540g
-✅ Producto 16 contiene al menos una equivalencia (detergente)
-Texto del producto 16: detergente en polvo persil universal acción profunda plus 4.5kg
-✅ Producto 17 contiene al menos una equivalencia (detergente)
-Texto del producto 17: detergente ariel regular bolsa 4.5kg
-✅ Producto 18 contiene al menos una equivalencia (detergente)
-Texto del producto 18: detergente en polvo bold 3 cariñitos de mamá 800g
-✅ Producto 19 contiene al menos una equivalencia (detergente)
-Texto del producto 19: detergente líquido mas color 830 ml
-✅ Producto 20 contiene al menos una equivalencia (detergente)
+🗓️ Día 2: Viernes
+21 de noviembre
+⏱️ total de horarios encontrados para Viernes
+21 de noviembre: 7
+⏰ Horarios para "Viernes
+21 de noviembre": 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+🏪 Revisando sucursal 5: Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
+CONSOLE
+🗓️ total dias: 2
 
-=== Buscando: suabitel ===
-🟢 Se encontraron 20 productos reales (conteo estabilizado)
-Texto del producto 0: suavizante de ropa suavitel cuidado superior fresca primavera 1l
-✅ Producto 1 contiene al menos una equivalencia (suavitel, suavizante, aromatizante de ropa, downy, ensueño)
-Texto del producto 1: suavizante de ropa suavitel cuidado superior fresca primavera 3l
-✅ Producto 2 contiene al menos una equivalencia (suavitel, suavizante, aromatizante de ropa, downy, ensueño)
-Texto del producto 2: suavizante de telas suavitel cuidado superior fresco aroma de sol 1l
-✅ Producto 3 contiene al menos una equivalencia (suavitel, suavizante, aromatizante de ropa, downy, ensueño)
-Texto del producto 3: suavizante de telas suavitel complete fresca primavera 700ml
-✅ Producto 4 contiene al menos una equivalencia (suavitel, suavizante, aromatizante de ropa, downy, ensueño)
-Texto del producto 4: suavizante de ropa suavitel cuidado superior aroma de sol 3l
-✅ Producto 5 contiene al menos una equivalencia (suavitel, suavizante, aromatizante de ropa, downy, ensueño)
-Texto del producto 5: suavizante suavitel acqua 700ml
-✅ Producto 6 contiene al menos una equivalencia (suavitel, suavizante, aromatizante de ropa, downy, ensueño)
-Texto del producto 6: suavizante suavitel lilas botella 700ml
-✅ Producto 7 contiene al menos una equivalencia (suavitel, suavizante, aromatizante de ropa, downy, ensueño)
-Texto del producto 7: suavizante de telas suavitel complete anochecer 700ml
-✅ Producto 8 contiene al menos una equivalencia (suavitel, suavizante, aromatizante de ropa, downy, ensueño)
-Texto del producto 8: suavizante de telas suavitel complete acqua 700ml
-✅ Producto 9 contiene al menos una equivalencia (suavitel, suavizante, aromatizante de ropa, downy, ensueño)
-Texto del producto 9: suavizante de telas suavitel baby 3l
-✅ Producto 10 contiene al menos una equivalencia (suavitel, suavizante, aromatizante de ropa, downy, ensueño)
-Texto del producto 10: suavizante de telas suavitel complete fresco aroma de sol 700ml
-✅ Producto 11 contiene al menos una equivalencia (suavitel, suavizante, aromatizante de ropa, downy, ensueño)
-Texto del producto 11: suavizante de telas antibacterial suavitel baby para bebé 740ml
-✅ Producto 12 contiene al menos una equivalencia (suavitel, suavizante, aromatizante de ropa, downy, ensueño)
-Texto del producto 12: suavizante de ropa suavitel cuidado superior fresca primavera 740ml
-✅ Producto 13 contiene al menos una equivalencia (suavitel, suavizante, aromatizante de ropa, downy, ensueño)
-Texto del producto 13: suavizante de ropa suavitel cuidado superior anochecer 740ml
-✅ Producto 14 contiene al menos una equivalencia (suavitel, suavizante, aromatizante de ropa, downy, ensueño)
-Texto del producto 14: suavizante de ropa suavitel cuidado superior aroma de sol 740ml
-✅ Producto 15 contiene al menos una equivalencia (suavitel, suavizante, aromatizante de ropa, downy, ensueño)
-Texto del producto 15: suavizante de telas suavitel momentos mágicos abrazo de amor 4.8l
-✅ Producto 16 contiene al menos una equivalencia (suavitel, suavizante, aromatizante de ropa, downy, ensueño)
-Texto del producto 16: suavizante de ropa suavitel cuidado superior manzana 3l
-✅ Producto 17 contiene al menos una equivalencia (suavitel, suavizante, aromatizante de ropa, downy, ensueño)
-Texto del producto 17: suavizante de telas suavitel momentos mágicos abrazo de amor 2.8l
-✅ Producto 18 contiene al menos una equivalencia (suavitel, suavizante, aromatizante de ropa, downy, ensueño)
-Texto del producto 18: suavizante de telas suavitel complete fresca primavera 2.8l
-✅ Producto 19 contiene al menos una equivalencia (suavitel, suavizante, aromatizante de ropa, downy, ensueño)
-Texto del producto 19: suavizante de ropa suavitel rojo tentación edición limitada 4.8l
-✅ Producto 20 contiene al menos una equivalencia (suavitel, suavizante, aromatizante de ropa, downy, ensueño)
+🗓️ Día 1: Mañana
+20 de noviembre
+⏱️ total de horarios encontrados para Mañana
+20 de noviembre: 7
+⏰ Horarios para "Mañana
+20 de noviembre": 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 
-=== Buscando: jamon serrano ===
-🟢 Se encontraron 20 productos reales (conteo estabilizado)
-Texto del producto 0: charola de jamón serrano parma 150g
-✅ Producto 1 contiene al menos una equivalencia (jamón serrano, jamón ibérico, jamón)
-Texto del producto 1: jamón serrano premium parma 120g
-✅ Producto 2 contiene al menos una equivalencia (jamón serrano, jamón ibérico, jamón)
-Texto del producto 2: jamón serrano parma 100 g
-✅ Producto 3 contiene al menos una equivalencia (jamón serrano, jamón ibérico, jamón)
-Texto del producto 3: jamón serrano real ibérico 100g
-✅ Producto 4 contiene al menos una equivalencia (jamón serrano, jamón ibérico, jamón)
-Texto del producto 4: jamón serrano peñaranda kg
-✅ Producto 5 contiene al menos una equivalencia (jamón serrano, jamón ibérico, jamón)
-Texto del producto 5: jamón serrano selecto parma por kg
-✅ Producto 6 contiene al menos una equivalencia (jamón serrano, jamón ibérico, jamón)
-Texto del producto 6: jamón serrano el pozo 60g
-✅ Producto 7 contiene al menos una equivalencia (jamón serrano, jamón ibérico, jamón)
-Texto del producto 7: jamón serrano peñaranda 100g
-✅ Producto 8 contiene al menos una equivalencia (jamón serrano, jamón ibérico, jamón)
-Texto del producto 8: jamón serrano tangamanga 100g
-✅ Producto 9 contiene al menos una equivalencia (jamón serrano, jamón ibérico, jamón)
-Texto del producto 9: jamón serrano bernina 85g
-✅ Producto 10 contiene al menos una equivalencia (jamón serrano, jamón ibérico, jamón)
-Texto del producto 10: jamón serrano tangamanga kg
-✅ Producto 11 contiene al menos una equivalencia (jamón serrano, jamón ibérico, jamón)
-Texto del producto 11: jamón tangamanga serrano en pétalos 90g
-✅ Producto 12 contiene al menos una equivalencia (jamón serrano, jamón ibérico, jamón)
-Texto del producto 12: jamón serrano iglesias redondo 100g
-✅ Producto 13 contiene al menos una equivalencia (jamón serrano, jamón ibérico, jamón)
-Texto del producto 13: jamón serrano casademont 100g
-✅ Producto 14 contiene al menos una equivalencia (jamón serrano, jamón ibérico, jamón)
-Texto del producto 14: jamón serrano reserva campofrío 100g
-✅ Producto 15 contiene al menos una equivalencia (jamón serrano, jamón ibérico, jamón)
-Texto del producto 15: jamón serrano bernina kg
-✅ Producto 16 contiene al menos una equivalencia (jamón serrano, jamón ibérico, jamón)
-Texto del producto 16: jamón serrano obertal 100g
-✅ Producto 17 contiene al menos una equivalencia (jamón serrano, jamón ibérico, jamón)
-Texto del producto 17: jamón serrano reserva campofrío kg
-✅ Producto 18 contiene al menos una equivalencia (jamón serrano, jamón ibérico, jamón)
-Texto del producto 18: jamón airesano serrano 60g
-✅ Producto 19 contiene al menos una equivalencia (jamón serrano, jamón ibérico, jamón)
-Texto del producto 19: sándwich el español fuente de sodas chedraui
-❌ Producto 20 no contiene ninguna equivalencia (jamón serrano, jamón ibérico, jamón)
+🗓️ Día 2: Viernes
+21 de noviembre
+⏱️ total de horarios encontrados para Viernes
+21 de noviembre: 7
+⏰ Horarios para "Viernes
+21 de noviembre": 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+🏪 Revisando sucursal 6: Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
+CONSOLE
+🗓️ total dias: 2
 
-=== Buscando: maquillage ===
-🟢 Se encontraron 20 productos reales (conteo estabilizado)
-Texto del producto 0: maquillaje en polvo compacto ponds angel face canela 12g
-✅ Producto 1 contiene al menos una equivalencia (maquillaje)
-Texto del producto 1: maquillaje en polvo compacto ponds angel face caribe 12g
-✅ Producto 2 contiene al menos una equivalencia (maquillaje)
-Texto del producto 2: maquillaje en polvo compacto ponds angel face natural dos 12g
-✅ Producto 3 contiene al menos una equivalencia (maquillaje)
-Texto del producto 3: maquillaje en polvo compacto ponds angel face gitano 12g
-✅ Producto 4 contiene al menos una equivalencia (maquillaje)
-Texto del producto 4: maquillaje en polvo cicatricure natural 10g
-✅ Producto 5 contiene al menos una equivalencia (maquillaje)
-Texto del producto 5: maquillaje en polvo compacto pond's clarant b3 angel face 12g
-✅ Producto 6 contiene al menos una equivalencia (maquillaje)
-Texto del producto 6: maquillaje rev neon halloween 9g
-✅ Producto 7 contiene al menos una equivalencia (maquillaje)
-Texto del producto 7: maquillaje en polvo cicatricure medio10g
-✅ Producto 8 contiene al menos una equivalencia (maquillaje)
-Texto del producto 8: maquillaje en polvo compacto ponds angel face topacio 12g
-✅ Producto 9 contiene al menos una equivalencia (maquillaje)
-Texto del producto 9: kit de maquillaje rev catrina para halloween
-✅ Producto 10 contiene al menos una equivalencia (maquillaje)
-Texto del producto 10: maquillaje en pasta negro rev básico halloween 78g
-✅ Producto 11 contiene al menos una equivalencia (maquillaje)
-Texto del producto 11: maquillaje en polvo compacto ponds angel face natural uno 12g
-✅ Producto 12 contiene al menos una equivalencia (maquillaje)
-Texto del producto 12: maquillaje líquido revlon colorstay full cover foundation sand beige 30 ml
-✅ Producto 13 contiene al menos una equivalencia (maquillaje)
-Texto del producto 13: maquillaje en polvo compacto ole! cosmetics traslúcido 10g
-✅ Producto 14 contiene al menos una equivalencia (maquillaje)
-Texto del producto 14: maquillaje líquido cicatricure natural 30ml
-✅ Producto 15 contiene al menos una equivalencia (maquillaje)
-Texto del producto 15: maquillaje corrector essence camouflage + matte tono 20
-✅ Producto 16 contiene al menos una equivalencia (maquillaje)
-Texto del producto 16: maquillaje líquido cicatricure color inteligente fps 50 humectante 30ml
-✅ Producto 17 contiene al menos una equivalencia (maquillaje)
-Texto del producto 17: maquillaje en polvo compacto maybelline new york fit me! 222 true beige 12g
-✅ Producto 18 contiene al menos una equivalencia (maquillaje)
-Texto del producto 18: maquillaje líquido cicatricure calcium therapy 30ml
-✅ Producto 19 contiene al menos una equivalencia (maquillaje)
-Texto del producto 19: maquillaje corrector líquido l'oréal infallible more than 324 oatmeal 14.4ml
-✅ Producto 20 contiene al menos una equivalencia (maquillaje)
+🗓️ Día 1: Mañana
+20 de noviembre
+⏱️ total de horarios encontrados para Mañana
+20 de noviembre: 7
+⏰ Horarios para "Mañana
+20 de noviembre": 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 
-=== Buscando: mayonesa macormik ===
-🟢 Se encontraron 20 productos reales (conteo estabilizado)
-Texto del producto 0: mayonesa mccormick con limón 507g
-✅ Producto 1 contiene al menos una equivalencia (mayonesa, mccormick)
-Texto del producto 1: mayonesa mccormick con limón 725g
-✅ Producto 2 contiene al menos una equivalencia (mayonesa, mccormick)
-Texto del producto 2: mayonesa mccormick con limón 190g
-✅ Producto 3 contiene al menos una equivalencia (mayonesa, mccormick)
-Texto del producto 3: mayonesa mccormick con limón 330g
-✅ Producto 4 contiene al menos una equivalencia (mayonesa, mccormick)
-Texto del producto 4: mayonesa mccormick con limón 1.2kg
-✅ Producto 5 contiene al menos una equivalencia (mayonesa, mccormick)
-Texto del producto 5: mayonesa con jugo de limones mccormick squeeze 290g
-✅ Producto 6 contiene al menos una equivalencia (mayonesa, mccormick)
-Texto del producto 6: mayonesa mccormick con limón 725g
-✅ Producto 7 contiene al menos una equivalencia (mayonesa, mccormick)
-Texto del producto 7: mayonesa mccormick con limón 1.7kg
-✅ Producto 8 contiene al menos una equivalencia (mayonesa, mccormick)
-Texto del producto 8: mayonesa mccormick con jugo de limón 285g
-✅ Producto 9 contiene al menos una equivalencia (mayonesa, mccormick)
-Texto del producto 9: mayonesa mccormick con limón 507g
-✅ Producto 10 contiene al menos una equivalencia (mayonesa, mccormick)
-Texto del producto 10: mayonesa mccormick pack viajero 3 piezas
-✅ Producto 11 contiene al menos una equivalencia (mayonesa, mccormick)
-Texto del producto 11: mayonesa mccormick mayofranks 2 piezas
-✅ Producto 12 contiene al menos una equivalencia (mayonesa, mccormick)
-Texto del producto 12: aderezo de mayonesa mccormick con chilpotle squeeze 310g
-✅ Producto 13 contiene al menos una equivalencia (mayonesa, mccormick)
-Texto del producto 13: mostaza mccormick squeeze 220g
-✅ Producto 14 contiene al menos una equivalencia (mayonesa, mccormick)
-Texto del producto 14: mostaza mccormick preparada 210g
-✅ Producto 15 contiene al menos una equivalencia (mayonesa, mccormick)
-Texto del producto 15: aderezo de mayonesa mccormick light con limón 425g
-✅ Producto 16 contiene al menos una equivalencia (mayonesa, mccormick)
-Texto del producto 16: mostaza mccormick 430g
-✅ Producto 17 contiene al menos una equivalencia (mayonesa, mccormick)
-Texto del producto 17: aderezo de mayonesa mccormick 420g
-✅ Producto 18 contiene al menos una equivalencia (mayonesa, mccormick)
-Texto del producto 18: aderezo de mayonesa mccormick 775g
-✅ Producto 19 contiene al menos una equivalencia (mayonesa, mccormick)
-Texto del producto 19: mostaza mccormick preparada 115g
-✅ Producto 20 contiene al menos una equivalencia (mayonesa, mccormick)
+🗓️ Día 2: Viernes
+21 de noviembre
+⏱️ total de horarios encontrados para Viernes
+21 de noviembre: 7
+⏰ Horarios para "Viernes
+21 de noviembre": 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+🏪 Revisando sucursal 7: Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
+CONSOLE
+🗓️ total dias: 2
 
-=== Buscando: jitomate salades ===
-🟢 Se encontraron 5 productos reales (conteo estabilizado)
-Texto del producto 0: tomate saladet por kg
-✅ Producto 1 contiene al menos una equivalencia (jitomate saladet, tomate saladet, tomate)
-Texto del producto 1: jitomate saladet campo vivo orgánico 450g
-✅ Producto 2 contiene al menos una equivalencia (jitomate saladet, tomate saladet, tomate)
-Texto del producto 2: pan para hamburguesa de tomate 8 piezas
-✅ Producto 3 contiene al menos una equivalencia (jitomate saladet, tomate saladet, tomate)
-Texto del producto 3: semilla hortaflor h798 jitomate saladet
-✅ Producto 4 contiene al menos una equivalencia (jitomate saladet, tomate saladet, tomate)
-Texto del producto 4: ciabatta de tomate rustica
-✅ Producto 5 contiene al menos una equivalencia (jitomate saladet, tomate saladet, tomate)
+🗓️ Día 1: Mañana
+20 de noviembre
+⏱️ total de horarios encontrados para Mañana
+20 de noviembre: 7
+⏰ Horarios para "Mañana
+20 de noviembre": 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 
-=== Buscando: selulares ===
-🟢 Se encontraron 5 productos reales (conteo estabilizado)
-Texto del producto 0: tomate saladet por kg
-❌ Producto 1 no contiene ninguna equivalencia (celular, teléfono, smartphone, samsung, xiaomi, iphone, motorola)
-Texto del producto 1: celular zte blade v70 max 256 gb gris telcel
-✅ Producto 2 contiene al menos una equivalencia (celular, teléfono, smartphone, samsung, xiaomi, iphone, motorola)
-Texto del producto 2: celular zte axon 70 256 gb gris + smartwatch telcel
-✅ Producto 3 contiene al menos una equivalencia (celular, teléfono, smartphone, samsung, xiaomi, iphone, motorola)
-Texto del producto 3: vino tinto estadounidense josh cellars cabernet 750ml
-❌ Producto 4 no contiene ninguna equivalencia (celular, teléfono, smartphone, samsung, xiaomi, iphone, motorola)
-Texto del producto 4: celular zte axon 70 256 gb verde + smartwatch telcel
-✅ Producto 5 contiene al menos una equivalencia (celular, teléfono, smartphone, samsung, xiaomi, iphone, motorola)
+🗓️ Día 2: Viernes
+21 de noviembre
+⏱️ total de horarios encontrados para Viernes
+21 de noviembre: 7
+⏰ Horarios para "Viernes
+21 de noviembre": 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+🏪 Revisando sucursal 8: Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
+CONSOLE
+🗓️ total dias: 2
 
-=== Buscando: jugetes ===
-🟢 Se encontraron 20 productos reales (conteo estabilizado)
-Texto del producto 0: juguete para bebés fisher-price perrito camina conmigo
-✅ Producto 1 contiene al menos una equivalencia (juguetes, juguete, carro, carrito, muñeca, play-doh, figura, peluche, mattel, hasbro, lego)
-Texto del producto 1: cuete trozos res por kg
-❌ Producto 2 no contiene ninguna equivalencia (juguetes, juguete, carro, carrito, muñeca, play-doh, figura, peluche, mattel, hasbro, lego)
-Texto del producto 2: fisher-price juguete para bebés pila de aritos
-✅ Producto 3 contiene al menos una equivalencia (juguetes, juguete, carro, carrito, muñeca, play-doh, figura, peluche, mattel, hasbro, lego)
-Texto del producto 3: fisher-price juguete tablet aprendizaje crece conmigo rosa
-✅ Producto 4 contiene al menos una equivalencia (juguetes, juguete, carro, carrito, muñeca, play-doh, figura, peluche, mattel, hasbro, lego)
-Texto del producto 4: juguete para bebés fisher-price león camina conmigo andadera
-✅ Producto 5 contiene al menos una equivalencia (juguetes, juguete, carro, carrito, muñeca, play-doh, figura, peluche, mattel, hasbro, lego)
-Texto del producto 5: fisher-price juguete tablet aprendizaje crece conmigo azul
-✅ Producto 6 contiene al menos una equivalencia (juguetes, juguete, carro, carrito, muñeca, play-doh, figura, peluche, mattel, hasbro, lego)
-Texto del producto 6: juguete para bebés fisher-price surtido mini bi bot y mini bel bot
-✅ Producto 7 contiene al menos una equivalencia (juguetes, juguete, carro, carrito, muñeca, play-doh, figura, peluche, mattel, hasbro, lego)
-Texto del producto 7: fisher-price juguete bebés control juega y aprende conmigo
-✅ Producto 8 contiene al menos una equivalencia (juguetes, juguete, carro, carrito, muñeca, play-doh, figura, peluche, mattel, hasbro, lego)
-Texto del producto 8: juguete para bebés fisher-price primera muñeca y primer osito
-✅ Producto 9 contiene al menos una equivalencia (juguetes, juguete, carro, carrito, muñeca, play-doh, figura, peluche, mattel, hasbro, lego)
-Texto del producto 9: juguete para bebés fisher-price surtido de actividades de animales
-✅ Producto 10 contiene al menos una equivalencia (juguetes, juguete, carro, carrito, muñeca, play-doh, figura, peluche, mattel, hasbro, lego)
-Texto del producto 10: fisher-price juguete para bebés mariposa bloques divertidos
-✅ Producto 11 contiene al menos una equivalencia (juguetes, juguete, carro, carrito, muñeca, play-doh, figura, peluche, mattel, hasbro, lego)
-Texto del producto 11: juguete para bebés fisher-price oruga cadena de colores
-✅ Producto 12 contiene al menos una equivalencia (juguetes, juguete, carro, carrito, muñeca, play-doh, figura, peluche, mattel, hasbro, lego)
-Texto del producto 12: juguete para bebés fisher-price cubo animalitos divertidos
-✅ Producto 13 contiene al menos una equivalencia (juguetes, juguete, carro, carrito, muñeca, play-doh, figura, peluche, mattel, hasbro, lego)
-Texto del producto 13: juguete para bebés fisher-price teléfono sonidos divertidos
-✅ Producto 14 contiene al menos una equivalencia (juguetes, juguete, carro, carrito, muñeca, play-doh, figura, peluche, mattel, hasbro, lego)
-Texto del producto 14: fisher-price juguete mis primeros rompecabezas de madera
-✅ Producto 15 contiene al menos una equivalencia (juguetes, juguete, carro, carrito, muñeca, play-doh, figura, peluche, mattel, hasbro, lego)
-Texto del producto 15: juguete para bebés fisher-price cebra bloques de actividades
-✅ Producto 16 contiene al menos una equivalencia (juguetes, juguete, carro, carrito, muñeca, play-doh, figura, peluche, mattel, hasbro, lego)
-Texto del producto 16: juguete para bebés fisher-price caballito de mar dulces sueños
-✅ Producto 17 contiene al menos una equivalencia (juguetes, juguete, carro, carrito, muñeca, play-doh, figura, peluche, mattel, hasbro, lego)
-Texto del producto 17: fisher-price juguete para bebés teléfono parlanchín rojo
-✅ Producto 18 contiene al menos una equivalencia (juguetes, juguete, carro, carrito, muñeca, play-doh, figura, peluche, mattel, hasbro, lego)
-Texto del producto 18: juguete para bebés fisher-price teléfono parlanchín
-✅ Producto 19 contiene al menos una equivalencia (juguetes, juguete, carro, carrito, muñeca, play-doh, figura, peluche, mattel, hasbro, lego)
-Texto del producto 19: hot wheels juguete camiones remolque sorpresa escala 1:64
-✅ Producto 20 contiene al menos una equivalencia (juguetes, juguete, carro, carrito, muñeca, play-doh, figura, peluche, mattel, hasbro, lego)
+🗓️ Día 1: Mañana
+20 de noviembre
+⏱️ total de horarios encontrados para Mañana
+20 de noviembre: 7
+⏰ Horarios para "Mañana
+20 de noviembre": 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 
-=== Buscando: qeso ===
-🟢 Se encontraron 20 productos reales (conteo estabilizado)
-Texto del producto 0: queso manchego nochebuena rebanado 400g
-✅ Producto 1 contiene al menos una equivalencia (queso)
-Texto del producto 1: queso crema philadelphia original 200g
-✅ Producto 2 contiene al menos una equivalencia (queso)
-Texto del producto 2: queso fud panela rebanadas cuadradas 300g
-✅ Producto 3 contiene al menos una equivalencia (queso)
-Texto del producto 3: queso panela volcanes 400g
-✅ Producto 4 contiene al menos una equivalencia (queso)
-Texto del producto 4: queso manchego nochebuena rebanado 200g
-✅ Producto 5 contiene al menos una equivalencia (queso)
-Texto del producto 5: queso lala panela 200g
-✅ Producto 6 contiene al menos una equivalencia (queso)
-Texto del producto 6: queso la villita estilo fundido americano 210g
-✅ Producto 7 contiene al menos una equivalencia (queso)
-Texto del producto 7: queso la villita tipo manchego rebanadas medias lunas 150g
-✅ Producto 8 contiene al menos una equivalencia (queso)
-Texto del producto 8: queso selecto brand manchego 400g
-✅ Producto 9 contiene al menos una equivalencia (queso)
-Texto del producto 9: queso philadelphia original 2 pack 440g
-✅ Producto 10 contiene al menos una equivalencia (queso)
-Texto del producto 10: queso mozarella la villita rallado 600g
-✅ Producto 11 contiene al menos una equivalencia (queso)
-Texto del producto 11: queso lala oaxaca 400g
-✅ Producto 12 contiene al menos una equivalencia (queso)
-Texto del producto 12: queso la villita tipo manchego rebanado 400g
-✅ Producto 13 contiene al menos una equivalencia (queso)
-Texto del producto 13: queso la villita panela 360g
-✅ Producto 14 contiene al menos una equivalencia (queso)
-Texto del producto 14: queso crema philadelphia 90g
-✅ Producto 15 contiene al menos una equivalencia (queso)
-Texto del producto 15: queso crema fiorelo 190g
-✅ Producto 16 contiene al menos una equivalencia (queso)
-Texto del producto 16: queso lala panela light 400g
-✅ Producto 17 contiene al menos una equivalencia (queso)
-Texto del producto 17: queso gouda nochebuena rebanado 400g
-✅ Producto 18 contiene al menos una equivalencia (queso)
-Texto del producto 18: queso bionda oaxaca 400g
-✅ Producto 19 contiene al menos una equivalencia (queso)
-Texto del producto 19: queso fud mozzarella rallado 200g
-✅ Producto 20 contiene al menos una equivalencia (queso)
+🗓️ Día 2: Viernes
+21 de noviembre
+⏱️ total de horarios encontrados para Viernes
+21 de noviembre: 7
+⏰ Horarios para "Viernes
+21 de noviembre": 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 
-=== Buscando: aroz ===
-🟢 Se encontraron 20 productos reales (conteo estabilizado)
-Texto del producto 0: arroz super extra chedraui 900g
-✅ Producto 1 contiene al menos una equivalencia (arroz)
-Texto del producto 1: arroz verde valle super extra 900g
-✅ Producto 2 contiene al menos una equivalencia (arroz)
-Texto del producto 2: arroz schettino verde 900g
-✅ Producto 3 contiene al menos una equivalencia (arroz)
-Texto del producto 3: arroz schettino extra 900g
-✅ Producto 4 contiene al menos una equivalencia (arroz)
-Texto del producto 4: arroz sos grano grueso 750g
-✅ Producto 5 contiene al menos una equivalencia (arroz)
-Texto del producto 5: arroz sos integral 1kg
-✅ Producto 6 contiene al menos una equivalencia (arroz)
-Texto del producto 6: arroz con leche lala 4 piezas 125g
-✅ Producto 7 contiene al menos una equivalencia (arroz)
-Texto del producto 7: arroz la merced super extra 900g
-✅ Producto 8 contiene al menos una equivalencia (arroz)
-Texto del producto 8: arroz a la mexicana knorr en sobre 155g
-✅ Producto 9 contiene al menos una equivalencia (arroz)
-Texto del producto 9: arroz super extra calidad bueno premium 900g
-✅ Producto 10 contiene al menos una equivalencia (arroz)
-Texto del producto 10: arroz verde valle impegable 750g
-✅ Producto 11 contiene al menos una equivalencia (arroz)
-Texto del producto 11: arroz italriso súper extra 800g
-✅ Producto 12 contiene al menos una equivalencia (arroz)
-Texto del producto 12: arroz sos super extra rojo 900g
-✅ Producto 13 contiene al menos una equivalencia (arroz)
-Texto del producto 13: arroz precocido verde valle jardinera 140g
-✅ Producto 14 contiene al menos una equivalencia (arroz)
-Texto del producto 14: arroz a la primavera knorr en sobre 155g
-✅ Producto 15 contiene al menos una equivalencia (arroz)
-Texto del producto 15: arroz sos precocido 900g
-✅ Producto 16 contiene al menos una equivalencia (arroz)
-Texto del producto 16: arroz con leche lala 125g
-✅ Producto 17 contiene al menos una equivalencia (arroz)
-Texto del producto 17: arroz precocido verde valle blanco 300g
-✅ Producto 18 contiene al menos una equivalencia (arroz)
-Texto del producto 18: arroz sos super extra para sushi 1kg
-✅ Producto 19 contiene al menos una equivalencia (arroz)
-Texto del producto 19: arroz verde valle integral 900g
-✅ Producto 20 contiene al menos una equivalencia (arroz)
+📌 Resumen final:
+🕒 Fecha de ejecución: 19/11/2025, 18:09:09
+🏬 Total de sucursales evaluadas: 8
+✅ Total configuradas con días: 8
+🚫 Total sin días configurados: 0
 
-=== Buscando: sebolla ===
-🟢 Se encontraron 20 productos reales (conteo estabilizado)
-Texto del producto 0: cebolla blanca por kg
-✅ Producto 1 contiene al menos una equivalencia (cebolla)
-Texto del producto 1: cebolla morada por kg
-✅ Producto 2 contiene al menos una equivalencia (cebolla)
-Texto del producto 2: cebolla de cambray por manojo
-✅ Producto 3 contiene al menos una equivalencia (cebolla)
-Texto del producto 3: cebolla amarilla por kg
-✅ Producto 4 contiene al menos una equivalencia (cebolla)
-Texto del producto 4: semillas verde valle lenteja 450g
-❌ Producto 5 no contiene ninguna equivalencia (cebolla)
-Texto del producto 5: cebolla en polvo mccormick 70g
-✅ Producto 6 contiene al menos una equivalencia (cebolla)
-Texto del producto 6: cebolla selecto en polvo 65g
-✅ Producto 7 contiene al menos una equivalencia (cebolla)
-Texto del producto 7: cebolla morada organica bolsa 700g
-✅ Producto 8 contiene al menos una equivalencia (cebolla)
-Texto del producto 8: semilla first street girasol 226g
-❌ Producto 9 no contiene ninguna equivalencia (cebolla)
-Texto del producto 9: vino blanco italiano bolla pinot grigio 750ml
-❌ Producto 10 no contiene ninguna equivalencia (cebolla)
-Texto del producto 10: vino tinto italiano bolla chianti docg 750ml
-❌ Producto 11 no contiene ninguna equivalencia (cebolla)
-Texto del producto 11: cebolla blanca campo vivo orgánica 700g
-✅ Producto 12 contiene al menos una equivalencia (cebolla)
-Texto del producto 12: semilla hortaflor h953 cilantro cultivad
-❌ Producto 13 no contiene ninguna equivalencia (cebolla)
-Texto del producto 13: semillas verde valle maíz palomero 500g
-❌ Producto 14 no contiene ninguna equivalencia (cebolla)
-Texto del producto 14: semillas verde valle haba 500g
-❌ Producto 15 no contiene ninguna equivalencia (cebolla)
-Texto del producto 15: cebolla salada fresh gourmet topping para ensalada 99g
-✅ Producto 16 contiene al menos una equivalencia (cebolla)
-Texto del producto 16: semilla san elias girasol 200g
-❌ Producto 17 no contiene ninguna equivalencia (cebolla)
-Texto del producto 17: semilla hortaflor h558 lavanda
-❌ Producto 18 no contiene ninguna equivalencia (cebolla)
-Texto del producto 18: semilla hortaflor h506 albahaca grande
-❌ Producto 19 no contiene ninguna equivalencia (cebolla)
-Texto del producto 19: cebolla ajo pimienta fresh gourmet topping para ensalada 99g
-✅ Producto 20 contiene al menos una equivalencia (cebolla)
+📅 Sucursales con días configurados:
 
-=== Buscando: aguacate hass ===
-🟢 Se encontraron 4 productos reales (conteo estabilizado)
-Texto del producto 0: aguacate hass por kg
-✅ Producto 1 contiene al menos una equivalencia (aguacate hass, palta, aguacate)
-Texto del producto 1: aguacate hass enmallado pieza
-✅ Producto 2 contiene al menos una equivalencia (aguacate hass, palta, aguacate)
-Texto del producto 2: aguacate hass extra malla 3 piezas
-✅ Producto 3 contiene al menos una equivalencia (aguacate hass, palta, aguacate)
-Texto del producto 3: aceite de aguacate hass & hass extra virgen 250ml
-✅ Producto 4 contiene al menos una equivalencia (aguacate hass, palta, aguacate)
+🏪 Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
+   - Día: Mañana
+20 de noviembre
+     Horarios: 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+   - Día: Viernes
+21 de noviembre
+     Horarios: 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 
-=== Buscando: manteqilla ===
-🟢 Se encontraron 20 productos reales (conteo estabilizado)
-Texto del producto 0: mantequilla gloria sin sal 90g
-✅ Producto 1 contiene al menos una equivalencia (mantequilla, margarina)
-Texto del producto 1: mantequilla lala sin sal barra 90g
-✅ Producto 2 contiene al menos una equivalencia (mantequilla, margarina)
-Texto del producto 2: margarina iberia sin sal 90g
-✅ Producto 3 contiene al menos una equivalencia (mantequilla, margarina)
-Texto del producto 3: mantequilla lala sin sal barra 90g 4 piezas
-✅ Producto 4 contiene al menos una equivalencia (mantequilla, margarina)
-Texto del producto 4: mantequilla gloria sin sal 225g
-✅ Producto 5 contiene al menos una equivalencia (mantequilla, margarina)
-Texto del producto 5: mantequilla gloria con sal 90g
-✅ Producto 6 contiene al menos una equivalencia (mantequilla, margarina)
-Texto del producto 6: mantequilla gloria sin sal 360g
-✅ Producto 7 contiene al menos una equivalencia (mantequilla, margarina)
-Texto del producto 7: margarina primavera chantilly sin sal 190g
-✅ Producto 8 contiene al menos una equivalencia (mantequilla, margarina)
-Texto del producto 8: margarina selecto sin sal de 90g
-✅ Producto 9 contiene al menos una equivalencia (mantequilla, margarina)
-Texto del producto 9: margarina la villita con sal 90g
-✅ Producto 10 contiene al menos una equivalencia (mantequilla, margarina)
-Texto del producto 10: mantequilla lala sin sal barra 225g
-✅ Producto 11 contiene al menos una equivalencia (mantequilla, margarina)
-Texto del producto 11: margarina primavera sin sal 400g
-✅ Producto 12 contiene al menos una equivalencia (mantequilla, margarina)
-Texto del producto 12: mantequilla aguascalientes 1kg
-✅ Producto 13 contiene al menos una equivalencia (mantequilla, margarina)
-Texto del producto 13: margarina la villita sin sal 90g
-✅ Producto 14 contiene al menos una equivalencia (mantequilla, margarina)
-Texto del producto 14: mantequilla aguascalientes 220g
-✅ Producto 15 contiene al menos una equivalencia (mantequilla, margarina)
-Texto del producto 15: mantequilla nochebuena sin sal 90g
-✅ Producto 16 contiene al menos una equivalencia (mantequilla, margarina)
-Texto del producto 16: mantequilla en barra sin sal lurpak 200g
-✅ Producto 17 contiene al menos una equivalencia (mantequilla, margarina)
-Texto del producto 17: margarina selecto sin sal de 225g
-✅ Producto 18 contiene al menos una equivalencia (mantequilla, margarina)
-Texto del producto 18: mantequilla barrita aguascalientes 90g
-✅ Producto 19 contiene al menos una equivalencia (mantequilla, margarina)
-Texto del producto 19: mantequilla gloria con sal 360g
-✅ Producto 20 contiene al menos una equivalencia (mantequilla, margarina)
+🏪 Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
+   - Día: Mañana
+20 de noviembre
+     Horarios: 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+   - Día: Viernes
+21 de noviembre
+     Horarios: 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 
-=== Buscando: suavisante ===
-🟢 Se encontraron 20 productos reales (conteo estabilizado)
-Texto del producto 0: suavizante de ropa suavitel cuidado superior fresca primavera 1l
-✅ Producto 1 contiene al menos una equivalencia (suavizante, suavitel, aromatizante de ropa, downy, ensueño, detergente)
-Texto del producto 1: suavizante de ropa suavitel cuidado superior fresca primavera 3l
-✅ Producto 2 contiene al menos una equivalencia (suavizante, suavitel, aromatizante de ropa, downy, ensueño, detergente)
-Texto del producto 2: suavizante de telas suavitel cuidado superior fresco aroma de sol 1l
-✅ Producto 3 contiene al menos una equivalencia (suavizante, suavitel, aromatizante de ropa, downy, ensueño, detergente)
-Texto del producto 3: suavizante de telas suavitel complete fresca primavera 700ml
-✅ Producto 4 contiene al menos una equivalencia (suavizante, suavitel, aromatizante de ropa, downy, ensueño, detergente)
-Texto del producto 4: suavizante de ropa suavitel cuidado superior aroma de sol 3l
-✅ Producto 5 contiene al menos una equivalencia (suavizante, suavitel, aromatizante de ropa, downy, ensueño, detergente)
-Texto del producto 5: suavizante suavitel acqua 700ml
-✅ Producto 6 contiene al menos una equivalencia (suavizante, suavitel, aromatizante de ropa, downy, ensueño, detergente)
-Texto del producto 6: suavizante suavitel lilas botella 700ml
-✅ Producto 7 contiene al menos una equivalencia (suavizante, suavitel, aromatizante de ropa, downy, ensueño, detergente)
-Texto del producto 7: suavizante de telas suavitel complete anochecer 700ml
-✅ Producto 8 contiene al menos una equivalencia (suavizante, suavitel, aromatizante de ropa, downy, ensueño, detergente)
-Texto del producto 8: suavizante de telas suavitel complete acqua 700ml
-✅ Producto 9 contiene al menos una equivalencia (suavizante, suavitel, aromatizante de ropa, downy, ensueño, detergente)
-Texto del producto 9: suavizante de telas downy intense amanecer 2.8l
-✅ Producto 10 contiene al menos una equivalencia (suavizante, suavitel, aromatizante de ropa, downy, ensueño, detergente)
-Texto del producto 10: suavizante de telas suavitel baby 3l
-✅ Producto 11 contiene al menos una equivalencia (suavizante, suavitel, aromatizante de ropa, downy, ensueño, detergente)
-Texto del producto 11: suavizante de telas downy intense floral 2.8l
-✅ Producto 12 contiene al menos una equivalencia (suavizante, suavitel, aromatizante de ropa, downy, ensueño, detergente)
-Texto del producto 12: suavizante de telas suavitel complete fresco aroma de sol 700ml
-✅ Producto 13 contiene al menos una equivalencia (suavizante, suavitel, aromatizante de ropa, downy, ensueño, detergente)
-Texto del producto 13: suavizante de telas antibacterial suavitel baby para bebé 740ml
-✅ Producto 14 contiene al menos una equivalencia (suavizante, suavitel, aromatizante de ropa, downy, ensueño, detergente)
-Texto del producto 14: suavizante de ropa suavitel cuidado superior fresca primavera 740ml
-✅ Producto 15 contiene al menos una equivalencia (suavizante, suavitel, aromatizante de ropa, downy, ensueño, detergente)
-Texto del producto 15: suavizante de ropa suavitel cuidado superior anochecer 740ml
-✅ Producto 16 contiene al menos una equivalencia (suavizante, suavitel, aromatizante de ropa, downy, ensueño, detergente)
-Texto del producto 16: suavizante de telas downy intense pureza 2.8l
-✅ Producto 17 contiene al menos una equivalencia (suavizante, suavitel, aromatizante de ropa, downy, ensueño, detergente)
-Texto del producto 17: suavizante de telas downy intense floral 700ml
-✅ Producto 18 contiene al menos una equivalencia (suavizante, suavitel, aromatizante de ropa, downy, ensueño, detergente)
-Texto del producto 18: suavizante de telas downy intense amanecer 700ml
-✅ Producto 19 contiene al menos una equivalencia (suavizante, suavitel, aromatizante de ropa, downy, ensueño, detergente)
-Texto del producto 19: suavizante de telas ensueño max zero enjuague frescura primaveral 800ml + 50ml
-✅ Producto 20 contiene al menos una equivalencia (suavizante, suavitel, aromatizante de ropa, downy, ensueño, detergente)
+🏪 Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
+   - Día: Mañana
+20 de noviembre
+     Horarios: 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+   - Día: Viernes
+21 de noviembre
+     Horarios: 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 
-=== Buscando: mochilas scolares ===
-🟢 Se encontraron 20 productos reales (conteo estabilizado)
-Texto del producto 0: mochila kalgap 600d n varios modelos
-✅ Producto 1 contiene al menos una equivalencia (mochila, backpack, totto, kipling, samsonite)
-Texto del producto 1: mochila kalgap estampada varios modelos
-✅ Producto 2 contiene al menos una equivalencia (mochila, backpack, totto, kipling, samsonite)
-Texto del producto 2: mochila kalgap 600d c varios modelos
-✅ Producto 3 contiene al menos una equivalencia (mochila, backpack, totto, kipling, samsonite)
-Texto del producto 3: mochila caballero sport juvenil
-✅ Producto 4 contiene al menos una equivalencia (mochila, backpack, totto, kipling, samsonite)
-Texto del producto 4: mochila senderismo sporteam
-✅ Producto 5 contiene al menos una equivalencia (mochila, backpack, totto, kipling, samsonite)
-Texto del producto 5: mochila porta laptop mccarthy lpi-2 gris
-✅ Producto 6 contiene al menos una equivalencia (mochila, backpack, totto, kipling, samsonite)
-Texto del producto 6: mochila yadatex naruto azul
-✅ Producto 7 contiene al menos una equivalencia (mochila, backpack, totto, kipling, samsonite)
-Texto del producto 7: mochila para laptop coolcapital mochila slay matcha
-✅ Producto 8 contiene al menos una equivalencia (mochila, backpack, totto, kipling, samsonite)
-Texto del producto 8: mochila luxo brand unibella color vino
-✅ Producto 9 contiene al menos una equivalencia (mochila, backpack, totto, kipling, samsonite)
-Texto del producto 9: mochila evelyn kate pequeña acolchada spade color negro.
-✅ Producto 10 contiene al menos una equivalencia (mochila, backpack, totto, kipling, samsonite)
-Texto del producto 10: mochila macarena brand cars mini infantil color negro con rojo
-✅ Producto 11 contiene al menos una equivalencia (mochila, backpack, totto, kipling, samsonite)
-Texto del producto 11: mochila luxo mx xl negra nylon poliester para laptop
-✅ Producto 12 contiene al menos una equivalencia (mochila, backpack, totto, kipling, samsonite)
-Texto del producto 12: mochila macarena brand labubu escolar color lila con estuche exterior
-✅ Producto 13 contiene al menos una equivalencia (mochila, backpack, totto, kipling, samsonite)
-Texto del producto 13: mochila escolar macarena brand labubu color fucsia 39 cm
-✅ Producto 14 contiene al menos una equivalencia (mochila, backpack, totto, kipling, samsonite)
-Texto del producto 14: mochila escolar macarena brand labubu color negro 39 cm
-✅ Producto 15 contiene al menos una equivalencia (mochila, backpack, totto, kipling, samsonite)
-Texto del producto 15: mochila macarena brand labubu escolar color azul con estuche exterior
-✅ Producto 16 contiene al menos una equivalencia (mochila, backpack, totto, kipling, samsonite)
-Texto del producto 16: mochila marc jacobs negra 39 x 36 cm
-✅ Producto 17 contiene al menos una equivalencia (mochila, backpack, totto, kipling, samsonite)
-Texto del producto 17: mochila escolar macarena store color rosa de labubu
-✅ Producto 18 contiene al menos una equivalencia (mochila, backpack, totto, kipling, samsonite)
-Texto del producto 18: mochila mccarthy más portafolio mc-7 negro/rojo mc-022/8 rojo
-✅ Producto 19 contiene al menos una equivalencia (mochila, backpack, totto, kipling, samsonite)
-Texto del producto 19: mochila teton de hidratación gris oasis 22l con bolsa de agua de 3l
-✅ Producto 20 contiene al menos una equivalencia (mochila, backpack, totto, kipling, samsonite)
+🏪 Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
+   - Día: Mañana
+20 de noviembre
+     Horarios: 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+   - Día: Viernes
+21 de noviembre
+     Horarios: 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 
-=== Buscando: sepillo de dientes ===
-🟢 Se encontraron 1 productos reales (conteo estabilizado)
-Texto del producto 0: hilo dental gum té verde 1 pieza
-❌ Producto 1 no contiene ninguna equivalencia (cepillo de dientes, cepillo)
+🏪 Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
+   - Día: Mañana
+20 de noviembre
+     Horarios: 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+   - Día: Viernes
+21 de noviembre
+     Horarios: 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 
-=== Buscando: aomatizante para casa ===
-🟢 Se encontraron 6 productos reales (conteo estabilizado)
-Texto del producto 0: tiras activas pato lima fresca 3 unidades de 10g
-✅ Producto 1 contiene al menos una equivalencia (aromatizante, ambientador, bloqueador de olores, tiras activas, glade, air wick, poett)
-Texto del producto 1: canastilla limpiadora y aromatizante para baños bref menta 50g
-✅ Producto 2 contiene al menos una equivalencia (aromatizante, ambientador, bloqueador de olores, tiras activas, glade, air wick, poett)
-Texto del producto 2: canastilla limpiadora y aromatizante para baño bref floral 100g
-✅ Producto 3 contiene al menos una equivalencia (aromatizante, ambientador, bloqueador de olores, tiras activas, glade, air wick, poett)
-Texto del producto 3: tiras activas pato lavanda 3 unidades de 10g
-✅ Producto 4 contiene al menos una equivalencia (aromatizante, ambientador, bloqueador de olores, tiras activas, glade, air wick, poett)
-Texto del producto 4: canastilla limpiadora y aromatizante para baños bref tierra magnolia 50g
-✅ Producto 5 contiene al menos una equivalencia (aromatizante, ambientador, bloqueador de olores, tiras activas, glade, air wick, poett)
-Texto del producto 5: bloqueador de olores para wc exgerm aroma pepino 100 ml
-✅ Producto 6 contiene al menos una equivalencia (aromatizante, ambientador, bloqueador de olores, tiras activas, glade, air wick, poett)
+🏪 Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
+   - Día: Mañana
+20 de noviembre
+     Horarios: 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+   - Día: Viernes
+21 de noviembre
+     Horarios: 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+
+🏪 Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
+   - Día: Mañana
+20 de noviembre
+     Horarios: 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+   - Día: Viernes
+21 de noviembre
+     Horarios: 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+
+🏪 Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
+   - Día: Mañana
+20 de noviembre
+     Horarios: 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+   - Día: Viernes
+21 de noviembre
+     Horarios: 8:00 am a 9:59 am, 10:00 am a 11:59 am, 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+
+
+📄 Reporte TXT generado en: C:\Users\atcon\Desktop\Playwright\playwright-piloto2\tests\reports\reporteSucursales.txt
+📊 Reporte XML JUnit generado en: C:\Users\atcon\Desktop\Playwright\playwright-piloto2\tests\reports\reporteSucursales.xml
+📄 Reporte PDF generado en: C:\Users\atcon\Desktop\Playwright\playwright-piloto2\reports\reporteSucursales.pdf
 ]]>
 </system-out>
 <system-err>
-<![CDATA[Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-]]>
-</system-err>
-</testcase>
-<testcase name="C2 - Long Tail" classname="Coincidencias\pruebasCoincidencias.spec.js" time="138.612">
-<system-out>
-<![CDATA[
-=== Buscando: shampoo para cabello teñido sin sulfatos ===
-🟢 Se encontraron 3 productos reales (conteo estabilizado)
-
-=== Buscando: papel higiénico de 16 rollos triple hoja ===
-🟢 Se encontraron 3 productos reales (conteo estabilizado)
-
-=== Buscando: café soluble descafeinado frasco grande ===
-🟢 Se encontraron 1 productos reales (conteo estabilizado)
-
-=== Buscando: leche deslactosada light de un litro ===
-❌ El sistema muestra mensaje de "sin resultados". Los 6 productos visibles son sugerencias.
-
-=== Buscando: refrigerador de dos puertas con despachador de hielo ===
-❌ El sistema muestra mensaje de "sin resultados". Los 6 productos visibles son sugerencias.
-
-=== Buscando: desodorante en aerosol para hombre sin alcohol ===
-🟢 Se encontraron 0 productos reales (conteo estabilizado)
-
-=== Buscando: pañales para bebé etapa 4 caja con 120 ===
-❌ El sistema muestra mensaje de "sin resultados". Los 6 productos visibles son sugerencias.
-
-=== Buscando: lavadora automática de 20 kg con carga frontal ===
-❌ El sistema muestra mensaje de "sin resultados". Los 6 productos visibles son sugerencias.
-
-=== Buscando: yogurt griego sin azúcar sabor natural ===
-❌ El sistema muestra mensaje de "sin resultados". Los 6 productos visibles son sugerencias.
-
-=== Buscando: aceite de canola para freír 3 litros ===
-❌ El sistema muestra mensaje de "sin resultados". Los 6 productos visibles son sugerencias.
-
-=== Buscando: tequila reposado 100% agave 750 ml ===
-🟢 Se encontraron 3 productos reales (conteo estabilizado)
-
-=== Buscando: detergente líquido para ropa de color biodegradable ===
-🟢 Se encontraron 3 productos reales (conteo estabilizado)
-
-=== Buscando: suavitel aroma de sol botella 5 litros ===
-❌ El sistema muestra mensaje de "sin resultados". Los 6 productos visibles son sugerencias.
-
-=== Buscando: helado de chocolate sin azúcar añadido ===
-❌ El sistema muestra mensaje de "sin resultados". Los 6 productos visibles son sugerencias.
-
-=== Buscando: base de maquillaje maybelline fit me tono 220 ===
-🟢 Se encontraron 1 productos reales (conteo estabilizado)
-
-=== Buscando: celular samsung galaxy a54 con 128gb ===
-❌ El sistema muestra mensaje de "sin resultados". Los 6 productos visibles son sugerencias.
-
-=== Buscando: juguetes para niña de 3 a 5 años ===
-❌ El sistema muestra mensaje de "sin resultados". Los 6 productos visibles son sugerencias.
-
-=== Buscando: pasta de dientes colgate luminous white ===
-🟢 Se encontraron 11 productos reales (conteo estabilizado)
-
-=== Buscando: queso manchego rebanado paquete de 400g ===
-❌ El sistema muestra mensaje de "sin resultados". Los 6 productos visibles son sugerencias.
-
-=== Buscando: cloro blanqueador para ropa blanca galón ===
-❌ El sistema muestra mensaje de "sin resultados". Los 6 productos visibles son sugerencias.
-
-=== Buscando: crema corporal nivea para piel extra seca ===
-🟢 Se encontraron 3 productos reales (conteo estabilizado)
-
-=== Buscando: mochila escolar con ruedas para niño ===
-❌ El sistema muestra mensaje de "sin resultados". Los 6 productos visibles son sugerencias.
-
-=== Buscando: jabón de tocador dove para piel sensible ===
-❌ El sistema muestra mensaje de "sin resultados". Los 6 productos visibles son sugerencias.
-
-=== Buscando: estufa de piso de 6 quemadores con horno ===
-🟢 Se encontraron 4 productos reales (conteo estabilizado)
-
-=== Buscando: croquetas para perro adulto raza pequeña 15 kg ===
-❌ El sistema muestra mensaje de "sin resultados". Los 6 productos visibles son sugerencias.
-]]>
-</system-out>
-<system-err>
-<![CDATA[Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
-Se ingresar a buscarProducto
+<![CDATA[Se ingresó al for, producto actual: Aguacate Hass por Kg
+Se ingresó al if productosAgregados
+Se intenta agregar producto: Aguacate Hass por Kg
+Se ingresar a BuscarYAgregarProducto
+Se ingresó al for, producto actual: Plátano Chiapas por Kg
+Se ingresó al if productosAgregados
+Se intenta agregar producto: Plátano Chiapas por Kg
+Se ingresar a BuscarYAgregarProducto
+⚠️ Producto agotado: Plátano Chiapas por Kg
+Se ingresó al for, producto actual: Cebolla Blanca por kg
+Se ingresó al if productosAgregados
+Se intenta agregar producto: Cebolla Blanca por kg
+Se ingresar a BuscarYAgregarProducto
+⚠️ Producto agotado: Cebolla Blanca por kg
+Se ingresó al for, producto actual: Zanahoria por kg
+Se ingresó al if productosAgregados
+Se intenta agregar producto: Zanahoria por kg
+Se ingresar a BuscarYAgregarProducto
+Se ingresó al for, producto actual: Ajo por Kg
+Se ingresó al if productosAgregados
+Se intenta agregar producto: Ajo por Kg
+Se ingresar a BuscarYAgregarProducto
+Estamos en paso 1. Intentando avanzar...
+Estamos en paso 2, completando datos...
+Estamos en paso 2, completando datos...
+Ya estamos en paso 3, listo para continuar.
+URL desconocida, esperando a que avance de manera natural...
+total sucursales 8
 ]]>
 </system-err>
 </testcase>
