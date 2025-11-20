@@ -31,7 +31,7 @@ module.exports = async function globalSetup() {
 
   if (count === 0) {
     console.log("⚠️ No hay direcciones, agregando todas las sucursales...");
-  await page.pause();
+    await page.waitForTimeout(500);
     for (const [nombre, direccion] of Object.entries(config.sucursales)) {
       console.log(`➡️ Agregando sucursal: ${nombre} (${direccion})`);
       await directionsPage.agregarDireccion(nombre, direccion);
