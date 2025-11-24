@@ -16,22 +16,26 @@ const excelsemantico = 'Semánticos';
 // 🔥 Habilitar paralelismo por archivo
 test.describe.configure({ mode: 'parallel' });
 
-// Crear una fixture por test (cada test tendrá su propio browser)
 test.beforeEach(async ({}, testInfo) => {
-  testInfo.context = await chromium.launchPersistentContext('', {
+  const browser = await chromium.launch({
     headless: false,
     args: ['--start-maximized']
   });
 
-  const page = await testInfo.context.newPage();
+  const context = await browser.newContext();
+  const page = await context.newPage();
 
-  // --- Cargar cookies ---
+  testInfo.browser = browser;
+  testInfo.context = context;
+  testInfo.page = page;
+
+  // --- Cookies ---
   if (fs.existsSync('./sessionCookies.json')) {
     const cookies = JSON.parse(fs.readFileSync('./sessionCookies.json'));
-    await testInfo.context.addCookies(cookies);
+    await context.addCookies(cookies);
   }
 
-  // --- Cargar LocalStorage ---
+  // --- LocalStorage ---
   if (fs.existsSync('./sessionLocalStorage.json')) {
     const localStorageData = JSON.parse(fs.readFileSync('./sessionLocalStorage.json'));
     await page.goto(config.urls.PROD);
@@ -42,8 +46,6 @@ test.beforeEach(async ({}, testInfo) => {
     }, localStorageData);
   }
 
-  // Guardamos page + pageObjects en testInfo para que cada test lo use
-  testInfo.page = page;
   testInfo.headerPage = new HeaderPage(page);
   testInfo.resumencarritos = new ResumenCarritoPage(page);
   testInfo.productosPage = new ProductosEncontradosPage(page);
@@ -52,15 +54,19 @@ test.beforeEach(async ({}, testInfo) => {
 
 test.afterEach(async ({}, testInfo) => {
   await testInfo.context.close();
+  await testInfo.browser.close();
 });
-
 
 test('C1 - Errores Ortográficos', async ({}, testInfo) => {
   const { page, headerPage, productosPage, carritoUtils } = testInfo;
 
   const data = getExcelData(excelurl, excelerrores);
 
+  // 🔥 Arreglo para guardar TODO lo evaluado
+  const resultadosTotales = [];
+
   for (const row of data) {
+
     const Termino = row['Término'];
     const equivalencias = row['Equivalencia']
       .split(',')
@@ -68,13 +74,58 @@ test('C1 - Errores Ortográficos', async ({}, testInfo) => {
 
     console.log(`\n=== Buscando: ${Termino} ===`);
 
-    await carritoUtils.buscarProducto(page, headerPage, productosPage, Termino);
-    await carritoUtils.evaluarBusquedaErroresOrtograficos(page, productosPage, equivalencias);
+    // 1️⃣ Buscar el término
+    const hayResultados = await carritoUtils.buscarProducto(
+      page,
+      headerPage,
+      productosPage,
+      Termino
+    );
+
+    // Estructura base del resultado
+    let registroTermino = {
+      termino: Termino,
+      equivalencias,
+      hayResultados,
+      coincidencias: [],
+      noCoincidencias: [],
+      listaDetallada: []
+    };
+
+    // 2️⃣ Si hay resultados reales, evaluar equivalencias
+    if (hayResultados) {
+      const evaluacion = await carritoUtils.evaluarBusquedaErroresOrtograficos(
+        page,
+        productosPage,
+        equivalencias
+      );
+
+      // Guardamos directamente lo que devolvió el método
+      registroTermino.coincidencias = evaluacion.coincidencias;
+      registroTermino.noCoincidencias = evaluacion.noCoincidencias;
+      registroTermino.listaDetallada = evaluacion.listaDetallada;
+
+      console.log(`🟢 Coincidencias:`, evaluacion.coincidencias);
+      console.log(`🔸 No Coincidencias:`, evaluacion.noCoincidencias);
+
+    } else {
+      console.log(`❌ No hubo productos reales para evaluar equivalencias`);
+    }
+
+    // 3️⃣ Guardar el resultado de ESTE término
+    resultadosTotales.push(registroTermino);
 
     await page.waitForTimeout(500);
   }
-});
 
+  // 🔥🔥🔥 Al final del test
+  console.log("\n=============== RESULTADOS CONSOLIDADOS ===============");
+  console.log(JSON.stringify(resultadosTotales, null, 2));
+  console.log("=======================================================\n");
+
+  // Si quisieras escribirlos a archivo JSON:
+  // fs.writeFileSync("./logs/resultados_C1.json", JSON.stringify(resultadosTotales, null, 2));
+});
 
 test('C2 - Long Tail', async ({}, testInfo) => {
   const { page, headerPage, productosPage, carritoUtils } = testInfo;
@@ -106,11 +157,67 @@ test('C4 - Semántico', async ({}, testInfo) => {
   const { page, headerPage, productosPage, carritoUtils } = testInfo;
 
   const data = getExcelData(excelurl, excelsemantico);
+
+  // 🔥 Arreglo para guardar TODO lo evaluado
+  const resultadosTotales = [];
+
   for (const row of data) {
+
     const Termino = row['Término'];
+    const equivalencias = row['Equivalencia']
+      .split(',')
+      .map(e => e.trim().toLowerCase());
 
     console.log(`\n=== Buscando: ${Termino} ===`);
 
-    await carritoUtils.buscarProducto(page, headerPage, productosPage, Termino);
+    // 1️⃣ Buscar el término
+    const hayResultados = await carritoUtils.buscarProducto(
+      page,
+      headerPage,
+      productosPage,
+      Termino
+    );
+
+    // Estructura base del resultado
+    let registroTermino = {
+      termino: Termino,
+      equivalencias,
+      hayResultados,
+      coincidencias: [],
+      noCoincidencias: [],
+      listaDetallada: []
+    };
+
+    // 2️⃣ Si hay resultados reales, evaluar equivalencias (mismo método que C1)
+    if (hayResultados) {
+      const evaluacion = await carritoUtils.evaluarBusquedaErroresOrtograficos(
+        page,
+        productosPage,
+        equivalencias
+      );
+
+      registroTermino.coincidencias = evaluacion.coincidencias;
+      registroTermino.noCoincidencias = evaluacion.noCoincidencias;
+      registroTermino.listaDetallada = evaluacion.listaDetallada;
+
+      console.log(`🟢 Coincidencias:`, evaluacion.coincidencias);
+      console.log(`🔸 No Coincidencias:`, evaluacion.noCoincidencias);
+
+    } else {
+      console.log(`❌ No hubo productos reales para evaluar equivalencias`);
+    }
+
+    // 3️⃣ Guardar el resultado de ESTE término
+    resultadosTotales.push(registroTermino);
+
+    await page.waitForTimeout(500);
   }
+
+  // 🔥🔥🔥 Al final del test
+  console.log("\n=============== RESULTADOS CONSOLIDADOS C4 ===============");
+  console.log(JSON.stringify(resultadosTotales, null, 2));
+  console.log("===========================================================\n");
+
+  // Si quieres escribirlos a archivo JSON:
+  // fs.writeFileSync("./logs/resultados_C4.json", JSON.stringify(resultadosTotales, null, 2));
 });

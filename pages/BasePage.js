@@ -75,7 +75,7 @@ class BasePage {
         await el.waitFor({ state: 'visible' });
 
         for (const char of text) {
-            await el.type(char, { delay: 50 });
+            await el.type(char, { delay: 1 });
             //await this.page.keyboard.press('End');
         }
     }
