@@ -205,4 +205,110 @@ async function generarReportePDF({
   }
 }
 
-module.exports = { generarReportePDF };
+// ---------------------------------------------------------------------------
+//    GENERA REPORTE PDF PARA UN TESTCASE CON LISTA DE COINCIDENCIAS
+// ---------------------------------------------------------------------------
+async function generarReporteCoincidenciasPDF({
+  nombreTestCase = "TestCase",
+  fechaEjecucion = new Date().toLocaleString('es-MX', { timeZone: 'America/Mexico_City' }),
+  coincidencias = []
+}) {
+  try {
+
+    // --- Definición de fuentes ---
+    const fonts = {
+      Roboto: {
+        normal: 'Helvetica',
+        bold: 'Helvetica-Bold',
+        italics: 'Helvetica-Oblique',
+        bolditalics: 'Helvetica-BoldOblique'
+      }
+    };
+
+    const printer = new PdfPrinter(fonts);
+    printer.vfs = vfsFonts.vfs;
+
+    // ----------------------------------------------------------------------
+    // ENCABEZADO
+    // ----------------------------------------------------------------------
+    const contenido = [
+      { text: `Reporte TestCase: ${nombreTestCase}`, style: 'titulo' },
+      { text: `Fecha ejecución: ${fechaEjecucion}\n\n`, style: 'subtitulo' }
+    ];
+
+    // ----------------------------------------------------------------------
+    // TABLA DE COINCIDENCIAS
+    // ----------------------------------------------------------------------
+    contenido.push({
+      table: {
+        widths: ['20%', '25%', '15%', '40%'],
+        body: [
+          [
+            { text: 'Step', style: 'encabezadoNaranja', alignment: 'center', fillColor: '#ffe6cc' },
+            { text: 'Input', style: 'encabezadoNaranja', alignment: 'center', fillColor: '#ffe6cc' },
+            { text: 'Resultado', style: 'encabezadoNaranja', alignment: 'center', fillColor: '#ffe6cc' },
+            { text: 'Detalle', style: 'encabezadoNaranja', alignment: 'center', fillColor: '#ffe6cc' }
+          ],
+          ...coincidencias.map((row, i) => ([
+            { text: row.step || '', style: 'texto', fillColor: i % 2 === 0 ? '#ffffff' : '#f2f2f2' },
+            { text: row.input || '', style: 'texto', fillColor: i % 2 === 0 ? '#ffffff' : '#f2f2f2' },
+            { text: row.resultado || '', style: 'texto', fillColor: i % 2 === 0 ? '#ffffff' : '#f2f2f2' },
+            { text: row.detalle || '', style: 'texto', fillColor: i % 2 === 0 ? '#ffffff' : '#f2f2f2' }
+          ]))
+        ]
+      },
+      layout: 'lightHorizontalLines'
+    });
+
+    // ----------------------------------------------------------------------
+    // DEFINICIÓN DEL DOCUMENTO
+    // ----------------------------------------------------------------------
+    const docDefinition = {
+      content: contenido,
+      styles: {
+        titulo: { fontSize: 18, bold: true, color: '#ff8800', margin: [0,0,0,10] },
+        subtitulo: { fontSize: 12, italics: true, color: '#555', margin: [0,0,0,15] },
+        texto: { fontSize: 11, margin: [0,2,0,2] },
+        encabezadoNaranja: { fontSize: 13, bold: true, color: '#ff8800' }
+      },
+      defaultStyle: { font: 'Roboto' },
+      pageMargins: [40, 60, 40, 60]
+    };
+
+    // ----------------------------------------------------------------------
+    // GUARDADO DEL PDF
+    // ----------------------------------------------------------------------
+    const reportDir = path.join(__dirname, '../reports');
+    if (!fs.existsSync(reportDir)) fs.mkdirSync(reportDir);
+
+    // nombre limpio
+    const fechaSafe = new Date()
+      .toISOString()
+      .replace(/[-:T]/g, "")
+      .slice(0, 15);
+
+    const pdfName = `Reporte_${nombreTestCase}_${fechaSafe}.pdf`;
+
+    const pdfPath = path.join(reportDir, pdfName);
+
+    const pdfDoc = printer.createPdfKitDocument(docDefinition);
+    const stream = fs.createWriteStream(pdfPath);
+    pdfDoc.pipe(stream);
+    pdfDoc.end();
+
+    return new Promise((resolve, reject) => {
+      stream.on('finish', () => {
+        console.log(`📄 Reporte generado: ${pdfPath}`);
+        resolve(pdfPath);
+      });
+      stream.on('error', reject);
+    });
+
+  } catch (err) {
+    console.error('❌ Error al generar reporte de coincidencias:', err);
+    throw err;
+  }
+}
+
+
+module.exports = { generarReportePDF,generarReporteCoincidenciasPDF };

@@ -17,16 +17,16 @@ class NavegacionActions {
       await resumencarritos.humanType(resumencarritos.contactotelefonoInput, '5550553518');
       await page.waitForSelector(resumencarritos.telefonoCapturadoCheck, { state: 'visible', timeout: 30000 });
       await resumencarritos.safeClick(resumencarritos.irenvioButton);
-      await page.waitForTimeout(2000);
+      await page.waitForTimeout(4000);
       return await this.avanzarCarrito(page, resumencarritos);
       
     }
 
     if (currentUrl.includes(resumencarritos.paso1URL)) {
       console.warn(`Estamos en paso 1. Intentando avanzar...`);
-      await page.waitForTimeout(1000);
-      await resumencarritos.safeClick(resumencarritos.continuarconlacompraButton);
       await page.waitForTimeout(2000);
+      await resumencarritos.safeClick(resumencarritos.continuarconlacompraButton);
+      await page.waitForTimeout(3000);
       return await this.avanzarCarrito(page, resumencarritos);
 
     } 
@@ -61,7 +61,7 @@ class NavegacionActions {
 
     if (await botonAgregar.count() > 0 && await botonAgregar.isVisible()) {
       await botonAgregar.click();
-      await headerPage.safeClick(await headerPage.logoImg);
+      await headerPage.safeClick(headerPage.logoImg);
       return true;
     }
 
@@ -118,7 +118,7 @@ async buscarProducto(page, headerPage, productos, producto) {
       }
 
       prevCount = visibles;
-      await page.waitForTimeout(500);
+      await page.waitForTimeout(400);
     }
 
     // 🔥 Aquí agregamos tu condición ANTES del console.log final
@@ -148,23 +148,51 @@ async buscarProducto(page, headerPage, productos, producto) {
    * @param {Object} productos - page object de resultados
    * @param {Array<string>} equivalencias - palabras esperadas
    */
-  async evaluarBusquedaErroresOrtograficos(page, productos, equivalencias) {
-    let productosVisibles = page.locator(`${productos.resultadobusquedaLabel} >> visible=true`);
-    const count = await productosVisibles.count();
+  
+async evaluarBusquedaErroresOrtograficos(page, productos, equivalencias) {
+  // 🔹 Reinstanciar locator para evitar datos de la búsqueda anterior
+  const productosVisibles = page.locator(`${productos.resultadobusquedaLabel} >> visible=true`);
+  await productosVisibles.first().waitFor({ timeout: 5000 }).catch(() => {});
 
-    for (let i = 0; i < count; i++) {
-      const textoProducto = (await productosVisibles.nth(i).innerText()).toLowerCase();
-      console.log(`Texto del producto ${i}: ${textoProducto}`);
+  const count = await productosVisibles.count();
 
-      const contiene = equivalencias.some(eq => textoProducto.includes(eq));
+  let coincidencias = [];
+  let noCoincidencias = [];
+  let listaDetallada = [];
 
-      if (contiene) {
-        console.log(`✅ Producto ${i + 1} contiene al menos una equivalencia (${equivalencias.join(', ')})`);
-      } else {
-        console.log(`❌ Producto ${i + 1} no contiene ninguna equivalencia (${equivalencias.join(', ')})`);
-      }
+  //await page.waitForTimeout(200);
+  for (let i = 0; i < count; i++) {
+
+    // ◼️ Forced wait pequeño para asegurar render
+
+    let textoProducto = "";
+    try {
+      //textoProducto = (await productosVisibles.nth(i).innerText({ timeout: 3000 })).toLowerCase();
+      textoProducto = (await productosVisibles.nth(i).textContent({ timeout: 3000 })).toLowerCase();
+    } catch {
+      console.log(`⚠️ No se pudo obtener innerText del producto ${i}, saltando...`);
+      continue;
     }
+
+    const coincide = equivalencias.some(eq => textoProducto.includes(eq));
+
+    if (coincide) {
+      coincidencias.push(textoProducto);
+    } else {
+      noCoincidencias.push(textoProducto);
+    }
+
+    // 🔥 Aquí armamos la lista completa para enviarla al TC
+    listaDetallada.push({
+      texto: textoProducto,
+      coincide
+    });
   }
+
+  // 🔥 DEVOLVEMOS toda la info (nada más tocado)
+  return { coincidencias, noCoincidencias, listaDetallada };
+}
+
 
 }
 

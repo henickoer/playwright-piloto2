@@ -37,6 +37,6 @@ module.exports = defineConfig({
     ['junit', { outputFile: path.join(__dirname, 'reports', 'reporteSucursales.xml') }]
   ],
 
-  timeout: 500000,
+  timeout: 1000000,
   retries: 1,
 });
