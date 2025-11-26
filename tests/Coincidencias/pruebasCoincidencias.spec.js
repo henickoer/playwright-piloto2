@@ -6,7 +6,7 @@ const fs = require('fs');
 const NavegacionActions = require('../../utils/NavegacionActions');
 const { getExcelData } = require('../../utils/excelReader');
 const ResumenCarritoPage = require('../../pages/ResumenCarritoPage');
-
+const { generarReporteCoincidenciasPDF } = require('../../utils/creadorpdf');
 const excelurl = '.\\data\\ChedrahuiQA_Lexico.xlsx';
 const excelerrores = 'Errores Ortográficos';
 const excellong = 'Long Tail';
@@ -114,51 +114,140 @@ test('C1 - Errores Ortográficos', async ({}, testInfo) => {
 
     // 3️⃣ Guardar el resultado de ESTE término
     resultadosTotales.push(registroTermino);
+    
+    //AQUI SE REALIZA
+    await headerPage.safeClick(headerPage.logoImg);
+    await page.waitForTimeout(300);
+    await page.waitForSelector('iframe#launcher', { state: 'visible', timeout: 30000 });
+
 
     await page.waitForTimeout(500);
   }
 
-  // 🔥🔥🔥 Al final del test
+
+  /*
   console.log("\n=============== RESULTADOS CONSOLIDADOS ===============");
   console.log(JSON.stringify(resultadosTotales, null, 2));
   console.log("=======================================================\n");
-
-  // Si quisieras escribirlos a archivo JSON:
-  // fs.writeFileSync("./logs/resultados_C1.json", JSON.stringify(resultadosTotales, null, 2));
+  */
+  // Generamos el PDF
+  await generarReporteCoincidenciasPDF({
+    nombreTestCase: "C1_ErroresOrtograficos",
+    resultados: resultadosTotales         
+  });
 });
 
 test('C2 - Long Tail', async ({}, testInfo) => {
   const { page, headerPage, productosPage, carritoUtils } = testInfo;
 
   const data = getExcelData(excelurl, excellong);
+
+  const resultadosTotales = [];
+
   for (const row of data) {
     const Termino = row['Término'];
 
     console.log(`\n=== Buscando: ${Termino} ===`);
 
-    await carritoUtils.buscarProducto(page, headerPage, productosPage, Termino);
+    const hayResultados = await carritoUtils.buscarProducto(
+      page,
+      headerPage,
+      productosPage,
+      Termino
+    );
+
+    let productosEncontrados = [];
+
+    if (hayResultados) {
+      productosEncontrados = await carritoUtils.obtenerProductosEncontrados(
+        page,
+        productosPage
+      );
+    }
+
+    resultadosTotales.push({
+      termino: Termino,
+      hayResultados,
+      productosEncontrados
+    });
+
+    //AQUI SE REALIZA
+    await headerPage.safeClick(headerPage.logoImg);
+    await page.waitForTimeout(300);
+    await page.waitForSelector('iframe#launcher', { state: 'visible', timeout: 30000 });
+    await page.waitForTimeout(500);
   }
+
+  /*
+  console.log("\n=============== RESULTADOS CONSOLIDADOS ===============");
+  console.log(JSON.stringify(resultadosTotales, null, 2));
+  console.log("=======================================================\n");
+  */
+  await generarReporteCoincidenciasPDF({
+    nombreTestCase: "C2_LongTail",
+    resultados: resultadosTotales
+  });
 });
 
 test('C3 - Frecuencia Alta', async ({}, testInfo) => {
   const { page, headerPage, productosPage, carritoUtils } = testInfo;
 
   const data = getExcelData(excelurl, excelfrecuencia);
+
+  const resultadosTotales = [];
+
   for (const row of data) {
     const Termino = row['Término'];
 
     console.log(`\n=== Buscando: ${Termino} ===`);
 
-    await carritoUtils.buscarProducto(page, headerPage, productosPage, Termino);
+    const hayResultados = await carritoUtils.buscarProducto(
+      page,
+      headerPage,
+      productosPage,
+      Termino
+    );
+
+    let productosEncontrados = [];
+
+    if (hayResultados) {
+      productosEncontrados = await carritoUtils.obtenerProductosEncontrados(
+        page,
+        productosPage
+      );
+    }
+
+    resultadosTotales.push({
+      termino: Termino,
+      hayResultados,
+      productosEncontrados
+    });
+
+    //AQUI SE REALIZA
+    await headerPage.safeClick(headerPage.logoImg);
+    await page.waitForTimeout(300);
+    await page.waitForSelector('iframe#launcher', { state: 'visible', timeout: 30000 });
+
+    await page.waitForTimeout(500);
   }
+
+  // Al final del test
+  console.log("\n=============== RESULTADOS CONSOLIDADOS ===============");
+  console.log(JSON.stringify(resultadosTotales, null, 2));
+  console.log("=======================================================\n");
+
+  await generarReporteCoincidenciasPDF({
+    nombreTestCase: "C3_FrecuenciaAlta",
+    resultados: resultadosTotales
+  });
 });
+
 
 test('C4 - Semántico', async ({}, testInfo) => {
   const { page, headerPage, productosPage, carritoUtils } = testInfo;
 
   const data = getExcelData(excelurl, excelsemantico);
 
-  // 🔥 Arreglo para guardar TODO lo evaluado
   const resultadosTotales = [];
 
   for (const row of data) {
@@ -210,14 +299,32 @@ test('C4 - Semántico', async ({}, testInfo) => {
     // 3️⃣ Guardar el resultado de ESTE término
     resultadosTotales.push(registroTermino);
 
+    //AQUI SE REALIZA
+    await headerPage.safeClick(headerPage.logoImg);
+    await page.waitForTimeout(300);
+    await page.waitForSelector('iframe#launcher', { state: 'visible', timeout: 30000 });
     await page.waitForTimeout(500);
   }
 
-  // 🔥🔥🔥 Al final del test
+  //
+  /*
   console.log("\n=============== RESULTADOS CONSOLIDADOS C4 ===============");
   console.log(JSON.stringify(resultadosTotales, null, 2));
   console.log("===========================================================\n");
+*/
+ const coincidenciasPDF = resultadosTotales.map((item, index) => ({
+    step: `Producto ${index + 1}`,
+    input: item.termino,
+    resultado: item.hayResultados ? "Resultados encontrados" : "Sin resultados",
+    detalle:
+      `Equivalencias: ${item.equivalencias.join(', ')}\n\n` +
+      `Coincidencias:\n${item.coincidencias.join('\n')}\n\n` +
+      `No Coincidencias:\n${item.noCoincidencias.join('\n')}`
+  }));
 
-  // Si quieres escribirlos a archivo JSON:
-  // fs.writeFileSync("./logs/resultados_C4.json", JSON.stringify(resultadosTotales, null, 2));
+  await generarReporteCoincidenciasPDF({
+    nombreTestCase: "C4_Semantico",
+    resultados: resultadosTotales
+  });
+
 });
