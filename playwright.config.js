@@ -2,7 +2,7 @@ const { defineConfig } = require('@playwright/test');
 const path = require('path');
 
 module.exports = defineConfig({
-  //globalSetup: require.resolve('./global-setup.js'),
+  globalSetup: require.resolve('./global-setup.js'),
 
   testDir: './tests',
 
@@ -38,5 +38,5 @@ module.exports = defineConfig({
   ],
 
   timeout: 1000000,
-  //retries: 1,
+  //retries: 2,
 });
