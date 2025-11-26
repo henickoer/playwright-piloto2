@@ -44,6 +44,8 @@ function obtenerSucursalPorDireccion(texto) {
 // ------------------------------------------------------
 //  REPORTE DE SUCURSALES (EXISTENTE)
 // ------------------------------------------------------
+
+
 async function generarReportePDF({
   sucursalesEvaluadas = [],
   sucursalesSinDias = [],
@@ -105,10 +107,16 @@ async function generarReportePDF({
       contenidoDetalle.push({ text: '\n', style: 'texto' });
 
       const dias = s.dias.slice(0, 4);
-      const columnas = ['Día 1', 'Día 2', 'Día 3', 'Día 4'];
 
-      const diasData = columnas.map((_, i) => {
+      // 🔥 NUEVO: Encabezado dinámico usando la fecha real
+      const columnas = dias.map(d => {
+        const partes = d?.nombreDia?.split("\n") || [];
+        return partes[1]?.trim() || d?.nombreDia || "";
+      });
+
+      const diasData = columnas.map((columna, i) => {
         let d = dias[i] || { nombreDia: '', horarios: [] };
+
         if (typeof d.horarios === 'string') {
           d.horarios = d.horarios
             .split(',')
@@ -117,11 +125,13 @@ async function generarReportePDF({
         } else if (!Array.isArray(d.horarios)) {
           d.horarios = [];
         }
+
         return d;
       });
 
       const maxFilas = Math.max(...diasData.map(d => d.horarios.length));
 
+      // 🔥 Tabla de encabezados con la fecha real
       contenidoDetalle.push({
         table: {
           widths: ['25%', '25%', '25%', '25%'],
@@ -202,8 +212,6 @@ async function generarReportePDF({
     throw err;
   }
 }
-
-
 
 // ------------------------------------------------------
 //  ⚡ NUEVO: REPORTE DE COINCIDENCIAS (C1, C2, C3, C4)
