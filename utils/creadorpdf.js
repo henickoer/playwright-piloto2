@@ -45,6 +45,7 @@ function obtenerSucursalPorDireccion(texto) {
 //  REPORTE DE SUCURSALES (EXISTENTE)
 // ------------------------------------------------------
 
+
 async function generarReportePDF({
   sucursalesEvaluadas = [],
   sucursalesSinDias = [],
@@ -211,7 +212,6 @@ async function generarReportePDF({
     throw err;
   }
 }
-
 
 // ------------------------------------------------------
 //  ⚡ NUEVO: REPORTE DE COINCIDENCIAS (C1, C2, C3, C4)
