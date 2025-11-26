@@ -9,21 +9,21 @@ module.exports = defineConfig({
   // 👉 Desactivamos testMatch global para evitar que Playwright ejecute TODO
   testMatch: [],
 
-  projects: [
-    {
-      name: 'Coincidencias',
-      testMatch: '**/Coincidencias/*.spec.js'
-    },
-    {
-      name: 'TimeSlotScraper',
-      testMatch: '**/TimeSlotScraper/*.spec.js'
-    },
-    {
-      name: 'Scraperycoincidencias',
-      testMatch: [
-        '**/Coincidencias/*.spec.js',
-        '**/TimeSlotScraper/*.spec.js'
-      ]
+    projects: [
+      {
+        name: 'Coincidencias',
+        testMatch: '**/Coincidencias/*.spec.js'
+      },
+      {
+        name: 'TimeSlotScraper',
+        testMatch: '**/TimeSlotScraper/*.spec.js'
+      },
+      {
+        name: 'Scraperycoincidencias',
+        testMatch: [
+          '**/Coincidencias/*.spec.js',
+          '**/TimeSlotScraper/*.spec.js'
+        ]
     }
   ],
 
