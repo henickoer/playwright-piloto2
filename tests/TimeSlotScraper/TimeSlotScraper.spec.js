@@ -180,8 +180,6 @@ test('C1 - TimeSlot Scraper', async () => {
       dias: diasConfigurados
     });
 
-
-
     await resumencarritos.safeClick(resumencarritos.cambiarDireccionLink);    
     await page.waitForTimeout(200);
   }
