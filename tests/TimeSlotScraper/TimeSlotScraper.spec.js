@@ -124,8 +124,10 @@ test('C1 - TimeSlot Scraper', async () => {
 
   // --- Recorremos todas las sucursales ---
   for (let i = 0; i < total; i++) {
-    const sucursal = sucursales.nth(0); // Siempre la primera
-
+    await page.pause();
+    //const sucursal = sucursales.nth(0); // Siempre la primera
+    const sucursal = sucursales.nth(i); // Siempre la primera
+    await page.pause();
     await sucursal.scrollIntoViewIfNeeded();
     const nombreSucursal = (await sucursal.innerText()).trim();
     console.log(`🏪 Revisando sucursal ${i + 1}: ${nombreSucursal}`);
@@ -136,7 +138,7 @@ test('C1 - TimeSlot Scraper', async () => {
 
     try {
       await page.waitForTimeout(4500);
-
+      await page.pause();
       const dias = page.locator(resumencarritos.diasentrega);
       const totalDias = await dias.count();
       console.log(`CONSOLE\n🗓️ total dias: ${totalDias}`);
