@@ -142,17 +142,32 @@ async buscarProducto(page, headerPage, productos, producto) {
   return false;
 }
 
-  /**
-   * 🔹 Evalúa los resultados de búsqueda para errores ortográficos
-   * @param {import('playwright').Page} page 
-   * @param {Object} productos - page object de resultados
-   * @param {Array<string>} equivalencias - palabras esperadas
-   */
-  
+/**
+ * 🔹 Evalúa los resultados de búsqueda para errores ortográficos
+ *     — estable, con reintentos y sin generar listas vacías —
+ */
 async evaluarBusquedaErroresOrtograficos(page, productos, equivalencias) {
-  // 🔹 Reinstanciar locator para evitar datos de la búsqueda anterior
+
+  // Asegurar que ya aparecieron elementos visibles
   const productosVisibles = page.locator(`${productos.resultadobusquedaLabel} >> visible=true`);
   await productosVisibles.first().waitFor({ timeout: 5000 }).catch(() => {});
+
+  // Reintento pequeño para evitar textos viejos/render parcial
+  await page.waitForTimeout(150);
+
+  // Función de lectura con reintento
+  async function obtenerTextoConReintento(locator) {
+    for (let intento = 0; intento < 3; intento++) {
+      try {
+        let txt = await locator.textContent({ timeout: 500 });
+        if (txt && txt.trim().length > 0) {
+          return txt.toLowerCase().trim();
+        }
+      } catch {}
+      await new Promise(r => setTimeout(r, 250));
+    }
+    return null;
+  }
 
   const count = await productosVisibles.count();
 
@@ -160,38 +175,64 @@ async evaluarBusquedaErroresOrtograficos(page, productos, equivalencias) {
   let noCoincidencias = [];
   let listaDetallada = [];
 
-  //await page.waitForTimeout(200);
   for (let i = 0; i < count; i++) {
 
-    // ◼️ Forced wait pequeño para asegurar render
+    let textoProducto = await obtenerTextoConReintento(productosVisibles.nth(i));
 
-    let textoProducto = "";
-    try {
-      //textoProducto = (await productosVisibles.nth(i).innerText({ timeout: 3000 })).toLowerCase();
-      textoProducto = (await productosVisibles.nth(i).textContent({ timeout: 3000 })).toLowerCase();
-    } catch {
-      console.log(`⚠️ No se pudo obtener innerText del producto ${i}, saltando...`);
+    if (!textoProducto) {
+      console.log(`⚠️ No se pudo obtener innerText del producto ${i}, registrando como NO LEÍDO`);
+      
+      // 🔥 Registro seguro (NO rompas el reporte)
+      listaDetallada.push({
+        texto: "[NO LEÍDO]",
+        coincide: false
+      });
+
+      noCoincidencias.push("[NO LEÍDO]");
       continue;
     }
 
     const coincide = equivalencias.some(eq => textoProducto.includes(eq));
 
-    if (coincide) {
-      coincidencias.push(textoProducto);
-    } else {
-      noCoincidencias.push(textoProducto);
-    }
+    if (coincide) coincidencias.push(textoProducto);
+    else noCoincidencias.push(textoProducto);
 
-    // 🔥 Aquí armamos la lista completa para enviarla al TC
     listaDetallada.push({
       texto: textoProducto,
       coincide
     });
+
+
   }
 
-  // 🔥 DEVOLVEMOS toda la info (nada más tocado)
   return { coincidencias, noCoincidencias, listaDetallada };
 }
+
+async obtenerProductosEncontrados(page, productosPage) {
+  // Mismo locator que ya usas en C1 y C4
+  const locator = page.locator(`${productosPage.resultadobusquedaLabel} >> visible=true`);
+
+  const count = await locator.count();
+  const textos = [];
+
+  for (let i = 0; i < count; i++) {
+    try {
+      let txt = await locator.nth(i).textContent();
+      if (txt && txt.trim().length > 0) {
+        textos.push(txt.trim());
+      }
+    } catch (e) {
+      console.warn("⚠ No se pudo leer un producto:", e);
+    }
+
+  }
+  return textos;
+}
+
+
+
+
+
 
 
 }

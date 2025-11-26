@@ -5,7 +5,10 @@ const fs = require('fs');
 const path = require('path');
 const config = require('./Environment');
 
-// --- Función auxiliar para normalizar texto ---
+
+// ------------------------------------------------------
+//  NORMALIZADOR DE TEXTO
+// ------------------------------------------------------
 function normalizarTexto(texto) {
   if (!texto || typeof texto !== "string") return "";
   return texto
@@ -16,7 +19,10 @@ function normalizarTexto(texto) {
     .trim();
 }
 
-// --- Buscar sucursal por dirección ---
+
+// ------------------------------------------------------
+//  BUSCAR SUCURSAL POR DIRECCIÓN
+// ------------------------------------------------------
 function obtenerSucursalPorDireccion(texto) {
   const textoNormalizado = normalizarTexto(texto);
   const sucursalesConfig = config.sucursales || {};
@@ -34,7 +40,10 @@ function obtenerSucursalPorDireccion(texto) {
   return "Desconocida";
 }
 
-// --- Función principal ---
+
+// ------------------------------------------------------
+//  REPORTE DE SUCURSALES (EXISTENTE)
+// ------------------------------------------------------
 async function generarReportePDF({
   sucursalesEvaluadas = [],
   sucursalesSinDias = [],
@@ -44,7 +53,6 @@ async function generarReportePDF({
   totalNoConfiguradas = 0
 }) {
   try {
-    // --- Definición de fuentes ---
     const fonts = {
       Roboto: {
         normal: 'Helvetica',
@@ -57,7 +65,6 @@ async function generarReportePDF({
     const printer = new PdfPrinter(fonts);
     printer.vfs = vfsFonts.vfs;
 
-    // --- Contenido del resumen ---
     const contenidoResumen = [
       { text: 'Resumen Final', style: 'titulo' },
       { text: `Fecha ejecución: ${fechaHora}`, style: 'subtitulo' },
@@ -76,7 +83,6 @@ async function generarReportePDF({
 
     contenidoResumen.push({ text: '', pageBreak: 'after' });
 
-    // --- Detalle de sucursales ---
     const sucursalesConDias = sucursalesEvaluadas.filter(s => Array.isArray(s.dias) && s.dias.length > 0);
     const contenidoDetalle = [];
 
@@ -88,7 +94,6 @@ async function generarReportePDF({
         style: 'encabezadoSucursal'
       });
 
-      // Dirección con fuente más grande e interlineado
       contenidoDetalle.push({
         text: [
           { text: 'Dirección: ', color: '#ff8800', bold: true },
@@ -99,11 +104,9 @@ async function generarReportePDF({
 
       contenidoDetalle.push({ text: '\n', style: 'texto' });
 
-      // --- Construcción de tabla Día 1 a Día 4 ---
-      const dias = s.dias.slice(0, 4); // máximo 4 días
+      const dias = s.dias.slice(0, 4);
       const columnas = ['Día 1', 'Día 2', 'Día 3', 'Día 4'];
 
-      // Normalizar y limpiar horarios: split por "," + trim + eliminar "." final
       const diasData = columnas.map((_, i) => {
         let d = dias[i] || { nombreDia: '', horarios: [] };
         if (typeof d.horarios === 'string') {
@@ -117,10 +120,8 @@ async function generarReportePDF({
         return d;
       });
 
-      // Calcular máximo número de filas
       const maxFilas = Math.max(...diasData.map(d => d.horarios.length));
 
-      // Encabezado de tabla
       contenidoDetalle.push({
         table: {
           widths: ['25%', '25%', '25%', '25%'],
@@ -136,14 +137,13 @@ async function generarReportePDF({
         layout: 'lightHorizontalLines'
       });
 
-      // Filas de horarios con fondo alternado
       const bodyHorarios = [];
       for (let i = 0; i < maxFilas; i++) {
         const fila = diasData.map(d => ({
           text: d.horarios[i] || '',
           alignment: 'left',
           style: 'texto',
-          fillColor: i % 2 === 0 ? '#ffffff' : '#f2f2f2' // alternado blanco/gris
+          fillColor: i % 2 === 0 ? '#ffffff' : '#f2f2f2'
         }));
         bodyHorarios.push(fila);
       }
@@ -163,26 +163,24 @@ async function generarReportePDF({
       }
     }
 
-    // --- Documento PDF ---
     const docDefinition = {
       content: [...contenidoResumen, ...contenidoDetalle],
       styles: {
-        titulo: { fontSize: 18, bold: true, color: '#ff8800', margin: [0,0,0,10] },
-        subtitulo: { fontSize: 12, italics: true, color: '#555', margin: [0,0,0,15] },
-        texto: { fontSize: 11, margin: [0,2,0,2] },
-        encabezadoNaranja: { fontSize: 13, bold: true, color: '#ff8800', margin: [0,10,0,5] },
-        encabezadoSucursal: { fontSize: 14, bold: true, color: '#ff6600', margin: [0,12,0,8] },
-        direccion: { fontSize: 12, lineHeight: 1.4, margin: [0,4,0,4] }
+        titulo: { fontSize: 18, bold: true, color: '#ff8800', margin: [0, 0, 0, 10] },
+        subtitulo: { fontSize: 12, italics: true, color: '#555', margin: [0, 0, 0, 15] },
+        texto: { fontSize: 11, margin: [0, 2, 0, 2] },
+        encabezadoNaranja: { fontSize: 13, bold: true, color: '#ff8800', margin: [0, 10, 0, 5] },
+        encabezadoSucursal: { fontSize: 14, bold: true, color: '#ff6600', margin: [0, 12, 0, 8] },
+        direccion: { fontSize: 12, lineHeight: 1.4, margin: [0, 4, 0, 4] }
       },
       defaultStyle: { font: 'Roboto' },
       pageMargins: [40, 60, 40, 60]
     };
 
-    // --- Guardado ---
     const reportDir = path.join(__dirname, '../reports');
     if (!fs.existsSync(reportDir)) fs.mkdirSync(reportDir);
 
-    const pdfPath = path.join(reportDir, 'reporteSucursales.pdf');
+    const pdfPath = path.join(reportDir, '../reports/reporteSucursales.pdf');
 
     if (fs.existsSync(pdfPath)) fs.unlinkSync(pdfPath);
 
@@ -205,17 +203,81 @@ async function generarReportePDF({
   }
 }
 
-// ---------------------------------------------------------------------------
-//    GENERA REPORTE PDF PARA UN TESTCASE CON LISTA DE COINCIDENCIAS
-// ---------------------------------------------------------------------------
+
+
+// ------------------------------------------------------
+//  ⚡ NUEVO: REPORTE DE COINCIDENCIAS (C1, C2, C3, C4)
+// ------------------------------------------------------
 async function generarReporteCoincidenciasPDF({
   nombreTestCase = "TestCase",
   fechaEjecucion = new Date().toLocaleString('es-MX', { timeZone: 'America/Mexico_City' }),
-  coincidencias = []
+  resultados = []
 }) {
   try {
 
-    // --- Definición de fuentes ---
+    // ---------------------------
+    //  ADAPTADOR DE DATOS
+    // ---------------------------
+    const resultadosAdaptados = resultados.map(r => {
+      const tieneEquivalencias = Array.isArray(r.equivalencias);
+
+      let listaDetallada = [];
+
+      if (Array.isArray(r.listaDetallada) && r.listaDetallada.length > 0) {
+        listaDetallada = r.listaDetallada;
+      } else {
+        const coinc = Array.isArray(r.coincidencias) ? r.coincidencias : [];
+        const noCoinc = Array.isArray(r.noCoincidencias) ? r.noCoincidencias : [];
+
+        listaDetallada = [
+          ...coinc.map(t => ({ texto: String(t), coincide: true })),
+          ...noCoinc.map(t => ({ texto: String(t), coincide: false }))
+        ];
+      }
+
+      return {
+        termino: r.termino || r.input || "Sin nombre",
+        equivalencias: r.equivalencias || null,
+        productosEncontrados: Array.isArray(r.productosEncontrados) ? r.productosEncontrados : [],
+        hayResultados:
+          r.hayResultados === true ||
+          listaDetallada.length > 0 ||
+          (Array.isArray(r.productosEncontrados) && r.productosEncontrados.length > 0),
+        listaDetallada
+      };
+    });
+
+    if (resultadosAdaptados.length === 0) {
+      throw new Error("El generador recibió un arreglo vacío.");
+    }
+
+
+    // ---------------------------
+    // MÉTRICAS
+    // ---------------------------
+    const totalEvaluados = resultadosAdaptados.length;
+    const tieneEquivalencias = resultadosAdaptados.some(x => Array.isArray(x.equivalencias));
+
+    let metricas = {};
+
+    if (tieneEquivalencias) {
+      metricas.todasCorrectas = resultadosAdaptados.filter(
+        x => x.listaDetallada.length > 0 && x.listaDetallada.every(y => y.coincide)
+      ).length;
+
+      metricas.conErrores = resultadosAdaptados.filter(
+        x => x.listaDetallada.some(y => !y.coincide)
+      ).length;
+
+    } else {
+      metricas.conResultados = resultadosAdaptados.filter(x => x.hayResultados).length;
+      metricas.sinResultados = resultadosAdaptados.filter(x => !x.hayResultados).length;
+    }
+
+
+    // ---------------------------
+    // CONFIG PDF
+    // ---------------------------
     const fonts = {
       Roboto: {
         normal: 'Helvetica',
@@ -228,65 +290,166 @@ async function generarReporteCoincidenciasPDF({
     const printer = new PdfPrinter(fonts);
     printer.vfs = vfsFonts.vfs;
 
-    // ----------------------------------------------------------------------
-    // ENCABEZADO
-    // ----------------------------------------------------------------------
-    const contenido = [
-      { text: `Reporte TestCase: ${nombreTestCase}`, style: 'titulo' },
-      { text: `Fecha ejecución: ${fechaEjecucion}\n\n`, style: 'subtitulo' }
-    ];
+    const contenido = [];
 
-    // ----------------------------------------------------------------------
-    // TABLA DE COINCIDENCIAS
-    // ----------------------------------------------------------------------
-    contenido.push({
-      table: {
-        widths: ['20%', '25%', '15%', '40%'],
-        body: [
+    // ---------------------------
+    // RESUMEN GENERAL
+    // ---------------------------
+    contenido.push(
+      { text: `Reporte Testcase: ${nombreTestCase}`, style: 'titulo', margin: [0, 0, 0, 10] },
+      { text: `Fecha ejecución: ${fechaEjecucion}`, style: 'subtitulo', margin: [0, 0, 0, 15] },
+      { text: `Cantidad total de términos evaluados: ${totalEvaluados}`, style: 'subtitulo', margin: [0, 0, 0, 10] }
+    );
+
+    if (tieneEquivalencias) {
+      contenido.push(
+        { text: `Términos con todas las equivalencias correctas: ${metricas.todasCorrectas}`, style: 'subtitulo' },
+        { text: `Términos con equivalencias incorrectas: ${metricas.conErrores}`, style: 'subtitulo' }
+      );
+    } else {
+      contenido.push(
+        { text: `Términos con resultados de búsqueda: ${metricas.conResultados}`, style: 'subtitulo' },
+        { text: `Términos sin resultados de búsqueda: ${metricas.sinResultados}`, style: 'subtitulo' }
+      );
+    }
+
+    contenido.push({ text: "", pageBreak: "after" });
+
+
+    // ---------------------------
+    // DETALLE POR TÉRMINO
+    // ---------------------------
+    for (let i = 0; i < resultadosAdaptados.length; i++) {
+      const termino = resultadosAdaptados[i];
+
+      contenido.push({
+        text: `Resultado de búsqueda: "${termino.termino}"`,
+        style: 'encabezadoNaranja',
+        margin: [0, 0, 0, 10]
+      });
+
+      // ---------------------------------------------------------
+      //   C2 / C3 — NO HAY EQUIVALENCIAS
+      // ---------------------------------------------------------
+      if (!termino.equivalencias) {
+
+        const hayProductos = termino.productosEncontrados.length > 0;
+
+        if (!hayProductos) {
+          contenido.push({ text: "Búsqueda sin éxito", style: "texto" });
+
+          if (i < resultadosAdaptados.length - 1) {
+            contenido.push({ text: "", pageBreak: "after" });
+          }
+
+          continue;
+        }
+
+        const tablaBody = [
           [
-            { text: 'Step', style: 'encabezadoNaranja', alignment: 'center', fillColor: '#ffe6cc' },
-            { text: 'Input', style: 'encabezadoNaranja', alignment: 'center', fillColor: '#ffe6cc' },
-            { text: 'Resultado', style: 'encabezadoNaranja', alignment: 'center', fillColor: '#ffe6cc' },
-            { text: 'Detalle', style: 'encabezadoNaranja', alignment: 'center', fillColor: '#ffe6cc' }
-          ],
-          ...coincidencias.map((row, i) => ([
-            { text: row.step || '', style: 'texto', fillColor: i % 2 === 0 ? '#ffffff' : '#f2f2f2' },
-            { text: row.input || '', style: 'texto', fillColor: i % 2 === 0 ? '#ffffff' : '#f2f2f2' },
-            { text: row.resultado || '', style: 'texto', fillColor: i % 2 === 0 ? '#ffffff' : '#f2f2f2' },
-            { text: row.detalle || '', style: 'texto', fillColor: i % 2 === 0 ? '#ffffff' : '#f2f2f2' }
-          ]))
-        ]
-      },
-      layout: 'lightHorizontalLines'
-    });
+            {
+              text: "Producto encontrado",
+              style: "encabezadoNaranja",
+              fillColor: "#ffe6cc",
+              alignment: "center"
+            }
+          ]
+        ];
 
-    // ----------------------------------------------------------------------
-    // DEFINICIÓN DEL DOCUMENTO
-    // ----------------------------------------------------------------------
+        termino.productosEncontrados.forEach(p => {
+          tablaBody.push([{ text: p, style: "texto", alignment: "left" }]);
+        });
+
+        contenido.push({
+          table: { widths: ["100%"], body: tablaBody },
+          layout: "lightHorizontalLines"
+        });
+
+        if (i < resultadosAdaptados.length - 1) {
+          contenido.push({ text: "", pageBreak: "after" });
+        }
+
+        continue;
+      }
+
+      // ---------------------------------------------------------
+      //   C1 / C4 — EQUIVALENCIAS
+      // ---------------------------------------------------------
+      const total = termino.listaDetallada.length;
+      const totalCoinc = termino.listaDetallada.filter(x => x.coincide).length;
+
+      contenido.push({
+        text: `${totalCoinc} coincidencias de ${total} productos encontrados`,
+        style: "subtitulo",
+        margin: [0, 0, 0, 15]
+      });
+
+      const ordenados = [
+        ...termino.listaDetallada.filter(x => x.coincide),
+        ...termino.listaDetallada.filter(x => !x.coincide)
+      ];
+
+      const tablaBody = [
+        [
+          {
+            text: "Producto",
+            style: "encabezadoNaranja",
+            alignment: "center",
+            fillColor: "#ffe6cc"
+          },
+          {
+            text: "Resultado",
+            style: "encabezadoNaranja",
+            alignment: "center",
+            fillColor: "#ffe6cc"
+          }
+        ]
+      ];
+
+      ordenados.forEach(row => {
+        tablaBody.push([
+          { text: row.texto, style: "texto", alignment: "left" },
+          row.coincide
+            ? { text: "Correcto", alignment: "center", color: "green", fontSize: 11 }
+            : { text: "Incorrecto", alignment: "center", color: "red", fontSize: 11 }
+        ]);
+      });
+
+      contenido.push({
+        table: { widths: ["80%", "20%"], body: tablaBody },
+        layout: {
+          hLineWidth: () => 0.5,
+          vLineWidth: () => 0.5,
+          hLineColor: () => "#cccccc",
+          vLineColor: () => "#cccccc"
+        }
+      });
+
+      if (i < resultadosAdaptados.length - 1) {
+        contenido.push({ text: "", pageBreak: "after" });
+      }
+    }
+
+
+    // ---------------------------
+    // GUARDAR PDF
+    // ---------------------------
     const docDefinition = {
       content: contenido,
       styles: {
-        titulo: { fontSize: 18, bold: true, color: '#ff8800', margin: [0,0,0,10] },
-        subtitulo: { fontSize: 12, italics: true, color: '#555', margin: [0,0,0,15] },
-        texto: { fontSize: 11, margin: [0,2,0,2] },
-        encabezadoNaranja: { fontSize: 13, bold: true, color: '#ff8800' }
+        titulo: { fontSize: 18, bold: true, color: "#ff8800" },
+        subtitulo: { fontSize: 12, color: "#333" },
+        texto: { fontSize: 11, lineHeight: 1.1 },
+        encabezadoNaranja: { fontSize: 13, bold: true, color: "#ff8800" }
       },
-      defaultStyle: { font: 'Roboto' },
+      defaultStyle: { font: "Roboto" },
       pageMargins: [40, 60, 40, 60]
     };
 
-    // ----------------------------------------------------------------------
-    // GUARDADO DEL PDF
-    // ----------------------------------------------------------------------
-    const reportDir = path.join(__dirname, '../reports');
+    const reportDir = path.join(__dirname, "../reports");
     if (!fs.existsSync(reportDir)) fs.mkdirSync(reportDir);
 
-    // nombre limpio
-    const fechaSafe = new Date()
-      .toISOString()
-      .replace(/[-:T]/g, "")
-      .slice(0, 15);
-
+    const fechaSafe = new Date().toISOString().replace(/[-:T]/g, "").slice(0, 15);
     const pdfName = `Reporte_${nombreTestCase}_${fechaSafe}.pdf`;
 
     const pdfPath = path.join(reportDir, pdfName);
@@ -297,18 +460,17 @@ async function generarReporteCoincidenciasPDF({
     pdfDoc.end();
 
     return new Promise((resolve, reject) => {
-      stream.on('finish', () => {
+      stream.on("finish", () => {
         console.log(`📄 Reporte generado: ${pdfPath}`);
         resolve(pdfPath);
       });
-      stream.on('error', reject);
+      stream.on("error", reject);
     });
 
   } catch (err) {
-    console.error('❌ Error al generar reporte de coincidencias:', err);
+    console.error("❌ Error al generar reporte:", err);
     throw err;
   }
 }
 
-
-module.exports = { generarReportePDF,generarReporteCoincidenciasPDF };
+module.exports = { generarReportePDF, generarReporteCoincidenciasPDF };
