@@ -95,47 +95,58 @@ async buscarProducto(page, headerPage, productos, producto) {
     page.locator(productos.resultadobusquedaLabel).first().waitFor({ state: 'visible', timeout: 5000 }).catch(() => {})
   ]);
 
-  // --- 🔸 Si hay resultados, estabilizar el conteo ---
-  if (await page.locator(productos.resultadobusquedaLabel).first().isVisible()) {
 
-    let productosEncontrados = page.locator(`${productos.resultadobusquedaLabel} >> visible=true`);
-    let prevCount = 0;
-    let stableCount = 0;
-    let visibles = 0;
 
-    for (let i = 0; i < 5; i++) {
-      const total = await productosEncontrados.count();
-      visibles = 0;
-      for (let j = 0; j < total; j++) {
-        if (await productosEncontrados.nth(j).isVisible()) visibles++;
-      }
+// --- 🔸 Si hay resultados, estabilizar el conteo por visibilidad ---
+if (await page.locator(productos.resultadobusquedaLabel).first().isVisible()) {
 
-      if (visibles === prevCount) {
-        stableCount++;
-        if (stableCount >= 2) break;
-      } else {
-        stableCount = 0;
-      }
+  const elementos = page.locator(`${productos.resultadobusquedaLabel} >> visible=true`);
 
-      prevCount = visibles;
-      await page.waitForTimeout(400);
+  let prevVisibleCount = -1;
+  let stableRounds = 0;
+  let visibles = 0;
+
+  for (let i = 0; i < 10; i++) {
+
+    const total = await elementos.count();
+    visibles = 0;
+
+    for (let j = 0; j < total; j++) {
+      if (await elementos.nth(j).isVisible()) visibles++;
     }
 
-    // 🔥 Aquí agregamos tu condición ANTES del console.log final
-
-    const hayMensajeNoResultados = await page
-      .locator(productos.sinresultadosLabel)
-      .isVisible()
-      .catch(() => false);
-
-    if (hayMensajeNoResultados) {
-      console.log(`❌ El sistema muestra mensaje de "sin resultados". Los ${visibles} productos visibles son sugerencias.`);
-      return false;
+    // Si el número visible coincide con la vuelta anterior → estable
+    if (visibles === prevVisibleCount) {
+      stableRounds++;
+      if (stableRounds >= 2) {
+        // Ya se estabilizó
+        break;
+      }
+    } else {
+      stableRounds = 0; // rompe estabilidad
     }
 
-    console.log(`🟢 Se encontraron ${visibles} productos reales (conteo estabilizado)`);
-    return true;
+    prevVisibleCount = visibles;
+    await page.waitForTimeout(500);
   }
+
+  // --- 🔹 Verificar si aparece mensaje de "sin resultados" ---
+  const hayMensajeNoResultados = await page
+    .locator(productos.sinresultadosLabel)
+    .isVisible()
+    .catch(() => false);
+
+  if (hayMensajeNoResultados) {
+    console.log(`❌ El sistema muestra "sin resultados". Los ${visibles} visibles son sugerencias.`);
+    return false;
+  }
+
+  console.log(`🟢 Conteo estabilizado: ${visibles} productos visibles reales.`);
+  return true;
+}
+
+
+
 
   // --- Si no hay resultados visibles ---
   console.log('❌ No se encontraron resultados');
@@ -153,7 +164,7 @@ async evaluarBusquedaErroresOrtograficos(page, productos, equivalencias) {
   await productosVisibles.first().waitFor({ timeout: 5000 }).catch(() => {});
 
   // Reintento pequeño para evitar textos viejos/render parcial
-  await page.waitForTimeout(150);
+  await page.waitForTimeout(500);
 
   // Función de lectura con reintento
   async function obtenerTextoConReintento(locator) {

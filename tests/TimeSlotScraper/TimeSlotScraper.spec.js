@@ -24,7 +24,7 @@ test('C1 - TimeSlot Scraper', async () => {
   const resumencarritos = new ResumenCarritoPage(page);
   const productos = new ProductosEncontradosPage(page);
   const carritoUtils = new NavegacionActions();
-
+/*
   // --- Sesión persistente ---
   if (fs.existsSync('./sessionCookies.json')) { 
     const cookies = JSON.parse(fs.readFileSync('./sessionCookies.json'));
@@ -39,6 +39,30 @@ test('C1 - TimeSlot Scraper', async () => {
         localStorage.setItem(key, value);
       }
     }, localStorageData);
+  }
+*/
+
+  // --- Sesión persistente ---
+  if (fs.existsSync('./sessionCookies.json')) { 
+    const cookies = JSON.parse(fs.readFileSync('./sessionCookies.json'));
+    await context.addCookies(cookies);
+  }
+
+  if (fs.existsSync('./sessionLocalStorage.json')) {
+    const localStorageData = JSON.parse(fs.readFileSync('./sessionLocalStorage.json'));
+
+    // Primero navegar UNA sola vez
+    await page.goto(config.urls.PROD, { waitUntil: 'domcontentloaded' });
+
+    // Inyectar localStorage ANTES de cualquier otra navegación
+    await page.evaluate((data) => {
+      for (const [key, value] of Object.entries(data)) {
+        localStorage.setItem(key, value);
+      }
+    }, localStorageData);
+
+    // Recargar SOLO después de setear localStorage
+    await page.reload({ waitUntil: 'domcontentloaded' });
   }
 
   // --- Flujo principal ---
@@ -254,8 +278,8 @@ for (const s of sucursalesEvaluadas) {
 xml += `</testsuite>\n`;
 
 // --- Guardado de reportes ---
-const reportDir = path.join(__dirname, '../reports');
-if (!fs.existsSync(reportDir)) fs.mkdirSync(reportDir);
+const reportDir = path.join(process.cwd(), 'reports');
+if (!fs.existsSync(reportDir)) fs.mkdirSync(reportDir, { recursive: true });
 
 const reportPathTxt = path.join(reportDir, 'reporteSucursales.txt');
 fs.writeFileSync(reportPathTxt, reporteTexto, 'utf8');
