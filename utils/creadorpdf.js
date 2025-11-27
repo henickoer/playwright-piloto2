@@ -67,6 +67,31 @@ async function generarReportePDF({
     const printer = new PdfPrinter(fonts);
     printer.vfs = vfsFonts.vfs;
 
+    // ---------------------------
+    //  CARPETA ÚNICA DE REPORTES
+    // ---------------------------
+    const reportDir = path.join(process.cwd(), 'reports');
+    if (!fs.existsSync(reportDir)) fs.mkdirSync(reportDir, { recursive: true });
+
+    // ---------------------------
+    //  RUTA CORRECTA DEL PDF
+    // ---------------------------
+    const pdfPath = path.join(reportDir, 'reporteSucursales.pdf');
+
+    // Si existe, eliminar
+    if (fs.existsSync(pdfPath)) fs.unlinkSync(pdfPath);
+
+    // ---------------------------
+    //  RUTA CORRECTA DEL XML
+    // ---------------------------
+    const xmlPath = path.join(reportDir, 'reporteSucursales.xml');
+
+    if (fs.existsSync(xmlPath)) fs.unlinkSync(xmlPath);
+
+    // -------------------------------------------------
+    // CONTENIDO DEL PDF (todo tu código igual)
+    // -------------------------------------------------
+
     const contenidoResumen = [
       { text: 'Resumen Final', style: 'titulo' },
       { text: `Fecha ejecución: ${fechaHora}`, style: 'subtitulo' },
@@ -108,30 +133,23 @@ async function generarReportePDF({
 
       const dias = s.dias.slice(0, 4);
 
-      // 🔥 NUEVO: Encabezado dinámico usando la fecha real
-      const columnas = dias.map(d => {
-        const partes = d?.nombreDia?.split("\n") || [];
-        return partes[1]?.trim() || d?.nombreDia || "";
-      });
+      // ENCABEZADOS → ahora muestran la fecha real del scrapeo
+      const columnas = dias.map(d => d.nombreDia.split('\n')[1] || '');
 
-      const diasData = columnas.map((columna, i) => {
-        let d = dias[i] || { nombreDia: '', horarios: [] };
-
-        if (typeof d.horarios === 'string') {
-          d.horarios = d.horarios
-            .split(',')
-            .map(h => h.trim().replace(/\.$/, ''))
-            .filter(h => h.length > 0);
-        } else if (!Array.isArray(d.horarios)) {
-          d.horarios = [];
-        }
-
-        return d;
+      const diasData = dias.map((d) => {
+        return {
+          nombreDia: d.nombreDia.split('\n')[1] || '',
+          horarios: typeof d.horarios === 'string'
+            ? d.horarios
+                .split(',')
+                .map(h => h.trim().replace(/\.$/, ''))
+                .filter(h => h.length > 0)
+            : []
+        };
       });
 
       const maxFilas = Math.max(...diasData.map(d => d.horarios.length));
 
-      // 🔥 Tabla de encabezados con la fecha real
       contenidoDetalle.push({
         table: {
           widths: ['25%', '25%', '25%', '25%'],
@@ -168,9 +186,7 @@ async function generarReportePDF({
 
       contenidoDetalle.push({ text: '\n', style: 'texto' });
 
-      if (index < sucursalesConDias.length - 1) {
-        contenidoDetalle.push({ text: '', pageBreak: 'after' });
-      }
+      if (index < sucursalesConDias.length - 1) contenidoDetalle.push({ text: '', pageBreak: 'after' });
     }
 
     const docDefinition = {
@@ -187,21 +203,23 @@ async function generarReportePDF({
       pageMargins: [40, 60, 40, 60]
     };
 
-    const reportDir = path.join(__dirname, '../reports');
-    if (!fs.existsSync(reportDir)) fs.mkdirSync(reportDir);
-
-    const pdfPath = path.join(reportDir, '../reports/reporteSucursales.pdf');
-
-    if (fs.existsSync(pdfPath)) fs.unlinkSync(pdfPath);
-
+    // ---------------------------
+    // CREACIÓN DEL PDF
+    // ---------------------------
     const pdfDoc = printer.createPdfKitDocument(docDefinition);
     const stream = fs.createWriteStream(pdfPath);
     pdfDoc.pipe(stream);
     pdfDoc.end();
 
+    // ---------------------------
+    // GENERAR XML (si aplica)
+    // ---------------------------
+    fs.writeFileSync(xmlPath, JSON.stringify(sucursalesEvaluadas, null, 2), "utf8");
+
     return new Promise((resolve, reject) => {
       stream.on('finish', () => {
-        console.log(`📄 Reporte PDF generado en: ${pdfPath}`);
+        console.log(`📄 PDF generado: ${pdfPath}`);
+        console.log(`📄 XML generado: ${xmlPath}`);
         resolve(pdfPath);
       });
       stream.on('error', reject);
@@ -212,6 +230,7 @@ async function generarReportePDF({
     throw err;
   }
 }
+
 
 // ------------------------------------------------------
 //  ⚡ NUEVO: REPORTE DE COINCIDENCIAS (C1, C2, C3, C4)
@@ -312,11 +331,13 @@ async function generarReporteCoincidenciasPDF({
     if (tieneEquivalencias) {
       contenido.push(
         { text: `Términos con todas las equivalencias correctas: ${metricas.todasCorrectas}`, style: 'subtitulo' },
+          { text: '\n' },
         { text: `Términos con equivalencias incorrectas: ${metricas.conErrores}`, style: 'subtitulo' }
       );
     } else {
       contenido.push(
         { text: `Términos con resultados de búsqueda: ${metricas.conResultados}`, style: 'subtitulo' },
+          { text: '\n' },
         { text: `Términos sin resultados de búsqueda: ${metricas.sinResultados}`, style: 'subtitulo' }
       );
     }
