@@ -123,8 +123,10 @@ test('C1 - Errores Ortográficos', async ({}, testInfo) => {
     resultadosTotales.push(registroTermino);
     
     //AQUI SE REALIZA
-    await headerPage.safeClick(headerPage.logoImg);
     await page.waitForTimeout(500);
+    await headerPage.safeClick(headerPage.logoImg);
+    await page.waitForTimeout(200);
+    await page.pause();
     await page.waitForSelector('iframe#launcher', { state: 'visible', timeout: 30000 });
    // await page.waitForTimeout(200);
   }

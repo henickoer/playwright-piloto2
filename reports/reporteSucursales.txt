@@ -1,5 +1,5 @@
 📌 Resumen final
-Fecha ejecución: 27/11/2025, 09:26:12
+Fecha ejecución: 28/11/2025, 09:09:43
 🏬 Total de sucursales evaluadas: 8
 ✅ Total configuradas con días: 8
 🚫 Total sin días configurados: 0
@@ -7,89 +7,89 @@ Fecha ejecución: 27/11/2025, 09:26:12
 📅 Sucursales con días configurados:
 🏪 Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
  - Día: Hoy
-27 de noviembre
-   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
- - Día: Mañana
 28 de noviembre
    Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
- - Día: Sábado
-29 de noviembre
-   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
-
-🏪 Parque de Valencia - 17 Parques de la Herradura 52786 ESTADO DE MÉXICO, Naucalpan de Juárez México
- - Día: Hoy
-27 de noviembre
-   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
  - Día: Mañana
-28 de noviembre
-   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
- - Día: Sábado
 29 de noviembre
+   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+ - Día: Domingo
+30 de noviembre
    Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 
 🏪 Periférico Boulevard Manuel Ávila Camacho - 1007 Habitacional Jardines de Santa Monica 54050 ESTADO DE MÉXICO, Tlalnepantla México
  - Día: Hoy
-27 de noviembre
-   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
- - Día: Mañana
 28 de noviembre
    Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
- - Día: Sábado
-29 de noviembre
-   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
-
-🏪 Calle Cerrada de San Jerónimo - 117 San Jerónimo Lídice 10200 CIUDAD DE MÉXICO, Ciudad de México México
- - Día: Hoy
-27 de noviembre
-   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
  - Día: Mañana
-28 de noviembre
-   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
- - Día: Sábado
 29 de noviembre
+   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+ - Día: Domingo
+30 de noviembre
    Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 
 🏪 Calle Hipólito Taine - 307 Polanco V Sección 11560 CIUDAD DE MÉXICO, Ciudad de México México
  - Día: Hoy
-27 de noviembre
-   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
- - Día: Mañana
 28 de noviembre
-   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
- - Día: Sábado
-29 de noviembre
-   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
-
-🏪 Vasco de Quiroga - 3900 Contadero 05348 CIUDAD DE MÉXICO, Ciudad de México México
- - Día: Hoy
-27 de noviembre
-   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+   Horarios: 11:01 am a 12:30 pm, 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
  - Día: Mañana
-28 de noviembre
-   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
- - Día: Sábado
 29 de noviembre
-   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+   Horarios: 11:01 am a 12:30 pm, 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
+ - Día: Domingo
+30 de noviembre
+   Horarios: 11:01 am a 12:30 pm, 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
 
 🏪 Miguel Laurent - 624 Colonia del Valle Sur 03104 CIUDAD DE MÉXICO, Ciudad de México México
  - Día: Hoy
-27 de noviembre
-   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
- - Día: Mañana
 28 de noviembre
    Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
- - Día: Sábado
+ - Día: Mañana
 29 de noviembre
+   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+ - Día: Domingo
+30 de noviembre
    Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 
-🏪 Calle 12 - 30 San José Vista Hermosa 72190 PUEBLA, Heroica Puebla de Zaragoza México
+🏪 Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
  - Día: Hoy
-27 de noviembre
-   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
- - Día: Mañana
 28 de noviembre
    Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
- - Día: Sábado
+ - Día: Mañana
 29 de noviembre
+   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+ - Día: Domingo
+30 de noviembre
+   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+
+🏪 Calle Hipólito Taine - 307 Polanco V Sección 11560 CIUDAD DE MÉXICO, Ciudad de México México
+ - Día: Hoy
+28 de noviembre
+   Horarios: 11:01 am a 12:30 pm, 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
+ - Día: Mañana
+29 de noviembre
+   Horarios: 11:01 am a 12:30 pm, 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
+ - Día: Domingo
+30 de noviembre
+   Horarios: 11:01 am a 12:30 pm, 12:31 pm a 2:00 pm, 2:01 pm a 3:30 pm, 3:31 pm a 5:00 pm, 5:01 pm a 6:30 pm, 6:31 pm a 8:00 pm, 8:01 pm a 9:30 pm.
+
+🏪 Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
+ - Día: Hoy
+28 de noviembre
+   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+ - Día: Mañana
+29 de noviembre
+   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+ - Día: Domingo
+30 de noviembre
+   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+
+🏪 Calzada México-Xochimilco - 5149 Guadalupe 14388 CIUDAD DE MÉXICO, Ciudad de México México
+ - Día: Hoy
+28 de noviembre
+   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+ - Día: Mañana
+29 de noviembre
+   Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
+ - Día: Domingo
+30 de noviembre
    Horarios: 12:00 pm a 1:59 pm, 2:00 pm a 3:59 pm, 4:00 pm a 5:59 pm, 6:00 pm a 7:59 pm, 8:00 pm a 10:00 pm.
 

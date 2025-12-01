@@ -479,7 +479,8 @@ async function generarReporteCoincidenciasPDF({
     if (!fs.existsSync(reportDir)) fs.mkdirSync(reportDir);
 
     const fechaSafe = new Date().toISOString().replace(/[-:T]/g, "").slice(0, 15);
-    const pdfName = `Reporte_${nombreTestCase}_${fechaSafe}.pdf`;
+    //const pdfName = `Reporte_${nombreTestCase}_${fechaSafe}.pdf`;
+    const pdfName = `Reporte_${nombreTestCase}.pdf`;
 
     const pdfPath = path.join(reportDir, pdfName);
 
