@@ -2,30 +2,30 @@
   "cookies": [
     {
       "name": "vid_rt",
-      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5NTZlZWNmMC1jNDEwLTRhZjQtODk3OS1iMmQxNDIyZmFlMzciLCJzZXNzIjoiY2U5OTNkNDMtYWMwYi00NGVmLWFmMDAtOWFmNzA3ZDA4MDA4IiwiaWF0IjoxNzY0MjYxODE0LCJleHAiOjE3NjY4NTM4MTQsImlzcyI6InZpZCJ9.4RPKktNEJKT4MMJs7jNl9xL7IkJsjNza4_x60hQWGnY",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzNWViNmJlZC1hMWUxLTQ5NWYtYWFlYy02Y2U0YzJhNGM4M2EiLCJzZXNzIjoiNjk4NDdlNTQtZmFiNi00MzM4LWEzMTItNWYxMTI3MWM0NGQ2IiwiaWF0IjoxNzY0NTk5ODQ1LCJleHAiOjE3NjcxOTE4NDUsImlzcyI6InZpZCJ9.EjWkc3NfZnOLfMvUHVy7BuUMBo9LcjHxhx-j579KxnM",
       "domain": ".www.chedraui.com.mx",
       "path": "/api/vtexid/refreshtoken/webstore",
-      "expires": 1766853813.285261,
+      "expires": 1767191843.637464,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Strict"
     },
     {
       "name": "_csrf",
-      "value": "WRYEv4fEqpp3i9RdEcyrsbwM",
+      "value": "CKFkfBQsGgi9SMDblHFTsPbB",
       "domain": "chedraui-prod.us.auth0.com",
       "path": "/usernamepassword/login",
-      "expires": 1765125801.502903,
+      "expires": 1765463826.198584,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "_li_ss",
-      "value": "CgASFw3UuLGSEhAKBgiTARClHAoGCJQBEKUc",
+      "value": "CgASHw3fh4uhEhgKBgiUARCpHAoGCPQBEKkcCgYIkwEQqRw",
       "domain": "i.liadm.com",
       "path": "/s",
-      "expires": 1766853817.037561,
+      "expires": 1767191847.407596,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
@@ -35,27 +35,47 @@
       "value": "master%3A-",
       "domain": "www.chedraui.com.mx",
       "path": "/",
-      "expires": 1764348150,
+      "expires": 1764685414,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "VtexRCSessionIdv7",
-      "value": "04dc5ed1-9dd7-4bb6-a6c8-e686bd4d58eb",
+      "value": "d293111e-6373-4c83-8f5f-da671f536ecd",
       "domain": ".chedraui.com.mx",
       "path": "/",
-      "expires": 1764263619,
+      "expires": 1764601649,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "VtexRCMacIdv7",
-      "value": "8f78fcaf-2eef-45b8-b4f2-e0603e7d6882",
+      "value": "9677b35b-b13a-4f08-8622-800d44e6fe51",
       "domain": ".chedraui.com.mx",
       "path": "/",
-      "expires": 1795797819,
+      "expires": 1796135849,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "vtex-search-session",
+      "value": "f5f3a9f69cb0474a97e60d65d1e55978",
+      "domain": ".chedraui.com.mx",
+      "path": "/",
+      "expires": 1764601647.335346,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "vtex-search-anonymous",
+      "value": "f28f32e6be1943d19afeef7b147180d1",
+      "domain": ".chedraui.com.mx",
+      "path": "/",
+      "expires": 1796135847.335855,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -65,7 +85,7 @@
       "value": "3",
       "domain": ".groovinads.com",
       "path": "/",
-      "expires": 1768149817.340715,
+      "expires": 1768487847.843257,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
@@ -75,7 +95,7 @@
       "value": "undefined",
       "domain": ".groovinads.com",
       "path": "/",
-      "expires": 1768149817.340794,
+      "expires": 1768487847.843302,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
@@ -85,47 +105,27 @@
       "value": "3",
       "domain": ".groovinads.com",
       "path": "/",
-      "expires": 1768149817.340845,
+      "expires": 1768487847.843327,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "GRV_BHV_DATE5577",
-      "value": "2025-11-27",
+      "value": "2025-12-01",
       "domain": ".groovinads.com",
       "path": "/",
-      "expires": 1766853817.340896,
+      "expires": 1767191847.84335,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "GRV_IDU",
-      "value": "9710e8270e81c29",
+      "value": "c2ed93e359d3485",
       "domain": ".groovinads.com",
       "path": "/",
-      "expires": 1790181817.340945,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "NPAd10e4b862fac00f554a34963c404cd71",
-      "value": "on",
-      "domain": ".groovinads.com",
-      "path": "/",
-      "expires": 1764348197.336722,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "NPA17a592f5791913879a74c09030f767b9",
-      "value": "on",
-      "domain": ".groovinads.com",
-      "path": "/",
-      "expires": 1764348197.336737,
+      "expires": 1790519847.843374,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
@@ -135,77 +135,97 @@
       "value": "Disabled",
       "domain": ".groovinads.com",
       "path": "/",
-      "expires": 1764283397.33675,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "vtex-search-session",
-      "value": "bc1be60141644ca1afba96ed8b5fc044",
-      "domain": ".chedraui.com.mx",
-      "path": "/",
-      "expires": 1764263616.870697,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "vtex-search-anonymous",
-      "value": "8d00e9f855b5426699ddb2a16c540cd8",
-      "domain": ".chedraui.com.mx",
-      "path": "/",
-      "expires": 1795797816.871168,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "uid",
-      "value": "f218f996-a7fc-43ca-9a26-6bf193753019",
-      "domain": ".criteo.com",
-      "path": "/",
-      "expires": 1797957797.460107,
+      "expires": 1764621447.843398,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "sp-variant",
-      "value": "66844d747af2d50d0f2e2357-variantTreament",
+      "value": "66844d747af2d50d0f2e2357-variantNull",
       "domain": ".chedraui.com.mx",
       "path": "/",
-      "expires": 1764263616.870305,
+      "expires": 1764601647.334966,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
+      "name": "uid",
+      "value": "f87a67c6-5606-4d57-8763-0fd8d921b276",
+      "domain": ".criteo.com",
+      "path": "/",
+      "expires": 1798295822.440495,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_gcl_au",
+      "value": "1.1.1593918938.1764599823",
+      "domain": ".chedraui.com.mx",
+      "path": "/",
+      "expires": 1772375822,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_TargetOne_ShortLivedCookie",
+      "value": "G95PTRFONW8FTPSFNGDU1764599822836",
+      "domain": "www.chedraui.com.mx",
+      "path": "/",
+      "expires": 1764601647,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_TargetOne_Session_Cookie_start_time",
+      "value": "2025-12-01 14:37:02.837 UTC",
+      "domain": "www.chedraui.com.mx",
+      "path": "/",
+      "expires": 1764601647,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ttp",
+      "value": "36FQQdyyIc9pJwdc8RjiCdr6tV0",
+      "domain": ".tiktok.com",
+      "path": "/",
+      "expires": 1798295847.85008,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
       "name": "checkout.vtex.com",
-      "value": "__ofid=802f35cf883345309562803b34949b31",
+      "value": "__ofid=045bce29223e449ba1b86483844da0d5",
       "domain": ".www.chedraui.com.mx",
       "path": "/",
-      "expires": 1779813820.210515,
+      "expires": 1780151850.98608,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "g",
-      "value": "O7NR5qS7NQJdEPagXUeT_1764261798750",
+      "value": "kgTRgJv93z3w3owPAfOZ_1764599825488",
       "domain": ".creativecdn.com",
       "path": "/",
-      "expires": 1795797797.908744,
+      "expires": 1796135823.868904,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "c",
-      "value": "O7NR5qS7NQJdEPagXUeT_23LKb0xojl6IVrjPposI_1764261798750",
+      "value": "kgTRgJv93z3w3owPAfOZ_23LKb0xojl6IVrjPposI_1764599825488",
       "domain": ".creativecdn.com",
       "path": "/",
-      "expires": 1795797797.908865,
+      "expires": 1796135823.869169,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None",
@@ -214,119 +234,15 @@
     },
     {
       "name": "ts",
-      "value": "1764261798",
+      "value": "1764599825",
       "domain": ".creativecdn.com",
       "path": "/",
-      "expires": 1795797797.908897,
+      "expires": 1796135823.869225,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None",
       "partitionKey": "https://chedraui.com.mx",
       "_crHasCrossSiteAncestor": true
-    },
-    {
-      "name": "_gcl_au",
-      "value": "1.1.754617013.1764261798",
-      "domain": ".chedraui.com.mx",
-      "path": "/",
-      "expires": 1772037797,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "_TargetOne_ShortLivedCookie",
-      "value": "EZEIGZA1V0UFC0GJOXPX1764261797944",
-      "domain": "www.chedraui.com.mx",
-      "path": "/",
-      "expires": 1764263617,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "_TargetOne_Session_Cookie_start_time",
-      "value": "2025-11-27 16:43:17.944 UTC",
-      "domain": "www.chedraui.com.mx",
-      "path": "/",
-      "expires": 1764263617,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "_ttp",
-      "value": "364NHtsgXam7VKHq2bpuTTh5ppE",
-      "domain": ".tiktok.com",
-      "path": "/",
-      "expires": 1797957817.324278,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "muidn",
-      "value": "parjqErxKCH8",
-      "domain": ".mgid.com",
-      "path": "/",
-      "expires": 1795797816.551907,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "mg_sync",
-      "value": "{\"834131\":1764261799}",
-      "domain": "cm.mgid.com",
-      "path": "/",
-      "expires": 1766853816.552056,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "t_gid",
-      "value": "f646ceed-c758-45a7-b826-46c3aa4d6ccd-tuct10220527",
-      "domain": ".taboola.com",
-      "path": "/",
-      "expires": 1795797817.616331,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "t_pt_gid",
-      "value": "f646ceed-c758-45a7-b826-46c3aa4d6ccd-tuct10220527",
-      "domain": ".taboola.com",
-      "path": "/",
-      "expires": 1795797817.616418,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None",
-      "partitionKey": "https://chedraui.com.mx",
-      "_crHasCrossSiteAncestor": true
-    },
-    {
-      "name": "XANDR_PANID",
-      "value": "CSm2kttmPuiTZA6OY56GUZPcPIpJx5Qgg5DWuVDJZ5xCPqXhUft_-_jKzt_2XUcKx9S-XNNx0vGEj6CnYr1ygXouEE04i5RonWtIwLZT5QE.",
-      "domain": ".adnxs.com",
-      "path": "/",
-      "expires": 1772037817.22287,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None",
-      "partitionKey": "https://chedraui.com.mx",
-      "_crHasCrossSiteAncestor": true
-    },
-    {
-      "name": "uuid2",
-      "value": "2473757492239514516",
-      "domain": ".adnxs.com",
-      "path": "/",
-      "expires": 1772037817.223111,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "None"
     },
     {
       "name": "ar_debug",
@@ -339,28 +255,18 @@
       "sameSite": "None"
     },
     {
-      "name": "IDE",
-      "value": "AHWqTUlP6_sBlvXdNA3NhNdY8vduRi7kpaRXNJ6MfBxBlpgjgsWxzcCWEwgDi1ow",
-      "domain": ".doubleclick.net",
-      "path": "/",
-      "expires": 1798821798.936506,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
       "name": "_ga",
-      "value": "GA1.1.972821980.1764261799",
+      "value": "GA1.1.13183543.1764599824",
       "domain": ".chedraui.com.mx",
       "path": "/",
-      "expires": 1798821799.2086,
+      "expires": 1799159823.977178,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "smc_ls_session",
-      "value": "1764261799340",
+      "value": "1764599824051",
       "domain": ".chedraui.com.mx",
       "path": "/",
       "expires": -1,
@@ -370,10 +276,10 @@
     },
     {
       "name": "MUID",
-      "value": "25B956F1C32C6F800CBC4040C24F6EDD",
+      "value": "37F9CE8B83B06F6538BED83E82C96E49",
       "domain": ".bing.com",
       "path": "/",
-      "expires": 1797957800.597244,
+      "expires": 1798295825.334421,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
@@ -383,78 +289,80 @@
       "value": "0",
       "domain": ".bat.bing.com",
       "path": "/",
-      "expires": 1764866599.462324,
+      "expires": 1765204624.131159,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
+    },
+    {
+      "name": "_fbp",
+      "value": "fb.2.1764599824171.78079377364036204",
+      "domain": ".chedraui.com.mx",
+      "path": "/",
+      "expires": 1772375849,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
     },
     {
       "name": "_tt_enable_cookie",
       "value": "1",
       "domain": ".chedraui.com.mx",
       "path": "/",
-      "expires": 1797957817,
+      "expires": 1798295848,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "_ttp",
-      "value": "01KB3359J4GXAZTCR2G7N5WX3N_.tt.2",
+      "value": "01KBD5GZYDQCDWPYXFGCNRWKZB_.tt.2",
       "domain": ".chedraui.com.mx",
       "path": "/",
-      "expires": 1797957817,
+      "expires": 1798295848,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "__zlcmid",
-      "value": "1Upo654ZjcGpNig",
+      "value": "1Uto6fyBxnwZcAW",
       "domain": ".chedraui.com.mx",
       "path": "/",
-      "expires": 1795797818,
+      "expires": 1796135848,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
-      "name": "_fbp",
-      "value": "fb.2.1764261799545.749694827623727302",
-      "domain": ".chedraui.com.mx",
+      "name": "XANDR_PANID",
+      "value": "IHU-qYLbcJjCMhFMAZhx29UzhwYq95BKT6csoKzCcchr2wTQG6e0A4Cz9nup85zQJvmT5q-jVTMY8hZQaybkLTq6yYULrnImmKMXi5LYr5k.",
+      "domain": ".adnxs.com",
       "path": "/",
-      "expires": 1772037818,
+      "expires": 1772375847.582456,
       "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://chedraui.com.mx",
+      "_crHasCrossSiteAncestor": true
     },
     {
-      "name": "CMID",
-      "value": "aSh-qcAoITQAFlgyAyvcFwAA",
-      "domain": ".casalemedia.com",
+      "name": "uuid2",
+      "value": "1174502778840376734",
+      "domain": ".adnxs.com",
       "path": "/",
-      "expires": 1795797817.052943,
-      "httpOnly": false,
+      "expires": 1772375847.582657,
+      "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
-      "name": "CMPS",
-      "value": "5733",
-      "domain": ".casalemedia.com",
+      "name": "IDE",
+      "value": "AHWqTUmzAFogOVhgghVVtnAp6Iyf384bTCWAmxzeNFLg2CWCi11y0a8dV46P7Z8Ao7M",
+      "domain": ".doubleclick.net",
       "path": "/",
-      "expires": 1772037800.538141,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "CMPRO",
-      "value": "5733",
-      "domain": ".casalemedia.com",
-      "path": "/",
-      "expires": 1772037817.053008,
-      "httpOnly": false,
+      "expires": 1799159824.779148,
+      "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
@@ -463,137 +371,167 @@
       "value": "0",
       "domain": ".c.bing.com",
       "path": "/",
-      "expires": 1764866600.597342,
+      "expires": 1765204625.334507,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "CMID",
+      "value": "aS2oEsAoIe0AETXrAfq8egAA",
+      "domain": ".casalemedia.com",
+      "path": "/",
+      "expires": 1796135847.402805,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "CMPS",
+      "value": "4204",
+      "domain": ".casalemedia.com",
+      "path": "/",
+      "expires": 1772375825.371883,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "CMPRO",
+      "value": "4204",
+      "domain": ".casalemedia.com",
+      "path": "/",
+      "expires": 1772375847.402914,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "tuuid",
-      "value": "c4d673c8-02c9-4a19-9d4b-b84ac8802a5f",
+      "value": "17c4904c-4b07-467a-9e0e-81f94df9bbd4",
       "domain": ".bidswitch.net",
       "path": "/",
-      "expires": 1795797800.694332,
+      "expires": 1796135825.48129,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "c",
-      "value": "1764261801",
+      "value": "1764599827",
       "domain": ".bidswitch.net",
       "path": "/",
-      "expires": 1795797800.611979,
+      "expires": 1796135825.403186,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "tuuid_lu",
-      "value": "1764261801",
+      "value": "1764599827",
       "domain": ".bidswitch.net",
       "path": "/",
-      "expires": 1795797800.69446,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "visitor-id",
-      "value": "4072634014628463000V10",
-      "domain": ".media.net",
-      "path": "/",
-      "expires": 1795797800.631415,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "data-c",
-      "value": "k-aSjUuHdcd-xq1lE6IiDsm5XRELcCs7ntnVNC7Q~~3",
-      "domain": ".media.net",
-      "path": "/",
-      "expires": 1766853817.033228,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "KADUSERCOOKIE",
-      "value": "81D923EA-6595-4842-9321-71DE7DC56129",
-      "domain": ".pubmatic.com",
-      "path": "/",
-      "expires": 1795797800.654092,
+      "expires": 1796135825.481411,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "mv_tokens",
-      "value": "%7B%22mv_uuid%22%3A%222f3b3f60-cbb0-11f0-adc8-4d1ad13c100e%22%2C%22version%22%3A%22invalidate-verizon-pushes%22%7D",
+      "value": "%7B%22mv_uuid%22%3A%22362da130-cec3-11f0-8592-35966d71d538%22%2C%22version%22%3A%22invalidate-verizon-pushes%22%7D",
       "domain": "exchange.mediavine.com",
       "path": "/",
-      "expires": 1765471417.03373,
+      "expires": 1765809447.399258,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "mv_tokens_invalidate-verizon-pushes",
-      "value": "%7B%22mv_uuid%22%3A%222f3b3f60-cbb0-11f0-adc8-4d1ad13c100e%22%2C%22version%22%3A%22invalidate-verizon-pushes%22%7D",
+      "value": "%7B%22mv_uuid%22%3A%22362da130-cec3-11f0-8592-35966d71d538%22%2C%22version%22%3A%22invalidate-verizon-pushes%22%7D",
       "domain": "exchange.mediavine.com",
       "path": "/",
-      "expires": 1765471417.033778,
+      "expires": 1765809447.399426,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "am_tokens",
-      "value": "%7B%22mv_uuid%22%3A%222f3b3f60-cbb0-11f0-adc8-4d1ad13c100e%22%2C%22version%22%3A%22invalidate-verizon-pushes%22%7D",
+      "value": "%7B%22mv_uuid%22%3A%22362da130-cec3-11f0-8592-35966d71d538%22%2C%22version%22%3A%22invalidate-verizon-pushes%22%7D",
       "domain": "exchange.mediavine.com",
       "path": "/",
-      "expires": 1765471417.03381,
+      "expires": 1765809447.399486,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "am_tokens_invalidate-verizon-pushes",
-      "value": "%7B%22mv_uuid%22%3A%222f3b3f60-cbb0-11f0-adc8-4d1ad13c100e%22%2C%22version%22%3A%22invalidate-verizon-pushes%22%7D",
+      "value": "%7B%22mv_uuid%22%3A%22362da130-cec3-11f0-8592-35966d71d538%22%2C%22version%22%3A%22invalidate-verizon-pushes%22%7D",
       "domain": "exchange.mediavine.com",
       "path": "/",
-      "expires": 1765471417.033838,
+      "expires": 1765809447.399535,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "criteo",
-      "value": "%7B%22id%22%3A%22k-V_9zfHdcd-xq1lE6IiDsm5XRELe31pwqbvhD4A%22%2C%22version%22%3A%22criteo%22%7D",
+      "value": "%7B%22id%22%3A%22k-32CsCz9JyWOqQLtlfQfbWbbvImXIEqEXGZ0jVg%22%2C%22version%22%3A%22criteo%22%7D",
       "domain": "exchange.mediavine.com",
       "path": "/",
-      "expires": 1765471417.033866,
+      "expires": 1765809447.399642,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "KADUSERCOOKIE",
+      "value": "CCD6ACF2-3E90-4409-9EB4-A7DC07E45222",
+      "domain": ".pubmatic.com",
+      "path": "/",
+      "expires": 1796135825.573054,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "visitor-id",
+      "value": "4076014275328201000V10",
+      "domain": ".media.net",
+      "path": "/",
+      "expires": 1796135825.580528,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "data-c",
+      "value": "k-uyMRuz9JyWOqQLtlfQfbWbbvImV2-ncsc7xV2A~~3",
+      "domain": ".media.net",
+      "path": "/",
+      "expires": 1767191847.397428,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "lidid",
-      "value": "f17ef6b2-fbc7-42ba-89b3-dc918d3abf22",
+      "value": "0c2afee5-1174-435a-9d66-69fe0d201598",
       "domain": ".liadm.com",
       "path": "/",
-      "expires": 1798821817.037709,
+      "expires": 1799159847.407731,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "visitor",
-      "value": "88b83bcc-4078-4616-9fb6-8569315ba3c6",
+      "value": "c821b035-c8b2-4289-a3a1-5e3ac73d95b9",
       "domain": ".postrelease.com",
       "path": "/",
-      "expires": 1795797816.156979,
+      "expires": 1796135846.258173,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
@@ -603,107 +541,49 @@
       "value": "0",
       "domain": ".postrelease.com",
       "path": "/",
-      "expires": 1795797816.157087,
+      "expires": 1796135846.258329,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
-      "name": "demdex",
-      "value": "77183167763935561631449918515398915027",
-      "domain": ".demdex.net",
+      "name": "t_gid",
+      "value": "57de8531-aa1e-4cea-952a-3cfe38036a23-tuct10272d93",
+      "domain": ".taboola.com",
       "path": "/",
-      "expires": 1779813817.070799,
+      "expires": 1796135847.352203,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
-      "name": "tt_viewer",
-      "value": "6f953b28-ee67-40a2-8c4d-1675777c3352",
-      "domain": ".teads.tv",
+      "name": "t_pt_gid",
+      "value": "57de8531-aa1e-4cea-952a-3cfe38036a23-tuct10272d93",
+      "domain": ".taboola.com",
       "path": "/",
-      "expires": 1795711400.868063,
+      "expires": 1796135847.352337,
       "httpOnly": false,
       "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "v1_151",
-      "value": "1",
-      "domain": ".revcontent.com",
-      "path": "/",
-      "expires": 1766853817.034244,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "v2_151",
-      "value": "k-VlXZwXdcd-xq1lE6IiDsm5XRELfUxdPXIxJdAg",
-      "domain": ".revcontent.com",
-      "path": "/",
-      "expires": 1766853817.034302,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "pid",
-      "value": "3133844865669467109",
-      "domain": ".smartadserver.com",
-      "path": "/",
-      "expires": 1772037801.891321,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "TestIfCookieP",
-      "value": "ok",
-      "domain": ".smartadserver.com",
-      "path": "/",
-      "expires": 1798389801.891392,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "csync",
-      "value": "79:k-dag3andcd-xq1lE6IiDsm5XRELdI30DaWOKedQ",
-      "domain": ".smartadserver.com",
-      "path": "/",
-      "expires": 1766853818.023182,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "dpm",
-      "value": "77183167763935561631449918515398915027",
-      "domain": ".dpm.demdex.net",
-      "path": "/",
-      "expires": 1779813817.07093,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
+      "sameSite": "None",
+      "partitionKey": "https://chedraui.com.mx",
+      "_crHasCrossSiteAncestor": true
     },
     {
       "name": "khaos",
-      "value": "MIHNXAOA-13-19LM",
+      "value": "MIN96CWM-1E-9TMQ",
       "domain": ".rubiconproject.com",
       "path": "/",
-      "expires": 1795797817.034998,
+      "expires": 1796135847.357593,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "khaos_p",
-      "value": "MIHNXAOA-13-19LM",
+      "value": "MIN96CWM-1E-9TMQ",
       "domain": ".rubiconproject.com",
       "path": "/",
-      "expires": 1795797817.03506,
+      "expires": 1796135847.357659,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None",
@@ -715,7 +595,7 @@
       "value": "1",
       "domain": ".rubiconproject.com",
       "path": "/",
-      "expires": 1772037817.035144,
+      "expires": 1772375847.357794,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None",
@@ -723,31 +603,41 @@
       "_crHasCrossSiteAncestor": true
     },
     {
-      "name": "tvid",
-      "value": "9cc7078b5dcf479a8f9b849909dd4e74",
-      "domain": ".tremorhub.com",
+      "name": "v1_151",
+      "value": "1",
+      "domain": ".revcontent.com",
       "path": "/",
-      "expires": 1795818701.015156,
+      "expires": 1767191847.407031,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
-      "name": "tv_UICR",
-      "value": "k-eVlD2Hdcd-xq1lE6IiDsm5XRELcuhHzxJIPWOg",
-      "domain": ".tremorhub.com",
+      "name": "v2_151",
+      "value": "k-B0vauj9JyWOqQLtlfQfbWbbvImXqMoe53io6wQ",
+      "domain": ".revcontent.com",
       "path": "/",
-      "expires": 1766853817.031717,
+      "expires": 1767191847.407154,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "tt_viewer",
+      "value": "59cd4091-324b-498e-a83a-88ef71cba77b",
+      "domain": ".teads.tv",
+      "path": "/",
+      "expires": 1796049425.860179,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "tluidp",
-      "value": "1729651537577824653850",
+      "value": "1408238094869555507187",
       "domain": ".3lift.com",
       "path": "/",
-      "expires": 1772037817.023704,
+      "expires": 1772375847.370619,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None",
@@ -756,70 +646,110 @@
     },
     {
       "name": "tluid",
-      "value": "1729651537577824653850",
+      "value": "1408238094869555507187",
       "domain": ".3lift.com",
       "path": "/",
-      "expires": 1772037817.023765,
+      "expires": 1772375847.370795,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "_rxuuid",
-      "value": "%7B%22rx_uuid%22%3A%22RX-4db62dbd-54a5-413a-b881-285fff0e321f-005%22%7D",
+      "value": "%7B%22rx_uuid%22%3A%22RX-bbd22877-ccc0-4b5c-b7bb-2032adb835f7-005%22%7D",
       "domain": ".1rx.io",
       "path": "/",
-      "expires": 1795797801.066452,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "_rxuuid",
-      "value": "%7B%22rx_uuid%22%3A%22RX-4db62dbd-54a5-413a-b881-285fff0e321f-005%22%7D",
-      "domain": ".targeting.unrulymedia.com",
-      "path": "/",
-      "expires": 1795797817.203192,
+      "expires": 1796135826.056591,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "did",
-      "value": "s%3Av0%3Aea6bc8c0-0749-4757-9e6e-fbc3458677e0.6B2INN6FIgBQk1qbcixTwWTIzJG7mqtExbnbijVJ38g",
+      "value": "s%3Av0%3A294fa469-0094-45b0-821d-0ebec40c793b.Qqnlv9A5O8mrVA6XBIqLNHV9kEgNmV61zQuQSAzdlRU",
       "domain": "chedraui-prod.us.auth0.com",
       "path": "/",
-      "expires": 1795819401.378652,
+      "expires": 1796157426.074537,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "did_compat",
-      "value": "s%3Av0%3Aea6bc8c0-0749-4757-9e6e-fbc3458677e0.6B2INN6FIgBQk1qbcixTwWTIzJG7mqtExbnbijVJ38g",
+      "value": "s%3Av0%3A294fa469-0094-45b0-821d-0ebec40c793b.Qqnlv9A5O8mrVA6XBIqLNHV9kEgNmV61zQuQSAzdlRU",
       "domain": "chedraui-prod.us.auth0.com",
       "path": "/",
-      "expires": 1795819401.379378,
+      "expires": 1796157426.074803,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
     },
     {
+      "name": "tvid",
+      "value": "60a404cca8d147df8b74365c03c687fb",
+      "domain": ".tremorhub.com",
+      "path": "/",
+      "expires": 1796156726.12002,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "tv_UICR",
+      "value": "k-8h8wDz9JyWOqQLtlfQfbWbbvImWgt39BSVgDKQ",
+      "domain": ".tremorhub.com",
+      "path": "/",
+      "expires": 1767191847.402341,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "pid",
+      "value": "5859256328018398682",
+      "domain": ".smartadserver.com",
+      "path": "/",
+      "expires": 1772375826.182141,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "TestIfCookieP",
+      "value": "ok",
+      "domain": ".smartadserver.com",
+      "path": "/",
+      "expires": 1798727826.18223,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "csync",
+      "value": "79:k-P9_n6j9JyWOqQLtlfQfbWbbvImUt0pU_klSW8g",
+      "domain": ".smartadserver.com",
+      "path": "/",
+      "expires": 1767191848.412028,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
       "name": "__rtbh.lid",
-      "value": "%7B%22eventType%22%3A%22lid%22%2C%22id%22%3A%22uSbd4EFjVFduYplSD33C%22%2C%22expiryDate%22%3A%222026-11-27T16%3A43%3A21.960Z%22%7D",
+      "value": "%7B%22eventType%22%3A%22lid%22%2C%22id%22%3A%22N2chSAK6kWSywy9akEZw%22%2C%22expiryDate%22%3A%222026-12-01T14%3A37%3A07.397Z%22%7D",
       "domain": "chedraui-prod.us.auth0.com",
       "path": "/",
-      "expires": 1795797801,
+      "expires": 1796135827,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "cto_bundle",
-      "value": "jVHa4F91JTJGa0w1T1pOenRIaXBJZU5EYXU2dEhlSWVIMkVKSWVWOWlyRmRtNnlqNGFMTzclMkIzc0xqQXNHTXdVU0hCTnQ5ZTNrSmlvJTJCVUlNQkpwWkdUYmJSdE5jNlE1aVZvbGtaYjdJcXlxNmdqUnQyWnpadHNndU1lMzltMkQ0RCUyQk43eHlSSUd3dmk1SDZUSCUyQk43TXZZUzBRYUVRJTNEJTNE",
+      "value": "TJ0N3F8lMkY2clJ0d2JJbjladlFqYVlGNElTMG1LYld4TzVxSFhZSkNtMTFaYU5lTUpqZSUyQk9wMlpJRUdCMExXdVNvelFTQVN3VXRFS1piaE5JQlBzalNCN3JCbDlOUG0lMkJSM1BUSGtUQUlMRGdQNG43VFRIa1ZqMDRXMmZ6V1lUSldTTE56bUR5UDNFQTZhdXNkT20xTjJ1bjVSTnclM0QlM0Q",
       "domain": ".criteo.com",
       "path": "/",
-      "expires": 1797957803.257943,
+      "expires": 1798295827.663235,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None",
@@ -828,17 +758,17 @@
     },
     {
       "name": "cto_bundle",
-      "value": "HzUGw19sSGlxUzN6dDN5dU1SYllQZFVvJTJCRWZia1JRUld0ZFRsRFZ2SVR2V0Jod1VGTCUyRm0lMkY0MUhVNXRwJTJGT1ZRQnBjazJQVXJNN1EyY092Z2dacjBZUiUyQlhVazlqT1hvMTZsR0lVTW93U0VYT0k1T1NNQUNiU1c0dzhzQmNpSU12Z0VVa3NIclRTbTRaWkclMkZpQU5WQ0VDJTJGQ04xZyUzRCUzRA",
+      "value": "YCKwq19sNzBXbktrbUhZODNHak9TZnJGZWp0R01ObWR0ZHVEZHJHOXZKNDVIMDNYNnAlMkJBampjJTJGcUMyZmklMkY5Q2l2SkRVb2EyUFphMmFZc3UyWWFCYVM0NFdSRkd5eHhlV1NSWlRGTUNCN1REdEElMkZMdDZEWmUyQyUyQk80R2lSWHlvMDB5aW5leXpEWXdzMDFNOXFnTSUyQlEwYUVhdmclM0QlM0Q",
       "domain": ".auth0.com",
       "path": "/",
-      "expires": 1798425802,
+      "expires": 1798763827,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "smc_ls_session",
-      "value": "1764261802303",
+      "value": "1764599827762",
       "domain": ".auth0.com",
       "path": "/",
       "expires": -1,
@@ -848,130 +778,130 @@
     },
     {
       "name": "_lr_hb_-zvhuxj%2Ftendaenlinea",
-      "value": "{%22heartbeat%22:1764261803071}",
+      "value": "{%22heartbeat%22:1764599828379}",
       "domain": "chedraui-prod.us.auth0.com",
       "path": "/",
-      "expires": 1764348203,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "_ga_N938TMF9GB",
-      "value": "GS2.1.s1764261803$o1$g0$t1764261803$j60$l0$h0",
-      "domain": ".auth0.com",
-      "path": "/",
-      "expires": 1798821803.300367,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "_ga",
-      "value": "GA1.1.1166140284.1764261803",
-      "domain": ".auth0.com",
-      "path": "/",
-      "expires": 1798821803.300825,
+      "expires": 1764686228,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "_lr_tabs_-zvhuxj%2Ftendaenlinea",
-      "value": "{%22recordingID%22:%226-019ac632-b101-7656-9fb0-87e035291535%22%2C%22sessionID%22:0%2C%22lastActivity%22:1764261811535%2C%22hasActivity%22:true%2C%22confirmed%22:false%2C%22recordingConditionThreshold%22:38.779268845325966%2C%22clearsIdentifiedUser%22:false}",
+      "value": "{%22recordingID%22:%226-019ada58-8cb1-7071-a317-4fd31a27e34f%22%2C%22sessionID%22:0%2C%22lastActivity%22:1764599828604%2C%22hasActivity%22:false%2C%22clearsIdentifiedUser%22:false%2C%22confirmed%22:true}",
       "domain": "chedraui-prod.us.auth0.com",
       "path": "/",
-      "expires": 1764348211,
+      "expires": 1764686228,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_N938TMF9GB",
+      "value": "GS2.1.s1764599828$o1$g0$t1764599828$j60$l0$h0",
+      "domain": ".auth0.com",
+      "path": "/",
+      "expires": 1799159828.959324,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.73427384.1764599829",
+      "domain": ".auth0.com",
+      "path": "/",
+      "expires": 1799159828.959761,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "auth0",
-      "value": "s%3AwVzGAP__jgV0ANMNUjgicVxYnUHY24_C.o%2FPCUGVT3oqF9DK8qNI0Ig%2BjvWGAx3JIV3JVYmnjGh4",
+      "value": "s%3Au4yZexLFdAvOtOlWhAQqx1vWst1MawnQ.0YGIzkcUBpDeHKmD8uadj0BxZoQszDZt43pjt%2Bb3TIA",
       "domain": "chedraui-prod.us.auth0.com",
       "path": "/",
-      "expires": 1765125812.766498,
+      "expires": 1765463842.913295,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "auth0_compat",
-      "value": "s%3AwVzGAP__jgV0ANMNUjgicVxYnUHY24_C.o%2FPCUGVT3oqF9DK8qNI0Ig%2BjvWGAx3JIV3JVYmnjGh4",
+      "value": "s%3Au4yZexLFdAvOtOlWhAQqx1vWst1MawnQ.0YGIzkcUBpDeHKmD8uadj0BxZoQszDZt43pjt%2Bb3TIA",
       "domain": "chedraui-prod.us.auth0.com",
       "path": "/",
-      "expires": 1765125812.766809,
+      "expires": 1765463842.913545,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "VtexIdclientAutCookie_chedrauimx",
-      "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjA3ODg3REM3MjJDRkVEM0QyODhDRTg4NkM2RUUwODYyQkExMEYwNEUiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiJiNzU1ZTJlMi1kYzdlLTRhZTItODUwOS1hOGMwNWRjOGY1OGJAbWFpbHNsdXJwLmJpeiIsImFjY291bnQiOiJjaGVkcmF1aW14IiwiYXVkaWVuY2UiOiJ3ZWJzdG9yZSIsImV4cCI6MTc2NDM0ODIxNCwidHlwZSI6InVzZXIiLCJ1c2VySWQiOiI5NTZlZWNmMC1jNDEwLTRhZjQtODk3OS1iMmQxNDIyZmFlMzciLCJpYXQiOjE3NjQyNjE4MTQsImZsYWciOiJvYXV0aF92dGV4ZG9tYWluIiwiaXNSZXByZXNlbnRhdGl2ZSI6ZmFsc2UsImlzcyI6InRva2VuLWVtaXR0ZXIiLCJqdGkiOiJkY2RmMjIxMC1jMmZlLTRmMjMtYTc2Mi05MGMzZjVlZDU3YTUifQ.lRNA2zPXPLG7AtYsCCFhIQtarucKwHjm18smJtiLO1Kgqp7tJIantRBiJaQ0ggfKFeXqo3OubI0j6jFplflvJg",
+      "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjI4Qjc5OUM0NEFBMjEwNzU4RkUxNUM4RUUzQUUzM0ZCRjE0MjdGN0IiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiIzMTk0ZDVmYS03MDJlLTQ3NTAtYTg1Yy0xMjExOTgwNGQ5ZTRAbWFpbHNsdXJwLmJpeiIsImFjY291bnQiOiJjaGVkcmF1aW14IiwiYXVkaWVuY2UiOiJ3ZWJzdG9yZSIsImV4cCI6MTc2NDY4NjI0NSwidHlwZSI6InVzZXIiLCJ1c2VySWQiOiIzNWViNmJlZC1hMWUxLTQ5NWYtYWFlYy02Y2U0YzJhNGM4M2EiLCJpYXQiOjE3NjQ1OTk4NDUsImZsYWciOiJvYXV0aF92dGV4ZG9tYWluIiwiaXNSZXByZXNlbnRhdGl2ZSI6ZmFsc2UsImlzcyI6InRva2VuLWVtaXR0ZXIiLCJqdGkiOiI1NzY5ZTViZC1jMWVjLTQyMTMtOGZiNy0wMjMwYmE4MDJjMDQifQ.50YPYqF8bbnznMX8TiNbKzh5O7iOE66rkUY7kKlr13XT3FfrEGJEoAwgJPXltLE0LESgu0JH8A3xUmxBW191gw",
       "domain": ".vtexid.vtex.com.br",
       "path": "/",
-      "expires": 1764348212.188682,
+      "expires": 1764686242.436638,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "VtexIdclientAutCookie_4095fcf9-f929-49a7-a818-8abd1f714a82",
-      "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjA3ODg3REM3MjJDRkVEM0QyODhDRTg4NkM2RUUwODYyQkExMEYwNEUiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiJiNzU1ZTJlMi1kYzdlLTRhZTItODUwOS1hOGMwNWRjOGY1OGJAbWFpbHNsdXJwLmJpeiIsImFjY291bnQiOiJjaGVkcmF1aW14IiwiYXVkaWVuY2UiOiJ3ZWJzdG9yZSIsImV4cCI6MTc2NDM0ODIxNCwidHlwZSI6InVzZXIiLCJ1c2VySWQiOiI5NTZlZWNmMC1jNDEwLTRhZjQtODk3OS1iMmQxNDIyZmFlMzciLCJpYXQiOjE3NjQyNjE4MTQsImZsYWciOiJvYXV0aF92dGV4ZG9tYWluIiwiaXNSZXByZXNlbnRhdGl2ZSI6ZmFsc2UsImlzcyI6InRva2VuLWVtaXR0ZXIiLCJqdGkiOiJkY2RmMjIxMC1jMmZlLTRmMjMtYTc2Mi05MGMzZjVlZDU3YTUifQ.lRNA2zPXPLG7AtYsCCFhIQtarucKwHjm18smJtiLO1Kgqp7tJIantRBiJaQ0ggfKFeXqo3OubI0j6jFplflvJg",
+      "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjI4Qjc5OUM0NEFBMjEwNzU4RkUxNUM4RUUzQUUzM0ZCRjE0MjdGN0IiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiIzMTk0ZDVmYS03MDJlLTQ3NTAtYTg1Yy0xMjExOTgwNGQ5ZTRAbWFpbHNsdXJwLmJpeiIsImFjY291bnQiOiJjaGVkcmF1aW14IiwiYXVkaWVuY2UiOiJ3ZWJzdG9yZSIsImV4cCI6MTc2NDY4NjI0NSwidHlwZSI6InVzZXIiLCJ1c2VySWQiOiIzNWViNmJlZC1hMWUxLTQ5NWYtYWFlYy02Y2U0YzJhNGM4M2EiLCJpYXQiOjE3NjQ1OTk4NDUsImZsYWciOiJvYXV0aF92dGV4ZG9tYWluIiwiaXNSZXByZXNlbnRhdGl2ZSI6ZmFsc2UsImlzcyI6InRva2VuLWVtaXR0ZXIiLCJqdGkiOiI1NzY5ZTViZC1jMWVjLTQyMTMtOGZiNy0wMjMwYmE4MDJjMDQifQ.50YPYqF8bbnznMX8TiNbKzh5O7iOE66rkUY7kKlr13XT3FfrEGJEoAwgJPXltLE0LESgu0JH8A3xUmxBW191gw",
       "domain": ".vtexid.vtex.com.br",
       "path": "/",
-      "expires": 1764348212.188935,
+      "expires": 1764686242.436852,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "VtexIdclientAutCookie_chedrauimx",
-      "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IkIzNEVFODgwNjg3NTgyODVGREY4NjhDOTU1MUJGQkQ2NjE3ODk4QUIiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiJiNzU1ZTJlMi1kYzdlLTRhZTItODUwOS1hOGMwNWRjOGY1OGJAbWFpbHNsdXJwLmJpeiIsImFjY291bnQiOiJjaGVkcmF1aW14IiwiYXVkaWVuY2UiOiJ3ZWJzdG9yZSIsInNlc3MiOiJjZTk5M2Q0My1hYzBiLTQ0ZWYtYWYwMC05YWY3MDdkMDgwMDgiLCJleHAiOjE3NjQzNDgyMTQsInR5cGUiOiJ1c2VyIiwidXNlcklkIjoiOTU2ZWVjZjAtYzQxMC00YWY0LTg5NzktYjJkMTQyMmZhZTM3IiwiaWF0IjoxNzY0MjYxODE0LCJpc1JlcHJlc2VudGF0aXZlIjpmYWxzZSwiaXNzIjoidG9rZW4tZW1pdHRlciIsImp0aSI6IjBlZGZkMmYzLTRlYzctNDdhNi1hYjg3LTdkNmYzZTgwOWRjNiJ9.jOP896wL2pSV5rKbwH0xhPFHEXYGeC9017RIkRr0hz0DV3-vawBTzjXRano1_ucEKPsayfI6JFHhdebX-rxQVw",
+      "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjI4Qjc5OUM0NEFBMjEwNzU4RkUxNUM4RUUzQUUzM0ZCRjE0MjdGN0IiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiIzMTk0ZDVmYS03MDJlLTQ3NTAtYTg1Yy0xMjExOTgwNGQ5ZTRAbWFpbHNsdXJwLmJpeiIsImFjY291bnQiOiJjaGVkcmF1aW14IiwiYXVkaWVuY2UiOiJ3ZWJzdG9yZSIsInNlc3MiOiI2OTg0N2U1NC1mYWI2LTQzMzgtYTMxMi01ZjExMjcxYzQ0ZDYiLCJleHAiOjE3NjQ2ODYyNDUsInR5cGUiOiJ1c2VyIiwidXNlcklkIjoiMzVlYjZiZWQtYTFlMS00OTVmLWFhZWMtNmNlNGMyYTRjODNhIiwiaWF0IjoxNzY0NTk5ODQ1LCJpc1JlcHJlc2VudGF0aXZlIjpmYWxzZSwiaXNzIjoidG9rZW4tZW1pdHRlciIsImp0aSI6IjgxNmNhYmViLTE2OTEtNDU4YS1iODJiLTQ2MDdkNjMyMTg3OCJ9.orciznVdnuaSZ_9LLWSlskXZdhyHn_lW3GYgmcO9AszNN8PuXT8SY6IqgL_1_-gLlO9lx8c8lmCaq3vuZ_wH-Q",
       "domain": ".www.chedraui.com.mx",
       "path": "/",
-      "expires": 1764348213.285017,
+      "expires": 1764686243.637164,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "VtexIdclientAutCookie_4095fcf9-f929-49a7-a818-8abd1f714a82",
-      "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IkIzNEVFODgwNjg3NTgyODVGREY4NjhDOTU1MUJGQkQ2NjE3ODk4QUIiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiJiNzU1ZTJlMi1kYzdlLTRhZTItODUwOS1hOGMwNWRjOGY1OGJAbWFpbHNsdXJwLmJpeiIsImFjY291bnQiOiJjaGVkcmF1aW14IiwiYXVkaWVuY2UiOiJ3ZWJzdG9yZSIsInNlc3MiOiJjZTk5M2Q0My1hYzBiLTQ0ZWYtYWYwMC05YWY3MDdkMDgwMDgiLCJleHAiOjE3NjQzNDgyMTQsInR5cGUiOiJ1c2VyIiwidXNlcklkIjoiOTU2ZWVjZjAtYzQxMC00YWY0LTg5NzktYjJkMTQyMmZhZTM3IiwiaWF0IjoxNzY0MjYxODE0LCJpc1JlcHJlc2VudGF0aXZlIjpmYWxzZSwiaXNzIjoidG9rZW4tZW1pdHRlciIsImp0aSI6IjBlZGZkMmYzLTRlYzctNDdhNi1hYjg3LTdkNmYzZTgwOWRjNiJ9.jOP896wL2pSV5rKbwH0xhPFHEXYGeC9017RIkRr0hz0DV3-vawBTzjXRano1_ucEKPsayfI6JFHhdebX-rxQVw",
+      "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjI4Qjc5OUM0NEFBMjEwNzU4RkUxNUM4RUUzQUUzM0ZCRjE0MjdGN0IiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiIzMTk0ZDVmYS03MDJlLTQ3NTAtYTg1Yy0xMjExOTgwNGQ5ZTRAbWFpbHNsdXJwLmJpeiIsImFjY291bnQiOiJjaGVkcmF1aW14IiwiYXVkaWVuY2UiOiJ3ZWJzdG9yZSIsInNlc3MiOiI2OTg0N2U1NC1mYWI2LTQzMzgtYTMxMi01ZjExMjcxYzQ0ZDYiLCJleHAiOjE3NjQ2ODYyNDUsInR5cGUiOiJ1c2VyIiwidXNlcklkIjoiMzVlYjZiZWQtYTFlMS00OTVmLWFhZWMtNmNlNGMyYTRjODNhIiwiaWF0IjoxNzY0NTk5ODQ1LCJpc1JlcHJlc2VudGF0aXZlIjpmYWxzZSwiaXNzIjoidG9rZW4tZW1pdHRlciIsImp0aSI6IjgxNmNhYmViLTE2OTEtNDU4YS1iODJiLTQ2MDdkNjMyMTg3OCJ9.orciznVdnuaSZ_9LLWSlskXZdhyHn_lW3GYgmcO9AszNN8PuXT8SY6IqgL_1_-gLlO9lx8c8lmCaq3vuZ_wH-Q",
       "domain": ".www.chedraui.com.mx",
       "path": "/",
-      "expires": 1764348213.285139,
+      "expires": 1764686243.637316,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "GRV_5577_ga",
-      "value": "GA1.1.972821980.1764261799",
+      "value": "GA1.1.13183543.1764599824",
       "domain": ".groovinads.com",
       "path": "/",
-      "expires": 1764521013.976661,
+      "expires": 1764859044.435663,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "tuuid",
-      "value": "9786f37b-7435-4835-946d-156c6d90136a",
+      "value": "ceb806eb-00c7-4b38-8a57-795443a5ca62",
       "domain": ".360yield.com",
       "path": "/",
-      "expires": 1772037816.098203,
+      "expires": 1772375846.20254,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "tuuid_lu",
-      "value": "1764261816",
+      "value": "1764599847",
       "domain": ".360yield.com",
       "path": "/",
-      "expires": 1772037816.098257,
+      "expires": 1772375846.202609,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
@@ -981,27 +911,17 @@
       "value": "1",
       "domain": ".postrelease.com",
       "path": "/",
-      "expires": 1795797816.15715,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "data-c-ts",
-      "value": "1764261817",
-      "domain": ".media.net",
-      "path": "/",
-      "expires": 1766853817.033298,
+      "expires": 1796135846.258378,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "vtex_session",
-      "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjY1OTUxY2VkLTQ5YjMtNDdhZC1iZjExLWZhM2U3M2FmODc2NCIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50LmlkIjpbXSwiaWQiOiJjN2RhM2UzOS1jMjAyLTRhNDEtYTQ3Yi02NjgwMWNlZDI2MWYiLCJ2ZXJzaW9uIjo0LCJzdWIiOiJzZXNzaW9uIiwiYWNjb3VudCI6InNlc3Npb24iLCJleHAiOjE3NjQ5NTMwMTcsImlhdCI6MTc2NDI2MTgxNywianRpIjoiYjczNzE5NGYtYjFlYS00NjNhLWFlNjUtODViYmU3MjhlYzIyIiwiaXNzIjoic2Vzc2lvbi9kYXRhLXNpZ25lciJ9.rLVYqDQpLASm4GLxC_zOOsfnn_FADPtQLOKVwe5iZ8Sx1JboU6JhoOe6qmIY68QSrY0YxDyyrCBwgPuzM1C6Og",
+      "value": "eyJhbGciOiJFUzI1NiIsImtpZCI6IjI1OTUxMjg1LTU5NjQtNDEzOC1iOTkyLTRkZjlhZmJlMDI3ZiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50LmlkIjpbXSwiaWQiOiI4Mzg5MWU3MS1kYTJkLTRhMmItOTM3My04NGExZDVjMjQzNTciLCJ2ZXJzaW9uIjo0LCJzdWIiOiJzZXNzaW9uIiwiYWNjb3VudCI6InNlc3Npb24iLCJleHAiOjE3NjUyOTEwNDgsImlhdCI6MTc2NDU5OTg0OCwianRpIjoiZTJkNzZiMjItN2U4NS00NDNlLWFlYzctNGQyNjkyZjA5NGY1IiwiaXNzIjoic2Vzc2lvbi9kYXRhLXNpZ25lciJ9.2ruxFZwJC0-5zmA6Fr_xTDrjRyPgxnVczCS0myCYGnIP-_RXii9bxoIpAtE9Ip7cxtv9BbSN8RAPCJFjfTnmQw",
       "domain": "www.chedraui.com.mx",
       "path": "/",
-      "expires": 1764693816.880462,
+      "expires": 1765031847.307086,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
@@ -1011,87 +931,87 @@
       "value": "eyJjYW1wYWlnbnMiOm51bGwsImNoYW5uZWwiOiIxIiwicHJpY2VUYWJsZXMiOm51bGwsInJlZ2lvbklkIjoiVTFjalkyaGxaSEpoZFdsdGVEQXdOVGs3WTJobFpISmhkV2x0ZURBMk5qZz0iLCJ1dG1fY2FtcGFpZ24iOm51bGwsInV0bV9zb3VyY2UiOm51bGwsInV0bWlfY2FtcGFpZ24iOm51bGwsImN1cnJlbmN5Q29kZSI6Ik1YTiIsImN1cnJlbmN5U3ltYm9sIjoiJCIsImNvdW50cnlDb2RlIjoiTUVYIiwiY3VsdHVyZUluZm8iOiJlcy1NWCIsImFkbWluX2N1bHR1cmVJbmZvIjoiZXMtTVgiLCJjaGFubmVsUHJpdmFjeSI6InB1YmxpYyIsImZhY2V0cyI6ImNvdW50cnk9TUVYO2Nvb3JkaW5hdGVzPS05OC4yMzk2ODQ5LDE5LjAzODAxNjI7In0",
       "domain": "www.chedraui.com.mx",
       "path": "/",
-      "expires": 1764693816.880614,
+      "expires": 1765031847.307186,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "__rtbh.lid",
-      "value": "%7B%22eventType%22%3A%22lid%22%2C%22id%22%3A%22I7t3x2zKRmn6uwAaOhEw%22%2C%22expiryDate%22%3A%222026-11-27T16%3A43%3A36.375Z%22%7D",
+      "value": "%7B%22eventType%22%3A%22lid%22%2C%22id%22%3A%22Me8dz5FD34ib8mMxUWs7%22%2C%22expiryDate%22%3A%222026-12-01T14%3A37%3A26.797Z%22%7D",
       "domain": "www.chedraui.com.mx",
       "path": "/",
-      "expires": 1795797816,
+      "expires": 1796135846,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "cto_bundle",
-      "value": "UfULVl9WTEd4Q3FMcEdmMkFpcVNxcVhyNU0zQTJnTmsxWDVuQU1scWR4ZWlJYjhmbHBISnolMkZFQVNJSHdLOUZBVFh3bU5LaG02NmszdVVMWmhaSjRMQnpOcGNEcGplN3o0ZVFHMFZXVzAlMkZ6enRTNVFzenpHblJGNUs1SHBQSXpHZ3dUUlhvNmxPR0VxN2VIVUwxMWhLJTJCJTJGRGxKT3NIcEpWMkVUc2xsdFJZTTJ6VzZ0RSUzRA",
+      "value": "-JN4j18lMkJkQ2MzYzlHTnBiM0dKMlRETEc4czNtbWslMkJTbVNJaGdER3JXMXVqNnY3cEoyejlkcm95bFFzS3NFNFlZJTJGeVhsYlViUFdieFR3WmpuVU1PT0UlMkZxSDI1eURDZWoyZUlRJTJCUjhIWnJBcWNkcm9udGJWSGtPZThaSGtQMUlmV0NZRktJeFhNM0lHQXB5JTJGY3dKZmlUOVk3dHdzcmR3Sm9jdGdrZlBLd21PRXNnRWclM0Q",
       "domain": ".chedraui.com.mx",
       "path": "/",
-      "expires": 1798425816,
+      "expires": 1798763847,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "udmts",
-      "value": "1764261817.0",
+      "value": "1764599848.0",
       "domain": ".udmserve.net",
       "path": "/",
-      "expires": 1795797816.82114,
+      "expires": 1796135847.177709,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "dt",
-      "value": "A37C28B4-DCF5-3D6E-B57C-DFFE4AA2F1C7",
+      "value": "CB8A3F82-F80C-3E16-A3D2-567B09A1007D",
       "domain": ".udmserve.net",
       "path": "/",
-      "expires": 1795797816.821254,
+      "expires": 1796135847.177831,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "rtbh",
-      "value": "bhOxVaAbmcUMug6QY8kuyzWDVgiadeKq9Ja4WQ4-CMI",
+      "value": "q8iRHhTL4dTqMFfeFHtmuOKJibp0PUAPfTkYvsDAsco",
       "domain": ".udmserve.net",
       "path": "/",
-      "expires": 1772037816.8213,
+      "expires": 1772375847.177882,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "um",
-      "value": "!38,DU-OsSQYbFVAjiTcu0baYdh13P8X695rnw8Vc8tCaVYqhnvjJ2TMXqsW7DHjclaGpL6M9eMRSFb8jnw7Ge1ipbQ2roQ,1772037817",
+      "value": "!38,UlHZOU0BL-5DRkKfHA6olJQo8rfn6Sk9sgKFPYOvt-zyi8WdcHS.qpXAh-uE7RfljrDvlqD-3iNqaTSgnVB6Nk8X-.w,1772375848",
       "domain": ".360yield.com",
       "path": "/",
-      "expires": 1772037816.976342,
+      "expires": 1772375847.334263,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "umeh",
-      "value": "!38,0,1826469817,-1",
+      "value": "!38,0,1826807848,-1",
       "domain": ".360yield.com",
       "path": "/",
-      "expires": 1772037816.976453,
+      "expires": 1772375847.33436,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "audit_p",
-      "value": "1|LdSPvhyY0bAcionYB69ynzgzw+i9xJcSBFqVcaT32KfZykQty+sMp/bS28EsUHGp0wZKhDgnKFMwHTRO1/p4iCck1N7K9KkV0dqlR5NoluSCD9zFQIvrTeOh2+qkzVw6A5gO+PRkKYasYxgiLwTTmcZ00VYgGYetjB3AS1FFcR116h2LKXkYaJDy+KCnXKr4N6JXMcYuiJM=",
+      "value": "1|hWqC/q5rpigN4hG0kq5RJJeGWSZUyGRvruzTC02f+VIzlL6iPO/WS3kuS/J+1H4XdYity/dlfrAwHTRO1/p4iCck1N7K9KkV0dqlR5NoluSCD9zFQIvrTUD7W9C8yYEIT/MoSly0pyYErQhHjD3Elh4fUZGVYR8LCMk2465XIW116h2LKXkYaJDy+KCnXKr4N6JXMcYuiJM=",
       "domain": ".rubiconproject.com",
       "path": "/",
-      "expires": 1795797817.03486,
+      "expires": 1796135847.357413,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None",
@@ -1100,30 +1020,40 @@
     },
     {
       "name": "audit",
-      "value": "1|LdSPvhyY0bAcionYB69ynzgzw+i9xJcSBFqVcaT32KfZykQty+sMp/bS28EsUHGp0wZKhDgnKFMwHTRO1/p4iCck1N7K9KkV0dqlR5NoluSCD9zFQIvrTeOh2+qkzVw6A5gO+PRkKYasYxgiLwTTmcZ00VYgGYetjB3AS1FFcR116h2LKXkYaJDy+KCnXKr4N6JXMcYuiJM=",
+      "value": "1|hWqC/q5rpigN4hG0kq5RJJeGWSZUyGRvruzTC02f+VIzlL6iPO/WS3kuS/J+1H4XdYity/dlfrAwHTRO1/p4iCck1N7K9KkV0dqlR5NoluSCD9zFQIvrTUD7W9C8yYEIT/MoSly0pyYErQhHjD3Elh4fUZGVYR8LCMk2465XIW116h2LKXkYaJDy+KCnXKr4N6JXMcYuiJM=",
       "domain": ".rubiconproject.com",
       "path": "/",
-      "expires": 1795797817.03511,
+      "expires": 1796135847.357733,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "data-c-ts",
+      "value": "1764599849",
+      "domain": ".media.net",
+      "path": "/",
+      "expires": 1767191847.397553,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "SPugT",
-      "value": "1764261817",
+      "value": "1764599849",
       "domain": ".pubmatic.com",
       "path": "/",
-      "expires": 1766853817.035571,
+      "expires": 1767191847.414854,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "cto_bundle",
-      "value": "7GH7P19ZUHI4RkZlT2ZHJTJCWXAlMkY3biUyQk16VzhNaU5LelhBZE9UWnhpa3olMkZmbSUyRmF0cWdTVmhGOWtvdnlGJTJGVWpWTjdRSU5HYVQlMkYxU1FQMWVsWFBnenZnUU5HJTJCN2wxQ2l1aWhpejR4SnREblklMkJQU0FXcDhGWlB2M3Zmc0g4azRSSHN1Q2FLdHJJaWoxT2szRDJRMVBlYjNOYXYwQVElM0QlM0Q",
+      "value": "3D_blV93dU5YaFo5JTJCUiUyRm9FTW1sS3FVbXR0JTJGU3AwYnl0SGp0NnY4cWpjcU5va2Z6Q0UlMkJEbjdDNGFkbkFjUyUyQmVPcGNpWEtqWkZ0eVhRcHpPcFQxNVlJdnBQRW5jSUQ2cUhXTVBTNEJLOWNIdERyaWNrbGthSUJscTJuOFRtZVEzamR6MGNSWGMlMkJMaTJXa0wwdHZmREElMkZNUHFpQSUzRCUzRA",
       "domain": ".criteo.com",
       "path": "/",
-      "expires": 1797957817.129341,
+      "expires": 1798295847.460287,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None",
@@ -1131,41 +1061,51 @@
       "_crHasCrossSiteAncestor": true
     },
     {
-      "name": "ljt_reader",
-      "value": "6369be0821a3d8a260130634",
-      "domain": ".lijit.com",
+      "name": "_rxuuid",
+      "value": "%7B%22rx_uuid%22%3A%22RX-bbd22877-ccc0-4b5c-b7bb-2032adb835f7-005%22%7D",
+      "domain": ".targeting.unrulymedia.com",
       "path": "/",
-      "expires": 1795797817.19818,
-      "httpOnly": false,
+      "expires": 1796135847.522406,
+      "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
-      "name": "3pids",
-      "value": "\"8105:02ee4adc7adf05d1f0f8b741b02915bc,,658324a9e34212b4e115656f699d7bdb5d009ba6,,ed408fa3fea23af0fea3490804056045be4813cef712829f43325338f5dfab1a,,\"",
+      "name": "ljt_reader",
+      "value": "d35d8f82b6b3a5fd01265493",
       "domain": ".lijit.com",
       "path": "/",
-      "expires": 1795797817.198074,
+      "expires": 1796135847.666775,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "anj",
-      "value": "dTM7k!M40*dWIy(ghqdmU(7TZcZh:`#[2R!N:uKeRh0MLZLmmL+C*D_Q5p3@fjCKJq#8P2*B8SP@X/UAq)`E[[W[BuCEY$kNP:yVc:KHPx#CPZ0Kf+%ekZIYe52Xz+xm9Covo2GWB)7gFYMlup-gM6W<3$XoUdwlVKr>-EyIv3GH<5%%dk?+.gLHHXs6>JpDqWI",
+      "value": "dTM7k!M40*dWIy(ghqdmU(3#rO#%vl#[2P?NW9TfRh0MLZLmn2*:DL3+)Q3o16]H_HNC*k-`WDswscyP<Lk?!XtO1k.pdzmeDi4nfs_#'2t6Zp0Kf+%ekZIYe52XzB:r9sWU=Ai@Bp76+!JsbT<=SS)Z>Slp-`3WDDE5XFTPQ9X)j$5(z''3.gLHHXs6>J_k!Pu",
       "domain": ".adnxs.com",
       "path": "/",
-      "expires": 1772037817.223027,
+      "expires": 1772375847.582593,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
+      "name": "3pids",
+      "value": "\"8100:15b751c10b570add4e74f40f7b989a1d,,91a88c0a5b218655472e600114a65e716b779069,,e7dd919bebd2c0fd64fd7fdf7fe3ceef6a739e542e427c02f413773950c5576e,,\"",
+      "domain": ".lijit.com",
+      "path": "/",
+      "expires": 1796135847.66666,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
       "name": "_TargetOne_Session_Cookie_Time",
-      "value": "1764261817246",
+      "value": "1764599847735",
       "domain": "www.chedraui.com.mx",
       "path": "/",
-      "expires": 1764263617,
+      "expires": 1764601647,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -1175,87 +1115,87 @@
       "value": "",
       "domain": ".www.chedraui.com.mx",
       "path": "/",
-      "expires": 1779813820.211178,
+      "expires": 1780151850.986296,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Strict"
     },
     {
+      "name": "_lr_hb_-zvhuxj%2Ftendaenlinea",
+      "value": "{%22heartbeat%22:1764599847992}",
+      "domain": "www.chedraui.com.mx",
+      "path": "/",
+      "expires": 1764686247,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
       "name": "_uetsid",
-      "value": "2df0ac90cbb011f0beae937b73a8c9e2",
+      "value": "34594230cec311f08faccb8b932b82f3",
       "domain": ".chedraui.com.mx",
       "path": "/",
-      "expires": 1764348217,
+      "expires": 1764686248,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "_uetvid",
-      "value": "2df0c8d0cbb011f09e1843c6e50644e2",
+      "value": "34595dd0cec311f08820e5565547072a",
       "domain": ".chedraui.com.mx",
       "path": "/",
-      "expires": 1797957817,
+      "expires": 1798295848,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "_lr_tabs_-zvhuxj%2Ftendaenlinea",
-      "value": "{%22recordingID%22:%226-019ac632-a26c-7fde-92b5-789f43cbafa9%22%2C%22sessionID%22:0%2C%22lastActivity%22:1764261817621%2C%22hasActivity%22:false%2C%22confirmed%22:false%2C%22recordingConditionThreshold%22:24.95180453952035%2C%22clearsIdentifiedUser%22:false}",
+      "value": "{%22recordingID%22:%226-019ada58-7c7f-793a-84fc-d8799fdbde97%22%2C%22sessionID%22:0%2C%22lastActivity%22:1764599848162%2C%22hasActivity%22:false%2C%22clearsIdentifiedUser%22:false%2C%22confirmed%22:true}",
       "domain": "www.chedraui.com.mx",
       "path": "/",
-      "expires": 1764348217,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "_lr_hb_-zvhuxj%2Ftendaenlinea",
-      "value": "{%22heartbeat%22:1764261817621}",
-      "domain": "www.chedraui.com.mx",
-      "path": "/",
-      "expires": 1764348217,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "AWSALBCORS",
-      "value": "6me/rBCT3N+gyday9Y8Gnv7vtpUgB/3mDyQ5oqC0joNnr/mlWkbB/7d7YM1EI1AC8juT64spsFlGnmVWsfp/ftmXRKGj99bYbekshOf3pWe6rV2ZbCQ22iElx9EQ",
-      "domain": "widget-mediator.zopim.com",
-      "path": "/",
-      "expires": 1764866618.085299,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "_ga_N938TMF9GB",
-      "value": "GS2.1.s1764261799$o1$g1$t1764261819$j40$l0$h0",
-      "domain": ".chedraui.com.mx",
-      "path": "/",
-      "expires": 1798821819.372198,
+      "expires": 1764686248,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "ttcsid",
-      "value": "1764261799498::cwUeyU-yc7loxc-NeM-e.1.1764261819539.0",
+      "value": "1764599824339::imedveRENn0L7z3BNoT-.1.1764599848313.0",
       "domain": ".chedraui.com.mx",
       "path": "/",
-      "expires": 1797957819,
+      "expires": 1798295848,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "ttcsid_C8TOJ8DCSQN3SGB7QUV0",
-      "value": "1764261799497::ITTIrsJWLaOCs-TFHGRs.1.1764261819539.1",
+      "value": "1764599824338::ySufvdJvpPppywG1zdIr.1.1764599848313.1",
       "domain": ".chedraui.com.mx",
       "path": "/",
-      "expires": 1797957819,
+      "expires": 1798295848,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "AWSALBCORS",
+      "value": "SKZFIEyea/WIfuI6r3fT5py7O/PAAWQ6qF/KvuAR3NnSpIo5Nss84rU28WxRy7Z16iXpGarDKvRKWR5n4J3mI7c4mcVr7vpZjTQI3AuzReCB47YXnEHgm1gPReD4",
+      "domain": "widget-mediator.zopim.com",
+      "path": "/",
+      "expires": 1765204648.421051,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga_N938TMF9GB",
+      "value": "GS2.1.s1764599823$o1$g1$t1764599849$j34$l0$h0",
+      "domain": ".chedraui.com.mx",
+      "path": "/",
+      "expires": 1799159849.287848,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -1267,7 +1207,7 @@
       "localStorage": [
         {
           "name": "grvclid",
-          "value": "9710e8270e81c29"
+          "value": "c2ed93e359d3485"
         },
         {
           "name": "jml_removeFromListSha",
@@ -1279,7 +1219,7 @@
         },
         {
           "name": "userData",
-          "value": "{\"id\":\"956eecf0-c410-4af4-8979-b2d1422fae37\",\"email\":\"7271956576595e96bdd1b1730b5d353e6e85d9e8ab03e535d6f388ceefd782e5\",\"firstName\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"lastName\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"phone\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"street\":\"e826c3ac6893f55d53ca1cf88e3e9b242f5b52f92d15b95c66bb3744a0be7636\",\"city\":\"3c5cfef7dcb07d7403cc3be1bcd5fe639caecbb4ec582ee4de52f4e96cd7cf18\",\"country\":\"c9c0448bea7fa3ad04431d88135f479cf2d6b2096c5b3197bad7ea57edb1083c\",\"postalCode\":\"e62e4500d0fde56ee44ec0c4d72653f605770a3ab240b4dcd834e4d017394b2f\",\"state\":\"eceaa1dc96668e0380b6fb50cb1afef188a94e48aec1c8ba09bde49af6bd239b\"}"
+          "value": "{\"id\":\"35eb6bed-a1e1-495f-aaec-6ce4c2a4c83a\",\"email\":\"bbc4f8c27d15a4dcc148969ff30c87cdb640ad1dd7324239a7e52762f3dc71e5\",\"firstName\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"lastName\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"phone\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"street\":\"e826c3ac6893f55d53ca1cf88e3e9b242f5b52f92d15b95c66bb3744a0be7636\",\"city\":\"3c5cfef7dcb07d7403cc3be1bcd5fe639caecbb4ec582ee4de52f4e96cd7cf18\",\"country\":\"c9c0448bea7fa3ad04431d88135f479cf2d6b2096c5b3197bad7ea57edb1083c\",\"postalCode\":\"e62e4500d0fde56ee44ec0c4d72653f605770a3ab240b4dcd834e4d017394b2f\",\"state\":\"eceaa1dc96668e0380b6fb50cb1afef188a94e48aec1c8ba09bde49af6bd239b\"}"
         },
         {
           "name": "jml_wishListSha",
@@ -1291,19 +1231,19 @@
         },
         {
           "name": "_uetvid_exp",
-          "value": "Tue, 22 Dec 2026 16:43:37 GMT"
+          "value": "Sat, 26 Dec 2026 14:37:28 GMT"
         },
         {
           "name": "cto_bundle",
-          "value": "UfULVl9WTEd4Q3FMcEdmMkFpcVNxcVhyNU0zQTJnTmsxWDVuQU1scWR4ZWlJYjhmbHBISnolMkZFQVNJSHdLOUZBVFh3bU5LaG02NmszdVVMWmhaSjRMQnpOcGNEcGplN3o0ZVFHMFZXVzAlMkZ6enRTNVFzenpHblJGNUs1SHBQSXpHZ3dUUlhvNmxPR0VxN2VIVUwxMWhLJTJCJTJGRGxKT3NIcEpWMkVUc2xsdFJZTTJ6VzZ0RSUzRA"
+          "value": "-JN4j18lMkJkQ2MzYzlHTnBiM0dKMlRETEc4czNtbWslMkJTbVNJaGdER3JXMXVqNnY3cEoyejlkcm95bFFzS3NFNFlZJTJGeVhsYlViUFdieFR3WmpuVU1PT0UlMkZxSDI1eURDZWoyZUlRJTJCUjhIWnJBcWNkcm9udGJWSGtPZThaSGtQMUlmV0NZRktJeFhNM0lHQXB5JTJGY3dKZmlUOVk3dHdzcmR3Sm9jdGdrZlBLd21PRXNnRWclM0Q"
         },
         {
           "name": "orderform-zustand-storage",
-          "value": "{\"state\":{\"orderForm\":{\"orderFormId\":\"802f35cf883345309562803b34949b31\",\"items\":[],\"totalizers\":[],\"marketingData\":{\"coupon\":\"\",\"utmCampaign\":\"\",\"utmMedium\":\"\",\"utmSource\":\"\",\"utmiCampaign\":\"\",\"utmiPart\":\"\",\"utmiPage\":\"\",\"__typename\":\"MarketingData\"},\"value\":0}},\"version\":0}"
+          "value": "{\"state\":{\"orderForm\":{\"orderFormId\":\"045bce29223e449ba1b86483844da0d5\",\"items\":[],\"totalizers\":[],\"marketingData\":{\"coupon\":\"\",\"utmCampaign\":\"\",\"utmMedium\":\"\",\"utmSource\":\"\",\"utmiCampaign\":\"\",\"utmiPart\":\"\",\"utmiPage\":\"\",\"__typename\":\"MarketingData\"},\"value\":0}},\"version\":0}"
         },
         {
           "name": "smc_sesn",
-          "value": "{\"v\":\"1\",\"e\":2079621799995,\"s\":1764261799340}"
+          "value": "{\"v\":\"1\",\"e\":2079959824680,\"s\":1764599824051}"
         },
         {
           "name": "jml_viewListsSha",
@@ -1319,19 +1259,19 @@
         },
         {
           "name": "_gcl_ls",
-          "value": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":0,\"timeouts\":0,\"creationTimeMs\":1764261797931},\"expires\":1772037797931}}"
+          "value": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":0,\"timeouts\":0,\"creationTimeMs\":1764599822809},\"expires\":1772375822809}}"
         },
         {
           "name": "smct_last_ov",
-          "value": "{\"v\":\"%5B%7B%22id%22%3A130200%2C%22loaded%22%3A1764261817077%2C%22open%22%3Anull%2C%22eng%22%3Anull%2C%22closed%22%3Anull%7D%5D\",\"e\":1766853817077,\"s\":1764261799340}"
+          "value": "{\"v\":\"%5B%7B%22id%22%3A130200%2C%22loaded%22%3A1764599849625%2C%22open%22%3Anull%2C%22eng%22%3Anull%2C%22closed%22%3Anull%7D%5D\",\"e\":1767191849625,\"s\":1764599824051}"
         },
         {
           "name": "ZD-suid",
-          "value": "{\"id\":\"1604d181c57346fbba75f54ff88498c5\",\"expiry\":1764262717797,\"tabs\":{\"count\":1,\"expiry\":0}}"
+          "value": "{\"id\":\"6239d5e1d2294d03a493a17a5613fde1\",\"expiry\":1764600748157,\"tabs\":{\"count\":1,\"expiry\":0}}"
         },
         {
           "name": "myAddressSelected",
-          "value": "{\"addressId\":\"9XG4G9NGoX\",\"addressType\":\"residential\",\"alias\":\"Angelopolis\",\"city\":\"Heroica Puebla de Zaragoza\",\"complement\":\"\",\"country\":\"MEX\",\"documentId\":\"b12e88de-1271-48c8-a028-bf9c18b20680\",\"geoCoordinates\":[-98.2396849,19.0380162],\"neighborhood\":\"San José Vista Hermosa\",\"number\":\"30\",\"postalCode\":\"72190\",\"receiverName\":null,\"reference\":null,\"state\":\"PUEBLA\",\"street\":\"Calle 12\",\"__typename\":\"CartAddress\"}"
+          "value": "{\"addressId\":\"9IYJZQU0lc\",\"addressType\":\"residential\",\"alias\":\"Angelopolis\",\"city\":\"Heroica Puebla de Zaragoza\",\"complement\":\"\",\"country\":\"MEX\",\"documentId\":\"249fa939-fcf8-416c-b6ff-fe398b8746e6\",\"geoCoordinates\":[-98.2396849,19.0380162],\"neighborhood\":\"San José Vista Hermosa\",\"number\":\"30\",\"postalCode\":\"72190\",\"receiverName\":null,\"reference\":null,\"state\":\"PUEBLA\",\"street\":\"Calle 12\",\"__typename\":\"CartAddress\"}"
         },
         {
           "name": "jml_productsByIdentifierSha",
@@ -1339,19 +1279,15 @@
         },
         {
           "name": "ZD-settings",
-          "value": "[[\"ea4fa75f63fd14897660d2229c0d37faa8d26328\",1764261798]]"
+          "value": "[[\"ea4fa75f63fd14897660d2229c0d37faa8d26328\",1764599823]]"
         },
         {
           "name": "smc_tag",
-          "value": "{\"v\":\"eyJpZCI6ODA0NSwibmFtZSI6ImNoZWRyYXVpLmNvbSJ9\",\"e\":1795797799355,\"s\":1764261799340}"
+          "value": "{\"v\":\"eyJpZCI6ODA0NSwibmFtZSI6ImNoZWRyYXVpLmNvbSJ9\",\"e\":1796135824065,\"s\":1764599824051}"
         },
         {
           "name": "ZD-buid",
-          "value": "42860bf776e0428aaced754c2b08f0f4"
-        },
-        {
-          "name": "smc_spv",
-          "value": "{\"v\":\"3\",\"e\":0,\"s\":1764261799340}"
+          "value": "94f1505e29534209819825ba51cb84d2"
         },
         {
           "name": "jml_getSimulationInfoSha",
@@ -1359,7 +1295,7 @@
         },
         {
           "name": "_uetvid",
-          "value": "2df0c8d0cbb011f09e1843c6e50644e2"
+          "value": "34595dd0cec311f08820e5565547072a"
         },
         {
           "name": "lastExternalReferrer",
@@ -1370,16 +1306,20 @@
           "value": "0"
         },
         {
+          "name": "smc_spv",
+          "value": "{\"v\":\"3\",\"e\":0,\"s\":1764599824051}"
+        },
+        {
           "name": "jml_addToCartSha",
           "value": "a63161354718146c4282079551df81aaa8fa3d59584520cf5ea1c278fac0db33"
         },
         {
           "name": "_lr_id_",
-          "value": "{\"userID\":\"11996667-2750-4690-aaf6-5aeeeb764f51\"}"
+          "value": "{\"userID\":\"525de3ad-2e09-4fbf-b8bf-059f252e02ae\"}"
         },
         {
           "name": "__zlcstore",
-          "value": "{\"xZ4SDhJjAVslap6kEHoJmdAPZhz68t61\":{\"web_sdk_last_host\":\"widget-mediator.zopim.com\",\"timestamp\":1764261818287,\"account_status\":\"online\"}}"
+          "value": "{\"xZ4SDhJjAVslap6kEHoJmdAPZhz68t61\":{\"web_sdk_last_host\":\"widget-mediator.zopim.com\",\"timestamp\":1764599848563,\"account_status\":\"online\"}}"
         },
         {
           "name": "jml_updateItemsSha",
@@ -1387,19 +1327,19 @@
         },
         {
           "name": "__rtbh.lid",
-          "value": "{\"eventType\":\"lid\",\"id\":\"I7t3x2zKRmn6uwAaOhEw\",\"expiryDate\":\"2026-11-27T16:43:36.375Z\"}"
+          "value": "{\"eventType\":\"lid\",\"id\":\"Me8dz5FD34ib8mMxUWs7\",\"expiryDate\":\"2026-12-01T14:37:26.797Z\"}"
         },
         {
           "name": "smc_session_time",
-          "value": "5"
+          "value": "6"
         },
         {
           "name": "userInfo",
-          "value": "{\"id\":\"956eecf0-c410-4af4-8979-b2d1422fae37\",\"email\":\"7271956576595e96bdd1b1730b5d353e6e85d9e8ab03e535d6f388ceefd782e5\",\"firstName\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"lastName\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"phone\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"}"
+          "value": "{\"id\":\"35eb6bed-a1e1-495f-aaec-6ce4c2a4c83a\",\"email\":\"bbc4f8c27d15a4dcc148969ff30c87cdb640ad1dd7324239a7e52762f3dc71e5\",\"firstName\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"lastName\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"phone\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"}"
         },
         {
           "name": "smc_session_id",
-          "value": "{\"v\":\"c81pdDcGqvgG3yWhudJM9ed6BJydTbrH\",\"e\":0,\"s\":1764261799340}"
+          "value": "{\"v\":\"rwjv41YBUfCZTgjbEj4KcpKN661JwkX5\",\"e\":0,\"s\":1764599824051}"
         },
         {
           "name": "vtexPageView",
@@ -1407,11 +1347,11 @@
         },
         {
           "name": "topicsLastReferenceTime",
-          "value": "1764261818234"
+          "value": "1764599849470"
         },
         {
           "name": "_uetsid",
-          "value": "2df0ac90cbb011f0beae937b73a8c9e2"
+          "value": "34594230cec311f08faccb8b932b82f3"
         },
         {
           "name": "ZD-store",
@@ -1423,23 +1363,23 @@
         },
         {
           "name": "smct_session",
-          "value": "{\"v\":\"%7B%22s%22%3A1764261800361%2C%22l%22%3A1764261820424%2C%22lt%22%3A1764261820424%2C%22t%22%3A5%2C%22p%22%3A6%7D\",\"e\":0,\"s\":1764261799340}"
+          "value": "{\"v\":\"%7B%22s%22%3A1764599825074%2C%22l%22%3A1764599851870%2C%22lt%22%3A1764599851870%2C%22t%22%3A6%2C%22p%22%3A8%7D\",\"e\":0,\"s\":1764599824051}"
         },
         {
           "name": "smc_uid",
-          "value": "{\"v\":\"1764261799342717\",\"e\":2079621799342,\"s\":1764261799340}"
+          "value": "{\"v\":\"1764599824053573\",\"e\":2079959824053,\"s\":1764599824051}"
         },
         {
           "name": "lastExternalReferrerTime",
-          "value": "1764261815624"
+          "value": "1764599845911"
         },
         {
           "name": "smc_tpv",
-          "value": "{\"v\":\"3\",\"e\":2079621817057,\"s\":1764261799340}"
+          "value": "{\"v\":\"3\",\"e\":2079959849617,\"s\":1764599824051}"
         },
         {
           "name": "vid_rt_webstore",
-          "value": "{\"status\":\"success\",\"refreshAfter\":\"2025-11-28T04:43:34.053Z\"}"
+          "value": "{\"status\":\"success\",\"refreshAfter\":\"2025-12-02T02:37:24.493Z\"}"
         },
         {
           "name": "userAddress",
@@ -1447,11 +1387,11 @@
         },
         {
           "name": "_uetsid_exp",
-          "value": "Fri, 28 Nov 2025 16:43:37 GMT"
+          "value": "Tue, 02 Dec 2025 14:37:28 GMT"
         },
         {
           "name": "jml_uuid_663d0352743a721a7f0214e1",
-          "value": "956eecf0-c410-4af4-8979-b2d1422fae37"
+          "value": "35eb6bed-a1e1-495f-aaec-6ce4c2a4c83a"
         },
         {
           "name": "jml_orderFormSha",
@@ -1459,7 +1399,7 @@
         },
         {
           "name": "analytics:session",
-          "value": "{\"location\":\"https://www.chedraui.com.mx/\",\"referrer\":\"\",\"expires\":1764263619}"
+          "value": "{\"location\":\"https://www.chedraui.com.mx/\",\"referrer\":\"\",\"expires\":1764601649}"
         },
         {
           "name": "acceptCookies",
@@ -1467,7 +1407,7 @@
         },
         {
           "name": "orderform",
-          "value": "{\"id\":\"802f35cf883345309562803b34949b31\",\"items\":[],\"value\":0,\"totalizers\":[],\"marketingData\":{\"coupon\":\"\",\"utmCampaign\":\"\",\"utmMedium\":\"\",\"utmSource\":\"\",\"utmiCampaign\":\"\",\"utmiPart\":\"\",\"utmiPage\":\"\",\"__typename\":\"MarketingData\"},\"canEditData\":true,\"loggedIn\":true,\"paymentData\":{\"paymentSystems\":[],\"payments\":[],\"installmentOptions\":[],\"availableAccounts\":[],\"isValid\":false,\"__typename\":\"PaymentData\"},\"messages\":{\"couponMessages\":[],\"generalMessages\":[],\"__typename\":\"OrderFormMessages\"},\"shipping\":{\"countries\":[],\"availableAddresses\":[{\"addressId\":\"9XG4G9NGoX\",\"addressType\":\"residential\",\"alias\":\"Angelopolis\",\"city\":\"Heroica Puebla de Zaragoza\",\"complement\":\"\",\"country\":\"MEX\",\"documentId\":\"b12e88de-1271-48c8-a028-bf9c18b20680\",\"geoCoordinates\":[-98.2396849,19.0380162],\"neighborhood\":\"San José Vista Hermosa\",\"number\":\"30\",\"postalCode\":\"72190\",\"receiverName\":null,\"reference\":null,\"state\":\"PUEBLA\",\"street\":\"Calle 12\",\"__typename\":\"CartAddress\"},{\"addressId\":\"9Dgc9onNrM\",\"addressType\":\"residential\",\"alias\":\"Coapa\",\"city\":\"Ciudad de México\",\"complement\":\"\",\"country\":\"MEX\",\"documentId\":\"07be34fa-6352-4cc6-9db0-8d02a7ae672e\",\"geoCoordinates\":[-99.1428912,19.2847556],\"neighborhood\":\"Guadalupe\",\"number\":\"5149\",\"postalCode\":\"14388\",\"receiverName\":null,\"reference\":null,\"state\":\"CIUDAD DE MÉXICO\",\"street\":\"Calzada México-Xochimilco\",\"__typename\":\"CartAddress\"},{\"addressId\":\"9Mn6w5wkxl\",\"addressType\":\"residential\",\"alias\":\"Interlomas\",\"city\":\"Naucalpan de Juárez\",\"complement\":\"\",\"country\":\"MEX\",\"documentId\":\"d3d53fd8-8be4-48d9-848d-01a1b08e55f0\",\"geoCoordinates\":[-99.26786519999999,19.40322],\"neighborhood\":\"Parques de la Herradura\",\"number\":\"17\",\"postalCode\":\"52786\",\"receiverName\":null,\"reference\":null,\"state\":\"ESTADO DE MÉXICO\",\"street\":\"Parque de Valencia\",\"__typename\":\"CartAddress\"},{\"addressId\":\"9pg3UW3t7P\",\"addressType\":\"residential\",\"alias\":\"Mundo E\",\"city\":\"Tlalnepantla\",\"complement\":\"\",\"country\":\"MEX\",\"documentId\":\"7725acd2-dbef-49b8-91ef-71416f92f924\",\"geoCoordinates\":[-99.2281163,19.5259738],\"neighborhood\":\"Habitacional Jardines de Santa Monica\",\"number\":\"1007\",\"postalCode\":\"54050\",\"receiverName\":null,\"reference\":null,\"state\":\"ESTADO DE MÉXICO\",\"street\":\"Periférico Boulevard Manuel Ávila Camacho\",\"__typename\":\"CartAddress\"},{\"addressId\":\"9fCZCU2LSn\",\"addressType\":\"residential\",\"alias\":\"Pedregal\",\"city\":\"Ciudad de México\",\"complement\":\"\",\"country\":\"MEX\",\"documentId\":\"ed556389-8172-4900-95dd-c4dff9efc4aa\",\"geoCoordinates\":[-99.22241509999999,19.3253308],\"neighborhood\":\"San Jerónimo Lídice\",\"number\":\"117\",\"postalCode\":\"10200\",\"receiverName\":null,\"reference\":null,\"state\":\"CIUDAD DE MÉXICO\",\"street\":\"Calle Cerrada de San Jerónimo\",\"__typename\":\"CartAddress\"},{\"addressId\":\"9gnL8S3TMO\",\"addressType\":\"residential\",\"alias\":\"Polanco\",\"city\":\"Ciudad de México\",\"complement\":\"\",\"country\":\"MEX\",\"documentId\":\"d2959898-3209-49f9-9976-941335db0629\",\"geoCoordinates\":[-99.1849038,19.433135],\"neighborhood\":\"Polanco V Sección\",\"number\":\"307\",\"postalCode\":\"11560\",\"receiverName\":null,\"reference\":null,\"state\":\"CIUDAD DE MÉXICO\",\"street\":\"Calle Hipólito Taine\",\"__typename\":\"CartAddress\"},{\"addressId\":\"9sQoj3MtgX\",\"addressType\":\"residential\",\"alias\":\"Sante fe\",\"city\":\"Ciudad de México\",\"complement\":\"\",\"country\":\"MEX\",\"documentId\":\"ad27ac3d-dedf-408e-9272-3f919bcf83b1\",\"geoCoordinates\":[-99.2782551,19.3612015],\"neighborhood\":\"Contadero\",\"number\":\"3900\",\"postalCode\":\"05348\",\"receiverName\":null,\"reference\":null,\"state\":\"CIUDAD DE MÉXICO\",\"street\":\"Vasco de Quiroga\",\"__typename\":\"CartAddress\"},{\"addressId\":\"9gcaAhtZGX\",\"addressType\":\"residential\",\"alias\":\"Universidad\",\"city\":\"Ciudad de México\",\"complement\":\"\",\"country\":\"MEX\",\"documentId\":\"d78892af-0d8e-4624-b5a5-de9d9741ef1e\",\"geoCoordinates\":[-99.1645108,19.3751709],\"neighborhood\":\"Colonia del Valle Sur\",\"number\":\"624\",\"postalCode\":\"03104\",\"receiverName\":null,\"reference\":null,\"state\":\"CIUDAD DE MÉXICO\",\"street\":\"Miguel Laurent\",\"__typename\":\"CartAddress\"},{\"addressId\":\"9Dgc9onNrM\",\"addressType\":\"residential\",\"city\":\"Ciudad de México\",\"complement\":\"\",\"country\":\"MEX\",\"neighborhood\":\"Guadalupe\",\"number\":\"5149\",\"postalCode\":\"14388\",\"receiverName\":null,\"reference\":null,\"state\":\"CIUDAD DE MÉXICO\",\"street\":\"Calzada México-Xochimilco\",\"isDisposable\":true,\"geoCoordinates\":[-99.1428912,19.2847556],\"__typename\":\"Address\"},{\"addressId\":\"9Mn6w5wkxl\",\"addressType\":\"residential\",\"city\":\"Naucalpan de Juárez\",\"complement\":\"\",\"country\":\"MEX\",\"neighborhood\":\"Parques de la Herradura\",\"number\":\"17\",\"postalCode\":\"52786\",\"receiverName\":null,\"reference\":null,\"state\":\"ESTADO DE MÉXICO\",\"street\":\"Parque de Valencia\",\"isDisposable\":true,\"geoCoordinates\":[-99.26786519999999,19.40322],\"__typename\":\"Address\"},{\"addressId\":\"9pg3UW3t7P\",\"addressType\":\"residential\",\"city\":\"Tlalnepantla\",\"complement\":\"\",\"country\":\"MEX\",\"neighborhood\":\"Habitacional Jardines de Santa Monica\",\"number\":\"1007\",\"postalCode\":\"54050\",\"receiverName\":null,\"reference\":null,\"state\":\"ESTADO DE MÉXICO\",\"street\":\"Periférico Boulevard Manuel Ávila Camacho\",\"isDisposable\":true,\"geoCoordinates\":[-99.2281163,19.5259738],\"__typename\":\"Address\"},{\"addressId\":\"9fCZCU2LSn\",\"addressType\":\"residential\",\"city\":\"Ciudad de México\",\"complement\":\"\",\"country\":\"MEX\",\"neighborhood\":\"San Jerónimo Lídice\",\"number\":\"117\",\"postalCode\":\"10200\",\"receiverName\":null,\"reference\":null,\"state\":\"CIUDAD DE MÉXICO\",\"street\":\"Calle Cerrada de San Jerónimo\",\"isDisposable\":true,\"geoCoordinates\":[-99.22241509999999,19.3253308],\"__typename\":\"Address\"},{\"addressId\":\"9gnL8S3TMO\",\"addressType\":\"residential\",\"city\":\"Ciudad de México\",\"complement\":\"\",\"country\":\"MEX\",\"neighborhood\":\"Polanco V Sección\",\"number\":\"307\",\"postalCode\":\"11560\",\"receiverName\":null,\"reference\":null,\"state\":\"CIUDAD DE MÉXICO\",\"street\":\"Calle Hipólito Taine\",\"isDisposable\":true,\"geoCoordinates\":[-99.1849038,19.433135],\"__typename\":\"Address\"},{\"addressId\":\"9sQoj3MtgX\",\"addressType\":\"residential\",\"city\":\"Ciudad de México\",\"complement\":\"\",\"country\":\"MEX\",\"neighborhood\":\"Contadero\",\"number\":\"3900\",\"postalCode\":\"05348\",\"receiverName\":null,\"reference\":null,\"state\":\"CIUDAD DE MÉXICO\",\"street\":\"Vasco de Quiroga\",\"isDisposable\":true,\"geoCoordinates\":[-99.2782551,19.3612015],\"__typename\":\"Address\"},{\"addressId\":\"9gcaAhtZGX\",\"addressType\":\"residential\",\"city\":\"Ciudad de México\",\"complement\":\"\",\"country\":\"MEX\",\"neighborhood\":\"Colonia del Valle Sur\",\"number\":\"624\",\"postalCode\":\"03104\",\"receiverName\":null,\"reference\":null,\"state\":\"CIUDAD DE MÉXICO\",\"street\":\"Miguel Laurent\",\"isDisposable\":true,\"geoCoordinates\":[-99.1645108,19.3751709],\"__typename\":\"Address\"},{\"addressId\":\"9XG4G9NGoX\",\"addressType\":\"residential\",\"city\":\"Heroica Puebla de Zaragoza\",\"complement\":\"\",\"country\":\"MEX\",\"neighborhood\":\"San José Vista Hermosa\",\"number\":\"30\",\"postalCode\":\"72190\",\"receiverName\":null,\"reference\":null,\"state\":\"PUEBLA\",\"street\":\"Calle 12\",\"isDisposable\":true,\"geoCoordinates\":[-98.2396849,19.0380162],\"__typename\":\"Address\"}],\"selectedAddress\":{\"addressId\":\"9XG4G9NGoX\",\"addressType\":\"residential\",\"alias\":\"Angelopolis\",\"city\":\"Heroica Puebla de Zaragoza\",\"complement\":\"\",\"country\":\"MEX\",\"documentId\":\"b12e88de-1271-48c8-a028-bf9c18b20680\",\"geoCoordinates\":[-98.2396849,19.0380162],\"neighborhood\":\"San José Vista Hermosa\",\"number\":\"30\",\"postalCode\":\"72190\",\"receiverName\":null,\"reference\":null,\"state\":\"PUEBLA\",\"street\":\"Calle 12\",\"__typename\":\"CartAddress\"},\"deliveryOptions\":[],\"pickupOptions\":[],\"isValid\":false,\"__typename\":\"Shipping\"},\"userProfileId\":\"956eecf0-c410-4af4-8979-b2d1422fae37\",\"userType\":\"STORE_USER\",\"clientProfileData\":{\"email\":\"b755e2e2-dc7e-4ae2-8509-a8c05dc8f58b@mailslurp.biz\",\"firstName\":null,\"lastName\":null,\"document\":null,\"documentType\":null,\"phone\":null,\"isValid\":false,\"isCorporate\":false,\"corporateName\":null,\"tradeName\":null,\"corporateDocument\":null,\"stateInscription\":null,\"__typename\":\"ClientData\"},\"clientPreferencesData\":{\"locale\":\"es-MX\",\"optInNewsletter\":null,\"__typename\":\"ClientPreferencesData\"},\"allowManualPrice\":false,\"customData\":{\"customApps\":[{\"fields\":{\"performance\":\"true\"},\"id\":\"performance\",\"major\":1,\"__typename\":\"CustomApp\"}],\"__typename\":\"CustomData\"},\"__typename\":\"OrderForm\"}"
+          "value": "{\"id\":\"045bce29223e449ba1b86483844da0d5\",\"items\":[],\"value\":0,\"totalizers\":[],\"marketingData\":{\"coupon\":\"\",\"utmCampaign\":\"\",\"utmMedium\":\"\",\"utmSource\":\"\",\"utmiCampaign\":\"\",\"utmiPart\":\"\",\"utmiPage\":\"\",\"__typename\":\"MarketingData\"},\"canEditData\":true,\"loggedIn\":true,\"paymentData\":{\"paymentSystems\":[],\"payments\":[],\"installmentOptions\":[],\"availableAccounts\":[],\"isValid\":false,\"__typename\":\"PaymentData\"},\"messages\":{\"couponMessages\":[],\"generalMessages\":[],\"__typename\":\"OrderFormMessages\"},\"shipping\":{\"countries\":[],\"availableAddresses\":[{\"addressId\":\"9IYJZQU0lc\",\"addressType\":\"residential\",\"alias\":\"Angelopolis\",\"city\":\"Heroica Puebla de Zaragoza\",\"complement\":\"\",\"country\":\"MEX\",\"documentId\":\"249fa939-fcf8-416c-b6ff-fe398b8746e6\",\"geoCoordinates\":[-98.2396849,19.0380162],\"neighborhood\":\"San José Vista Hermosa\",\"number\":\"30\",\"postalCode\":\"72190\",\"receiverName\":null,\"reference\":null,\"state\":\"PUEBLA\",\"street\":\"Calle 12\",\"__typename\":\"CartAddress\"},{\"addressId\":\"9Z6W38Y8ay\",\"addressType\":\"residential\",\"alias\":\"Coapa\",\"city\":\"Ciudad de México\",\"complement\":\"\",\"country\":\"MEX\",\"documentId\":\"82536323-68e8-4d98-a896-29d8414d2c8b\",\"geoCoordinates\":[-99.1428912,19.2847556],\"neighborhood\":\"Guadalupe\",\"number\":\"5149\",\"postalCode\":\"14388\",\"receiverName\":null,\"reference\":null,\"state\":\"CIUDAD DE MÉXICO\",\"street\":\"Calzada México-Xochimilco\",\"__typename\":\"CartAddress\"},{\"addressId\":\"9ny9yjqjO0\",\"addressType\":\"residential\",\"alias\":\"Interlomas\",\"city\":\"Naucalpan de Juárez\",\"complement\":\"\",\"country\":\"MEX\",\"documentId\":\"3e000602-b06c-4ae4-ba02-90d32f2f74ea\",\"geoCoordinates\":[-99.26786519999999,19.40322],\"neighborhood\":\"Parques de la Herradura\",\"number\":\"17\",\"postalCode\":\"52786\",\"receiverName\":null,\"reference\":null,\"state\":\"ESTADO DE MÉXICO\",\"street\":\"Parque de Valencia\",\"__typename\":\"CartAddress\"},{\"addressId\":\"9IBQuLY4Jc\",\"addressType\":\"residential\",\"alias\":\"Mundo E\",\"city\":\"Tlalnepantla\",\"complement\":\"\",\"country\":\"MEX\",\"documentId\":\"c1e9e25a-75c1-4d7c-a049-e9b2ad6da43a\",\"geoCoordinates\":[-99.2281163,19.5259738],\"neighborhood\":\"Habitacional Jardines de Santa Monica\",\"number\":\"1007\",\"postalCode\":\"54050\",\"receiverName\":null,\"reference\":null,\"state\":\"ESTADO DE MÉXICO\",\"street\":\"Periférico Boulevard Manuel Ávila Camacho\",\"__typename\":\"CartAddress\"},{\"addressId\":\"97c6FOWcTr\",\"addressType\":\"residential\",\"alias\":\"Pedregal\",\"city\":\"Ciudad de México\",\"complement\":\"\",\"country\":\"MEX\",\"documentId\":\"31bdd362-156b-43dd-8303-f1997e891fbe\",\"geoCoordinates\":[-99.22241509999999,19.3253308],\"neighborhood\":\"San Jerónimo Lídice\",\"number\":\"117\",\"postalCode\":\"10200\",\"receiverName\":null,\"reference\":null,\"state\":\"CIUDAD DE MÉXICO\",\"street\":\"Calle Cerrada de San Jerónimo\",\"__typename\":\"CartAddress\"},{\"addressId\":\"93VMScIZZQ\",\"addressType\":\"residential\",\"alias\":\"Polanco\",\"city\":\"Ciudad de México\",\"complement\":\"\",\"country\":\"MEX\",\"documentId\":\"7218a072-585c-4d60-aa10-b982d3479817\",\"geoCoordinates\":[-99.1849038,19.433135],\"neighborhood\":\"Polanco V Sección\",\"number\":\"307\",\"postalCode\":\"11560\",\"receiverName\":null,\"reference\":null,\"state\":\"CIUDAD DE MÉXICO\",\"street\":\"Calle Hipólito Taine\",\"__typename\":\"CartAddress\"},{\"addressId\":\"9TeAu2LAYo\",\"addressType\":\"residential\",\"alias\":\"Sante fe\",\"city\":\"Ciudad de México\",\"complement\":\"\",\"country\":\"MEX\",\"documentId\":\"9c91142c-d985-416e-9dbb-1c922342df55\",\"geoCoordinates\":[-99.2782551,19.3612015],\"neighborhood\":\"Contadero\",\"number\":\"3900\",\"postalCode\":\"05348\",\"receiverName\":null,\"reference\":null,\"state\":\"CIUDAD DE MÉXICO\",\"street\":\"Vasco de Quiroga\",\"__typename\":\"CartAddress\"},{\"addressId\":\"9dC0CoPdcI\",\"addressType\":\"residential\",\"alias\":\"Universidad\",\"city\":\"Ciudad de México\",\"complement\":\"\",\"country\":\"MEX\",\"documentId\":\"6267fd7d-6d09-447e-aaa6-eb5df6ece959\",\"geoCoordinates\":[-99.1645108,19.3751709],\"neighborhood\":\"Colonia del Valle Sur\",\"number\":\"624\",\"postalCode\":\"03104\",\"receiverName\":null,\"reference\":null,\"state\":\"CIUDAD DE MÉXICO\",\"street\":\"Miguel Laurent\",\"__typename\":\"CartAddress\"},{\"addressId\":\"9Z6W38Y8ay\",\"addressType\":\"residential\",\"city\":\"Ciudad de México\",\"complement\":\"\",\"country\":\"MEX\",\"neighborhood\":\"Guadalupe\",\"number\":\"5149\",\"postalCode\":\"14388\",\"receiverName\":null,\"reference\":null,\"state\":\"CIUDAD DE MÉXICO\",\"street\":\"Calzada México-Xochimilco\",\"isDisposable\":true,\"geoCoordinates\":[-99.1428912,19.2847556],\"__typename\":\"Address\"},{\"addressId\":\"9ny9yjqjO0\",\"addressType\":\"residential\",\"city\":\"Naucalpan de Juárez\",\"complement\":\"\",\"country\":\"MEX\",\"neighborhood\":\"Parques de la Herradura\",\"number\":\"17\",\"postalCode\":\"52786\",\"receiverName\":null,\"reference\":null,\"state\":\"ESTADO DE MÉXICO\",\"street\":\"Parque de Valencia\",\"isDisposable\":true,\"geoCoordinates\":[-99.26786519999999,19.40322],\"__typename\":\"Address\"},{\"addressId\":\"9IBQuLY4Jc\",\"addressType\":\"residential\",\"city\":\"Tlalnepantla\",\"complement\":\"\",\"country\":\"MEX\",\"neighborhood\":\"Habitacional Jardines de Santa Monica\",\"number\":\"1007\",\"postalCode\":\"54050\",\"receiverName\":null,\"reference\":null,\"state\":\"ESTADO DE MÉXICO\",\"street\":\"Periférico Boulevard Manuel Ávila Camacho\",\"isDisposable\":true,\"geoCoordinates\":[-99.2281163,19.5259738],\"__typename\":\"Address\"},{\"addressId\":\"97c6FOWcTr\",\"addressType\":\"residential\",\"city\":\"Ciudad de México\",\"complement\":\"\",\"country\":\"MEX\",\"neighborhood\":\"San Jerónimo Lídice\",\"number\":\"117\",\"postalCode\":\"10200\",\"receiverName\":null,\"reference\":null,\"state\":\"CIUDAD DE MÉXICO\",\"street\":\"Calle Cerrada de San Jerónimo\",\"isDisposable\":true,\"geoCoordinates\":[-99.22241509999999,19.3253308],\"__typename\":\"Address\"},{\"addressId\":\"93VMScIZZQ\",\"addressType\":\"residential\",\"city\":\"Ciudad de México\",\"complement\":\"\",\"country\":\"MEX\",\"neighborhood\":\"Polanco V Sección\",\"number\":\"307\",\"postalCode\":\"11560\",\"receiverName\":null,\"reference\":null,\"state\":\"CIUDAD DE MÉXICO\",\"street\":\"Calle Hipólito Taine\",\"isDisposable\":true,\"geoCoordinates\":[-99.1849038,19.433135],\"__typename\":\"Address\"},{\"addressId\":\"9TeAu2LAYo\",\"addressType\":\"residential\",\"city\":\"Ciudad de México\",\"complement\":\"\",\"country\":\"MEX\",\"neighborhood\":\"Contadero\",\"number\":\"3900\",\"postalCode\":\"05348\",\"receiverName\":null,\"reference\":null,\"state\":\"CIUDAD DE MÉXICO\",\"street\":\"Vasco de Quiroga\",\"isDisposable\":true,\"geoCoordinates\":[-99.2782551,19.3612015],\"__typename\":\"Address\"},{\"addressId\":\"9dC0CoPdcI\",\"addressType\":\"residential\",\"city\":\"Ciudad de México\",\"complement\":\"\",\"country\":\"MEX\",\"neighborhood\":\"Colonia del Valle Sur\",\"number\":\"624\",\"postalCode\":\"03104\",\"receiverName\":null,\"reference\":null,\"state\":\"CIUDAD DE MÉXICO\",\"street\":\"Miguel Laurent\",\"isDisposable\":true,\"geoCoordinates\":[-99.1645108,19.3751709],\"__typename\":\"Address\"},{\"addressId\":\"9IYJZQU0lc\",\"addressType\":\"residential\",\"city\":\"Heroica Puebla de Zaragoza\",\"complement\":\"\",\"country\":\"MEX\",\"neighborhood\":\"San José Vista Hermosa\",\"number\":\"30\",\"postalCode\":\"72190\",\"receiverName\":null,\"reference\":null,\"state\":\"PUEBLA\",\"street\":\"Calle 12\",\"isDisposable\":true,\"geoCoordinates\":[-98.2396849,19.0380162],\"__typename\":\"Address\"}],\"selectedAddress\":{\"addressId\":\"9IYJZQU0lc\",\"addressType\":\"residential\",\"alias\":\"Angelopolis\",\"city\":\"Heroica Puebla de Zaragoza\",\"complement\":\"\",\"country\":\"MEX\",\"documentId\":\"249fa939-fcf8-416c-b6ff-fe398b8746e6\",\"geoCoordinates\":[-98.2396849,19.0380162],\"neighborhood\":\"San José Vista Hermosa\",\"number\":\"30\",\"postalCode\":\"72190\",\"receiverName\":null,\"reference\":null,\"state\":\"PUEBLA\",\"street\":\"Calle 12\",\"__typename\":\"CartAddress\"},\"deliveryOptions\":[],\"pickupOptions\":[],\"isValid\":false,\"__typename\":\"Shipping\"},\"userProfileId\":\"35eb6bed-a1e1-495f-aaec-6ce4c2a4c83a\",\"userType\":\"STORE_USER\",\"clientProfileData\":{\"email\":\"3194d5fa-702e-4750-a85c-12119804d9e4@mailslurp.biz\",\"firstName\":null,\"lastName\":null,\"document\":null,\"documentType\":null,\"phone\":null,\"isValid\":false,\"isCorporate\":false,\"corporateName\":null,\"tradeName\":null,\"corporateDocument\":null,\"stateInscription\":null,\"__typename\":\"ClientData\"},\"clientPreferencesData\":{\"locale\":\"es-MX\",\"optInNewsletter\":null,\"__typename\":\"ClientPreferencesData\"},\"allowManualPrice\":false,\"customData\":{\"customApps\":[{\"fields\":{\"performance\":\"true\"},\"id\":\"performance\",\"major\":1,\"__typename\":\"CustomApp\"}],\"__typename\":\"CustomData\"},\"__typename\":\"OrderForm\"}"
         },
         {
           "name": "smc_test_xdls",
@@ -1475,7 +1415,7 @@
         },
         {
           "name": "smc_not",
-          "value": "{\"v\":\"default\",\"e\":2079621799998,\"s\":1764261799340}"
+          "value": "{\"v\":\"default\",\"e\":2079959824682,\"s\":1764599824051}"
         },
         {
           "name": "regionId",
@@ -1488,16 +1428,7 @@
       "localStorage": [
         {
           "name": "rc::a",
-          "value": "czFpaDBpdzg3a3Nk"
-        }
-      ]
-    },
-    {
-      "origin": "https://ads01.groovinads.com",
-      "localStorage": [
-        {
-          "name": "_gcl_ls",
-          "value": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":1,\"timeouts\":0,\"creationTimeMs\":1764261799040},\"expires\":1772037799040}}"
+          "value": "MXNraDYxdzFzcjdkcHM="
         }
       ]
     },
@@ -1506,15 +1437,15 @@
       "localStorage": [
         {
           "name": "smc_uid",
-          "value": "1764261799342717"
+          "value": "1764599824053573"
         },
         {
           "name": "smc_credential",
-          "value": "eyJDcmVkZW50aWFscyI6eyJBY2Nlc3NLZXlJZCI6IkFTSUFYMkRVSlJFNDQ1QTZSVEpQIiwiRXhwaXJhdGlvbiI6MTc2NDI2NTQwNCwiU2VjcmV0S2V5IjoiVFpRdDlPVFh2N2poTW90aU5ObGJpVlptY3ZpRHVYZzVZYjEzSTBNUyIsIlNlc3Npb25Ub2tlbiI6IklRb0piM0pwWjJsdVgyVmpFTm4vLy8vLy8vLy8vd0VhQ1dWMUxYZGxjM1F0TVNKSE1FVUNJUURYcHZ2aEVpL3hackxDWi9TOFlVdE5kK3dkcC9vUjBqbVd3cmVPcHN5VXNBSWdaVEtWVDBsK0NMSC9DOWQxY25TVE5YUit5ZzN5WU0xU2ZOc3VnL0tiNGxncXRnVUlvdi8vLy8vLy8vLy9BUkFFR2d3MU16Y3hNVFE0TURZMU9EVWlES00xRFBmbkI1Mkhab1YrU0NxS0JhWEJhSG9jUWI1RmFMcW8xenNUMjlpUjJwM2NTZlRXZlc1clhVLy8zRCtSZS94ZFk0YkxpV1dQc0x1aHFoMEM0TDZGK1JWSm5NWUtCVU9KcUxhczNDNmYxRm4wUS9ZczBYcEVlcWhmY3VUbFBOSG5lcndseU53USs2YTZwU3dIdStUV3liNjRxQ1lWWlFRNWE2cGI0bVVPMklZUzFMRmptR1JZaWNXcTVlaEJDblFXOU04WW9VdWRNV3A5ajFyb3FqODlGTVBoUytRcTJIaHIxeHhYaFphQkhTeWNpbzZoZ2FONHFUTHhEYm9INDlybmVPRzQvMDN6UFI0OWhtcHNPVndCUDEwV3dxWnQ2SHFTa3JYcEZXN0NCYTVNQXdEQVpiUW9tbk1ldnlFNE1ENnNFU2hXUk9ZeDVJbWloQWFNSUtFUUFxK1NlWkhPSUo2cjhjeWNZN0Q0SVZDc3RMVnFwc1BJdHdlOTNkdG90bUllVm9qKzBhS3B1aE4wRE1yU3doTzZNQjdhcVJOVVF4b2FBbVBMT3FyQXFGdmdxRktubURtc3JpQ0NvNDJKdElnV2MzWmJXS3pFelUvQ0lWN2pIeXFRT0xhQ2hlMXZjZ0VTdWFNZ3Q3U0QzZGQ5b1V5cUFnZkJOWXFQWjd0ZmhzT3IwSHVQemV5UURURUNVd0RrNnkvdGNsd3hENTFIbkNhMHJlOEhEK2x5UExjd1E4eUZJWVdoQmZhcUErRUQyNXVQVG5NUDhZZ3lEeW9xU3BtLzBqVFREY21zcW1VUWVrUjlUQUZWK3k4Q1o1RFEyc2pjUTk4NDRqWDZBcUNzNldjMWN1aFB1YlpNbDVDRFFiNEFyVkI2QXV3WDIzR2luMDl4S3JjZ0NLUVpVNjJueGlQVFlxdzZJV201NlJNcUxOekNac2xWa2R2ZHNkWHQxT05VMWpreno4YWxQanRGWmpiMCtLb3RBYkFSb3BVaGU0Vk1zSXdYTUZlVXM1NXJsNDR5QmdaVExOUWpxTldlSEZDcWFSMHp5T1BGK3NJaFJKbDY5M2JWWk94dmIyTDNnTmQvWmNyeHFCVjZkb1QzV0cwTXU3S3dUTHNxYkl5WEVpY3htSk5NSEczckVXT1A4SUloSHp3K3RxU3VMa3VnOVprRjZqOVlNS3ovb2NrR090OENHY0Z4M3JsRkVGcjZESzlXc0NQa3U1Y1p6WlY2T0d4OVFHL0RlWC9VVmh6Uml4V3ZORFB2ZzhIVWFSTkFyS1VyUzRRS2ZhL3hNY0JYL0FjRzNFL1A5QzlLWE1QVmdjeFRlT0w5MVJVaHhsRVpsRkNUZGpWZmkwdFVHZ0x4Tms0Q2Y5dUw5V21HMldwVjg3ZE92dGEveExyaHducmgvZ091THpzY0d4N1JGY3RNZjNpMzRwMEQ2R0ViZkZUMDRWSXhFcitFakkyWjBCUThxUlVDTk9ZenlXNmpYajMwc1VqK2JwU09UbWhGMWw1bVkrZlRDbU40azVGSUF3UStlNS91TW1kcExCbDFyNFAzd1lIUDYyUmwrQ1dJNWVhcGc2b1VPZGhrMHlzdFN3ejZHb0dmc1JKdnVkcmkxb0VPYzkrdlAwcnFPNHBZU0dJZlpnb0l5RWxzSElrSUJiMnVMOVp1MFdGYkhYMlU2YTB6Uzd1Y1V3MkdBU3hPaVlDcGRpcm9nU2NWU3dORExLbmVYV3ZldWRwWGhBcTdkbmxtMHVTajl4VHJtZUNpeFUzVjdVTGU4anNxS1hET0xzVlpNZVlkellhY2x1WHZoS2oyN09pQ2tQeXAifX0="
+          "value": "eyJDcmVkZW50aWFscyI6eyJBY2Nlc3NLZXlJZCI6IkFTSUFYMkRVSlJFNFRQTFFYRkFCIiwiRXhwaXJhdGlvbiI6MTc2NDYwMzQyNywiU2VjcmV0S2V5IjoiWEpIUWRQdTREMUZJc3NYOEVtUEk1aHE5ekZkOGRwaFNjeVVSSFNZRyIsIlNlc3Npb25Ub2tlbiI6IklRb0piM0pwWjJsdVgyVmpFRGNhQ1dWMUxYZGxjM1F0TVNKR01FUUNJRjFEcSsyMzN1L2R6V09pV3FqdlRjS2VjYnA2M3RmU3d0bGdoKzkvMEMySUFpQVNZOUZmYUdHckNLU0Fxd3pUQUkrQnpiR0lQN1BrRDIvYnkydFJ4UDQzeVNxdUJRZ0FFQVFhRERVek56RXhORGd3TmpVNE5TSU1sZjBybkdVZUhvcUJrSnAxS29zRnlzK1lzL0VzdmNvb2tEY2lIdDNUQVo0WnBKZGVmZmVoYnd1MXBZWS9UQWlRY2RxZEphVDBreGllREpjSzBZbjVwV01XWmR5YkF1eTZ0WUl1MDlkcDN1bTRiOUZNU0hKRkVqNjdJamw1cFZjMmR4L294R0MzUUU3ajVUNERiTm1KL3hHOFdHWlRxczNYcHdzSlB6WjNJTHA3ZDRwVVRFUWpwR3Mxa3gvKzNvRDhubHkvV1RPbjBoVmtMbnpMZnZSOGJjVjgxZnNNVkN2OUNwSm9nU1Zna0N4dHFGQ1dwbGNyVXYweGwxNzhSeGN0eDRXOXpoVlBqYlE3NWtzUDNyVHVDSWFlR215MHlRZFpXL3J6SWtRdFpUZUdDbVNaN3BiREhza3h5TWdUYmx3N01lSnE2SFNPUE1MSmV3OE5oU3NhbmpBZ0QrQlc3aHpqS01SbWg5YzBhNzNwYlNQcjYrNHlCL1VIL08xWGJnZW9iL2pUY0VZeDVNTy9RRWRFalA4TWRwU2VyRVd3ZDMvL2ZXM0pwUk5TZXF1Y2czN3M5Nkd4Z05kaXpBZkdQaDRZa1Z6UlhhYTVxdVNtekhiZ3hob3pJZ3JxanVpQWxGQlNieXVVWDJFdlhrWHZVUGU0ZVJITHlpc0FIcEY4K1ppcFlvcVk0aCtMZ3lUVUh2d3Frb1ZHbEcwaGErN1U2c0tuQzhuVit3RVRoVklqUENPc0ZuaHFCM0lNMk81Vkw1TGtmR2ljNGZSRDdrZ2FnSi9mWk9JTjE5NkRya3F0ay9mdVFSY1dESWtmK3crb1JrNS9IM0NjaEw5VUMranEyMWcrcDYxalV0cktqVXJqVzVNVnhjSjkza0VPdzRDWDFhSzZIcVI2UHI2c3o2WmZZV0QzWlNHRkU0NThnTXZNajBOeCtvdFl6Sk5UcGdjTmFiaDVmRFNGVkpZb3M1R0ZyK1d3R1dGTklrQUhwbEVScjAwaG5oeGxCNENkVzZjcEt6c2hTNzFheXZEZERTcTByUmU2TlM1Zk9rV1Z3TTdZWm9IQ3hXaGY0dWFSTnN1OFlUWXlIRjJLVU1YeFdMZTl2aWJSVTV5RGF0Szd3d241dE1pU0o2eGE3OXpTT2hFS05nRkNVUUpCaUlxRVloTVNmUUU5dk4rc1ZQRVBNSlBRdHNrR090OENlOXVINUI4WlhHc1dDSGN3c2JVWEtINm5TZE5IcmZrZ1h1d2RYZGV3VlBrRnU0V1RsNk15eTYyZG9oTENFRVh2cW84cmdyb05zeWxTMkFwZ2NwY3lqQnAvTFRVWjk2MlZaM05NODFVczlkVTlvcWpBVVV0S2VHdjJvZXdvWUI1L2YxVGhRaHV1U1g1Sk4zVGMzYlV0QkRsdHVJSDZyV1pRdXREVm5OUitsbHpXK0txYmRPenVOdFpXbFZoeFN4alZ6cCs3K3ZBU21Xdk1TOFdFWTBQeHdwMFV4NjA4SitPdElHdS83SmkxTFdoUFREcDg2Nk5kT056OVc2NmtsaHIrOHBSUk94RVhPalN3Q3ZGR3Z0cmNzVHdzYU5wSDBEMW5JTndPY0FiUmZNTDVPQnpUcEZmUy8yVEVDN2hpZlpEb2xSaW1vZ0h2MVE5Q3V2bWlsblBidE1zSkFmc0s5dW40RXVqVGdBWXVIOURNT2Jqb3hRTitZZUE5emI0b1J5Vzl4VmJvWGVqamNjMDhOTzh5N0VNVHZuUGU4dE9oaUpNTG1Ya2lZUmt0Ulg4a1EyNVhDK2Q4QTcwUGNIeWlRYzYrRmJSa2g4MGRBWjRHZU5kVkdDSlIifX0="
         },
         {
           "name": "smc_identity",
-          "value": "eyJJZGVudGl0eUlkIjoiZXUtd2VzdC0xOjdkMGU4OTg5LTM5M2ItYzRhMS04N2JmLWIyOWU3ZWFjNjY2OSIsIklkZW50aXR5UG9vbElkIjoiZXUtd2VzdC0xOjlhMjhjYmRlLTM4M2UtNGM1Yi1iZGRkLTNiMzdhOWE3ZDFiZSJ9"
+          "value": "eyJJZGVudGl0eUlkIjoiZXUtd2VzdC0xOjdkMGU4OTg5LTM5ZmItYzMzMS03NDc0LTk1OTBkZTE1MmYxZSIsIklkZW50aXR5UG9vbElkIjoiZXUtd2VzdC0xOjlhMjhjYmRlLTM4M2UtNGM1Yi1iZGRkLTNiMzdhOWE3ZDFiZSJ9"
         },
         {
           "name": "smc-fp",
@@ -1527,43 +1458,43 @@
       "localStorage": [
         {
           "name": "smct_session",
-          "value": "{\"v\":\"%7B%22s%22%3A1764261803329%2C%22l%22%3A1764261813316%2C%22lt%22%3A1764261813316%2C%22t%22%3A11%2C%22p%22%3A11%7D\",\"e\":0,\"s\":1764261802303}"
+          "value": "{\"v\":\"%7B%22s%22%3A1764599828786%2C%22l%22%3A1764599842777%2C%22lt%22%3A1764599842777%2C%22t%22%3A15%2C%22p%22%3A15%7D\",\"e\":0,\"s\":1764599827762}"
         },
         {
           "name": "smc_uid",
-          "value": "{\"v\":\"1764261799342717\",\"e\":2079621802423,\"s\":1764261802303}"
+          "value": "{\"v\":\"1764599824053573\",\"e\":2079959828064,\"s\":1764599827762}"
         },
         {
           "name": "__rtbh.lid",
-          "value": "{\"eventType\":\"lid\",\"id\":\"uSbd4EFjVFduYplSD33C\",\"expiryDate\":\"2026-11-27T16:43:21.960Z\"}"
+          "value": "{\"eventType\":\"lid\",\"id\":\"N2chSAK6kWSywy9akEZw\",\"expiryDate\":\"2026-12-01T14:37:07.397Z\"}"
         },
         {
           "name": "smc_session_time",
-          "value": "11"
+          "value": "15"
         },
         {
           "name": "smc_tpv",
-          "value": "{\"v\":\"1\",\"e\":2079621803010,\"s\":1764261802303}"
+          "value": "{\"v\":\"1\",\"e\":2079959828383,\"s\":1764599827762}"
         },
         {
           "name": "smc_session_id",
-          "value": "{\"v\":\"XddsYSD1BbyHOuTZcKXc6nnXHV6I1TbF\",\"e\":0,\"s\":1764261802303}"
+          "value": "{\"v\":\"q5c4wql5vniiObHILJUzp8FDBrSV0PGi\",\"e\":0,\"s\":1764599827762}"
         },
         {
           "name": "cto_bundle",
-          "value": "HzUGw19sSGlxUzN6dDN5dU1SYllQZFVvJTJCRWZia1JRUld0ZFRsRFZ2SVR2V0Jod1VGTCUyRm0lMkY0MUhVNXRwJTJGT1ZRQnBjazJQVXJNN1EyY092Z2dacjBZUiUyQlhVazlqT1hvMTZsR0lVTW93U0VYT0k1T1NNQUNiU1c0dzhzQmNpSU12Z0VVa3NIclRTbTRaWkclMkZpQU5WQ0VDJTJGQ04xZyUzRCUzRA"
+          "value": "YCKwq19sNzBXbktrbUhZODNHak9TZnJGZWp0R01ObWR0ZHVEZHJHOXZKNDVIMDNYNnAlMkJBampjJTJGcUMyZmklMkY5Q2l2SkRVb2EyUFphMmFZc3UyWWFCYVM0NFdSRkd5eHhlV1NSWlRGTUNCN1REdEElMkZMdDZEWmUyQyUyQk80R2lSWHlvMDB5aW5leXpEWXdzMDFNOXFnTSUyQlEwYUVhdmclM0QlM0Q"
         },
         {
           "name": "smc_sesn",
-          "value": "{\"v\":\"1\",\"e\":2079621803010,\"s\":1764261802303}"
+          "value": "{\"v\":\"1\",\"e\":2079959828383,\"s\":1764599827762}"
         },
         {
           "name": "smc_tag",
-          "value": "{\"v\":\"eyJpZCI6ODA0NSwibmFtZSI6ImNoZWRyYXVpLmNvbSJ9\",\"e\":1795797802313,\"s\":1764261802303}"
+          "value": "{\"v\":\"eyJpZCI6ODA0NSwibmFtZSI6ImNoZWRyYXVpLmNvbSJ9\",\"e\":1796135827772,\"s\":1764599827762}"
         },
         {
           "name": "smc_spv",
-          "value": "{\"v\":\"1\",\"e\":0,\"s\":1764261802303}"
+          "value": "{\"v\":\"1\",\"e\":0,\"s\":1764599827762}"
         },
         {
           "name": "smc_session_step",
@@ -1571,7 +1502,7 @@
         },
         {
           "name": "smc_not",
-          "value": "{\"v\":\"default\",\"e\":2079621803012,\"s\":1764261802303}"
+          "value": "{\"v\":\"default\",\"e\":2079959828392,\"s\":1764599827762}"
         },
         {
           "name": "smc_test_xdls",
@@ -1579,7 +1510,7 @@
         },
         {
           "name": "_lr_id_",
-          "value": "{\"userID\":\"2d020631-e96f-4778-91a4-e219580d11ef\"}"
+          "value": "{\"userID\":\"2b0a0cb6-6c90-41a5-9fcd-be7b17cd2155\"}"
         }
       ]
     }
