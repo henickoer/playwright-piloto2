@@ -32,8 +32,11 @@ async function loginConCorreo(page, headerPage, loginPage) {
   await nextBtn.click();
 
   // Verificar correo mostrado
-  await page.locator('#codigo').waitFor({ state: 'visible' });
-  await page.waitForTimeout(500);
+const codigoInput = page.locator('#codigo');
+await codigoInput.waitFor({ state: 'visible' });
+//await expect(codigoInput).toBeEnabled();
+//await page.waitForTimeout(15000);
+
   const displayedEmail = await page.textContent('#sendEmail');
   if (!displayedEmail.includes(inbox.emailAddress.split('@')[0])) {
     throw new Error(`El email mostrado no coincide: ${displayedEmail}`);
