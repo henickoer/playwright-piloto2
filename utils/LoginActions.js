@@ -3,6 +3,10 @@ const { getFixedInbox, waitForCode, deleteEmail } = require('./mailslurp-utils')
 const { expect } = require('@playwright/test');
 const fs = require('fs');
 
+const { getExcelData } = require('../../utils/excelReader');
+
+
+
 async function loginConCorreo(page, headerPage, loginPage) {
   const inbox = await getFixedInbox();
   const emailAddress = inbox.emailAddress;
@@ -46,6 +50,8 @@ await codigoInput.waitFor({ state: 'visible' });
   const code = await waitForCode(inboxId, config.timeouts.waitForEmail);
   await headerPage.humanType('#codigo', code);
   await page.click('#btn-login-passwordless');
+  console.log('Se presionó boton login');
+
 
   // Esperar redirección al home
   await page.waitForURL(config.urls.PROD, { timeout: 20000 });

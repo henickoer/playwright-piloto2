@@ -69,18 +69,8 @@ test('C1 - TimeSlot Scraper', async () => {
   await page.goto(config.urls.PROD);
   await headerPage.safeClick(headerPage.aceptarCookiesButton);
   await page.goto(config.urls.PROD);
+  await page.waitForSelector('iframe#launcher', { state: 'visible', timeout: 30000 });
 
-
-
-
-  // Crear el locator sin await
-  const headers = page.locator(headerPage.bannerSuperiorHref);
-  
-  // Seleccionar el primer elemento del locator
-  const headerActual = headers.first();
-  // Esperar a que esté visible y habilitado
-  await headerActual.waitFor({ state: 'visible' });
- 
   await headerPage.safeClick(headerPage.minicartButton);  
   await page.waitForTimeout(2000);
 
@@ -135,6 +125,8 @@ test('C1 - TimeSlot Scraper', async () => {
   await page.waitForTimeout(3000);
 
   await carritoUtils.avanzarCarrito(page, resumencarritos);
+  await page.waitForTimeout(2000);
+  await page.reload();
   await page.waitForTimeout(2000);
   await resumencarritos.safeClick(resumencarritos.cambiarDireccionLink);
   await page.waitForTimeout(2000);
@@ -203,8 +195,6 @@ test('C1 - TimeSlot Scraper', async () => {
       nombre: nombreSucursal,
       dias: diasConfigurados
     });
-
-
 
     await resumencarritos.safeClick(resumencarritos.cambiarDireccionLink);    
     await page.waitForTimeout(200);
