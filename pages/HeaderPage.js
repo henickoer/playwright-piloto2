@@ -18,7 +18,24 @@ class HeaderPage extends BasePage {
     this.logoImg = "//*[contains(@class,'header--logo')]//*[@href]";
     this.holaUser = "//*[contains(text(),'Hola,')]";
     this.cerrarminicartButton = "//*[@class=' vtex-minicart-2-x-closeIcon']"; 
+    this.tarjeta_numeroInput = "//*[@id='creditCardpayment-card-0Number']";
+    this.tarjeta_nombreInput = "//*[@id='creditCardpayment-card-0Name']";
+    this.tarjeta_codigoInput = "//*[@id='creditCardpayment-card-0Code']";
+    this.tarjeta_mesSelect = "//*[@id='creditCardpayment-card-0Month']";
+    this.tarjeta_anoSelect = "//*[@id='creditCardpayment-card-0Code']";
+    this.tarjeta_mesesapagarSelect = "//*[@id='creditCardpayment-card-0Brand']";
+    this.tarjetachedrahui_codigoInput= "//*[contains(text(),'Código de seguridad')]/..//input";
+    this.tarjetachedrahui_numeroInput = "//*[@id='card-number-vale']";
+    this.tarjetachedrahui_montoInput = "//*[@id='amount-vale']";
+    this.tarjetachedrahui_validarButton = "//*[@id='vales-confirm-button']";
+   
+
   }
+
+    formapago(formapago){
+    return `//*[@class='payment-group-item-name' and contains(text(),'${producto.formapago}')]`;
+  }
+
 }
 
 module.exports = HeaderPage;
