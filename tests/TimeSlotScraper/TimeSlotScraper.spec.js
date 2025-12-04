@@ -127,7 +127,7 @@ test('C1 - TimeSlot Scraper', async () => {
   await carritoUtils.avanzarCarrito(page, resumencarritos);
   await page.waitForTimeout(2000);
   await page.reload();
-  await page.waitForTimeout(2000);
+  await page.waitForTimeout(10000);
   await resumencarritos.safeClick(resumencarritos.cambiarDireccionLink);
   await page.waitForTimeout(2000);
   const sucursales = await page.locator(resumencarritos.sucursales);

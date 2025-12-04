@@ -11,7 +11,7 @@ const PdfPrinter = require('pdfmake');
 const vfsFonts = require('pdfmake/build/vfs_fonts.js');
 const { sendEmail } = require('../../utils/mailslurp-utils');
 const { generarReportePDF } = require('../../utils/creadorpdf');
-const excelurl = '.\\data\\FlujosTransaccionales.xlsx';
+//const excelurl = '.\\data\\FlujosTransaccionales.xlsx';
 const exceltab = 'Datos Flujos';
 
 
@@ -118,9 +118,9 @@ await botonHorario.waitFor({ state: "visible" });
 await botonHorario.click();
 await headerPage.safeClick(resumencarritos.iralpagoButton);
 
-const data = getExcelData(excelurl, exceltab);
+/*const data = getExcelData(excelurl, exceltab);
 console.log(`\n=== Buscando: ${data} ===`);
-
+*/
 
 await page.pause();
 

@@ -3,7 +3,7 @@ const { getFixedInbox, waitForCode, deleteEmail } = require('./mailslurp-utils')
 const { expect } = require('@playwright/test');
 const fs = require('fs');
 
-const { getExcelData } = require('../../utils/excelReader');
+//const { getExcelData } = require('../../utils/excelReader');
 
 
 
