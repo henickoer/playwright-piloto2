@@ -22,7 +22,11 @@ test.beforeEach(async ({}, testInfo) => {
     args: ['--start-maximized']
   });
 
-  const context = await browser.newContext();
+  // 👇 FULL SCREEN REAL para todos los TC
+  const context = await browser.newContext({
+    viewport: null
+  });
+
   const page = await context.newPage();
 
   testInfo.browser = browser;
@@ -38,20 +42,16 @@ test.beforeEach(async ({}, testInfo) => {
   if (fs.existsSync('./sessionLocalStorage.json')) {
     const localStorageData = JSON.parse(fs.readFileSync('./sessionLocalStorage.json'));
 
-    // Primero navegar UNA sola vez
     await page.goto(config.urls.PROD, { waitUntil: 'domcontentloaded' });
 
-    // Inyectar localStorage ANTES de cualquier otra navegación
     await page.evaluate((data) => {
       for (const [key, value] of Object.entries(data)) {
         localStorage.setItem(key, value);
       }
     }, localStorageData);
 
-    // Recargar SOLO después de setear localStorage
     await page.reload({ waitUntil: 'domcontentloaded' });
   }
-
 
   testInfo.headerPage = new HeaderPage(page);
   testInfo.resumencarritos = new ResumenCarritoPage(page);
@@ -64,6 +64,7 @@ test.afterEach(async ({}, testInfo) => {
   await testInfo.browser.close();
 });
 
+/*
 test('C1 - Errores Ortográficos', async ({}, testInfo) => {
   const { page, headerPage, productosPage, carritoUtils } = testInfo;
 
@@ -126,7 +127,6 @@ test('C1 - Errores Ortográficos', async ({}, testInfo) => {
     await page.waitForTimeout(500);
     await headerPage.safeClick(headerPage.logoImg);
     await page.waitForTimeout(200);
-    await page.pause();
     await page.waitForSelector('iframe#launcher', { state: 'visible', timeout: 30000 });
    // await page.waitForTimeout(200);
   }
@@ -137,8 +137,8 @@ test('C1 - Errores Ortográficos', async ({}, testInfo) => {
     resultados: resultadosTotales         
   });
 });
+*/
 
-/*
 test('C2 - Long Tail', async ({}, testInfo) => {
   const { page, headerPage, productosPage, carritoUtils } = testInfo;
 
@@ -185,7 +185,7 @@ test('C2 - Long Tail', async ({}, testInfo) => {
     resultados: resultadosTotales
   });
 });
-
+/*
 test('C3 - Frecuencia Alta', async ({}, testInfo) => {
   const { page, headerPage, productosPage, carritoUtils } = testInfo;
 

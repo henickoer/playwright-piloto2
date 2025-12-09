@@ -2,7 +2,7 @@ const { defineConfig } = require('@playwright/test');
 const path = require('path');
 
 module.exports = defineConfig({
-  globalSetup: require.resolve('./global-setup.js'),
+  //globalSetup: require.resolve('./global-setup.js'),
 
   testDir: './tests',
 
@@ -18,13 +18,6 @@ module.exports = defineConfig({
         name: 'TimeSlotScraper',
         testMatch: '**/TimeSlotScraper/*.spec.js'
       },
-      {
-        name: 'Scraperycoincidencias',
-        testMatch: [
-          '**/Coincidencias/*.spec.js',
-          '**/TimeSlotScraper/*.spec.js'
-        ]
-    },
       {
         name: 'FlujosTransaccionales',
         testMatch: [

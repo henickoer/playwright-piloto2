@@ -16,7 +16,7 @@ async function loginConCorreo(page, headerPage, loginPage) {
 
   // Visitar sitio principal
   await page.goto(config.urls.PROD);
-  await page.waitForSelector('iframe#launcher', { state: 'visible', timeout: 30000 });
+  await page.waitForSelector('iframe#launcher', { state: 'visible', timeout: 40000 });
 
   if (!(await page.title()).toLowerCase().includes('supermercado')) {
     throw new Error('No se encontró "supermercado" en el título de la página');

@@ -19,7 +19,6 @@ class NavegacionActions {
       await resumencarritos.safeClick(resumencarritos.irenvioButton);
       await page.waitForTimeout(4000);
       return await this.avanzarCarrito(page, resumencarritos);
-      
     }
 
     if (currentUrl.includes(resumencarritos.paso1URL)) {
@@ -28,7 +27,6 @@ class NavegacionActions {
       await resumencarritos.safeClick(resumencarritos.continuarconlacompraButton);
       await page.waitForTimeout(3000);
       return await this.avanzarCarrito(page, resumencarritos);
-
     } 
 
     console.warn('URL desconocida, esperando a que avance de manera natural...');
@@ -97,76 +95,80 @@ async buscarProducto(page, headerPage, productos, producto) {
 
 
 
-// --- 🔸 Si hay resultados, estabilizar el conteo por visibilidad ---
-if (await page.locator(productos.resultadobusquedaLabel).first().isVisible()) {
+  // --- 🔸 Si hay resultados, estabilizar el conteo por visibilidad ---
+  if (await page.locator(productos.resultadobusquedaLabel).first().isVisible()) {
+    let elementos = page.locator(`${productos.resultadobusquedaLabel} >> visible=true`);
 
-  const elementos = page.locator(`${productos.resultadobusquedaLabel} >> visible=true`);
+    let prevVisibleCount = -1;
+    let stableRounds = 0;
+    let visibles = 0;
 
-  let prevVisibleCount = -1;
-  let stableRounds = 0;
-  let visibles = 0;
+    for (let i = 0; i < 10; i++) {
 
-  for (let i = 0; i < 10; i++) {
+      elementos = page.locator(`${productos.resultadobusquedaLabel} >> visible=true`);
+      let total = await elementos.count();
+      visibles = 0;
 
-    const total = await elementos.count();
-    visibles = 0;
-
-    for (let j = 0; j < total; j++) {
-      if (await elementos.nth(j).isVisible()) visibles++;
-    }
-
-    // Si el número visible coincide con la vuelta anterior → estable
-    if (visibles === prevVisibleCount) {
-      stableRounds++;
-      if (stableRounds >= 2) {
-        // Ya se estabilizó
-        break;
+      for (let j = 0; j < total; j++) {
+        if (await elementos.nth(j).isVisible()) visibles++;
       }
-    } else {
-      stableRounds = 0; // rompe estabilidad
+
+      console.log(`Iteración ${i} → visibles: ${visibles}, prev: ${prevVisibleCount}`);
+
+      if (visibles === prevVisibleCount) {
+        stableRounds++;
+        console.log(`Visibilidad estable (${stableRounds})`);
+
+        // 🔥 Scroll hasta el botón "Next page"
+        // Volver a leer después del scroll
+        elementos = page.locator(`${productos.resultadobusquedaLabel} >> visible=true`);
+        total = await elementos.count();
+        console.log(`Después del scroll → total detectados: ${total}`);
+
+        if (stableRounds >= 2) {
+          console.log("🟢 Completado: la lista dejó de crecer");
+          break;
+        }
+
+      } else {
+        console.log(`❌ Cambio detectado (visibles: ${visibles}), reseteando...`);
+        stableRounds = 0;
+        prevVisibleCount = visibles;
+        await page.locator('//*[@aria-label="Next page"]').scrollIntoViewIfNeeded();
+        await page.locator('//*[@class="chedrauimx-search-result-3-x-orderBy--layout"]').scrollIntoViewIfNeeded();
+        await page.waitForTimeout(500);
+
+        continue;
+      }
+
+      prevVisibleCount = visibles;
     }
 
-    prevVisibleCount = visibles;
-    await page.waitForTimeout(500);
+    const hayMensajeNoResultados = await page
+      .locator(productos.sinresultadosLabel)
+      .isVisible()
+      .catch(() => false);
+
+    if (hayMensajeNoResultados) {
+      console.log(`❌ El sistema muestra "sin resultados". Los ${visibles} visibles son sugerencias.`);
+      return false;
+    }
+
+    console.log(`🟢 Conteo estabilizado: ${visibles} productos visibles reales.`);
+    return true;
   }
 
-  // --- 🔹 Verificar si aparece mensaje de "sin resultados" ---
-  const hayMensajeNoResultados = await page
-    .locator(productos.sinresultadosLabel)
-    .isVisible()
-    .catch(() => false);
 
-  if (hayMensajeNoResultados) {
-    console.log(`❌ El sistema muestra "sin resultados". Los ${visibles} visibles son sugerencias.`);
-    return false;
-  }
-
-  console.log(`🟢 Conteo estabilizado: ${visibles} productos visibles reales.`);
-  return true;
-}
-
-
-
-
-  // --- Si no hay resultados visibles ---
   console.log('❌ No se encontraron resultados');
   return false;
 }
 
-/**
- * 🔹 Evalúa los resultados de búsqueda para errores ortográficos
- *     — estable, con reintentos y sin generar listas vacías —
- */
 async evaluarBusquedaErroresOrtograficos(page, productos, equivalencias) {
 
-  // Asegurar que ya aparecieron elementos visibles
   const productosVisibles = page.locator(`${productos.resultadobusquedaLabel} >> visible=true`);
   await productosVisibles.first().waitFor({ timeout: 5000 }).catch(() => {});
-
-  // Reintento pequeño para evitar textos viejos/render parcial
   await page.waitForTimeout(500);
 
-  // Función de lectura con reintento
   async function obtenerTextoConReintento(locator) {
     for (let intento = 0; intento < 3; intento++) {
       try {
@@ -193,7 +195,6 @@ async evaluarBusquedaErroresOrtograficos(page, productos, equivalencias) {
     if (!textoProducto) {
       console.log(`⚠️ No se pudo obtener innerText del producto ${i}, registrando como NO LEÍDO`);
       
-      // 🔥 Registro seguro (NO rompas el reporte)
       listaDetallada.push({
         texto: "[NO LEÍDO]",
         coincide: false
@@ -212,17 +213,15 @@ async evaluarBusquedaErroresOrtograficos(page, productos, equivalencias) {
       texto: textoProducto,
       coincide
     });
-
-
   }
 
   return { coincidencias, noCoincidencias, listaDetallada };
 }
 
 async obtenerProductosEncontrados(page, productosPage) {
-  // Mismo locator que ya usas en C1 y C4
-  const locator = page.locator(`${productosPage.resultadobusquedaLabel} >> visible=true`);
 
+  await page.waitForTimeout(4000);
+  const locator = page.locator(`${productosPage.resultadobusquedaLabel} >> visible=true`);
   const count = await locator.count();
   const textos = [];
 
@@ -235,16 +234,9 @@ async obtenerProductosEncontrados(page, productosPage) {
     } catch (e) {
       console.warn("⚠ No se pudo leer un producto:", e);
     }
-
   }
   return textos;
 }
-
-
-
-
-
-
 
 }
 
