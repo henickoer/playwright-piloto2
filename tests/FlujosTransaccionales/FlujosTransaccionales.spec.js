@@ -1,6 +1,7 @@
 // tests/TimeSlotScraper.spec.js
 const { test, chromium } = require('@playwright/test');
 const HeaderPage = require('../../pages/HeaderPage');
+const { getExcelData } = require('../../utils/excelReader');
 const ProductosEncontradosPage = require('../../pages/ProductosEncontradosPage'); 
 const ResumenCarritoPage = require('../../pages/ResumenCarritoPage');
 const config = require('../../utils/Environment');
@@ -11,7 +12,7 @@ const PdfPrinter = require('pdfmake');
 const vfsFonts = require('pdfmake/build/vfs_fonts.js');
 const { sendEmail } = require('../../utils/mailslurp-utils');
 const { generarReportePDF } = require('../../utils/creadorpdf');
-//const excelurl = '.\\data\\FlujosTransaccionales.xlsx';
+const excelurl = '.\\data\\FlujosTransaccionales.xlsx';
 const exceltab = 'Datos Flujos';
 
 
@@ -86,7 +87,7 @@ test('C1 - Visualizar metodos de pago', async () => {
     for (const producto of listaProductos) {
     console.warn(`Se ingresó al for, producto actual: `+producto);
 
-    if (productosAgregados >= 4) break;
+    if (productosAgregados >= 3) break;
       console.warn(`Se ingresó al if productosAgregados`);
       
       try {
@@ -116,14 +117,27 @@ test('C1 - Visualizar metodos de pago', async () => {
 const botonHorario = page.locator(resumencarritos.horarioentregaButton).first();
 await botonHorario.waitFor({ state: "visible" });
 await botonHorario.click();
+
 await headerPage.safeClick(resumencarritos.iralpagoButton);
 
 /*const data = getExcelData(excelurl, exceltab);
 console.log(`\n=== Buscando: ${data} ===`);
 */
 
-await page.pause();
+const data = getExcelData(excelurl, exceltab);
+console.log(data); 
 
+
+//await page.pause();
+
+
+ for (const row of data) {
+    const TipoPagoText = row['Tipos de pago'];
+    const XpathTipoPago = resumencarritos.formapagochedrahuiOption(TipoPagoText);
+    await resumencarritos.safeClick(XpathTipoPago);
+    console.log("El tipo de pago es: " + await resumencarritos.getText(XpathTipoPago));
+
+ }
 /*
 await sendEmail(
   config.correos,
@@ -132,5 +146,7 @@ await sendEmail(
   '../reports/reporteSucursales.pdf'
 );
 */
+
+
 
 });

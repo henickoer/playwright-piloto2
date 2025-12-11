@@ -48,7 +48,7 @@ class ResumenCarritoPage extends BasePage {
     return `//*[@class='chedrauimx-checkout-io-1-x-calendar__day'][${num}]`;
   }
 
-  formapagovaleschedrahuiOption(formapago) {
+  formapagochedrahuiOption(formapago) {
     return `//*[@class='payment-group-item-name' and contains(text(),'${formapago}')]`;
   }
 }
