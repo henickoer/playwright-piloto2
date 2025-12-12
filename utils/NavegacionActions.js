@@ -238,6 +238,66 @@ async obtenerProductosEncontrados(page, productosPage) {
   return textos;
 }
 
+  /**
+   * 🛒 Vaciar carrito (reutilizable)
+   */
+  async vaciarCarrito(page, resumencarritos, headerPage) {
+    console.log("↪ Ejecutando vaciarCarrito() ...");
+
+    const vaciarButton = page.locator(resumencarritos.vaciarcarritoButton);
+
+    if (await vaciarButton.count() > 0) {
+      console.log("🛒 Vaciando el carrito...");
+
+      await resumencarritos.safeClick(resumencarritos.vaciarcarritoButton);
+      await resumencarritos.safeClick(resumencarritos.eliminarItemsCarritoButton);
+
+      // Cerrar minicart
+      await headerPage.safeClick(headerPage.cerrarminicartButton);
+    } else {
+      await headerPage.safeClick(headerPage.cerrarminicartButton);
+      console.log("🧹 El carrito ya estaba vacío.");
+    }
+  }
+
+  async AgregarProductosDefault(page, headerPage, productos, config, cantidadAgregar) {
+
+  await page.goto(config.urls.PROD);
+
+  const listaProductos = [
+    'Aguacate Hass por Kg',  // 1
+    'Plátano Chiapas por Kg', // 2
+    'Cebolla Blanca por kg',  // 3
+    'Zanahoria por kg',       // 4
+    'Ajo por Kg'              // 5
+  ];
+
+  let productosAgregados = 0;
+
+  for (const producto of listaProductos) {
+    console.warn(`Se ingresó al for, producto actual: ` + producto);
+
+    if (productosAgregados >= cantidadAgregar) break;
+    console.warn(`Se ingresó al if productosAgregados`);
+
+    try {
+      console.warn(`Se intenta agregar producto: ${producto}`);
+      const exito = await this.buscarYAgregarProducto(page, headerPage, productos, producto);
+      if (exito) {
+        productosAgregados++;
+        console.log(`✅ Producto agregado: ${producto} (total agregados: ${productosAgregados})`);
+      }
+    } catch (err) {
+      console.warn(`⚠️ No se pudo agregar producto: ${producto} → ${err.message}`);
+    }
+
+    await page.goto(config.urls.PROD);
+
+  }
+}
+
+
+
 }
 
 module.exports = NavegacionActions;

@@ -15,19 +15,28 @@ const { generarReportePDF } = require('../../utils/creadorpdf');
 const excelurl = '.\\data\\FlujosTransaccionales.xlsx';
 const exceltab = 'Datos Flujos';
 
+let context;
+let page;
+let headerPage;
+let resumencarritos;
+let productos;
+let carritoUtils;
 
+// ------------------------
+// BEFORE ALL
+// ------------------------
+test.beforeAll(async () => {
 
-test('C1 - Visualizar metodos de pago', async () => { 
-  test.setTimeout(300000);
-  const context = await chromium.launchPersistentContext('', {
+  context = await chromium.launchPersistentContext('', {
     headless: false,
     args: ['--start-maximized']
   });
-  const page = await context.newPage();
-  const headerPage = new HeaderPage(page);
-  const resumencarritos = new ResumenCarritoPage(page);
-  const productos = new ProductosEncontradosPage(page);
-  const carritoUtils = new NavegacionActions();
+
+  page = await context.newPage();
+  headerPage = new HeaderPage(page);
+  resumencarritos = new ResumenCarritoPage(page);
+  productos = new ProductosEncontradosPage(page);
+  carritoUtils = new NavegacionActions();
 
   // --- Sesión persistente ---
   if (fs.existsSync('./sessionCookies.json')) { 
@@ -52,58 +61,24 @@ test('C1 - Visualizar metodos de pago', async () => {
     await page.reload({ waitUntil: 'domcontentloaded' });
   }
 
+});
+
+// ------------------------
+// TEST CASE
+// ------------------------
+test('C1 - Visualizar metodos de pago', async () => { 
+  test.setTimeout(300000);
+
   // --- Flujo principal ---
   await page.goto(config.urls.PROD);
   await headerPage.safeClick(headerPage.aceptarCookiesButton);
   await page.goto(config.urls.PROD);
   await page.waitForSelector('iframe#launcher', { state: 'visible', timeout: 30000 });
-
   await headerPage.safeClick(headerPage.minicartButton);  
   await page.waitForTimeout(2000);
 
-  const vaciarButton = await page.locator(resumencarritos.vaciarcarritoButton);
-  if (await vaciarButton.count() > 0) {
-    console.log('Vaciando el carrito...');
-    await resumencarritos.safeClick(resumencarritos.vaciarcarritoButton);
-    await resumencarritos.safeClick(resumencarritos.eliminarItemsCarritoButton);
-    await headerPage.safeClick(headerPage.cerrarminicartButton);
-  } else {
-    await headerPage.safeClick(headerPage.cerrarminicartButton);
-    console.log('🛒 El carrito ya está vacío.');
-  }
-
-  await page.goto(config.urls.PROD);
-
-    const listaProductos = [
-      'Aguacate Hass por Kg',  // 1
-      'Plátano Chiapas por Kg', // 2
-      'Cebolla Blanca por kg',  // 3
-      'Zanahoria por kg',       // 4
-      'Ajo por Kg'              // 5
-    ];
-
-    let productosAgregados = 0;
-
-    for (const producto of listaProductos) {
-    console.warn(`Se ingresó al for, producto actual: `+producto);
-
-    if (productosAgregados >= 3) break;
-      console.warn(`Se ingresó al if productosAgregados`);
-      
-      try {
-          console.warn(`Se intenta agregar producto: ${producto}`);
-          const exito = await carritoUtils.buscarYAgregarProducto(page, headerPage, productos, producto);
-          if (exito) {
-            productosAgregados++;
-            console.log(`✅ Producto agregado: ${producto} (total agregados: ${productosAgregados})`);
-          }
-        } catch (err) {
-          console.warn(`⚠️ No se pudo agregar producto: ${producto} → ${err.message}`);
-        }
-  }
-
-  console.log(`🛒 Total de productos agregados al carrito: ${productosAgregados}`);
-  await page.goto(config.urls.PROD);
+  await carritoUtils.vaciarCarrito(page, resumencarritos, headerPage);
+  await carritoUtils.AgregarProductosDefault(page,headerPage,productos,config,2);
 
   await headerPage.safeClick(headerPage.minicartButton);
   await page.waitForTimeout(2000);
@@ -114,39 +89,20 @@ test('C1 - Visualizar metodos de pago', async () => {
   await carritoUtils.avanzarCarrito(page, resumencarritos);
   await page.waitForTimeout(2000);
  
-const botonHorario = page.locator(resumencarritos.horarioentregaButton).first();
-await botonHorario.waitFor({ state: "visible" });
-await botonHorario.click();
+  const botonHorario = page.locator(resumencarritos.horarioentregaButton).first();
+  await botonHorario.waitFor({ state: "visible" });
+  await botonHorario.click();
 
-await headerPage.safeClick(resumencarritos.iralpagoButton);
+  await headerPage.safeClick(resumencarritos.iralpagoButton);
 
-/*const data = getExcelData(excelurl, exceltab);
-console.log(`\n=== Buscando: ${data} ===`);
-*/
+  const data = getExcelData(excelurl, exceltab);
+  console.log(data); 
 
-const data = getExcelData(excelurl, exceltab);
-console.log(data); 
-
-
-//await page.pause();
-
-
- for (const row of data) {
+  for (const row of data) {
     const TipoPagoText = row['Tipos de pago'];
     const XpathTipoPago = resumencarritos.formapagochedrahuiOption(TipoPagoText);
     await resumencarritos.safeClick(XpathTipoPago);
     console.log("El tipo de pago es: " + await resumencarritos.getText(XpathTipoPago));
-
- }
-/*
-await sendEmail(
-  config.correos,
-  '📄 Reporte PDF',
-  'Adjunto el reporte más reciente.',
-  '../reports/reporteSucursales.pdf'
-);
-*/
-
-
+  }
 
 });
