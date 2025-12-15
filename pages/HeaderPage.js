@@ -28,13 +28,20 @@ class HeaderPage extends BasePage {
     this.tarjetachedrahui_numeroInput = "//*[@id='card-number-vale']";
     this.tarjetachedrahui_montoInput = "//*[@id='amount-vale']";
     this.tarjetachedrahui_validarButton = "//*[@id='vales-confirm-button']";
-   
+    this.pagar_Button = "//*[@id='payment-data-submit'][2]";
+    this.validacioncampoobligatorio_Label = "/..//*[contains(text(),'Este campo es obligatorio')]";
 
   }
 
     formapago(formapago){
-    return `//*[@class='payment-group-item-name' and contains(text(),'${producto.formapago}')]`;
+      return `//*[@class='payment-group-item-name' and contains(text(),'${producto.formapago}')]`;
   }
+
+    iframeformapago(formapago){
+      return `//*[@class='payment-group-item-name' and contains(text(),'${producto.formapago}')]/../../..//iframe`;
+    }
+
+
 
 }
 

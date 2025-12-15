@@ -98,6 +98,48 @@ test('C1 - Visualizar metodos de pago', async () => {
   const data = getExcelData(excelurl, exceltab);
   console.log(data); 
 
+  //recorrer tiposdepago
+  for (const row of data) {
+    const TipoPagoText = row['Tipos de pago'];
+    const XpathTipoPago = resumencarritos.formapagochedrahuiOption(TipoPagoText);
+    await resumencarritos.safeClick(XpathTipoPago);
+    console.log("El tipo de pago es: " + await resumencarritos.getText(XpathTipoPago));
+  }
+
+});
+
+test('C2 - Pago Debito', async () => { 
+  test.setTimeout(300000);
+
+  // --- Flujo principal ---
+  await page.goto(config.urls.PROD);
+  await headerPage.safeClick(headerPage.aceptarCookiesButton);
+  await page.goto(config.urls.PROD);
+  await page.waitForSelector('iframe#launcher', { state: 'visible', timeout: 30000 });
+  await headerPage.safeClick(headerPage.minicartButton);  
+  await page.waitForTimeout(2000);
+
+  await carritoUtils.vaciarCarrito(page, resumencarritos, headerPage);
+  await carritoUtils.AgregarProductosDefault(page,headerPage,productos,config,2);
+
+  await headerPage.safeClick(headerPage.minicartButton);
+  await page.waitForTimeout(2000);
+  await resumencarritos.safeClick(resumencarritos.comprarcarritoButton);
+  await page.waitForLoadState('domcontentloaded');
+  await page.waitForTimeout(3000);
+
+  await carritoUtils.avanzarCarrito(page, resumencarritos);
+  await page.waitForTimeout(2000);
+ 
+  const botonHorario = page.locator(resumencarritos.horarioentregaButton).first();
+  await botonHorario.waitFor({ state: "visible" });
+  await botonHorario.click();
+
+  await headerPage.safeClick(resumencarritos.iralpagoButton);
+
+  const data = getExcelData(excelurl, exceltab);
+  console.log(data); 
+
   for (const row of data) {
     const TipoPagoText = row['Tipos de pago'];
     const XpathTipoPago = resumencarritos.formapagochedrahuiOption(TipoPagoText);
