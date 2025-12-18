@@ -34,11 +34,11 @@ class HeaderPage extends BasePage {
   }
 
     formapago(formapago){
-      return `//*[@class='payment-group-item-name' and contains(text(),'${producto.formapago}')]`;
+      return `//*[@class='payment-group-item-name' and contains(text(),'${formapago}')]`;
   }
 
     iframeformapago(formapago){
-      return `//*[@class='payment-group-item-name' and contains(text(),'${producto.formapago}')]/../../..//iframe`;
+      return `//*[@class='payment-group-item-name' and contains(text(),'${formapago}')]/../../..//iframe`;
     }
 
 

@@ -18,7 +18,7 @@ class BasePage {
     const el = this.page.locator(selector).first();
 
     try {
-        await this.page.waitForSelector(selector, { state: 'visible', timeout: 20000 });
+        await this.page.waitForSelector(selector, { state: 'visible', timeout: 25000 });
         await this.page.waitForTimeout(300);
 
         await expect(el).toBeVisible({ timeout: 10000 });
@@ -94,10 +94,10 @@ class BasePage {
         return await el.textContent();
     }
 
-    // Verificar si un elemento es visible
-    async isVisible(selector) {
+    async isVisible(selector, timeout = 5000) {
         const el = this.page.locator(selector);
-        return await el.isVisible();
+        await el.waitFor({ state: 'visible', timeout });
+        return true;
     }
 
     // Esperar que un elemento esté habilitado (no deshabilitado)

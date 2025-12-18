@@ -9,6 +9,7 @@ class ProductosEncontradosPage extends BasePage {
     this.page = page;
 
     // 🔹 Locators estáticos
+    this.agregarproductodentrobusquedaButton = "//*[contains(@class,'chedrauiPlusButton')]";
     this.productoAgotadoButton = "//*[contains(text(),'Agotado') and contains(@class,'add-to-cart-pdp')]";
     this.borrarCampoBusquedaButton = "//*[@aria-label='Borrar campo de búsqueda']";
     this.orderporSelect = "//*[contains(@class,'orderByText')]";

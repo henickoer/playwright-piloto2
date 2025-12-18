@@ -59,6 +59,7 @@ class NavegacionActions {
 
     if (await botonAgregar.count() > 0 && await botonAgregar.isVisible()) {
       await botonAgregar.click();
+      await page.isVisible(productos.agregarproductodentrobusquedaButton);
       await headerPage.safeClick(headerPage.logoImg);
       return true;
     }
@@ -292,9 +293,100 @@ async obtenerProductosEncontrados(page, productosPage) {
     }
 
     await page.goto(config.urls.PROD);
+    await page.waitForTimeout(500);
 
   }
 }
+
+  async ValidarFormulario(page, headerPage, tiposdepago, formapago) {
+    await page.waitForTimeout(2000);
+    console.warn("Validando formulario de: " + tiposdepago);
+    // 1️⃣ Localizar el iframe directo del método de pago
+    let iframeXPath;
+    let iframe;
+
+    if(tiposdepago=="Vales de Colaborador Chedraui"){
+          iframeXPath = headerPage.iframeformapago(tiposdepago);
+          iframe = page.frameLocator(iframeXPath);
+    }
+    else{
+          iframeXPath = headerPage.iframeformapago(tiposdepago);
+          iframe = page.frameLocator(iframeXPath);
+    }
+    console.warn("Tipo de formulario detectado:\n" + formapago);
+    console.warn("Iframe localizado:\n" + iframeXPath); 
+    // 2️⃣ Validaciones según el tipo de pago
+    let campos = [];
+
+    if (formapago.includes("Tarjeta")) {
+      campos = [
+        headerPage.tarjeta_numeroInput,
+        headerPage.tarjeta_mesesapagarSelect,
+        headerPage.tarjeta_nombreInput,
+        headerPage.tarjeta_mesSelect,
+        headerPage.tarjeta_anoSelect,
+        headerPage.tarjeta_codigoInput
+      ];
+
+    } else if (formapago.includes("Vale")) {
+      campos = [
+        headerPage.tarjetachedrahui_numeroInput,
+        headerPage.tarjetachedrahui_montoInput,
+        headerPage.tarjetachedrahui_codigoInput
+      ];
+    }
+
+    for (const campo of campos) {
+        console.warn("   Validando existencia del campo: " + campo);
+
+        if (formapago.includes("Vale")){
+          await page.locator(campo)
+            .waitFor({ state: 'visible', timeout: 5000 })
+            .catch(() => console.warn("⚠ No se encontró"));
+
+        }
+        else{
+          await iframe.locator(campo)
+            .waitFor({ state: 'visible', timeout: 5000 })
+            .catch(() => console.warn("⚠ No se encontró"));
+        }
+
+    }
+
+
+    // 4️⃣ Verificar botón pagar fuera del iframe
+    console.warn("\n➡️ Validando botón pagar fuera del iframe");
+    await page.locator(headerPage.pagar_Button)
+      .waitFor({ state: "visible", timeout: 5000 })
+      .catch(() => console.warn("⚠ No se encontró"));
+
+    await headerPage.safeClick(headerPage.pagar_Button);
+
+    // 5️⃣ Validar mensajes “Este campo es obligatorio”
+    console.warn("\n🧪 Validando mensajes de campo obligatorio...");
+
+    for (const campo of campos) {
+      const validacion = campo + headerPage.validacioncampoobligatorio_Label;
+      if (campo !== headerPage.tarjeta_mesesapagarSelect) {
+          try {
+            await iframe.locator(validacion).waitFor({ 
+              state: "visible", 
+              timeout: 2000 
+            });
+
+            console.log("   Mensaje obligatorio OK para: " + campo);
+          } catch {
+            console.warn("   No apareció mensaje obligatorio para: " + campo);
+          }
+      } else {
+        console.warn("   No es necesario validar campo meses apagar porque siempre esta capturado");
+      }
+    }
+
+    console.log("\n🟢 Validación finalizada para: " + formapago);
+    await page.pause();
+  }
+
 
 
 

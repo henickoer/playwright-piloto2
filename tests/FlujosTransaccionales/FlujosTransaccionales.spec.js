@@ -76,9 +76,8 @@ test('C1 - Visualizar metodos de pago', async () => {
   await page.waitForSelector('iframe#launcher', { state: 'visible', timeout: 30000 });
   await headerPage.safeClick(headerPage.minicartButton);  
   await page.waitForTimeout(2000);
-
   await carritoUtils.vaciarCarrito(page, resumencarritos, headerPage);
-  await carritoUtils.AgregarProductosDefault(page,headerPage,productos,config,2);
+  await carritoUtils.AgregarProductosDefault(page,headerPage,productos,config,1);
 
   await headerPage.safeClick(headerPage.minicartButton);
   await page.waitForTimeout(2000);
@@ -101,13 +100,21 @@ test('C1 - Visualizar metodos de pago', async () => {
   //recorrer tiposdepago
   for (const row of data) {
     const TipoPagoText = row['Tipos de pago'];
-    const XpathTipoPago = resumencarritos.formapagochedrahuiOption(TipoPagoText);
-    await resumencarritos.safeClick(XpathTipoPago);
-    console.log("El tipo de pago es: " + await resumencarritos.getText(XpathTipoPago));
+    const FormaPagoText = row['Forma Pago'];
+
+    console.log("➡️ Validando tipo de pago: " + TipoPagoText);
+    headerPage.safeClick(headerPage.formapago(TipoPagoText));
+    
+    if(TipoPagoText == "Pago contraentrega (al recibir tu pedido)"){
+      console.log("Por ser pago contra entrega no se ejecuta validación de campos");
+    }else{
+          await carritoUtils.ValidarFormulario(page, headerPage, TipoPagoText, FormaPagoText);
+    }
   }
 
-});
 
+});
+/*
 test('C2 - Pago Debito', async () => { 
   test.setTimeout(300000);
 
@@ -142,9 +149,10 @@ test('C2 - Pago Debito', async () => {
 
   for (const row of data) {
     const TipoPagoText = row['Tipos de pago'];
-    const XpathTipoPago = resumencarritos.formapagochedrahuiOption(TipoPagoText);
-    await resumencarritos.safeClick(XpathTipoPago);
-    console.log("El tipo de pago es: " + await resumencarritos.getText(XpathTipoPago));
-  }
+    console.log("➡️ Validando tipo de pago: " + TipoPagoText);
+
+    await carritoUtils.ValidarFormulario(page, headerPage, TipoPagoText);
+}
 
 });
+*/

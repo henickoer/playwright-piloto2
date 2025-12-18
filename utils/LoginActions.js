@@ -15,7 +15,10 @@ async function loginConCorreo(page, headerPage, loginPage) {
   await deleteEmail(inboxId);
 
   // Visitar sitio principal
-  await page.goto(config.urls.PROD);
+  await page.goto(config.urls.PROD, {
+    waitUntil: 'domcontentloaded',
+    timeout: 60000
+  });
   await page.waitForSelector('iframe#launcher', { state: 'visible', timeout: 40000 });
 
   if (!(await page.title()).toLowerCase().includes('supermercado')) {
