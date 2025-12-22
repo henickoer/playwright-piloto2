@@ -298,100 +298,116 @@ async obtenerProductosEncontrados(page, productosPage) {
   }
 }
 
-  async ValidarFormulario(page, headerPage, tiposdepago, formapago) {
-    await page.waitForTimeout(2000);
-    console.warn("Validando formulario de: " + tiposdepago);
-    // 1️⃣ Localizar el iframe directo del método de pago
-    let iframeXPath;
-    let iframe;
 
-    if(tiposdepago=="Vales de Colaborador Chedraui"){
-          const locator = page.locator(headerPage.formapago(tiposdepago));
-          await locator.scrollIntoViewIfNeeded();
-          await headerPage.safeClick(headerPage.formapago(tiposdepago));
-          console.warn("Tipo de formulario detectado:\n" + tiposdepago);
-          console.warn("Iframe localizado:\n" + tiposdepago);
+
+async ValidarFormulario(page, headerPage, tiposdepago, formapago) {
+  await page.waitForTimeout(2000);
+  console.warn("Validando formulario de: " + tiposdepago);
+
+  // 1️⃣ Determinar contexto (iframe o page)
+  let iframe;
+  let ctx; // 👉 contexto unificado
+
+  if (tiposdepago === "Vales de Colaborador Chedraui") {
+    const locator = page.locator(headerPage.formapago(tiposdepago));
+    await locator.scrollIntoViewIfNeeded();
+    await headerPage.safeClick(headerPage.formapago(tiposdepago));
+    ctx = page; // 🔹 Vales NO usa iframe
+    console.warn("Tipo de formulario detectado:\n" + tiposdepago);
+  } else {
+    const locator = page.locator(headerPage.iframeformapago(tiposdepago));
+    await locator.scrollIntoViewIfNeeded();
+    iframe = page.frameLocator(headerPage.iframeformapago(tiposdepago));
+    ctx = iframe; // 🔹 Tarjetas usan iframe
+    console.warn("Tipo de formulario detectado:\n" + formapago);
+    console.warn("Iframe localizado:\n" + headerPage.iframeformapago(tiposdepago));
+  }
+
+  // 2️⃣ Definir campos a validar
+  let campos = [];
+
+  if (formapago.includes("Tarjeta")) {
+    campos = [
+      headerPage.tarjeta_numeroInput,
+      headerPage.tarjeta_mesesapagarSelect,
+      headerPage.tarjeta_nombreInput,
+      headerPage.tarjeta_mesSelect,
+      headerPage.tarjeta_anoSelect,
+      headerPage.tarjeta_codigoInput
+    ];
+  } else if (formapago.includes("Vales")) {
+    campos = [
+      headerPage.tarjetachedrahui_numeroInput,
+      headerPage.tarjetachedrahui_montoInput,
+      headerPage.tarjetachedrahui_codigoInput
+    ];
+  }
+
+  // 3️⃣ Validar existencia de campos
+  for (const campo of campos) {
+    console.warn("   Validando existencia del campo: " + campo);
+
+    await ctx.locator(campo)
+      .waitFor({ state: 'visible', timeout: 5000 })
+      .catch(() => console.warn("⚠ No se encontró"));
+  }
+
+  // 4️⃣ Validar botones según tipo de pago
+  console.warn("\n➡️ Validando botón pagar fuera del frame");
+  const pagarBtn = page.locator(headerPage.pagar_Button);
+
+  if (formapago.includes("Vales")) {
+    const validarValeBtn = page.locator(headerPage.tarjetachedrahui_validarButton);
+
+    await validarValeBtn.waitFor({ state: 'visible', timeout: 5000 });
+
+    const validarHabilitado = await validarValeBtn.isEnabled();
+    const pagarHabilitado = await pagarBtn.isEnabled();
+
+    if (!validarHabilitado) {
+      console.warn("Validar mi Saldo correctamente inhabilitado");
+    } else {
+      console.warn("⚠ Validar mi Saldo habilitado con campos vacíos");
     }
-    else{
-          const locator = page.locator(headerPage.iframeformapago(tiposdepago));
-          await locator.scrollIntoViewIfNeeded();
-          iframeXPath = headerPage.iframeformapago(tiposdepago);
-          iframe = page.frameLocator(iframeXPath);
-          console.warn("Tipo de formulario detectado:\n" + formapago);
-          console.warn("Iframe localizado:\n" + iframeXPath); 
-    
-        }
-    // 2️⃣ Validaciones según el tipo de pago
-    let campos = [];
 
-    if (formapago.includes("Tarjeta")) {
-      campos = [
-        headerPage.tarjeta_numeroInput,
-        headerPage.tarjeta_mesesapagarSelect,
-        headerPage.tarjeta_nombreInput,
-        headerPage.tarjeta_mesSelect,
-        headerPage.tarjeta_anoSelect,
-        headerPage.tarjeta_codigoInput
-      ];
-
-    } else if (formapago.includes("Vale")) {
-      campos = [
-        headerPage.tarjetachedrahui_numeroInput,
-        headerPage.tarjetachedrahui_montoInput,
-        headerPage.tarjetachedrahui_codigoInput
-      ];
+    if (!pagarHabilitado) {
+      console.warn("Pagar correctamente inhabilitado");
+    } else {
+      console.warn("⚠ Pagar habilitado con vales vacíos");
     }
 
-    for (const campo of campos) {
-        console.warn("   Validando existencia del campo: " + campo);
-
-        if (formapago.includes("Vales")){
-          await page.locator(campo)
-            .waitFor({ state: 'visible', timeout: 5000 })
-            .catch(() => console.warn("⚠ No se encontró"));
-
-        }
-        else{
-          await iframe.locator(campo)
-            .waitFor({ state: 'visible', timeout: 5000 })
-            .catch(() => console.warn("⚠ No se encontró"));
-        }
-
-    }
-
-
-    // 4️⃣ Verificar botón pagar fuera del iframe
-    console.warn("\n➡️ Validando botón pagar fuera del iframe");
-    await page.locator(headerPage.pagar_Button)
+  } else {
+    await pagarBtn
       .waitFor({ state: "visible", timeout: 5000 })
       .catch(() => console.warn("⚠ No se encontró"));
 
-    await headerPage.safeClick(headerPage.pagar_Button);
+    await headerPage.safeClick(pagarBtn);
 
-    // 5️⃣ Validar mensajes “Este campo es obligatorio”
+    // 5️⃣ Validar mensajes obligatorios
     console.warn("\n🧪 Validando mensajes de campo obligatorio...");
 
     for (const campo of campos) {
       const validacion = campo + headerPage.validacioncampoobligatorio_Label;
-      if (campo !== headerPage.tarjeta_mesesapagarSelect) {
-          try {
-            await iframe.locator(validacion).waitFor({ 
-              state: "visible", 
-              timeout: 2000 
-            });
 
-            console.log("   Mensaje obligatorio OK para: " + campo);
-          } catch {
-            console.warn("   No apareció mensaje obligatorio para: " + campo);
-          }
+      if (campo !== headerPage.tarjeta_mesesapagarSelect) {
+        try {
+          await ctx.locator(validacion).waitFor({
+            state: "visible",
+            timeout: 2000
+          });
+          console.log("   Mensaje obligatorio OK para: " + campo);
+        } catch {
+          console.warn("   No apareció mensaje obligatorio para: " + campo);
+        }
       } else {
-        console.warn("   No es necesario validar campo meses apagar porque siempre esta capturado");
+        console.warn("   No es necesario validar campo meses a pagar porque siempre está capturado");
       }
     }
-
-    console.log("\n🟢 Validación finalizada para: " + formapago);
-    await page.pause();
   }
+
+  console.log("\n🟢 Validación finalizada para: " + formapago);
+}
+
 
 
 
