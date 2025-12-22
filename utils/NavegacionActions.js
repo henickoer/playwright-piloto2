@@ -306,15 +306,21 @@ async obtenerProductosEncontrados(page, productosPage) {
     let iframe;
 
     if(tiposdepago=="Vales de Colaborador Chedraui"){
-          iframeXPath = headerPage.iframeformapago(tiposdepago);
-          iframe = page.frameLocator(iframeXPath);
+          const locator = page.locator(headerPage.formapago(tiposdepago));
+          await locator.scrollIntoViewIfNeeded();
+          await headerPage.safeClick(headerPage.formapago(tiposdepago));
+          console.warn("Tipo de formulario detectado:\n" + tiposdepago);
+          console.warn("Iframe localizado:\n" + tiposdepago);
     }
     else{
+          const locator = page.locator(headerPage.iframeformapago(tiposdepago));
+          await locator.scrollIntoViewIfNeeded();
           iframeXPath = headerPage.iframeformapago(tiposdepago);
           iframe = page.frameLocator(iframeXPath);
-    }
-    console.warn("Tipo de formulario detectado:\n" + formapago);
-    console.warn("Iframe localizado:\n" + iframeXPath); 
+          console.warn("Tipo de formulario detectado:\n" + formapago);
+          console.warn("Iframe localizado:\n" + iframeXPath); 
+    
+        }
     // 2️⃣ Validaciones según el tipo de pago
     let campos = [];
 
@@ -339,7 +345,7 @@ async obtenerProductosEncontrados(page, productosPage) {
     for (const campo of campos) {
         console.warn("   Validando existencia del campo: " + campo);
 
-        if (formapago.includes("Vale")){
+        if (formapago.includes("Vales")){
           await page.locator(campo)
             .waitFor({ state: 'visible', timeout: 5000 })
             .catch(() => console.warn("⚠ No se encontró"));
