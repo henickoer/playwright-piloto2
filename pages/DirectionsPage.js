@@ -15,7 +15,24 @@ class DirectionsPage extends BasePage {
     this.aliastrabajoButton ="//button//*[contains(text(),'Trabajo')]";
     this.aliascasaButton = "//button//*[contains(text(),'Casa')]";
     this.aliastextInput = "//input[@placeholder='Ingresa un alias para esta dirección']";
-    this.guardardireccionButton = "//button//*[contains(text(),'Guardar dirección')]";    
+    this.guardardireccionButton = "//button//*[contains(text(),'Guardar dirección')]";
+    this.enviarestadireccionButton = "//button//*[contains(text(),'Enviar a esta dirección')]";    
+
+    
+    }
+
+    xpathDireccionEspecifica(direccion){
+        return `//*[@class='flex flex-row items-center chedrauimx-locator-2-x-titleAddress']//*[contains(text(),'${direccion}')]`;
+    }
+
+    async SeleccionarDireccionEspecifica(direccion) {
+        console.log(`Se inicia seleccion de direccion`);    
+        const xpathdireccion = this.xpathDireccionEspecifica(direccion);
+        console.log(`xpath es: `+ xpathdireccion);
+        await this.page.click(xpathdireccion);
+        console.log(`Se da clic en: `+ xpathdireccion);
+        await this.page.click(this.enviarestadireccionButton);
+        await this.page.waitForTimeout(6000);
 
     }
 

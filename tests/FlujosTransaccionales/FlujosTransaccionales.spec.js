@@ -12,8 +12,10 @@ const PdfPrinter = require('pdfmake');
 const vfsFonts = require('pdfmake/build/vfs_fonts.js');
 const { sendEmail } = require('../../utils/mailslurp-utils');
 const { generarReportePDF } = require('../../utils/creadorpdf');
+const DirectionsPage = require('../../pages/DirectionsPage');
 const excelurl = '.\\data\\FlujosTransaccionales.xlsx';
 const exceltab = 'Datos Flujos';
+const exceltab2 = 'Validaciones Tarjeta';
 
 let context;
 let page;
@@ -21,6 +23,7 @@ let headerPage;
 let resumencarritos;
 let productos;
 let carritoUtils;
+let directionsPage;
 
 // ------------------------
 // BEFORE ALL
@@ -37,6 +40,7 @@ test.beforeAll(async () => {
   resumencarritos = new ResumenCarritoPage(page);
   productos = new ProductosEncontradosPage(page);
   carritoUtils = new NavegacionActions();
+  directionsPage = new DirectionsPage(page);
 
   // --- Sesión persistente ---
   if (fs.existsSync('./sessionCookies.json')) { 
@@ -66,6 +70,7 @@ test.beforeAll(async () => {
 // ------------------------
 // TEST CASE
 // ------------------------
+/*
 test('C1 - Visualizar metodos de pago', async () => { 
   test.setTimeout(300000);
 
@@ -114,8 +119,8 @@ test('C1 - Visualizar metodos de pago', async () => {
 
 
 });
-/*
-test('C2 - Pago Debito', async () => { 
+*/
+test('C2 - Flujos Transaccionales', async () => { 
   test.setTimeout(300000);
 
   // --- Flujo principal ---
@@ -125,34 +130,68 @@ test('C2 - Pago Debito', async () => {
   await page.waitForSelector('iframe#launcher', { state: 'visible', timeout: 30000 });
   await headerPage.safeClick(headerPage.minicartButton);  
   await page.waitForTimeout(2000);
-
   await carritoUtils.vaciarCarrito(page, resumencarritos, headerPage);
-  await carritoUtils.AgregarProductosDefault(page,headerPage,productos,config,2);
 
-  await headerPage.safeClick(headerPage.minicartButton);
-  await page.waitForTimeout(2000);
-  await resumencarritos.safeClick(resumencarritos.comprarcarritoButton);
-  await page.waitForLoadState('domcontentloaded');
-  await page.waitForTimeout(3000);
+  //Lee la data del tab del excel
 
-  await carritoUtils.avanzarCarrito(page, resumencarritos);
-  await page.waitForTimeout(2000);
- 
-  const botonHorario = page.locator(resumencarritos.horarioentregaButton).first();
-  await botonHorario.waitFor({ state: "visible" });
-  await botonHorario.click();
-
-  await headerPage.safeClick(resumencarritos.iralpagoButton);
-
-  const data = getExcelData(excelurl, exceltab);
+  const data = getExcelData(excelurl, exceltab2);
   console.log(data); 
 
+  //Trabaja row por row
   for (const row of data) {
-    const TipoPagoText = row['Tipos de pago'];
-    console.log("➡️ Validando tipo de pago: " + TipoPagoText);
 
-    await carritoUtils.ValidarFormulario(page, headerPage, TipoPagoText);
-}
+
+    const TipoPagoText = row['Tipos de pago'];
+    const Activosraw = row['Activos'];
+    const Activos = Activosraw.split(", ").map(t => t.trim());
+    const Entregasraw = row['TipoTienda']
+    const Entregas = Entregasraw.split(", ").map(t => t.trim());
+    const Sucursal = row['Sucursal'];
+
+    console.log("➡️ Validando entregas: " + Entregas + " con activos: "+Activos);
+
+    //Agrega activo por activo dentro de los n configurados en un solo row (separados)
+    for (const activo of Activos){
+          console.log("Agregando "+activo+" al carrito");
+        await carritoUtils.buscarYAgregarProducto(page,headerPage,productos,activo);
+    }
+
+    //Definir direccion especifica
+    await page.waitForSelector('iframe#launcher', { state: 'visible', timeout: 30000 });
+    await page.waitForTimeout(2000);
+    await headerPage.safeClick(headerPage.enviara_button);
+    await directionsPage.SeleccionarDireccionEspecifica(Sucursal);    
+    //bloque que ingersa al carrito, hasta el paso 3 donde podremos ver los distintos puntos de entrega
+
+    await headerPage.safeClick(headerPage.minicartButton);
+    await page.waitForTimeout(2000);
+    await resumencarritos.safeClick(resumencarritos.comprarcarritoButton);
+    await page.waitForLoadState('domcontentloaded');
+    await page.waitForTimeout(3000);
+    await carritoUtils.avanzarCarrito(page, resumencarritos);
+    await page.waitForTimeout(2000);  
+    const botonHorario = page.locator(resumencarritos.horarioentregaButton).first();
+    await botonHorario.waitFor({ state: "visible" });
+    await botonHorario.click();
+
+    //Aqui se consumira la evaluacion de las entregas dentro del paso 3
+    await carritoUtils.ValidarEntregas(page, headerPage, Entregas, Sucursal); 
+
+    //Bloque que avanza al ultimo punto del checkout, en construccion
+    await headerPage.safeClick(resumencarritos.iralpagoButton);
+
+    //Aqui debemos de seleccionar el metodo de pago y "concluirlo"
+    headerPage.safeClick(headerPage.formapago(TipoPagoText));
+    
+    if(TipoPagoText == "Pago contraentrega (al recibir tu pedido)"){
+      console.log("Por ser pago contra entrega no se ejecuta");
+    }else{
+      console.log("Falta Agregar Captura de los campos");
+      await page.pause();
+    }
+  }
+
+
+
 
 });
-*/

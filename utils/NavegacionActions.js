@@ -408,9 +408,76 @@ async ValidarFormulario(page, headerPage, tiposdepago, formapago) {
   console.log("\n🟢 Validación finalizada para: " + formapago);
 }
 
+async ValidarEntregas(page, headerPage, TipoTienda, Sucursal) { 
+    console.warn("🔍 Iniciando validación de bloques de entrega…");
 
+    const tiposEsperados = Array.isArray(TipoTienda) 
+        ? TipoTienda.map(t => t.trim())
+        : TipoTienda.split(",").map(t => t.trim());
 
+    console.warn("Tipos esperados:", tiposEsperados);
 
+    const entregas = page.locator("//*[@class='chedrauimx-checkout-io-1-x-package__delivery']");
+    const count = await entregas.count();
+    console.warn(`Bloques encontrados en pantalla: ${count}`);
+
+    // 3️⃣ Validar cantidad exacta
+    if (count !== tiposEsperados.length) {
+        throw new Error(`❌ Se esperaban ${tiposEsperados.length} bloques pero se encontraron ${count}`);
+    }
+
+    console.warn("✔ Cantidad de bloques correcta.");
+
+    const sucursalLower = Sucursal.toLowerCase().trim();
+
+    // 4️⃣ Validar cada bloque
+    for (let i = 0; i < count; i++) {
+        const texto = (await entregas.nth(i).innerText()).trim();
+        const textoLower = texto.toLowerCase();
+
+        console.warn(`\n📦 Bloque ${i + 1}:\n${texto}`);
+
+        const tipo = tiposEsperados[i];
+
+        // SUPER
+        if (tipo === "Super") {
+            // Normalizamos espacios también
+            const textoNorm = textoLower.replace(/\s+/g, " ").trim();
+
+            if (!textoNorm.includes("entregado por entrega domicilio")) {
+                throw new Error(`❌ Bloque ${i+1}: no contiene 'Entregado por ENTREGA DOMICILIO'`);
+            }
+
+            if (!textoLower.includes(sucursalLower)) {
+                throw new Error(`❌ Bloque ${i+1}: no contiene la sucursal '${Sucursal}'`);
+            }
+
+            console.warn(`✔ Bloque ${i+1}: SUPER validado correctamente.`);
+        }
+
+        // FLETE
+        else if (tipo === "Flete") {
+            if (!textoLower.includes("flete")) {
+                throw new Error(`❌ Bloque ${i+1}: no contiene palabra clave Flete`);
+            }
+            console.warn(`✔ Bloque ${i+1}: FLETE correcto.`);
+        }
+
+        // ENVIADERO
+        else if (tipo === "Enviadero") {
+            if (!textoLower.includes("enviadero")) {
+                throw new Error(`❌ Bloque ${i+1}: no contiene palabra clave Enviadero`);
+            }
+            console.warn(`✔ Bloque ${i+1}: ENVIADERO correcto.`);
+        }
+
+        else {
+            console.warn(`⚠ Tipo desconocido en Excel: ${tipo}`);
+        }
+    }
+
+    console.warn("\n🟢 Validación COMPLETADA con éxito.");
+}
 
 }
 

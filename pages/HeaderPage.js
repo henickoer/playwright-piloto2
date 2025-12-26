@@ -30,7 +30,10 @@ class HeaderPage extends BasePage {
     this.tarjetachedrahui_validarButton = "//*[@id='vales-confirm-button']";
     this.pagar_Button = "//*[@id='payment-data-submit'][2]";
     this.validacioncampoobligatorio_Label = "/..//*[contains(text(),'Este campo es obligatorio')]";
-
+    this.pagorechazado_alert  = "//*[@class='btn btn-large payment-unauthorized-button']";
+    this.enviadopor_span = "//*[@class='chedrauimx-checkout-io-1-x-package__delivery']";
+    this.enviara_button = "//*[@class='chedrauimx-locator-2-x-labelTextAddress']";
+    
   }
 
     formapago(formapago){
